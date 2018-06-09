@@ -1,0 +1,17 @@
+{% extends 'lander/base.html' %}
+
+{% block content %}
+
+{% for title, url, score, elapsed in posts %}
+
+	<p>
+	<a href={{url}}>{{title}}</a>
+	<br/>
+	Score: {{score}}
+	<br/>
+	{{elapsed}} hours ago
+	</p>
+
+{% endfor %}
+
+{% endblock %}

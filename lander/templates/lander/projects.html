@@ -1,0 +1,25 @@
+{% extends 'lander/base.html' %}
+
+{% block content %}
+	<h1>Projects</h1>
+	<p>Here's a sampling of a few personal and professional projects I've worked on recently.</p>
+	<h2 id="deeplearning">Deep Learning</h2>
+	<p>I have created a number of deep learning applications in Python, mostly using variants of recurrent neural networks (RNNs).</p>
+	<p>As part of my coursework in Fall 2017 I co-wrote an RNN language model of Reddit's /r/Scotland subreddit. A github link can be found <a href="https://github.com/cstuartroe/r-scotland-language-model">here</a>.</p>
+	<p>I also created in my spare time an evolutionary simulation of worms with RNN brains learning to navigate obstacles across a screen. Below are images of untrained worms (left) and the worms after about ten generations of learning (right). Full source code can be found <a href="/static/text/worms.txt">here.</a></p>
+	<img src="{% static 'img/stupid-worms.gif' %}" style="width:24em; height:12em;"/>
+	<img src="{% static 'img/worms.gif' %}" style="width:24em; height:12em;"/>
+	<h2 id="writing">Research and Writing</h2>
+	<p>I've authored and co-authored a number of research projects recently.</p>
+	<p>The most substantial is the research I conducted in summer 2017 with <a href="https://ivy.ai">Ivy</a>, proposing and beginning preliminary implementation of several new strategies for their core product, natural language understanding software which reads the web and answers questions from university site visitors. The products of that research are under proprietary ownership of Ivy and cannot be given here.</p>
+	<p>I also conducted several related research projects in fall 2017 related to the Colonial Zapotec language, an indigenous language of 16th-18th century Mexico known only through archived legal and religious documents. A curated edition of part of Leonardo Levanto's 1632 Cathecismo, which I co-authored, can be found <a href="https://ticha.haverford.edu/en/texts/levanto-arte/98/original/">here</a>. I also conducted <a href="/static/pdf/Zapotec.pdf">an individual research project</a> investigating the usage of the covert subject morphosytactic construction in Zapotec, an example of descriptive linguistic writing.</p>
+	<p>With <a href="https://dynalect.com">Dynalect</a> I wrote weekly feature pieces and cowrote monthly in-depth industry reports, such as <a href="https://dynalect.files.wordpress.com/2017/05/final-clean-water-report.pdf">this one</a> about clean water access.</p>
+	<h2 id="webdev">Web Development</h2>
+	<p>Aside from this website, I also help with development for a few different sites around the web.</p>
+	<p><a href="http://ticha.haverford.edu">Ticha</a> is an online platform for documenting and analyzing original texts in Colonial Valley Zapotec, an indigenous language of southern Mexico, based at Haverford College. It's a collaboration between the linguistics department and Haverford Digital Scholarship, my current employer.</p>
+	<p>I designed <a href="https://ivy.ai">Ivy</a>'s site with Wordpress.</p>
+	<p>I'm also in charge of web design for <a href="https://dynalect.com">Dynalect Analytics</a>, a market research startup.
+	<h2 id="language">Language Learning</h2>
+	<p>I enjoy learning languages for fun. Besides English, which I speak natively, I am also a proficient reader and rusty but competent conversationalist with <b>Dutch</b> as well as moderately comfortable in <b>Mandarin</b>. I have the terrible habit of casually learning many languages at once, and I have a working familiarity (approximately A1-A2 level, or ability to understand given a dictionary) with <b>Spanish</b>, <b>French</b>, <b>Russian</b>, and <b>Turkish</b>.</p>
+	<p>I can be found on <a href="https://www.duolingo.com/ConorS2pacRoe">Duolingo</a>, <a href="https://www.memrise.com/user/%E5%B0%8F%E5%BE%90-csturoe/">Memrise</a>, and HelloTalk.</p>
+{% endblock %}

@@ -1,0 +1,45 @@
+{% load static %}
+<html>
+	<head>
+
+		<title>Conor Stuart Roe</title>
+		<link rel="stylesheet" href="{% static 'css/custom.css' %}">
+		<link rel="stylesheet" href="{% static 'font-awesome-4.7.0/css/font-awesome.min.css' %}">
+		<link rel="shortcut icon" href="{% static 'img/favicon.ico' %}">
+		<meta charset="utf-8">
+
+	</head>
+
+	<body>
+
+		<header id = "navbar">
+			<div class = "pagelinks" style="float:left;">
+				<a href = "/"><i class="fa fa-home" aria-hidden="true"></i>Home</a>
+				<a href="/static/pdf/resume.pdf"><i class="fa fa-briefcase" aria-hidden="true"></i>My Resume</a>
+				<!-- <a href = "/personal"><i class="fa fa-coffee" aria-hidden="true"></i>Personal</a> -->
+				<a href = "/projects"><i class="fa fa-rocket" aria-hidden="true"></i>Projects</a>
+			</div>
+			<div class = "pagelinks" style="float:right;">
+				<a href="http://www.linkedin.com/in/conorstuartroe/"><i class="fa fa-linkedin" aria-hidden="true"></i></a>
+				<a href="http://www.github.com/cstuartroe"><i class="fa fa-github" aria-hidden="true"></i></a>
+				<a href="mailto:conorstuartroe@yahoo.com"><i class="fa fa-envelope" aria-hidden="true" title="Yes, I still use Yahoo mail."></i></a>
+			</div>
+		</header>
+
+		<div id = "mainframe">
+			{% block content %}
+			{% endblock %}
+		</div>
+
+		<hr/>
+
+		<div id = "footer">
+			<p style="text-align: center;">All content &copy; Conor Stuart Roe 2018 under a <a href="http://creativecommons.org/licenses/by-nc-nd/3.0/">CC BY-NC-ND 3.0</a> license.</p>
+		</div>
+
+		<!-- <div class="talen">
+			<p><a href = "/nl">nl</a></p>
+		</div> -->
+
+	</body>
+</html>

@@ -1,0 +1,189 @@
+<!DOCTYPE html>
+<html lang='en'>
+	<head>
+		<title>A New Calendar, What the Hell?</title>
+		<meta charset='utf-8'>
+		<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+		<link rel="stylesheet" href="{% static 'css/calendar.css' %}">
+		<link rel="stylesheet" href="{% static 'font-awesome-4.7.0/css/font-awesome.min.css' %}">
+		<link rel="icon" href="../logo.png">
+		<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+		<script>
+			function Table(){
+				document.write('\
+					<table class="month">\
+				<tr>\
+					<th><div class="weekend"><p>1</p></div></th>\
+					<th><div class="weekend"><p>2</p></div></th>\
+					<th><div class="weekday"><p>3</p></div></th>\
+					<th><div class="weekday"><p>4</p></div></th>\
+					<th><div class="weekday"><p>5</p></div></th>\
+					<th><div class="weekday"><p>6</p></div></th>\
+					<th><div class="weekday"><p>7</p></div></th>\
+					<th><div class="weekday"><p>8</p></div></th>\
+					<th><div class="weekend"><p>9</p></div></th>\
+					<th><div class="weekend"><p>10</p></div></th>\
+				</tr>\
+				<tr>\
+					<th><div class="weekend"><p>11</p></div></th>\
+					<th><div class="weekend"><p>12</p></div></th>\
+					<th><div class="weekday"><p>13</p></div></th>\
+					<th><div class="weekday"><p>14</p></div></th>\
+					<th><div class="weekday"><p>15</p></div></th>\
+					<th><div class="weekday"><p>16</p></div></th>\
+					<th><div class="weekday"><p>17</p></div></th>\
+					<th><div class="weekday"><p>18</p></div></th>\
+					<th><div class="weekend"><p>19</p></div></th>\
+					<th><div class="weekend"><p>20</p></div></th>\
+				</tr>\
+				<tr>\
+					<th><div class="weekend"><p>21</p></div></th>\
+					<th><div class="weekend"><p>22</p></div></th>\
+					<th><div class="weekday"><p>23</p></div></th>\
+					<th><div class="weekday"><p>24</p></div></th>\
+					<th><div class="weekday"><p>25</p></div></th>\
+					<th><div class="weekday"><p>26</p></div></th>\
+					<th><div class="weekday"><p>27</p></div></th>\
+					<th><div class="weekday"><p>28</p></div></th>\
+					<th><div class="weekend"><p>29</p></div></th>\
+					<th><div class="weekend"><p>30</p></div></th>\
+				</tr>\
+			</table>\
+					')
+			}
+
+			function add(x,y){
+				return x+y;
+			}
+
+			var visitLength = 100;
+
+			window.setInterval(function(){
+				$('.activeSeason').removeClass('activeSeason');
+
+
+				var d = new Date();
+				var year = d.getUTCFullYear();
+				var month = d.getUTCMonth();
+				var date = d.getUTCDate();
+				var hour = d.getUTCHours();
+				var minute = d.getUTCMinutes();
+				var second = d.getUTCSeconds();
+				var millisecond = d.getUTCMilliseconds();
+
+				var daysInMonths = [0,31,28,31,30,31,30,31,31,30,31,30,31];
+				var leapYear = false;
+
+				seasons = [$('#winter'),$('#spring'),$('#summer'),$('#autumn')];
+				holidays = ['Winter Solstice','Spring Equinox','Summer Solstice','Autumn Equinox'];
+				monthNames = [['Early Winter','Midwinter','Late Winter'],['Early Spring','Midspring','Late Spring'],
+				['Early Summer','Midsummer','Late Summer'], ['Early Autumn','Midautumn','Late Autumn']];
+				alternateMonthNames = ['January','February','March','April','May','June','July','August','September','October','November','December'];
+				dayNames = ['Sunday','Moonday','Marsday','Mercuryday','Jupiterday','Uranusday','Neptuneday','Venusday','Saturnday','Starday']
+				
+				var seasonStarts = [0,92,183,274];
+				if(year%4 == 0){
+					daysInMonths = [0,31,29,31,30,31,30,31,31,30,31,30,31];
+					leapYear = true;
+					seasonStarts = [0,92,183,275];
+				}
+				var range = daysInMonths.slice(0,month+1);
+				var dayOfYear = range.reduce(add) + date-1;
+				console.log(dayOfYear);
+
+				//dayOfYear = Math.floor(d.getTime()/864)%10 + 78;
+
+				dayOfYear = (dayOfYear + 12) % daysInMonths.reduce(add);
+
+				for(i=0; i<4; i++){
+					if(dayOfYear>=seasonStarts[i]){
+						var season = i % 10;
+					}
+				}
+				
+				var dayOfSeason = dayOfYear - seasonStarts[season];
+				var seasonDiv = seasons[season];
+				var highlighted = seasonDiv[0].getElementsByTagName('div')[dayOfSeason];
+				$(highlighted).addClass('activeSeason');
+
+				var fullDate = 'unknown';
+				if(dayOfYear == seasonStarts[1] - 1){
+					fullDate = "New Years' Day";
+				}
+				else if((dayOfYear == seasonStarts[3] - 1) && leapYear){
+					fullDate = "Leap Day";
+				}
+				else if(dayOfSeason == 0){
+					fullDate = holidays[season];
+				}
+				else{
+					fullDate = dayNames[(dayOfSeason - 1) % 10] + ' ' + (((dayOfSeason - 1) % 30) + 1).toString() + ' ' + 
+					monthNames[season][Math.floor((dayOfSeason-1)/30)];
+				}
+				
+				if((month<2) || (month==2 && date<21)){
+					year = year + 3345;
+				}
+				else{
+					year = year + 3346;
+				}
+
+				var day = fullDate + ' ' + year.toString();
+				var time = Math.floor(((hour * 3600000) + (minute * 60000) + (second * 1000) + millisecond)/864).toString();
+				time = '00000'.substring(0,5 - time.length) + time;
+				time = time.slice(0,1) + ':' + time.slice(1,3) + ':' + time.slice(3,5);
+				document.getElementById('current').innerHTML = time + ' ' + day;
+				visitLength++;
+			}, 432);
+		</script>
+	</head>
+	<body><div class='container-fluid'><div class='row' style='padding: 1em; background-color: #222218;'>
+		<div class='col-xs-12'>
+			<h1 id='current'>0:00:00 New Years' Day 0000</h1>
+		</div>
+		<div class='col-xs-12 season-wrapper'><div class='season' id='new-year'>
+			<h2>New Years' Day</h2>
+			<table class='month'><tr><th><div class='weekend'><p>S</p></div></th></tr></table>
+		</div></div>
+		<div class='col-xs-12 col-md-6 season-wrapper'><div class='season' id='spring'>
+			<h2>Spring Equinox</h2>
+			<table class='month'><tr><th><div class='weekend'><p><i class="fa fa-cloud" aria-hidden="true"></i></p></div></th></tr></table>
+			<h2>Early Spring</h2>
+			<script>Table()</script>
+			<h2>Midspring</h2>
+			<script>Table()</script>
+			<h2>Late Spring</h2>
+			<script>Table()</script>
+		</div></div>
+		<div class='col-xs-12 col-md-6 season-wrapper'><div class='season' id='summer'>
+			<h2>Summer Solstice</h2>
+			<table class='month'><tr><th><div class='weekend'><p><i class="fa fa-sun-o" aria-hidden="true"></i></p></div></th></tr></table>
+			<h2>Early Summer</h2>
+			<script>Table()</script>
+			<h2>Midsummer</h2>
+			<script>Table()</script>
+			<h2>Late Summer</h2>
+			<script>Table()</script>
+		</div></div>
+		<div class='col-xs-12 col-md-6 season-wrapper'><div class='season' id='autumn'>
+			<h2>Autumn Equinox</h2>
+			<table class='month'><tr><th><div class='weekday'><p><i class="fa fa-leaf" aria-hidden="true"></i></p></div></th></tr></table>
+			<h2>Early Autumn</h2>
+			<script>Table()</script>
+			<h2>Midautumn</h2>
+			<script>Table()</script>
+			<h2>Late Autumn</h2>
+			<script>Table()</script>
+		</div></div>
+		<div class='col-xs-12 col-md-6 season-wrapper'><div class='season' id='winter'>
+			<h2>Winter Solstice</h2>
+			<table class='month'><tr><th><div class='weekday'><p><i class="fa fa-snowflake-o" aria-hidden="true"></i></p></div></th></tr></table>
+			<h2>Early Winter</h2>
+			<script>Table()</script>
+			<h2>Midwinter</h2>
+			<script>Table()</script>
+			<h2>Late Winter</h2>
+			<script>Table()</script>
+		</div></div>
+	</div></div></body>
+</html>
