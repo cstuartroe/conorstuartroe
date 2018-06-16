@@ -6,6 +6,8 @@
 		<link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.0.13/css/all.css" integrity="sha384-DNOHZ68U8hZfKXOrtjWvjxusGo9WQnrNx2sqG0tfsghAvtVlRW3tvkXWZh58N9jp" crossorigin="anonymous">
 		<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u" crossorigin="anonymous">
 		<link rel="stylesheet" href="{% static 'css/custom.css' %}">
+		<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+		<script defer src="https://use.fontawesome.com/releases/v5.0.13/js/all.js" integrity="sha384-xymdQtn1n3lH2wcu0qhcdaOpQwyoarkgLVxC/wZ5q7h9gHtxICrpcaSUfygqZGOe" crossorigin="anonymous"></script>
 		<link rel="shortcut icon" href="{% static 'img/favicon.ico' %}">
 		<meta charset="utf-8">
 
@@ -13,7 +15,8 @@
 
 	<body>
 
-		<header id = "navbar">
+		<header id = "navbar"> 
+		<!-- <div class="container"><div class="row"> -->
 			<div class = "pagelinks" style="float:left;">
 				<a href = "/"><i class="fas fa-home" aria-hidden="true"></i>Home</a>
 				<a href="/static/pdf/resume.pdf"><i class="fas fa-briefcase" aria-hidden="true"></i>My Resume</a>
@@ -21,10 +24,11 @@
 				<a href = "/projects"><i class="fas fa-rocket" aria-hidden="true"></i>Projects</a>
 			</div>
 			<div class = "pagelinks" style="float:right;">
-				<a href="http://www.linkedin.com/in/conorstuartroe/"><i class="fab fa-linkedin" aria-hidden="true"></i></a>
-				<a href="http://www.github.com/cstuartroe"><i class="fab fa-github" aria-hidden="true"></i></a>
-				<a href="mailto:conorstuartroe@yahoo.com"><i class="fas fa-envelope" aria-hidden="true" title="Yes, I still use Yahoo mail."></i></a>
+				<a href="http://www.linkedin.com/in/conorstuartroe/">&nbsp;<i class="fab fa-linkedin" aria-hidden="true"></i>&nbsp;</a>
+				<a href="http://www.github.com/cstuartroe">&nbsp;<i class="fab fa-github" aria-hidden="true"></i>&nbsp;</a>
+				<a href="mailto:conorstuartroe@yahoo.com">&nbsp;<i class="fas fa-envelope" aria-hidden="true" title="Yes, I still use Yahoo mail."></i>&nbsp;</a>
 			</div>
+		<!-- </div></div> -->
 		</header>
 
 		<div id = "mainframe">
@@ -37,6 +41,10 @@
 		<div id = "footer">
 			<p style="text-align: center;">All content &copy; Conor Stuart Roe 2018 under a <a href="http://creativecommons.org/licenses/by-nc-nd/3.0/">CC BY-NC-ND 3.0</a> license.</p>
 		</div>
+
+		<script>
+			$("<i class=\"fas fa-cog\" aria-hidden=\"true\"></i>").insertAfter("hr")
+		</script>
 
 		<!-- <div class="talen">
 			<p><a href = "/nl">nl</a></p>

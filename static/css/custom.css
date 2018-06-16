@@ -25,6 +25,7 @@ placeholderB8D29F
 
 body {
 	background-color: #E1E6D4;
+	text-align: center;
 }
 
 h1 {
@@ -64,7 +65,7 @@ p, td, th {
 	color: #303438;
 	padding: 0;
 	line-height: 1.5;
-	font-size: 3.5vh;
+	font-size: 2.5vh;
 	margin: 1em;
 }
 
@@ -81,9 +82,9 @@ p.chinese {
 	font-size: 2.5vh;
 }
 
-.fa, .fas, .fab {
+.fa, .fas, .fab, .svg-inline--fa {
 	font-size: 100% !important;
-	margin: .5em .5em;
+	margin: 0em .5em;
 }
 
 pre {
@@ -123,18 +124,17 @@ hr {
     color: #E1E6D4;
 }
 
-hr:after {
-	content: '\f013';
+.fa-cog {
 	font-family: FontAwesome;
 	-webkit-animation: fa-spin 5s infinite linear;
 	animation: fa-spin 5s infinite linear;
 	display: inline-block;
 	position: relative;
-	padding: 10px 10px;
+	padding: 0;
 	background: #E1E6D4;
 	border-radius: 50%;
 	color: #303438;
-	top: -1em;
+	top: -2em;
 }
 
 p a {
@@ -165,6 +165,10 @@ table {
 	z-index: 1;
 }
 
+.container {
+	width: auto;
+}
+
 .pagelinks {
 	overflow: hidden;
 }
@@ -173,7 +177,7 @@ table {
 	float: left;
 	display: block;
 	font-family: "Gentium";
-	font-size: 3.5vh;
+    font-size: calc(1vh + 1.5vw);
 	color: #E1E6D4;
 	font-weight: 600;
 	text-decoration:none;
