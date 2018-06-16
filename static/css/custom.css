@@ -81,7 +81,7 @@ p.chinese {
 	font-size: 2.5vh;
 }
 
-.fa{
+.fa, .fas, .fab {
 	font-size: 100% !important;
 	margin: .5em .5em;
 }
