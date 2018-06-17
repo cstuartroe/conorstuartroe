@@ -16,8 +16,80 @@ h1, h2, h3, p, li, td, th {
 	font-family: "Gentium";
 }
 
+h1, h2, h3 {
+	text-align: center;
+}
+
+h1 {
+	font-size: 4vh;
+}
+
+h2 {
+	font-size: 3vh;
+}
+
+h3, li, td, th {
+	font-size: 2.25vh;
+}
+
+p {
+	font-size: 2vh;
+	text-align: justify;
+}
+
+ul {
+	list-style-type: none;
+	padding: 0 2em;
+	text-align: left;
+}
+
+a, a:hover {
+	color: #007f00;
+}
 
 .lauvinko {
 	font-family: "Lavvinko Smooth Serif";
-	font-size: 2.5vh;
+}
+
+div.scroll {
+	overflow: scroll;
+	border-style: solid;
+	border-width: 2px;
+	border-color: #f0f0f0;
+}
+
+div.go-down {
+	border-style: solid;
+	border-width: 2px;
+	border-color: #f0f0f0;
+	height: 20vh;
+	display: table;
+	text-align: center;
+}
+
+div.go-down > * {
+	display: table-cell;
+	vertical-align: middle;
+}
+
+::-webkit-scrollbar {
+    width: 10px;
+}
+
+::-webkit-scrollbar-track {
+    background: #fff;
+}
+
+::-webkit-scrollbar-thumb {
+    background: #f0f0f0; 
+    border-radius: 5px;
+}
+
+#mainframe {
+	align-items: center;
+	text-align: center;
+}
+
+img { 
+	display: inline-block; 
 }
