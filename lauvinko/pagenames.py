@@ -1,0 +1,1 @@
+pagenames = {'people': '1', 'history': '1_1', 'prehistory': '1_1_1', 'early_history': '1_1_2', 'sultanate': '1_1_3', 'portuguese_rule': '1_1_4', 'dutch_rule': '1_1_5', 'british_rule': '1_1_6', 'culture': '1_2', 'food': '1_2_1', 'material': '1_2_2', 'clans': '1_2_3', 'society': '1_2_4', 'religion': '1_2_5'}

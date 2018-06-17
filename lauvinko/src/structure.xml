@@ -1,0 +1,17 @@
+<section name="people" title="The Lauvinko People">
+	<section name="history" title="History">
+		<section name="prehistory" title="Prehistory (until 800s CE)"/>
+		<section name="early_history" title="Early History (800s - 1400s)"/>
+		<section name="sultanate" title="Sultanate (1400s - 1511)"/>
+		<section name="portuguese_rule" title="Portuguese Rule (1511 – 1641)"/>
+		<section name="dutch_rule" title="Dutch Rule (1641 - 1824)"/>
+		<section name="british_rule" title="British Rule (1824 -)"/>
+	</section>
+	<section name="culture" title="Culture">
+		<section name="food" title="Food, Drink, and Drugs"/>
+		<section name="material" title="Material Culture"/>
+		<section name="clans" title="Clans"/>
+		<section name="society" title="Society"/>
+		<section name="religion" title="Religion"/>
+	</section>
+</section>

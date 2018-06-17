@@ -33,7 +33,8 @@ INSTALLED_APPS = [
     'django.contrib.sessions',
     'django.contrib.messages',
     'django.contrib.staticfiles',
-    'lander.apps.LanderConfig'
+    'lander.apps.LanderConfig',
+    'lauvinko.apps.LauvinkoConfig'
 ]
 
 MIDDLEWARE = [
