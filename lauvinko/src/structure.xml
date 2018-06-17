@@ -1,5 +1,5 @@
 <xml>
-	<section name="people" title="The Lauvinko People">
+	<section name="people" title="The Lauvìnko People">
 		<section name="history" title="History">
 			<section name="prehistory" title="Prehistory (until 800s CE)"/>
 			<section name="early_history" title="Early History (800s - 1400s)"/>
@@ -31,7 +31,7 @@
 			<section name="augment" title="Augment"/>
 		</section>
 		<section name="orthography" title="Orthography">
-			<section name="palavaytolis" title="Palavaytolis Abugida"/>
+			<section name="palavaytolis" title="Palavaytòlis Abugida"/>
 			<section name="latin" title="Latin Alphabet Orthography"/>
 			<section name="transcription" title="Transcription used in this document"/>
 		</section>

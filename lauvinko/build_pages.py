@@ -50,7 +50,7 @@ class LauvinkoPage:
     def generate_HTML(self):
         self.html = self.xml
         self.html = django_wrap('<h1>%s %s</h1>\n' % (join_nums(self.location,'.'),self.title) + self.html)
-        with open(os.path.join('templates','lauvinko',self.name + '.html'),'w') as fh:
+        with open(os.path.join('templates','lauvinko',self.name + '.html'),'w',encoding="utf-8") as fh:
             fh.write(self.html)
 
     def __repr__(self):
@@ -102,7 +102,7 @@ class MyContentHandler(ContentHandler):
             self.index_page = fh.read()
         self.index_page = self.index_page.replace('<contents/>',self.content_ul)
         self.index_page = django_wrap(self.index_page)
-        with open('templates/lauvinko_index.html','w') as fh:
+        with open('templates/lauvinko_index.html','w',encoding="utf-8") as fh:
             fh.write(self.index_page)
 
 handler = MyContentHandler()
