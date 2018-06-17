@@ -1,9 +1,12 @@
+from django.http import HttpResponseRedirect
 from django.shortcuts import render
-from .pagenames import *
+import django.template
 
 def index(request):
-    return render(request, 'lauvinko/index.html')
+    return render(request, 'lauvinko_index.html')
 
 def page(request,name):
-    ID = pagenames[name]
-    return render(request, 'lauvinko/' + ID + '.html')
+    try:
+        return render(request, 'lauvinko/' + name + '.html')
+    except django.template.exceptions.TemplateDoesNotExist:
+        return HttpResponseRedirect('/lauvinko')

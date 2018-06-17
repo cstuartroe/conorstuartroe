@@ -16,6 +16,16 @@ def pprint(tree):
 def join_nums(numlist,join_char='_'):
     return join_char.join([str(n) for n in numlist])
 
+def correct_HTML_encoding(html):
+    soup = bs(html,'lxml')
+    return soup.prettify()
+
+def django_wrap(html):
+    return '''{% extends 'lauvinko_base.html' %}
+{% block content %}
+''' + html + '''
+{% endblock %}'''
+
 class LauvinkoPage:
     def __init__(self,location,name,title,pages):
         self.location = location
@@ -39,11 +49,8 @@ class LauvinkoPage:
 
     def generate_HTML(self):
         self.html = self.xml
-        self.html = '''{% extends 'lauvinko/base.html' %}
-{% block content %}
-''' + '<h1>%s %s</h1>\n' % (join_nums(self.location,'.'),self.title) + self.html + '''
-{% endblock %}'''
-        with open(os.path.join('templates','lauvinko',join_nums(self.location) + '.html'),'w') as fh:
+        self.html = django_wrap('<h1>%s %s</h1>\n' % (join_nums(self.location,'.'),self.title) + self.html)
+        with open(os.path.join('templates','lauvinko',self.name + '.html'),'w') as fh:
             fh.write(self.html)
 
     def __repr__(self):
@@ -55,29 +62,51 @@ class MyContentHandler(ContentHandler):
         self.just_closed = False
         self.pages = {}
         self.names = {}
+        self.content_ul = ''
 
     def startElementNS(self, name, qname, attributes):
-        if self.just_closed:
-            self.location[-1] += 1
-        else:
-            self.location.append(1)
-        self.just_closed = False
+        if qname=="section":
+            if self.just_closed:
+                self.location[-1] += 1
+            else:
+                self.content_ul += '\t'*len(self.location) + '<ul>\n'
+                self.location.append(1)
+            self.just_closed = False
 
-        pagename = attributes[(None,'name')]
-        pagetitle = attributes[(None,'title')]
-        self.pages[join_nums(self.location)] = LauvinkoPage(copy(self.location),pagename,pagetitle,self.pages)
-        self.names[pagename] = join_nums(self.location)
+            pagename = attributes[(None,'name')]
+            pagetitle = attributes[(None,'title')]
+            self.pages[join_nums(self.location)] = LauvinkoPage(copy(self.location),pagename,pagetitle,self.pages)
+            self.names[pagename] = join_nums(self.location)
+            
+            self.content_ul += '\t'*len(self.location) + '<li><a href="/lauvinko/%s">%s %s</a></li>\n' % (pagename,join_nums(self.location,'.'),pagetitle)
+        else:
+            assert(qname=="xml" and self.location==[])
 
     def endElementNS(self, name, qname):
-        if self.just_closed:
-            del self.location[-1]
+        if qname=="section":
+            if self.just_closed:
+                del self.location[-1]
+                self.content_ul += '\t'*len(self.location) + '</ul>\n'
+            else:
+                pass
+            self.just_closed = True
         else:
-            pass
-        self.just_closed = True
+            assert(qname=="xml" and len(self.location)==1)
+            self.content_ul += '</ul>'
+
+    def finish_up(self):
+        for page in self.pages.values():
+            page.generate_HTML()
+
+        with open('src/lauvinko_index.xml','r') as fh:
+            self.index_page = fh.read()
+        self.index_page = self.index_page.replace('<contents/>',self.content_ul)
+        self.index_page = django_wrap(self.index_page)
+        with open('templates/lauvinko_index.html','w') as fh:
+            fh.write(self.index_page)
 
 handler = MyContentHandler()
 lxml.sax.saxify(structure, handler)
-with open('pagenames.py','w') as fh:
-    fh.write('pagenames = ' + str(handler.names))
-for page in handler.pages.values():
-    page.generate_HTML()
+handler.finish_up()
+with open('templates/lauvinko_index.html','rb') as fh:
+    b = fh.read()
