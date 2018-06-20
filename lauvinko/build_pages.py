@@ -102,43 +102,80 @@ class MyContentHandler(ContentHandler):
 
     def startElementNS(self, name, qname, attributes):
         if qname=="section":
-            if self.just_closed:
-                self.location[-1] += 1
-            else:
-                self.content_ul += '\t'*len(self.location) + '<ul>\n'
-                self.location.append(1)
-            self.just_closed = False
-
             pagename = attributes[(None,'name')]
             try:
                 pagetitle = attributes[(None,'title')]
             except KeyError:
                 pagetitle = titleize(pagename)
 
-            newpage = LauvinkoPage(copy(self.location),pagename,pagetitle,self.pages)
-            self.pages[join_nums(self.location)] = newpage
-            self.pages_in_order.append(newpage)
-            
-            self.content_ul += '\t'*len(self.location) + '<li><a href="/lauvinko/%s">%s %s</a></li>\n' % (pagename,join_nums(self.location,'.'),pagetitle)
+            self.add_page(pagename, pagetitle)
         else:
             assert(qname=="xml" and self.location==[])
 
+    def add_page(self,pagename,pagetitle,self_closing = False):
+        if self.just_closed:
+            self.location[-1] += 1
+        else:
+            self.content_ul += '\t'*len(self.location) + '<ul>\n'
+            self.location.append(1)
+        self.just_closed = False
+
+        newpage = LauvinkoPage(copy.copy(self.location),pagename,pagetitle,self.pages)
+        self.pages[join_nums(self.location)] = newpage
+        self.pages_in_order.append(newpage)
+            
+        self.content_ul += '\t'*len(self.location) + '<li><a href="/lauvinko/%s">%s %s</a></li>\n' % (pagename,join_nums(self.location,'.'),pagetitle)
+
+        if self_closing:
+            self.close_page()
+
     def endElementNS(self, name, qname):
         if qname=="section":
-            if self.just_closed:
-                del self.location[-1]
-                self.content_ul += '\t'*len(self.location) + '</ul>\n'
-            else:
-                pass
-            self.just_closed = True
+            self.close_page()
         else:
             assert(qname=="xml" and len(self.location)==1)
             self.content_ul += '</ul>'
 
+    def close_page(self):
+        if self.just_closed:
+            del self.location[-1]
+            self.content_ul += '\t'*len(self.location) + '</ul>\n'
+        else:
+            pass
+        self.just_closed = True
+
+    def build_dictionary(self):
+        self.dict_entries = {}
+        dictionary = etree.parse('src/dictionary.xml').getroot()
+        for entry in dictionary:
+            de = DictEntry.from_entry(entry)
+            self.dict_entries[de.ident] = de
+
+        entries_alphabetized = list(self.dict_entries.values())
+        entries_alphabetized.sort(key = lambda x: x.languages['pk'].forms['fq-np'].classical())
+
+        dictionary_text = ''
+        for entry in entries_alphabetized:
+            past_form = entry.languages['pk'].forms['fq-np']
+            dictionary_text += '<h3>%s  ' % past_form.classical()
+            dictionary_text += '<span class="lauvinko">%s</span></h3>\n' % past_form.falavay(False)
+            dictionary_text += '<p>From %s.</p>\n' % entry.origin
+            dictionary_text += '<p>%s</p>\n' % past_form.defn
+            dictionary_text += '<hr/>\n'
+            
+        with open('src/pages/dictionary_kasanic.xml','w',encoding='utf-8') as fh:
+            fh.write(dictionary_text)
+        self.add_page('dictionary_kasanic','Dictionary')
+
     def finish_up(self):
+        #build dictionary pages
+        self.build_dictionary()
+        
+        #build content pages
         for page in self.pages.values():
             page.generate_HTML()
 
+        #build index page
         with open('src/lauvinko_index.xml','r',encoding="utf-8") as fh:
             self.index_page = fh.read()
         self.index_page = self.index_page.replace('<contents/>',self.content_ul)
@@ -149,5 +186,3 @@ class MyContentHandler(ContentHandler):
 handler = MyContentHandler()
 lxml.sax.saxify(structure, handler)
 handler.finish_up()
-with open('templates/lauvinko_index.html','rb') as fh:
-    b = fh.read()

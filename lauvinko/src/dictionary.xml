@@ -1,0 +1,26 @@
+<xml>
+	<entry category="fientive" id="build" origin="kasanic">
+		<pk>
+			<form type="gn">
+				<word>@kaaye</word>
+				<defn>To build, establish, appoint</defn>
+			</form>
+		</pk>
+	</entry>
+	<entry pk-word="ekkungi" category="punctual" id="cross" origin="kasanic">
+		<pk>
+			<form type="gn">
+				<word>@kkungi</word>
+				<defn>To cross, go over.</defn>
+			</form>
+		</pk>
+	</entry>
+	<entry pk-word="eppaai" category="punctual" id="insert" origin="kasanic">
+		<pk>
+			<form type="gn">
+				<word>@ppaai</word>
+				<defn>To insert, pierce.</defn>
+			</form>
+		</pk>
+	</entry>
+</xml>
