@@ -36,7 +36,12 @@ class LauvinkoPage:
         self.title = title
         self.pages = pages
         
-        self.section_heirarchy = [pages[join_nums(self.location[:i])].name for i in range(1,len(self.location))]
+        self.section_heirarchy = []
+        for i in range(1,len(self.location)):
+            ancestor = pages[join_nums(self.location[:i])]
+            self.section_heirarchy.append(ancestor.name)
+        self.section_heirarchy.append(self.name)
+        
         self.children = []
         if len(self.location) > 1:
             self.parent = pages[join_nums(self.location[:-1])]
@@ -79,9 +84,10 @@ class LauvinkoPage:
             go_down = '<div class="row">\n'
             col_sizes = {1:(12,12),2:(6,6),3:(4,4),4:(6,3),5:(4,4),6:(4,4)}
             for child in self.children:
+                go_down += '<a href="/lauvinko/%s">' % child.name
                 go_down += '<div class="go-down col-xs-%d col-md-%d"><h3>' % (col_sizes[len(self.children)][0],col_sizes[len(self.children)][1])
-                go_down += child.link('')
-                go_down += '</h3></div>\n'
+                go_down += '%s %s' % (join_nums(child.location,'.'),child.title)
+                go_down += '</h3></div></a>\n'
             go_down += '</div>\n'
             self.html += go_down
         
@@ -99,6 +105,7 @@ class MyContentHandler(ContentHandler):
         self.pages = {}
         self.pages_in_order = []
         self.content_ul = ''
+        self.build_dictionary()
 
     def startElementNS(self, name, qname, attributes):
         if qname=="section":
@@ -163,14 +170,10 @@ class MyContentHandler(ContentHandler):
             dictionary_text += '<p>%s</p>\n' % past_form.defn
             dictionary_text += '<hr/>\n'
             
-        with open('src/pages/dictionary_kasanic.xml','w',encoding='utf-8') as fh:
+        with open('src/pages/dictionary/kasanic_dictionary/kasanic_dictionary.xml','w',encoding='utf-8') as fh:
             fh.write(dictionary_text)
-        self.add_page('dictionary_kasanic','Dictionary')
 
-    def finish_up(self):
-        #build dictionary pages
-        self.build_dictionary()
-        
+    def finish_up(self):        
         #build content pages
         for page in self.pages.values():
             page.generate_HTML()

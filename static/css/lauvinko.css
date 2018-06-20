@@ -12,6 +12,11 @@
     font-weight: normal;
 }
 
+* {
+	transition-duration: .5s;
+	transition-timing-function: ease;
+}
+
 h1, h2, h3, p, li, td, th {
 	font-family: "Gentium";
 }
@@ -70,6 +75,15 @@ div.go-down {
 div.go-down > * {
 	display: table-cell;
 	vertical-align: middle;
+}
+
+div.go-down:hover {
+	background-color: #8fc78f;
+}
+
+div.go-down:hover h3 {
+    color: white;
+    font-weight: 900;
 }
 
 ::-webkit-scrollbar {

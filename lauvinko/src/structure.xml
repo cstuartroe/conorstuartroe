@@ -160,4 +160,10 @@
 		<section name="north_wind" title="The North Wind and the Sun"/>
 		<section name="bhagavad_gita"/>
 	</section>
+	<section name="dictionary">
+		<section name="kasanic_dictionary" title="Kasanic Root Dictionary"/>
+		<section name="loanword_dictionary"/>
+		<section name="ideophones"/>
+		<section name="phrasebook"/>
+	</section>
 </xml>
