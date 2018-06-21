@@ -1,4 +1,8 @@
 <xml>
+	<section name="introduction">
+		<section name="overview"/>
+		<section name="glossing" title="A Note on Glossing Conventions"/>
+	</section>
 	<section name="people" title="The Lauvìnko People">
 		<section name="history">
 			<section name="prehistory" title="Prehistory (until 800s CE)"/>

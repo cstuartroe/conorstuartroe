@@ -62,6 +62,9 @@ class LauvinkoPage:
             open(full_path,'a').close()
             self.xml = ''
 
+        if self.xml == '':
+            self.xml = '<p>Unfortunately, this page still hasn\'t been written :(</p>'
+
     def link(self,leading_text):
         return '<a href="/lauvinko/%s">%s %s %s</a>' % (self.name,leading_text,join_nums(self.location,'.'),self.title)
 
@@ -72,9 +75,9 @@ class LauvinkoPage:
         self.html = self.xml
 
         if self.parent:
-            go_up = '<p class="go-up">%s</p>' % self.parent.link('Go up to ')
+            go_up = '<p class="go-up">%s</p>\n' % self.parent.link('Go up to ')
         else:
-            go_up = '<p class="go-up"><a href="/lauvinko">Go up to index page</a></p>'
+            go_up = '<p class="go-up"><a href="/lauvinko">Go up to index page</a></p>\n'
         self.html = go_up + self.html
         
         header = '<h1>%s %s</h1>\n' % (join_nums(self.location,'.'),self.title)
@@ -85,9 +88,10 @@ class LauvinkoPage:
             col_sizes = {1:(12,12),2:(6,6),3:(4,4),4:(6,3),5:(4,4),6:(4,4)}
             for child in self.children:
                 go_down += '<a href="/lauvinko/%s">' % child.name
-                go_down += '<div class="go-down col-xs-%d col-md-%d"><h3>' % (col_sizes[len(self.children)][0],col_sizes[len(self.children)][1])
+                go_down += '<div class="go-down col-xs-%d col-md-%d">' % (col_sizes[len(self.children)][0],col_sizes[len(self.children)][1])
+                go_down += '<div><h3>' 
                 go_down += '%s %s' % (join_nums(child.location,'.'),child.title)
-                go_down += '</h3></div></a>\n'
+                go_down += '</h3></div></div></a>\n'
             go_down += '</div>\n'
             self.html += go_down
         
@@ -156,19 +160,29 @@ class MyContentHandler(ContentHandler):
         dictionary = etree.parse('src/dictionary.xml').getroot()
         for entry in dictionary:
             de = DictEntry.from_entry(entry)
+            if de.ident in self.dict_entries:
+                raise KeyError('Root "%s" has multiple definitions.' % de.ident)
             self.dict_entries[de.ident] = de
 
         entries_alphabetized = list(self.dict_entries.values())
-        entries_alphabetized.sort(key = lambda x: x.languages['pk'].forms['fq-np'].classical())
+        entries_alphabetized.sort(key = lambda x: x.languages['pk'].get_citation_form().alphabetical())
 
         dictionary_text = ''
+
+        dictionary_text += '<p>This dictionary has %d entries!</p>\n' % len(entries_alphabetized)
+        
         for entry in entries_alphabetized:
-            past_form = entry.languages['pk'].forms['fq-np']
-            dictionary_text += '<h3>%s  ' % past_form.classical()
-            dictionary_text += '<span class="lauvinko">%s</span></h3>\n' % past_form.falavay(False)
-            dictionary_text += '<p>From %s.</p>\n' % entry.origin
-            dictionary_text += '<p>%s</p>\n' % past_form.defn
-            dictionary_text += '<hr/>\n'
+            cf = entry.languages['pk'].get_citation_form()
+            dictionary_text += '<div class="entry" id="%s">\n' % entry.ident
+            dictionary_text += '<h2 class="lauvinko">%s</h2>\n' % cf.falavay(False)
+            dictionary_text += '<h3><span style="font-style:italic;">%s</span>' % cf.classical()
+            dictionary_text += ' - %s root</h3>\n' % entry.category
+            dictionary_text += '<p>%s</p>\n' % cf.defn
+            for form in entry.languages['pk'].forms:
+                dictionary_text += '<p>%s ' % form
+                pkform = entry.languages['pk'].forms[form]
+                dictionary_text += '<span class="lauvinko">%s</span> %s</p>' % (pkform.falavay(), pkform.classical())
+            dictionary_text += '</div>\n<hr/>\n'
             
         with open('src/pages/dictionary/kasanic_dictionary/kasanic_dictionary.xml','w',encoding='utf-8') as fh:
             fh.write(dictionary_text)

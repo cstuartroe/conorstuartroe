@@ -21,7 +21,7 @@ h1, h2, h3, p, li, td, th {
 	font-family: "Gentium";
 }
 
-h1, h2, h3 {
+h1, h2 {
 	text-align: center;
 }
 
@@ -31,10 +31,12 @@ h1 {
 
 h2 {
 	font-size: 3vh;
+	margin: 15px 0;
 }
 
 h3, li, td, th {
 	font-size: 2.25vh;
+	margin: 10px 0;
 }
 
 p {
@@ -63,27 +65,40 @@ div.scroll {
 	border-color: #f0f0f0;
 }
 
-div.go-down {
-	border-style: solid;
-	border-width: 2px;
-	border-color: #f0f0f0;
-	height: 20vh;
-	display: table;
+p.go-up {
+	margin: 3em;
 	text-align: center;
 }
 
-div.go-down > * {
+div.go-down div {
+	border-style: solid;
+	border-width: 2px;
+	border-color: #f0f0f0;
+	border-radius: 20px;
+	height: 20vh;
+	display: table;
+	text-align: center;
+	margin: 2em;
+	padding: 1em;
+	width: 100%;
+}
+
+div.go-down div h3 {
 	display: table-cell;
 	vertical-align: middle;
 }
 
-div.go-down:hover {
-	background-color: #8fc78f;
+div.go-down div h3 {
+	font-weight: 900;
 }
 
-div.go-down:hover h3 {
+div.go-down div:hover {
+	background-color: #8fc78f;
+	border-color: black;
+}
+
+div.go-down div:hover h3 {
     color: white;
-    font-weight: 900;
 }
 
 ::-webkit-scrollbar {
@@ -106,4 +121,8 @@ div.go-down:hover h3 {
 
 img { 
 	display: inline-block; 
+}
+
+.entry > *{
+	text-align: left;
 }

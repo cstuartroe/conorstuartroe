@@ -20,19 +20,23 @@ def find(regex,s):
 
 flatten = lambda l: [item for sublist in l for item in sublist]
 
+PK_PRES = ['H','M']
+PK_ONSS = ['m','n','ñ','ṅ','p','t','c','k','v','r','s','y','h']
+PK_VOWS = ['ā','a','i','u','e','o','Y','W']
+
 class PKForm:
-    prefixes = ['H','M']
-    onsets = ['m','n','ñ','ṅ','p','t','c','k','v','l','s','y','h']
-    vows = ['ā','a','i','u','e','o','Y','W']
+    prefixes = PK_PRES
+    onsets = PK_ONSS
+    vows = PK_VOWS
     tail_letter = 'q'
     tail_cons = ['t','k','s','h']
     tail_vows = ['ā','i']
     tail_blocking_vows = ['ā','u','o']
-    prefix_re = option_re(['H','M'])
-    onset_re = option_re(['m','n','ñ','ṅ','p','t','c','k','v','l','s','y','h']) + 'v?'
-    vowel_re = option_re(['ā','a','i','u','e','o','Y','W'])
+    prefix_re = option_re(PK_PRES)
+    onset_re = option_re(PK_ONSS) + 'v?'
+    vowel_re = option_re(PK_VOWS)
     accent_re = r'!'
-    syll_re = r'[HM]?[mnñṅptckvlsyh]?v?[āaiueoYW]!?'
+    syll_re = prefix_re + '?' + option_re(PK_ONSS) + '?v?' + vowel_re + accent_re + '?'
     
 ##    onsets = ["ṅkv","mp","nt","ñc","ṅk","kv","p","t","c","k","'kv","'p","'t","'c","'k","ṅv","m","n","ñ","ṅ","r","y","v","s","h",'']
 ##    nuclei = ["āi","āu","ā","a","e","i","o","u"]
@@ -55,7 +59,10 @@ class PKForm:
         #self.aug = PKWord.safeEvolve(str(self),False)
         #self.forms = {"Uninflected":self}
 
-        self.defn = ''
+        self.defn = 'Not defined.'
+        
+        if 'ai' in self.classical() or 'au' in self.classical():
+            print("Warning: potentially incorrect root: " + self.classical())
 
     def set_defn(self,s):
         self.defn = s
@@ -94,12 +101,13 @@ class PKForm:
     def falavay(self,augment=False):       
         i = 0
         out = ''
-        processed_sylls = [PKForm.process_syll(syll,augment=augment) for syll in self.structure]
-        return ''.join(processed_sylls)
+        falavay_sylls = [PKForm.falavay_syll(syll,augment=augment) for syll in self.structure]
+        return ''.join(falavay_sylls)
 
-    def process_syll(syll,augment=False):        
+    def falavay_syll(syll,augment=False):        
         if syll[1] != '':
-            out = syll[0] + syll[1]
+            prefix = syll[0]
+            out = syll[1]
             tail = PKForm.tail_letter if (syll[1] in PKForm.tail_cons and syll[2] not in PKForm.tail_blocking_vows) else ''
             if syll[2] == 'a':
                 pass
@@ -112,7 +120,7 @@ class PKForm:
                 tail = ''
             else:
                 out = out + syll[2]
-            out += tail
+            out = prefix + out + tail
         else:
             out = syll[2].upper()
             tail = PKForm.tail_letter if syll[2] in PKForm.tail_vows else ''
@@ -129,12 +137,20 @@ class PKForm:
         replacements = [('Y','āi'),('W','āu'),('H','\''),('Mp','mp'),('Mt','nt'),('Mc','ñc'),('Mk','ṅk'),('!','')]
         return replacement_suite(replacements,flattened)
 
+    def alphabetical(self):
+        classical = self.classical()
+        # I'm just using "z" to send digraphs and accented letters to after the related letter, i.e. to send "ā" after "a"
+        replacements = [("āi","azy"),("āu","azz"),("ā","azx"),("'p","pz"),("'t","tz"),("'c","cz"),("'k","kz"),
+                        ("mp","mz"),("nt","nv"),("ñc","nx"),("ṅk","nz"),("ñ","nw"),("ṅ","ny")]
+        return replacement_suite(replacements,classical)
+
     def __str__(self):
         return ''.join(s[0]+s[1]+s[2] + ('!' if s[3] == 'high' else '') for s in self.l)
 
 class PKWord:
     categories = {"fientive":["im-np","im-pt","pf","in","fq-np","fq-pt"],"punctual":["np","pt","fq-np","fq-pt"],
                   "stative":["gn","pt","in"],"uninflected":["gn"]}
+    citation_forms = {"fientive":"im-np","punctual":"np","stative":"gn","uninflected":"gn"}
     low_ablauts = {"np":"e","pt":"o","im-np":"aa","im-pt":"o","pf":"e","in":"aa","fq-np":"e","fq-pt":"o"}
     high_ablauts = {"np":"i","pt":"u","im-np":"a","im-pt":"u","pf":"i","in":"a","fq-np":"i","fq-pt":"u"}
     prefixes = {"in":"in"}
@@ -145,12 +161,18 @@ class PKWord:
         else:
             raise ValueError("Invalid word category: " + category)
         self.forms = {}
+        self.citation_form = PKWord.citation_forms[self.category]
 
     def set_general(self,word,defn):
         if word is None:
             raise ValueError("General form declaration must include word.")
         if defn is None:
             raise ValueError("General form declaration must include definition.")
+        if self.category in ['fientive','punctual']:
+            try:
+                assert('@' in word or '~' in word)
+            except AssertionError:
+                raise ValueError("%s general form must include ablaut vowel: %s" % (self.category.title(), word))
         
         for form_name in PKWord.categories[self.category]:
             if form_name in self.forms:
@@ -170,6 +192,9 @@ class PKWord:
             self.forms[form_name] = form_obj
         if defn:
             self.forms[form_name].set_defn(defn)
+
+    def get_citation_form(self):
+        return self.forms[self.citation_form]
 
     def from_tag(language_tag, category):
         lemma = PKWord(category)
@@ -200,7 +225,7 @@ class DictEntry:
         if category in PKWord.categories:
             self.category = category
         else:
-            raise ValueError("Invalid word category: " + category)
+            raise ValueError("Invalid word category: " + str(category))
         
         if origin in DictEntry.origins:
             self.origin = origin
@@ -216,7 +241,10 @@ class DictEntry:
         category = entry.get("category")
         ident = entry.get("id")
         origin = entry.get("origin")
-        de = DictEntry(category,ident,origin)
+        try:
+            de = DictEntry(category,ident,origin)
+        except ValueError:
+            raise ValueError("Fucked up dictionary entry:\n" + etree.tostring(entry,pretty_print=True).decode('utf-8'))
         for language_tag in entry:
             de.new_language(language_tag)
         return de
