@@ -4,12 +4,12 @@ import copy
 from lxml import etree
 
 def replacement_suite(replacements,word):
-    for replacement_pair in replacements:
-        word = word.replace(replacement_pair[0],replacement_pair[1])
+    for item, replacement in replacements:
+        word = re.sub(item, replacement, word)
     return word
 
 def option_re(l):
-    return r'[' + ''.join(l) + ']'
+    return '[' + ''.join(l) + ']'
 
 def find(regex,s):
     result = re.findall(regex,s)
@@ -21,7 +21,7 @@ def find(regex,s):
 flatten = lambda l: [item for sublist in l for item in sublist]
 
 PK_PRES = ['H','M']
-PK_ONSS = ['m','n','ñ','ṅ','p','t','c','k','v','r','s','y','h']
+PK_ONSS = ['m','n','ñ','ṅ','G','p','t','c','k','K','v','r','s','y','h']
 PK_VOWS = ['ā','a','i','u','e','o','Y','W']
 
 class PKForm:
@@ -33,10 +33,10 @@ class PKForm:
     tail_vows = ['ā','i']
     tail_blocking_vows = ['ā','u','o']
     prefix_re = option_re(PK_PRES)
-    onset_re = option_re(PK_ONSS) + 'v?'
+    onset_re = option_re(PK_ONSS)
     vowel_re = option_re(PK_VOWS)
     accent_re = r'!'
-    syll_re = prefix_re + '?' + option_re(PK_ONSS) + '?v?' + vowel_re + accent_re + '?'
+    syll_re = prefix_re + '?' + onset_re + '?' + vowel_re + accent_re + '?|&'
     
 ##    onsets = ["ṅkv","mp","nt","ñc","ṅk","kv","p","t","c","k","'kv","'p","'t","'c","'k","ṅv","m","n","ñ","ṅ","r","y","v","s","h",'']
 ##    nuclei = ["āi","āu","ā","a","e","i","o","u"]
@@ -61,7 +61,7 @@ class PKForm:
 
         self.defn = 'Not defined.'
         
-        if 'ai' in self.classical() or 'au' in self.classical():
+        if 'əi' in self.classical() or 'əu' in self.classical():
             print("Warning: potentially incorrect root: " + self.classical())
 
     def set_defn(self,s):
@@ -69,22 +69,24 @@ class PKForm:
 
     def specialChars(word):
         word = str(word)
-        replacements = [('aai','Y'),('aau','W'),('aa','ā'),('ny','ñ'),('ng','ṅ'),('l','r')]
+        orig = word
+        replacements = [('[mn]([ptck])',r'M\1'),('[ptck\']([ptck])',r'H\1'),
+                        ('aai','Y'),('aau','W'),('aa','ā'),('ngv','G'),('kv','K'),('ny','ñ'),('ng','ṅ'),('l','r'),
+                        ('&(%s?%s%s)' % (PKForm.prefix_re,PKForm.onset_re,PKForm.vowel_re),r'\1\1'),
+                        ('&(%s%s?%s)' % (PKForm.vowel_re,PKForm.prefix_re,PKForm.onset_re),r'\1\1'),
+                        ('N([ptckK])',r'M\1'),('Nv','m'),('Nr','n'),('Ny','ñ'),('N(%s)' % PKForm.vowel_re,r'n\1'),('N',''),]
         word = replacement_suite(replacements,word)
-
-        nasalized_cons = ['mp','nt','nc','nk']
-        for nc in nasalized_cons:
-            word = word.replace(nc,'M'+nc[1])
-
-        glottalized_cons = ['pp','tt','cc','kk','\'p','\'t','\'c','\'k']
-        for gc in glottalized_cons:
-            word = word.replace(gc,'H'+gc[1])
-
+        if '&' in word:
+            raise ValueError("Invalid ampersand placement: " + orig)
         return word
 
     def parse(s):
         prelim = PKForm.specialChars(s)
         sylls = re.findall(PKForm.syll_re,prelim)
+        if ''.join(sylls) != prelim:
+            print(sylls)
+            print(prelim)
+            raise ValueError("Invalid Proto-Kasanic root: " + s)
         return [PKForm.parsesyll(syll) for syll in sylls]
 
     def parsesyll(syll):
@@ -126,15 +128,18 @@ class PKForm:
             tail = PKForm.tail_letter if syll[2] in PKForm.tail_vows else ''
             out += tail
 
+        replacements = [('A','Q'),('ā','a'),('Ā','A'),('K','p'),('G','m'),('ñ','N'),('ṅ','g')]
+        out = replacement_suite(replacements,out)
+
         if syll[3] == '!' and augment:
             out += 'K' + PKForm.tail_letter
     
-        replacements = [('A','Q'),('ā','a'),('Ā','A'),('kv','p'),('ṅv','m'),('ñ','N'),('ṅ','g')]
-        return replacement_suite(replacements,out)
+        return out
 
     def classical(self):
         flattened = ''.join(flatten(self.structure))
-        replacements = [('Y','āi'),('W','āu'),('H','\''),('Mp','mp'),('Mt','nt'),('Mc','ñc'),('Mk','ṅk'),('!','')]
+        replacements = [('Y','āi'),('W','āu'),('H','\''),('K','kv'),('G','ṅv'),('Mp','mp'),('Mt','nt'),('Mc','ñc'),('Mk','ṅk'),('!',''),
+                        ('a','ə'),('ā','a')]
         return replacement_suite(replacements,flattened)
 
     def alphabetical(self):
@@ -153,7 +158,7 @@ class PKWord:
     citation_forms = {"fientive":"im-np","punctual":"np","stative":"gn","uninflected":"gn"}
     low_ablauts = {"np":"e","pt":"o","im-np":"aa","im-pt":"o","pf":"e","in":"aa","fq-np":"e","fq-pt":"o"}
     high_ablauts = {"np":"i","pt":"u","im-np":"a","im-pt":"u","pf":"i","in":"a","fq-np":"i","fq-pt":"u"}
-    prefixes = {"in":"in"}
+    prefixes = {"in":"iN","fq-np":"&","fq-pt":"&"}
 
     def __init__(self, category):
         if category in PKWord.categories:

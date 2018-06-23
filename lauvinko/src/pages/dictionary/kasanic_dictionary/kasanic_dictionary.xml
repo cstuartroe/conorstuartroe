@@ -1,409 +1,574 @@
 <p>This dictionary has 68 entries!</p>
+<script>
+function toggleshown(table_toggler) {
+    var table = $(table_toggler).parent().parent().parent().parent()
+    table.toggleClass("notshown")
+    if(table_toggler.innerHTML == "Show") {
+        table_toggler.innerHTML = "Hide";
+    } else {
+        table_toggler.innerHTML = "Show";
+    }
+}
+</script>
 <div class="entry" id="build">
 <h2 class="lauvinko">Aqkaey</h2>
-<h3><span style="font-style:italic;">ākāye</span> - fientive root</h3>
-<p>To build, establish, appoint.</p>
-<p>im-np <span class="lauvinko">Aqkaey</span> ākāye</p><p>im-pt <span class="lauvinko">Okaey</span> okāye</p><p>pf <span class="lauvinko">Ekaey</span> ekāye</p><p>in <span class="lauvinko">Iqnakaey</span> inākāye</p><p>fq-np <span class="lauvinko">Ekaey</span> ekāye</p><p>fq-pt <span class="lauvinko">Okaey</span> okāye</p></div>
+<h3><span style="font-style:italic;">akaye</span> - To build, establish, appoint. (fientive)</h3>
+<table class="notshown">
+<thead><tr><th colspan="3">Classical Kasanic Inflection - <a onclick="toggleshown(this)">Show</a></th></tr></thead><tbody>
+<tr><td></td><td>Nonpast</td><td>Past</td></tr>
+<tr><td>Imperfective</td><td><span class="lauvinko">Aqkaey</span><br/><span style="font-style:italic;">akaye</span></td><td><span class="lauvinko">Okaey</span><br/><span style="font-style:italic;">okaye</span></td></tr>
+<tr><td>Perfective</td><td colspan="2"><span class="lauvinko">Ekaey</span><br/><span style="font-style:italic;">ekaye</span></td></tr>
+<tr><td>Frequentative</td><td><span class="lauvinko">Eekqkaey</span><br/><span style="font-style:italic;">ekekaye</span></td><td><span class="lauvinko">Oekokaey</span><br/><span style="font-style:italic;">okokaye</span></td></tr>
+<tr><td>Inceptive</td><td colspan="2"><span class="lauvinko">Iqnakaey</span><br/><span style="font-style:italic;">inakaye</span></td></tr>
+</tbody></table>
+</div>
 <hr/>
 <div class="entry" id="manner">
 <h2 class="lauvinko">AqHka</h2>
-<h3><span style="font-style:italic;">ā'kā</span> - uninflected root</h3>
-<p>Custom, manner, appearance.</p>
-<p>gn <span class="lauvinko">AqHka</span> ā'kā</p></div>
+<h3><span style="font-style:italic;">a'ka</span> - Custom, manner, appearance. (uninflected)</h3>
+</div>
 <hr/>
 <div class="entry" id="aunt">
 <h2 class="lauvinko">Aqtqri</h2>
-<h3><span style="font-style:italic;">ātari</span> - uninflected root</h3>
-<p>Kin, clanmate, sister, aunt.</p>
-<p>gn <span class="lauvinko">Aqtqri</span> ātari</p></div>
+<h3><span style="font-style:italic;">atəri</span> - Kin, clanmate, sister, aunt. (uninflected)</h3>
+</div>
 <hr/>
 <div class="entry" id="kin">
 <h2 class="lauvinko">Wetq</h2>
-<h3><span style="font-style:italic;">āute</span> - uninflected root</h3>
-<p>Kin, sameblooded.</p>
-<p>gn <span class="lauvinko">Wetq</span> āute</p></div>
+<h3><span style="font-style:italic;">aute</span> - Kin, sameblooded. (uninflected)</h3>
+</div>
 <hr/>
 <div class="entry" id="agitate">
 <h2 class="lauvinko">caMetqsa</h2>
-<h3><span style="font-style:italic;">cāntesā</span> - fientive root</h3>
-<p>To agitate.</p>
-<p>im-np <span class="lauvinko">caMetqsa</span> cāntesā</p><p>im-pt <span class="lauvinko">ecoMetqsa</span> contesā</p><p>pf <span class="lauvinko">ecMetqsa</span> centesā</p><p>in <span class="lauvinko">IqMcaMetqsa</span> iñcāntesā</p><p>fq-np <span class="lauvinko">ecMetqsa</span> centesā</p><p>fq-pt <span class="lauvinko">ecoMetqsa</span> contesā</p></div>
+<h3><span style="font-style:italic;">cantesa</span> - To agitate. (fientive)</h3>
+<table class="notshown">
+<thead><tr><th colspan="3">Classical Kasanic Inflection - <a onclick="toggleshown(this)">Show</a></th></tr></thead><tbody>
+<tr><td></td><td>Nonpast</td><td>Past</td></tr>
+<tr><td>Imperfective</td><td><span class="lauvinko">caMetqsa</span><br/><span style="font-style:italic;">cantesa</span></td><td><span class="lauvinko">ecoMetqsa</span><br/><span style="font-style:italic;">contesa</span></td></tr>
+<tr><td>Perfective</td><td colspan="2"><span class="lauvinko">ecMetqsa</span><br/><span style="font-style:italic;">centesa</span></td></tr>
+<tr><td>Frequentative</td><td><span class="lauvinko">ececMetqsa</span><br/><span style="font-style:italic;">cecentesa</span></td><td><span class="lauvinko">ecoecoMetqsa</span><br/><span style="font-style:italic;">cocontesa</span></td></tr>
+<tr><td>Inceptive</td><td colspan="2"><span class="lauvinko">IqMcaMetqsa</span><br/><span style="font-style:italic;">iñcantesa</span></td></tr>
+</tbody></table>
+</div>
 <hr/>
 <div class="entry" id="bite">
 <h2 class="lauvinko">ciHkiq</h2>
-<h3><span style="font-style:italic;">ci'ki</span> - punctual root</h3>
-<p>To bite, chew.</p>
-<p>np <span class="lauvinko">ciHkiq</span> ci'ki</p><p>pt <span class="lauvinko">cuHkiq</span> cu'ki</p><p>fq-np <span class="lauvinko">ciHkiq</span> ci'ki</p><p>fq-pt <span class="lauvinko">cuHkiq</span> cu'ki</p></div>
+<h3><span style="font-style:italic;">ci'ki</span> - To bite, chew. (punctual)</h3>
+<table class="notshown">
+<thead><tr><th colspan="3">Classical Kasanic Inflection - <a onclick="toggleshown(this)">Show</a></th></tr></thead><tbody>
+<tr><td></td><td>Nonpast</td><td>Past</td></tr>
+<tr><td>Perfective</td><td><span class="lauvinko">ciHkiq</span><br/><span style="font-style:italic;">ci'ki</span></td><td><span class="lauvinko">cuHkiq</span><br/><span style="font-style:italic;">cu'ki</span></td></tr>
+<tr><td>Frequentative</td><td><span class="lauvinko">ciciHkiq</span><br/><span style="font-style:italic;">cici'ki</span></td><td><span class="lauvinko">cucuHkiq</span><br/><span style="font-style:italic;">cucu'ki</span></td></tr>
+</tbody></table>
+</div>
 <hr/>
 <div class="entry" id="finger">
 <h2 class="lauvinko">ecokiqen</h2>
-<h3><span style="font-style:italic;">cokine</span> - uninflected root</h3>
-<p>Finger.</p>
-<p>gn <span class="lauvinko">ecokiqen</span> cokine</p></div>
+<h3><span style="font-style:italic;">cokine</span> - Finger. (uninflected)</h3>
+</div>
 <hr/>
 <div class="entry" id="search">
 <h2 class="lauvinko">HcaMeko</h2>
-<h3><span style="font-style:italic;">'cāṅko</span> - fientive root</h3>
-<p>To search, find.</p>
-<p>im-np <span class="lauvinko">HcaMeko</span> 'cāṅko</p><p>im-pt <span class="lauvinko">HecoMeko</span> 'coṅko</p><p>pf <span class="lauvinko">HecMeko</span> 'ceṅko</p><p>in <span class="lauvinko">IqHcaMeko</span> i'cāṅko</p><p>fq-np <span class="lauvinko">HecMeko</span> 'ceṅko</p><p>fq-pt <span class="lauvinko">HecoMeko</span> 'coṅko</p></div>
+<h3><span style="font-style:italic;">'caṅko</span> - To search, find. (fientive)</h3>
+<table class="notshown">
+<thead><tr><th colspan="3">Classical Kasanic Inflection - <a onclick="toggleshown(this)">Show</a></th></tr></thead><tbody>
+<tr><td></td><td>Nonpast</td><td>Past</td></tr>
+<tr><td>Imperfective</td><td><span class="lauvinko">HcaMeko</span><br/><span style="font-style:italic;">'caṅko</span></td><td><span class="lauvinko">HecoMeko</span><br/><span style="font-style:italic;">'coṅko</span></td></tr>
+<tr><td>Perfective</td><td colspan="2"><span class="lauvinko">HecMeko</span><br/><span style="font-style:italic;">'ceṅko</span></td></tr>
+<tr><td>Frequentative</td><td><span class="lauvinko">HecHecMeko</span><br/><span style="font-style:italic;">'ce'ceṅko</span></td><td><span class="lauvinko">HecoHecoMeko</span><br/><span style="font-style:italic;">'co'coṅko</span></td></tr>
+<tr><td>Inceptive</td><td colspan="2"><span class="lauvinko">IqHcaMeko</span><br/><span style="font-style:italic;">i'caṅko</span></td></tr>
+</tbody></table>
+</div>
 <hr/>
 <div class="entry" id="cross">
 <h2 class="lauvinko">EHkugi</h2>
-<h3><span style="font-style:italic;">e'kuṅi</span> - punctual root</h3>
-<p>To cross, go over.</p>
-<p>np <span class="lauvinko">EHkugi</span> e'kuṅi</p><p>pt <span class="lauvinko">OHkugi</span> o'kuṅi</p><p>fq-np <span class="lauvinko">EHkugi</span> e'kuṅi</p><p>fq-pt <span class="lauvinko">OHkugi</span> o'kuṅi</p></div>
+<h3><span style="font-style:italic;">e'kuṅi</span> - To cross, go over. (punctual)</h3>
+<table class="notshown">
+<thead><tr><th colspan="3">Classical Kasanic Inflection - <a onclick="toggleshown(this)">Show</a></th></tr></thead><tbody>
+<tr><td></td><td>Nonpast</td><td>Past</td></tr>
+<tr><td>Perfective</td><td><span class="lauvinko">EHkugi</span><br/><span style="font-style:italic;">e'kuṅi</span></td><td><span class="lauvinko">OHkugi</span><br/><span style="font-style:italic;">o'kuṅi</span></td></tr>
+<tr><td>Frequentative</td><td><span class="lauvinko">EHekqHkugi</span><br/><span style="font-style:italic;">e'ke'kuṅi</span></td><td><span class="lauvinko">OHekoHkugi</span><br/><span style="font-style:italic;">o'ko'kuṅi</span></td></tr>
+</tbody></table>
+</div>
 <hr/>
 <div class="entry" id="insert">
 <h2 class="lauvinko">EHpY</h2>
-<h3><span style="font-style:italic;">e'pāi</span> - punctual root</h3>
-<p>To insert, pierce.</p>
-<p>np <span class="lauvinko">EHpY</span> e'pāi</p><p>pt <span class="lauvinko">OHpY</span> o'pāi</p><p>fq-np <span class="lauvinko">EHpY</span> e'pāi</p><p>fq-pt <span class="lauvinko">OHpY</span> o'pāi</p></div>
+<h3><span style="font-style:italic;">e'pai</span> - To insert, pierce. (punctual)</h3>
+<table class="notshown">
+<thead><tr><th colspan="3">Classical Kasanic Inflection - <a onclick="toggleshown(this)">Show</a></th></tr></thead><tbody>
+<tr><td></td><td>Nonpast</td><td>Past</td></tr>
+<tr><td>Perfective</td><td><span class="lauvinko">EHpY</span><br/><span style="font-style:italic;">e'pai</span></td><td><span class="lauvinko">OHpY</span><br/><span style="font-style:italic;">o'pai</span></td></tr>
+<tr><td>Frequentative</td><td><span class="lauvinko">EHepHpY</span><br/><span style="font-style:italic;">e'pe'pai</span></td><td><span class="lauvinko">OHepoHpY</span><br/><span style="font-style:italic;">o'po'pai</span></td></tr>
+</tbody></table>
+</div>
 <hr/>
 <div class="entry" id="not">
 <h2 class="lauvinko">Er</h2>
-<h3><span style="font-style:italic;">era</span> - uninflected root</h3>
-<p>Not, no.</p>
-<p>gn <span class="lauvinko">Er</span> era</p></div>
+<h3><span style="font-style:italic;">erə</span> - Not, no. (uninflected)</h3>
+</div>
 <hr/>
 <div class="entry" id="fight">
 <h2 class="lauvinko">hanacvi</h2>
-<h3><span style="font-style:italic;">hānācavi</span> - fientive root</h3>
-<p>To fight.</p>
-<p>im-np <span class="lauvinko">hanacvi</span> hānācavi</p><p>im-pt <span class="lauvinko">ehonacvi</span> honācavi</p><p>pf <span class="lauvinko">ehqnacvi</span> henācavi</p><p>in <span class="lauvinko">Iqhanacvi</span> ihānācavi</p><p>fq-np <span class="lauvinko">ehqnacvi</span> henācavi</p><p>fq-pt <span class="lauvinko">ehonacvi</span> honācavi</p></div>
+<h3><span style="font-style:italic;">hanacəvi</span> - To fight. (fientive)</h3>
+<table class="notshown">
+<thead><tr><th colspan="3">Classical Kasanic Inflection - <a onclick="toggleshown(this)">Show</a></th></tr></thead><tbody>
+<tr><td></td><td>Nonpast</td><td>Past</td></tr>
+<tr><td>Imperfective</td><td><span class="lauvinko">hanacvi</span><br/><span style="font-style:italic;">hanacəvi</span></td><td><span class="lauvinko">ehonacvi</span><br/><span style="font-style:italic;">honacəvi</span></td></tr>
+<tr><td>Perfective</td><td colspan="2"><span class="lauvinko">ehqnacvi</span><br/><span style="font-style:italic;">henacəvi</span></td></tr>
+<tr><td>Frequentative</td><td><span class="lauvinko">ehqehqnacvi</span><br/><span style="font-style:italic;">hehenacəvi</span></td><td><span class="lauvinko">ehoehonacvi</span><br/><span style="font-style:italic;">hohonacəvi</span></td></tr>
+<tr><td>Inceptive</td><td colspan="2"><span class="lauvinko">Iqhanacvi</span><br/><span style="font-style:italic;">ihanacəvi</span></td></tr>
+</tbody></table>
+</div>
 <hr/>
 <div class="entry" id="water">
 <h2 class="lauvinko">ehqeho</h2>
-<h3><span style="font-style:italic;">heho</span> - uninflected root</h3>
-<p>Water.</p>
-<p>gn <span class="lauvinko">ehqeho</span> heho</p></div>
+<h3><span style="font-style:italic;">heho</span> - Water. (uninflected)</h3>
+</div>
 <hr/>
 <div class="entry" id="rice">
 <h2 class="lauvinko">ehqep</h2>
-<h3><span style="font-style:italic;">hekve</span> - uninflected root</h3>
-<p>Rice.</p>
-<p>gn <span class="lauvinko">ehqep</span> hekve</p></div>
+<h3><span style="font-style:italic;">hekve</span> - Rice. (uninflected)</h3>
+</div>
 <hr/>
 <div class="entry" id="toe">
 <h2 class="lauvinko">ehomum</h2>
-<h3><span style="font-style:italic;">homuma</span> - uninflected root</h3>
-<p>Toe.</p>
-<p>gn <span class="lauvinko">ehomum</span> homuma</p></div>
+<h3><span style="font-style:italic;">homumə</span> - Toe. (uninflected)</h3>
+</div>
 <hr/>
 <div class="entry" id="daughter1">
 <h2 class="lauvinko">Iqerohiq</h2>
-<h3><span style="font-style:italic;">irohi</span> - uninflected root</h3>
-<p>Father's daughter.</p>
-<p>gn <span class="lauvinko">Iqerohiq</span> irohi</p></div>
-<hr/>
-<div class="entry" id="north">
-<h2 class="lauvinko">kqmanW</h2>
-<h3><span style="font-style:italic;">kamānāu</span> - uninflected root</h3>
-<p>North.</p>
-<p>gn <span class="lauvinko">kqmanW</span> kamānāu</p></div>
-<hr/>
-<div class="entry" id="hut">
-<h2 class="lauvinko">kqravi</h2>
-<h3><span style="font-style:italic;">karāvi</span> - uninflected root</h3>
-<p>Hut, shelter.</p>
-<p>gn <span class="lauvinko">kqravi</span> karāvi</p></div>
+<h3><span style="font-style:italic;">irohi</span> - Father's daughter. (uninflected)</h3>
+</div>
 <hr/>
 <div class="entry" id="son1">
 <h2 class="lauvinko">kaMka</h2>
-<h3><span style="font-style:italic;">kāṅkā</span> - uninflected root</h3>
-<p>Father's son.</p>
-<p>gn <span class="lauvinko">kaMka</span> kāṅkā</p></div>
+<h3><span style="font-style:italic;">kaṅka</span> - Father's son. (uninflected)</h3>
+</div>
 <hr/>
 <div class="entry" id="speak">
 <h2 class="lauvinko">kaHepota</h2>
-<h3><span style="font-style:italic;">kā'potā</span> - fientive root</h3>
-<p>To speak, say.</p>
-<p>im-np <span class="lauvinko">kaHepota</span> kā'potā</p><p>im-pt <span class="lauvinko">ekoHepota</span> ko'potā</p><p>pf <span class="lauvinko">ekqHepota</span> ke'potā</p><p>in <span class="lauvinko">IqMkaHepota</span> iṅkā'potā</p><p>fq-np <span class="lauvinko">ekqHepota</span> ke'potā</p><p>fq-pt <span class="lauvinko">ekoHepota</span> ko'potā</p></div>
+<h3><span style="font-style:italic;">ka'pota</span> - To speak, say. (fientive)</h3>
+<table class="notshown">
+<thead><tr><th colspan="3">Classical Kasanic Inflection - <a onclick="toggleshown(this)">Show</a></th></tr></thead><tbody>
+<tr><td></td><td>Nonpast</td><td>Past</td></tr>
+<tr><td>Imperfective</td><td><span class="lauvinko">kaHepota</span><br/><span style="font-style:italic;">ka'pota</span></td><td><span class="lauvinko">ekoHepota</span><br/><span style="font-style:italic;">ko'pota</span></td></tr>
+<tr><td>Perfective</td><td colspan="2"><span class="lauvinko">ekqHepota</span><br/><span style="font-style:italic;">ke'pota</span></td></tr>
+<tr><td>Frequentative</td><td><span class="lauvinko">ekqekqHepota</span><br/><span style="font-style:italic;">keke'pota</span></td><td><span class="lauvinko">ekoekoHepota</span><br/><span style="font-style:italic;">koko'pota</span></td></tr>
+<tr><td>Inceptive</td><td colspan="2"><span class="lauvinko">IqMkaHepota</span><br/><span style="font-style:italic;">iṅka'pota</span></td></tr>
+</tbody></table>
+</div>
 <hr/>
 <div class="entry" id="son2">
 <h2 class="lauvinko">kaerpa</h2>
-<h3><span style="font-style:italic;">kārepā</span> - uninflected root</h3>
-<p>Mother's son.</p>
-<p>gn <span class="lauvinko">kaerpa</span> kārepā</p></div>
+<h3><span style="font-style:italic;">karepa</span> - Mother's son. (uninflected)</h3>
+</div>
 <hr/>
 <div class="entry" id="gust">
 <h2 class="lauvinko">kiqMkapiru</h2>
-<h3><span style="font-style:italic;">kiṅkākviru</span> - punctual root</h3>
-<p>To blow, gust.</p>
-<p>np <span class="lauvinko">kiqMkapiru</span> kiṅkākviru</p><p>pt <span class="lauvinko">kuMkapiru</span> kuṅkākviru</p><p>fq-np <span class="lauvinko">kiqMkapiru</span> kiṅkākviru</p><p>fq-pt <span class="lauvinko">kuMkapiru</span> kuṅkākviru</p></div>
+<h3><span style="font-style:italic;">kiṅkakviru</span> - To blow, gust. (punctual)</h3>
+<table class="notshown">
+<thead><tr><th colspan="3">Classical Kasanic Inflection - <a onclick="toggleshown(this)">Show</a></th></tr></thead><tbody>
+<tr><td></td><td>Nonpast</td><td>Past</td></tr>
+<tr><td>Perfective</td><td><span class="lauvinko">kiqMkapiru</span><br/><span style="font-style:italic;">kiṅkakviru</span></td><td><span class="lauvinko">kuMkapiru</span><br/><span style="font-style:italic;">kuṅkakviru</span></td></tr>
+<tr><td>Frequentative</td><td><span class="lauvinko">kiqkiqMkapiru</span><br/><span style="font-style:italic;">kikiṅkakviru</span></td><td><span class="lauvinko">kukuMkapiru</span><br/><span style="font-style:italic;">kukuṅkakviru</span></td></tr>
+</tbody></table>
+</div>
 <hr/>
 <div class="entry" id="much">
 <h2 class="lauvinko">ekoero</h2>
-<h3><span style="font-style:italic;">koro</span> - uninflected root</h3>
-<p>Much, many.</p>
-<p>gn <span class="lauvinko">ekoero</span> koro</p></div>
-<hr/>
-<div class="entry" id="mighty">
-<h2 class="lauvinko">panikiq</h2>
-<h3><span style="font-style:italic;">kvāniki</span> - fientive root</h3>
-<p>To be great, mighty.</p>
-<p>im-np <span class="lauvinko">panikiq</span> kvāniki</p><p>im-pt <span class="lauvinko">eponikiq</span> kvoniki</p><p>pf <span class="lauvinko">epnikiq</span> kveniki</p><p>in <span class="lauvinko">IqMpanikiq</span> iṅkvāniki</p><p>fq-np <span class="lauvinko">epnikiq</span> kveniki</p><p>fq-pt <span class="lauvinko">eponikiq</span> kvoniki</p></div>
+<h3><span style="font-style:italic;">koro</span> - Much, many. (uninflected)</h3>
+</div>
 <hr/>
 <div class="entry" id="heel">
 <h2 class="lauvinko">pY</h2>
-<h3><span style="font-style:italic;">kvāi</span> - uninflected root</h3>
-<p>Heel.</p>
-<p>gn <span class="lauvinko">pY</span> kvāi</p></div>
+<h3><span style="font-style:italic;">kvai</span> - Heel. (uninflected)</h3>
+</div>
 <hr/>
 <div class="entry" id="egg">
 <h2 class="lauvinko">pYMta</h2>
-<h3><span style="font-style:italic;">kvāintā</span> - uninflected root</h3>
-<p>Egg.</p>
-<p>gn <span class="lauvinko">pYMta</span> kvāintā</p></div>
+<h3><span style="font-style:italic;">kvainta</span> - Egg. (uninflected)</h3>
+</div>
+<hr/>
+<div class="entry" id="mighty">
+<h2 class="lauvinko">panikiq</h2>
+<h3><span style="font-style:italic;">kvaniki</span> - To be great, mighty. (fientive)</h3>
+<table class="notshown">
+<thead><tr><th colspan="3">Classical Kasanic Inflection - <a onclick="toggleshown(this)">Show</a></th></tr></thead><tbody>
+<tr><td></td><td>Nonpast</td><td>Past</td></tr>
+<tr><td>Imperfective</td><td><span class="lauvinko">panikiq</span><br/><span style="font-style:italic;">kvaniki</span></td><td><span class="lauvinko">eponikiq</span><br/><span style="font-style:italic;">kvoniki</span></td></tr>
+<tr><td>Perfective</td><td colspan="2"><span class="lauvinko">epnikiq</span><br/><span style="font-style:italic;">kveniki</span></td></tr>
+<tr><td>Frequentative</td><td><span class="lauvinko">epepnikiq</span><br/><span style="font-style:italic;">kvekveniki</span></td><td><span class="lauvinko">epoeponikiq</span><br/><span style="font-style:italic;">kvokvoniki</span></td></tr>
+<tr><td>Inceptive</td><td colspan="2"><span class="lauvinko">IqMpanikiq</span><br/><span style="font-style:italic;">iṅkvaniki</span></td></tr>
+</tbody></table>
+</div>
 <hr/>
 <div class="entry" id="part">
 <h2 class="lauvinko">pW</h2>
-<h3><span style="font-style:italic;">kvāu</span> - uninflected root</h3>
-<p>Part, piece.</p>
-<p>gn <span class="lauvinko">pW</span> kvāu</p></div>
+<h3><span style="font-style:italic;">kvau</span> - Part, piece. (uninflected)</h3>
+</div>
 <hr/>
 <div class="entry" id="add">
 <h2 class="lauvinko">pierMta</h2>
-<h3><span style="font-style:italic;">kvirentā</span> - punctual root</h3>
-<p>To add.</p>
-<p>np <span class="lauvinko">pierMta</span> kvirentā</p><p>pt <span class="lauvinko">puerMta</span> kvurentā</p><p>fq-np <span class="lauvinko">pierMta</span> kvirentā</p><p>fq-pt <span class="lauvinko">puerMta</span> kvurentā</p></div>
+<h3><span style="font-style:italic;">kvirenta</span> - To add. (punctual)</h3>
+<table class="notshown">
+<thead><tr><th colspan="3">Classical Kasanic Inflection - <a onclick="toggleshown(this)">Show</a></th></tr></thead><tbody>
+<tr><td></td><td>Nonpast</td><td>Past</td></tr>
+<tr><td>Perfective</td><td><span class="lauvinko">pierMta</span><br/><span style="font-style:italic;">kvirenta</span></td><td><span class="lauvinko">puerMta</span><br/><span style="font-style:italic;">kvurenta</span></td></tr>
+<tr><td>Frequentative</td><td><span class="lauvinko">pipierMta</span><br/><span style="font-style:italic;">kvikvirenta</span></td><td><span class="lauvinko">pupuerMta</span><br/><span style="font-style:italic;">kvukvurenta</span></td></tr>
+</tbody></table>
+</div>
 <hr/>
-<div class="entry" id="knife">
-<h2 class="lauvinko">mhiqkq</h2>
-<h3><span style="font-style:italic;">mahika</span> - uninflected root</h3>
-<p>Knife.</p>
-<p>gn <span class="lauvinko">mhiqkq</span> mahika</p></div>
+<div class="entry" id="north">
+<h2 class="lauvinko">kqmanW</h2>
+<h3><span style="font-style:italic;">kəmanau</span> - North. (uninflected)</h3>
+</div>
+<hr/>
+<div class="entry" id="hut">
+<h2 class="lauvinko">kqravi</h2>
+<h3><span style="font-style:italic;">kəravi</span> - Hut, shelter. (uninflected)</h3>
+</div>
 <hr/>
 <div class="entry" id="hand">
 <h2 class="lauvinko">maHecoepo</h2>
-<h3><span style="font-style:italic;">mā'copo</span> - uninflected root</h3>
-<p>Hand.</p>
-<p>gn <span class="lauvinko">maHecoepo</span> mā'copo</p></div>
+<h3><span style="font-style:italic;">ma'copo</span> - Hand. (uninflected)</h3>
+</div>
 <hr/>
 <div class="entry" id="mother">
 <h2 class="lauvinko">mama</h2>
-<h3><span style="font-style:italic;">māmā</span> - uninflected root</h3>
-<p>Mother.</p>
-<p>gn <span class="lauvinko">mama</span> māmā</p></div>
+<h3><span style="font-style:italic;">mama</span> - Mother. (uninflected)</h3>
+</div>
 <hr/>
 <div class="entry" id="eat">
 <h2 class="lauvinko">maneg</h2>
-<h3><span style="font-style:italic;">mānaṅe</span> - fientive root</h3>
-<p>To eat, consume.</p>
-<p>im-np <span class="lauvinko">maneg</span> mānaṅe</p><p>im-pt <span class="lauvinko">emoneg</span> monaṅe</p><p>pf <span class="lauvinko">emneg</span> menaṅe</p><p>in <span class="lauvinko">Iqmaneg</span> imānaṅe</p><p>fq-np <span class="lauvinko">emneg</span> menaṅe</p><p>fq-pt <span class="lauvinko">emoneg</span> monaṅe</p></div>
+<h3><span style="font-style:italic;">manəṅe</span> - To eat, consume. (fientive)</h3>
+<table class="notshown">
+<thead><tr><th colspan="3">Classical Kasanic Inflection - <a onclick="toggleshown(this)">Show</a></th></tr></thead><tbody>
+<tr><td></td><td>Nonpast</td><td>Past</td></tr>
+<tr><td>Imperfective</td><td><span class="lauvinko">maneg</span><br/><span style="font-style:italic;">manəṅe</span></td><td><span class="lauvinko">emoneg</span><br/><span style="font-style:italic;">monəṅe</span></td></tr>
+<tr><td>Perfective</td><td colspan="2"><span class="lauvinko">emneg</span><br/><span style="font-style:italic;">menəṅe</span></td></tr>
+<tr><td>Frequentative</td><td><span class="lauvinko">ememneg</span><br/><span style="font-style:italic;">memenəṅe</span></td><td><span class="lauvinko">emoemoneg</span><br/><span style="font-style:italic;">momonəṅe</span></td></tr>
+<tr><td>Inceptive</td><td colspan="2"><span class="lauvinko">Iqmaneg</span><br/><span style="font-style:italic;">imanəṅe</span></td></tr>
+</tbody></table>
+</div>
 <hr/>
 <div class="entry" id="pandan">
 <h2 class="lauvinko">maetoec</h2>
-<h3><span style="font-style:italic;">mātoce</span> - uninflected root</h3>
-<p>Pandan.</p>
-<p>gn <span class="lauvinko">maetoec</span> mātoce</p></div>
+<h3><span style="font-style:italic;">matoce</span> - Pandan. (uninflected)</h3>
+</div>
 <hr/>
 <div class="entry" id="mild">
 <h2 class="lauvinko">emMtqvW</h2>
-<h3><span style="font-style:italic;">mentavāu</span> - stative root</h3>
-<p>Mild, easy.</p>
-<p>gn <span class="lauvinko">emMtqvW</span> mentavāu</p><p>pt <span class="lauvinko">emMtqvW</span> mentavāu</p><p>in <span class="lauvinko">IqemMtqvW</span> imentavāu</p></div>
+<h3><span style="font-style:italic;">mentəvau</span> - Mild, easy. (stative)</h3>
+<table class="notshown">
+<thead><tr><th colspan="3">Classical Kasanic Inflection - <a onclick="toggleshown(this)">Show</a></th></tr></thead><tbody>
+<tr><td></td><td>Nonpast</td><td>Past</td></tr>
+<tr><td>Imperfective</td><td><span class="lauvinko">emMtqvW</span><br/><span style="font-style:italic;">mentəvau</span></td><td><span class="lauvinko">emMtqvW</span><br/><span style="font-style:italic;">mentəvau</span></td></tr>
+<tr><td>Inceptive</td><td colspan="2"><span class="lauvinko">IqemMtqvW</span><br/><span style="font-style:italic;">imentəvau</span></td></tr>
+</tbody></table>
+</div>
 <hr/>
 <div class="entry" id="sister">
 <h2 class="lauvinko">miero</h2>
-<h3><span style="font-style:italic;">miro</span> - uninflected root</h3>
-<p>Sister.</p>
-<p>gn <span class="lauvinko">miero</span> miro</p></div>
+<h3><span style="font-style:italic;">miro</span> - Sister. (uninflected)</h3>
+</div>
 <hr/>
 <div class="entry" id="woman">
 <h2 class="lauvinko">emoka</h2>
-<h3><span style="font-style:italic;">mokā</span> - uninflected root</h3>
-<p>Woman, female.</p>
-<p>gn <span class="lauvinko">emoka</span> mokā</p></div>
+<h3><span style="font-style:italic;">moka</span> - Woman, female. (uninflected)</h3>
+</div>
+<hr/>
+<div class="entry" id="knife">
+<h2 class="lauvinko">mhiqkq</h2>
+<h3><span style="font-style:italic;">məhikə</span> - Knife. (uninflected)</h3>
+</div>
 <hr/>
 <div class="entry" id="mango">
 <h2 class="lauvinko">natqmi</h2>
-<h3><span style="font-style:italic;">nātami</span> - uninflected root</h3>
-<p>Mango.</p>
-<p>gn <span class="lauvinko">natqmi</span> nātami</p></div>
+<h3><span style="font-style:italic;">natəmi</span> - Mango. (uninflected)</h3>
+</div>
 <hr/>
 <div class="entry" id="stand">
 <h2 class="lauvinko">MtiqHetokq</h2>
-<h3><span style="font-style:italic;">nti'toka</span> - stative root</h3>
-<p>To stand.</p>
-<p>gn <span class="lauvinko">MtiqHetokq</span> nti'toka</p><p>pt <span class="lauvinko">MtiqHetokq</span> nti'toka</p><p>in <span class="lauvinko">IqMtiqHetokq</span> inti'toka</p></div>
+<h3><span style="font-style:italic;">nti'tokə</span> - To stand. (stative)</h3>
+<table class="notshown">
+<thead><tr><th colspan="3">Classical Kasanic Inflection - <a onclick="toggleshown(this)">Show</a></th></tr></thead><tbody>
+<tr><td></td><td>Nonpast</td><td>Past</td></tr>
+<tr><td>Imperfective</td><td><span class="lauvinko">MtiqHetokq</span><br/><span style="font-style:italic;">nti'tokə</span></td><td><span class="lauvinko">MtiqHetokq</span><br/><span style="font-style:italic;">nti'tokə</span></td></tr>
+<tr><td>Inceptive</td><td colspan="2"><span class="lauvinko">IqMtiqHetokq</span><br/><span style="font-style:italic;">inti'tokə</span></td></tr>
+</tbody></table>
+</div>
 <hr/>
 <div class="entry" id="all">
 <h2 class="lauvinko">NYsa</h2>
-<h3><span style="font-style:italic;">ñāisā</span> - uninflected root</h3>
-<p>All, every.</p>
-<p>gn <span class="lauvinko">NYsa</span> ñāisā</p></div>
+<h3><span style="font-style:italic;">ñaisa</span> - All, every. (uninflected)</h3>
+</div>
 <hr/>
 <div class="entry" id="need">
 <h2 class="lauvinko">eNovipi</h2>
-<h3><span style="font-style:italic;">ñovipi</span> - stative root</h3>
-<p>To need.</p>
-<p>gn <span class="lauvinko">eNovipi</span> ñovipi</p><p>pt <span class="lauvinko">eNovipi</span> ñovipi</p><p>in <span class="lauvinko">IqeNovipi</span> iñovipi</p></div>
+<h3><span style="font-style:italic;">ñovipi</span> - To need. (stative)</h3>
+<table class="notshown">
+<thead><tr><th colspan="3">Classical Kasanic Inflection - <a onclick="toggleshown(this)">Show</a></th></tr></thead><tbody>
+<tr><td></td><td>Nonpast</td><td>Past</td></tr>
+<tr><td>Imperfective</td><td><span class="lauvinko">eNovipi</span><br/><span style="font-style:italic;">ñovipi</span></td><td><span class="lauvinko">eNovipi</span><br/><span style="font-style:italic;">ñovipi</span></td></tr>
+<tr><td>Inceptive</td><td colspan="2"><span class="lauvinko">IqeNovipi</span><br/><span style="font-style:italic;">iñovipi</span></td></tr>
+</tbody></table>
+</div>
 <hr/>
 <div class="entry" id="wise">
 <h2 class="lauvinko">Mcaey</h2>
-<h3><span style="font-style:italic;">ñcāye</span> - stative root</h3>
-<p>Wise, intelligent.</p>
-<p>gn <span class="lauvinko">Mcaey</span> ñcāye</p><p>pt <span class="lauvinko">Mcaey</span> ñcāye</p><p>in <span class="lauvinko">IqMcaey</span> iñcāye</p></div>
+<h3><span style="font-style:italic;">ñcaye</span> - Wise, intelligent. (stative)</h3>
+<table class="notshown">
+<thead><tr><th colspan="3">Classical Kasanic Inflection - <a onclick="toggleshown(this)">Show</a></th></tr></thead><tbody>
+<tr><td></td><td>Nonpast</td><td>Past</td></tr>
+<tr><td>Imperfective</td><td><span class="lauvinko">Mcaey</span><br/><span style="font-style:italic;">ñcaye</span></td><td><span class="lauvinko">Mcaey</span><br/><span style="font-style:italic;">ñcaye</span></td></tr>
+<tr><td>Inceptive</td><td colspan="2"><span class="lauvinko">IqMcaey</span><br/><span style="font-style:italic;">iñcaye</span></td></tr>
+</tbody></table>
+</div>
 <hr/>
 <div class="entry" id="trade">
 <h2 class="lauvinko">Meckiq</h2>
-<h3><span style="font-style:italic;">ñceki</span> - punctual root</h3>
-<p>To trade.</p>
-<p>np <span class="lauvinko">Meckiq</span> ñceki</p><p>pt <span class="lauvinko">Mecokiq</span> ñcoki</p><p>fq-np <span class="lauvinko">Meckiq</span> ñceki</p><p>fq-pt <span class="lauvinko">Mecokiq</span> ñcoki</p></div>
+<h3><span style="font-style:italic;">ñceki</span> - To trade. (punctual)</h3>
+<table class="notshown">
+<thead><tr><th colspan="3">Classical Kasanic Inflection - <a onclick="toggleshown(this)">Show</a></th></tr></thead><tbody>
+<tr><td></td><td>Nonpast</td><td>Past</td></tr>
+<tr><td>Perfective</td><td><span class="lauvinko">Meckiq</span><br/><span style="font-style:italic;">ñceki</span></td><td><span class="lauvinko">Mecokiq</span><br/><span style="font-style:italic;">ñcoki</span></td></tr>
+<tr><td>Frequentative</td><td><span class="lauvinko">MecMeckiq</span><br/><span style="font-style:italic;">ñceñceki</span></td><td><span class="lauvinko">MecoMecokiq</span><br/><span style="font-style:italic;">ñcoñcoki</span></td></tr>
+</tbody></table>
+</div>
 <hr/>
 <div class="entry" id="drink">
 <h2 class="lauvinko">egpipi</h2>
-<h3><span style="font-style:italic;">ṅepikvi</span> - punctual root</h3>
-<p>To drink.</p>
-<p>np <span class="lauvinko">egpipi</span> ṅepikvi</p><p>pt <span class="lauvinko">egopipi</span> ṅopikvi</p><p>fq-np <span class="lauvinko">egpipi</span> ṅepikvi</p><p>fq-pt <span class="lauvinko">egopipi</span> ṅopikvi</p></div>
+<h3><span style="font-style:italic;">ṅepikvi</span> - To drink. (punctual)</h3>
+<table class="notshown">
+<thead><tr><th colspan="3">Classical Kasanic Inflection - <a onclick="toggleshown(this)">Show</a></th></tr></thead><tbody>
+<tr><td></td><td>Nonpast</td><td>Past</td></tr>
+<tr><td>Perfective</td><td><span class="lauvinko">egpipi</span><br/><span style="font-style:italic;">ṅepikvi</span></td><td><span class="lauvinko">egopipi</span><br/><span style="font-style:italic;">ṅopikvi</span></td></tr>
+<tr><td>Frequentative</td><td><span class="lauvinko">egegpipi</span><br/><span style="font-style:italic;">ṅeṅepikvi</span></td><td><span class="lauvinko">egoegopipi</span><br/><span style="font-style:italic;">ṅoṅopikvi</span></td></tr>
+</tbody></table>
+</div>
 <hr/>
 <div class="entry" id="dog">
 <h2 class="lauvinko">egoygu</h2>
-<h3><span style="font-style:italic;">ṅoyaṅu</span> - uninflected root</h3>
-<p>Dog.</p>
-<p>gn <span class="lauvinko">egoygu</span> ṅoyaṅu</p></div>
+<h3><span style="font-style:italic;">ṅoyəṅu</span> - Dog. (uninflected)</h3>
+</div>
 <hr/>
 <div class="entry" id="yellow">
 <h2 class="lauvinko">Mkiqma</h2>
-<h3><span style="font-style:italic;">ṅkimā</span> - stative root</h3>
-<p>Yellow.</p>
-<p>gn <span class="lauvinko">Mkiqma</span> ṅkimā</p><p>pt <span class="lauvinko">Mkiqma</span> ṅkimā</p><p>in <span class="lauvinko">IqMkiqma</span> iṅkimā</p></div>
+<h3><span style="font-style:italic;">ṅkima</span> - Yellow. (stative)</h3>
+<table class="notshown">
+<thead><tr><th colspan="3">Classical Kasanic Inflection - <a onclick="toggleshown(this)">Show</a></th></tr></thead><tbody>
+<tr><td></td><td>Nonpast</td><td>Past</td></tr>
+<tr><td>Imperfective</td><td><span class="lauvinko">Mkiqma</span><br/><span style="font-style:italic;">ṅkima</span></td><td><span class="lauvinko">Mkiqma</span><br/><span style="font-style:italic;">ṅkima</span></td></tr>
+<tr><td>Inceptive</td><td colspan="2"><span class="lauvinko">IqMkiqma</span><br/><span style="font-style:italic;">iṅkima</span></td></tr>
+</tbody></table>
+</div>
 <hr/>
 <div class="entry" id="carry">
 <h2 class="lauvinko">MpaHkqey</h2>
-<h3><span style="font-style:italic;">ṅkvā'kaye</span> - fientive root</h3>
-<p>To carry, bear.</p>
-<p>im-np <span class="lauvinko">MpaHkqey</span> ṅkvā'kaye</p><p>im-pt <span class="lauvinko">MepoHkqey</span> ṅkvo'kaye</p><p>pf <span class="lauvinko">MepHkqey</span> ṅkve'kaye</p><p>in <span class="lauvinko">IqMpaHkqey</span> iṅkvā'kaye</p><p>fq-np <span class="lauvinko">MepHkqey</span> ṅkve'kaye</p><p>fq-pt <span class="lauvinko">MepoHkqey</span> ṅkvo'kaye</p></div>
+<h3><span style="font-style:italic;">ṅkva'kəye</span> - To carry, bear. (fientive)</h3>
+<table class="notshown">
+<thead><tr><th colspan="3">Classical Kasanic Inflection - <a onclick="toggleshown(this)">Show</a></th></tr></thead><tbody>
+<tr><td></td><td>Nonpast</td><td>Past</td></tr>
+<tr><td>Imperfective</td><td><span class="lauvinko">MpaHkqey</span><br/><span style="font-style:italic;">ṅkva'kəye</span></td><td><span class="lauvinko">MepoHkqey</span><br/><span style="font-style:italic;">ṅkvo'kəye</span></td></tr>
+<tr><td>Perfective</td><td colspan="2"><span class="lauvinko">MepHkqey</span><br/><span style="font-style:italic;">ṅkve'kəye</span></td></tr>
+<tr><td>Frequentative</td><td><span class="lauvinko">MepMepHkqey</span><br/><span style="font-style:italic;">ṅkveṅkve'kəye</span></td><td><span class="lauvinko">MepoMepoHkqey</span><br/><span style="font-style:italic;">ṅkvoṅkvo'kəye</span></td></tr>
+<tr><td>Inceptive</td><td colspan="2"><span class="lauvinko">IqMpaHkqey</span><br/><span style="font-style:italic;">iṅkva'kəye</span></td></tr>
+</tbody></table>
+</div>
 <hr/>
 <div class="entry" id="father">
 <h2 class="lauvinko">Op</h2>
-<h3><span style="font-style:italic;">opa</span> - uninflected root</h3>
-<p>Father.</p>
-<p>gn <span class="lauvinko">Op</span> opa</p></div>
+<h3><span style="font-style:italic;">opə</span> - Father. (uninflected)</h3>
+</div>
 <hr/>
 <div class="entry" id="touch">
 <h2 class="lauvinko">paesoru</h2>
-<h3><span style="font-style:italic;">pāsoru</span> - fientive root</h3>
-<p>To touch, strike.</p>
-<p>im-np <span class="lauvinko">paesoru</span> pāsoru</p><p>im-pt <span class="lauvinko">epoesoru</span> posoru</p><p>pf <span class="lauvinko">epesoru</span> pesoru</p><p>in <span class="lauvinko">Iqpaesoru</span> ipāsoru</p><p>fq-np <span class="lauvinko">epesoru</span> pesoru</p><p>fq-pt <span class="lauvinko">epoesoru</span> posoru</p></div>
+<h3><span style="font-style:italic;">pasoru</span> - To touch, strike. (fientive)</h3>
+<table class="notshown">
+<thead><tr><th colspan="3">Classical Kasanic Inflection - <a onclick="toggleshown(this)">Show</a></th></tr></thead><tbody>
+<tr><td></td><td>Nonpast</td><td>Past</td></tr>
+<tr><td>Imperfective</td><td><span class="lauvinko">paesoru</span><br/><span style="font-style:italic;">pasoru</span></td><td><span class="lauvinko">epoesoru</span><br/><span style="font-style:italic;">posoru</span></td></tr>
+<tr><td>Perfective</td><td colspan="2"><span class="lauvinko">epesoru</span><br/><span style="font-style:italic;">pesoru</span></td></tr>
+<tr><td>Frequentative</td><td><span class="lauvinko">epepesoru</span><br/><span style="font-style:italic;">pepesoru</span></td><td><span class="lauvinko">epoepoesoru</span><br/><span style="font-style:italic;">poposoru</span></td></tr>
+<tr><td>Inceptive</td><td colspan="2"><span class="lauvinko">IqMpaesoru</span><br/><span style="font-style:italic;">impasoru</span></td></tr>
+</tbody></table>
+</div>
 <hr/>
 <div class="entry" id="auncle">
 <h2 class="lauvinko">Hepsq</h2>
-<h3><span style="font-style:italic;">'pesa</span> - uninflected root</h3>
-<p>Aunt, uncle, older relative.</p>
-<p>gn <span class="lauvinko">Hepsq</span> 'pesa</p></div>
+<h3><span style="font-style:italic;">'pesə</span> - Aunt, uncle, older relative. (uninflected)</h3>
+</div>
 <hr/>
 <div class="entry" id="heir">
 <h2 class="lauvinko">raego</h2>
-<h3><span style="font-style:italic;">rāṅo</span> - uninflected root</h3>
-<p>Eldest brother, eldest son.</p>
-<p>gn <span class="lauvinko">raego</span> rāṅo</p></div>
+<h3><span style="font-style:italic;">raṅo</span> - Eldest brother, eldest son. (uninflected)</h3>
+</div>
 <hr/>
 <div class="entry" id="learn">
 <h2 class="lauvinko">raHpaeyo</h2>
-<h3><span style="font-style:italic;">rā'pāyo</span> - fientive root</h3>
-<p>To learn, teach.</p>
-<p>im-np <span class="lauvinko">raHpaeyo</span> rā'pāyo</p><p>im-pt <span class="lauvinko">eroHpaeyo</span> ro'pāyo</p><p>pf <span class="lauvinko">erHpaeyo</span> re'pāyo</p><p>in <span class="lauvinko">IqraHpaeyo</span> irā'pāyo</p><p>fq-np <span class="lauvinko">erHpaeyo</span> re'pāyo</p><p>fq-pt <span class="lauvinko">eroHpaeyo</span> ro'pāyo</p></div>
+<h3><span style="font-style:italic;">ra'payo</span> - To learn, teach. (fientive)</h3>
+<table class="notshown">
+<thead><tr><th colspan="3">Classical Kasanic Inflection - <a onclick="toggleshown(this)">Show</a></th></tr></thead><tbody>
+<tr><td></td><td>Nonpast</td><td>Past</td></tr>
+<tr><td>Imperfective</td><td><span class="lauvinko">raHpaeyo</span><br/><span style="font-style:italic;">ra'payo</span></td><td><span class="lauvinko">eroHpaeyo</span><br/><span style="font-style:italic;">ro'payo</span></td></tr>
+<tr><td>Perfective</td><td colspan="2"><span class="lauvinko">erHpaeyo</span><br/><span style="font-style:italic;">re'payo</span></td></tr>
+<tr><td>Frequentative</td><td><span class="lauvinko">ererHpaeyo</span><br/><span style="font-style:italic;">rere'payo</span></td><td><span class="lauvinko">eroeroHpaeyo</span><br/><span style="font-style:italic;">roro'payo</span></td></tr>
+<tr><td>Inceptive</td><td colspan="2"><span class="lauvinko">IqnaHpaeyo</span><br/><span style="font-style:italic;">ina'payo</span></td></tr>
+</tbody></table>
+</div>
 <hr/>
 <div class="entry" id="what">
 <h2 class="lauvinko">raesq</h2>
-<h3><span style="font-style:italic;">rāse</span> - uninflected root</h3>
-<p>What, which.</p>
-<p>gn <span class="lauvinko">raesq</span> rāse</p></div>
+<h3><span style="font-style:italic;">rase</span> - What, which. (uninflected)</h3>
+</div>
 <hr/>
 <div class="entry" id="man">
 <h2 class="lauvinko">erHca</h2>
-<h3><span style="font-style:italic;">re'cā</span> - uninflected root</h3>
-<p>Man, male.</p>
-<p>gn <span class="lauvinko">erHca</span> re'cā</p></div>
+<h3><span style="font-style:italic;">re'ca</span> - Man, male. (uninflected)</h3>
+</div>
 <hr/>
 <div class="entry" id="release">
 <h2 class="lauvinko">eresqkiq</h2>
-<h3><span style="font-style:italic;">reseki</span> - punctual root</h3>
-<p>Open, release.</p>
-<p>np <span class="lauvinko">eresqkiq</span> reseki</p><p>pt <span class="lauvinko">eroesqkiq</span> roseki</p><p>fq-np <span class="lauvinko">eresqkiq</span> reseki</p><p>fq-pt <span class="lauvinko">eroesqkiq</span> roseki</p></div>
-<hr/>
-<div class="entry" id="put">
-<h2 class="lauvinko">sqhqY</h2>
-<h3><span style="font-style:italic;">sahāi</span> - fientive root</h3>
-<p>To put, place.</p>
-<p>im-np <span class="lauvinko">sqhqY</span> sahāi</p><p>im-pt <span class="lauvinko">suhqY</span> suhāi</p><p>pf <span class="lauvinko">siqhqY</span> sihāi</p><p>in <span class="lauvinko">IqsqhqY</span> isahāi</p><p>fq-np <span class="lauvinko">siqhqY</span> sihāi</p><p>fq-pt <span class="lauvinko">suhqY</span> suhāi</p></div>
+<h3><span style="font-style:italic;">reseki</span> - Open, release. (punctual)</h3>
+<table class="notshown">
+<thead><tr><th colspan="3">Classical Kasanic Inflection - <a onclick="toggleshown(this)">Show</a></th></tr></thead><tbody>
+<tr><td></td><td>Nonpast</td><td>Past</td></tr>
+<tr><td>Perfective</td><td><span class="lauvinko">eresqkiq</span><br/><span style="font-style:italic;">reseki</span></td><td><span class="lauvinko">eroesqkiq</span><br/><span style="font-style:italic;">roseki</span></td></tr>
+<tr><td>Frequentative</td><td><span class="lauvinko">ereresqkiq</span><br/><span style="font-style:italic;">rereseki</span></td><td><span class="lauvinko">eroeroesqkiq</span><br/><span style="font-style:italic;">roroseki</span></td></tr>
+</tbody></table>
+</div>
 <hr/>
 <div class="entry" id="grow">
 <h2 class="lauvinko">sahiqtu</h2>
-<h3><span style="font-style:italic;">sāhitu</span> - fientive root</h3>
-<p>To grow, expand, mature.</p>
-<p>im-np <span class="lauvinko">sahiqtu</span> sāhitu</p><p>im-pt <span class="lauvinko">esohiqtu</span> sohitu</p><p>pf <span class="lauvinko">esqhiqtu</span> sehitu</p><p>in <span class="lauvinko">Iqsahiqtu</span> isāhitu</p><p>fq-np <span class="lauvinko">esqhiqtu</span> sehitu</p><p>fq-pt <span class="lauvinko">esohiqtu</span> sohitu</p></div>
+<h3><span style="font-style:italic;">sahitu</span> - To grow, expand, mature. (fientive)</h3>
+<table class="notshown">
+<thead><tr><th colspan="3">Classical Kasanic Inflection - <a onclick="toggleshown(this)">Show</a></th></tr></thead><tbody>
+<tr><td></td><td>Nonpast</td><td>Past</td></tr>
+<tr><td>Imperfective</td><td><span class="lauvinko">sahiqtu</span><br/><span style="font-style:italic;">sahitu</span></td><td><span class="lauvinko">esohiqtu</span><br/><span style="font-style:italic;">sohitu</span></td></tr>
+<tr><td>Perfective</td><td colspan="2"><span class="lauvinko">esqhiqtu</span><br/><span style="font-style:italic;">sehitu</span></td></tr>
+<tr><td>Frequentative</td><td><span class="lauvinko">esqesqhiqtu</span><br/><span style="font-style:italic;">sesehitu</span></td><td><span class="lauvinko">esoesohiqtu</span><br/><span style="font-style:italic;">sosohitu</span></td></tr>
+<tr><td>Inceptive</td><td colspan="2"><span class="lauvinko">Iqsahiqtu</span><br/><span style="font-style:italic;">isahitu</span></td></tr>
+</tbody></table>
+</div>
 <hr/>
 <div class="entry" id="parent">
 <h2 class="lauvinko">saHtu</h2>
-<h3><span style="font-style:italic;">sā'tu</span> - stative root</h3>
-<p>To parent, procreate.</p>
-<p>gn <span class="lauvinko">saHtu</span> sā'tu</p><p>pt <span class="lauvinko">saHtu</span> sā'tu</p><p>in <span class="lauvinko">IqsaHtu</span> isā'tu</p></div>
+<h3><span style="font-style:italic;">sa'tu</span> - To parent, procreate. (stative)</h3>
+<table class="notshown">
+<thead><tr><th colspan="3">Classical Kasanic Inflection - <a onclick="toggleshown(this)">Show</a></th></tr></thead><tbody>
+<tr><td></td><td>Nonpast</td><td>Past</td></tr>
+<tr><td>Imperfective</td><td><span class="lauvinko">saHtu</span><br/><span style="font-style:italic;">sa'tu</span></td><td><span class="lauvinko">saHtu</span><br/><span style="font-style:italic;">sa'tu</span></td></tr>
+<tr><td>Inceptive</td><td colspan="2"><span class="lauvinko">IqsaHtu</span><br/><span style="font-style:italic;">isa'tu</span></td></tr>
+</tbody></table>
+</div>
 <hr/>
 <div class="entry" id="none">
 <h2 class="lauvinko">saey</h2>
-<h3><span style="font-style:italic;">sāye</span> - uninflected root</h3>
-<p>None, nothing.</p>
-<p>gn <span class="lauvinko">saey</span> sāye</p></div>
+<h3><span style="font-style:italic;">saye</span> - None, nothing. (uninflected)</h3>
+</div>
 <hr/>
 <div class="entry" id="clan">
 <h2 class="lauvinko">esqhaNa</h2>
-<h3><span style="font-style:italic;">sehāñā</span> - uninflected root</h3>
-<p>Clan (family group).</p>
-<p>gn <span class="lauvinko">esqhaNa</span> sehāñā</p></div>
+<h3><span style="font-style:italic;">sehaña</span> - Clan (family group). (uninflected)</h3>
+</div>
 <hr/>
 <div class="entry" id="daughter2">
 <h2 class="lauvinko">esqeno</h2>
-<h3><span style="font-style:italic;">seno</span> - uninflected root</h3>
-<p>Mother's daughter.</p>
-<p>gn <span class="lauvinko">esqeno</span> seno</p></div>
+<h3><span style="font-style:italic;">seno</span> - Mother's daughter. (uninflected)</h3>
+</div>
 <hr/>
 <div class="entry" id="red">
 <h2 class="lauvinko">esqHetomi</h2>
-<h3><span style="font-style:italic;">se'toṅvi</span> - stative root</h3>
-<p>Red.</p>
-<p>gn <span class="lauvinko">esqHetomi</span> se'toṅvi</p><p>pt <span class="lauvinko">esqHetomi</span> se'toṅvi</p><p>in <span class="lauvinko">IqesqHetomi</span> ise'toṅvi</p></div>
+<h3><span style="font-style:italic;">se'toṅvi</span> - Red. (stative)</h3>
+<table class="notshown">
+<thead><tr><th colspan="3">Classical Kasanic Inflection - <a onclick="toggleshown(this)">Show</a></th></tr></thead><tbody>
+<tr><td></td><td>Nonpast</td><td>Past</td></tr>
+<tr><td>Imperfective</td><td><span class="lauvinko">esqHetomi</span><br/><span style="font-style:italic;">se'toṅvi</span></td><td><span class="lauvinko">esqHetomi</span><br/><span style="font-style:italic;">se'toṅvi</span></td></tr>
+<tr><td>Inceptive</td><td colspan="2"><span class="lauvinko">IqesqHetomi</span><br/><span style="font-style:italic;">ise'toṅvi</span></td></tr>
+</tbody></table>
+</div>
+<hr/>
+<div class="entry" id="put">
+<h2 class="lauvinko">sqhqY</h2>
+<h3><span style="font-style:italic;">səhai</span> - To put, place. (fientive)</h3>
+<table class="notshown">
+<thead><tr><th colspan="3">Classical Kasanic Inflection - <a onclick="toggleshown(this)">Show</a></th></tr></thead><tbody>
+<tr><td></td><td>Nonpast</td><td>Past</td></tr>
+<tr><td>Imperfective</td><td><span class="lauvinko">sqhqY</span><br/><span style="font-style:italic;">səhai</span></td><td><span class="lauvinko">suhqY</span><br/><span style="font-style:italic;">suhai</span></td></tr>
+<tr><td>Perfective</td><td colspan="2"><span class="lauvinko">siqhqY</span><br/><span style="font-style:italic;">sihai</span></td></tr>
+<tr><td>Frequentative</td><td><span class="lauvinko">siqsiqhqY</span><br/><span style="font-style:italic;">sisihai</span></td><td><span class="lauvinko">susuhqY</span><br/><span style="font-style:italic;">susuhai</span></td></tr>
+<tr><td>Inceptive</td><td colspan="2"><span class="lauvinko">IqsqhqY</span><br/><span style="font-style:italic;">isəhai</span></td></tr>
+</tbody></table>
+</div>
 <hr/>
 <div class="entry" id="brother">
 <h2 class="lauvinko">taero</h2>
-<h3><span style="font-style:italic;">tāro</span> - uninflected root</h3>
-<p>Brother.</p>
-<p>gn <span class="lauvinko">taero</span> tāro</p></div>
+<h3><span style="font-style:italic;">taro</span> - Brother. (uninflected)</h3>
+</div>
 <hr/>
 <div class="entry" id="sun">
 <h2 class="lauvinko">tuhiqsq</h2>
-<h3><span style="font-style:italic;">tuhisa</span> - stative root</h3>
-<p>Sun.</p>
-<p>gn <span class="lauvinko">tuhiqsq</span> tuhisa</p><p>pt <span class="lauvinko">tuhiqsq</span> tuhisa</p><p>in <span class="lauvinko">IqMtuhiqsq</span> intuhisa</p></div>
+<h3><span style="font-style:italic;">tuhisə</span> - Sun. (stative)</h3>
+<table class="notshown">
+<thead><tr><th colspan="3">Classical Kasanic Inflection - <a onclick="toggleshown(this)">Show</a></th></tr></thead><tbody>
+<tr><td></td><td>Nonpast</td><td>Past</td></tr>
+<tr><td>Imperfective</td><td><span class="lauvinko">tuhiqsq</span><br/><span style="font-style:italic;">tuhisə</span></td><td><span class="lauvinko">tuhiqsq</span><br/><span style="font-style:italic;">tuhisə</span></td></tr>
+<tr><td>Inceptive</td><td colspan="2"><span class="lauvinko">IqMtuhiqsq</span><br/><span style="font-style:italic;">intuhisə</span></td></tr>
+</tbody></table>
+</div>
 <hr/>
 <div class="entry" id="sleep">
 <h2 class="lauvinko">vahiqga</h2>
-<h3><span style="font-style:italic;">vāhiṅā</span> - stative root</h3>
-<p>To sleep.</p>
-<p>gn <span class="lauvinko">vahiqga</span> vāhiṅā</p><p>pt <span class="lauvinko">vahiqga</span> vāhiṅā</p><p>in <span class="lauvinko">Iqnvahiqga</span> invāhiṅā</p></div>
+<h3><span style="font-style:italic;">vahiṅa</span> - To sleep. (stative)</h3>
+<table class="notshown">
+<thead><tr><th colspan="3">Classical Kasanic Inflection - <a onclick="toggleshown(this)">Show</a></th></tr></thead><tbody>
+<tr><td></td><td>Nonpast</td><td>Past</td></tr>
+<tr><td>Imperfective</td><td><span class="lauvinko">vahiqga</span><br/><span style="font-style:italic;">vahiṅa</span></td><td><span class="lauvinko">vahiqga</span><br/><span style="font-style:italic;">vahiṅa</span></td></tr>
+<tr><td>Inceptive</td><td colspan="2"><span class="lauvinko">Iqmahiqga</span><br/><span style="font-style:italic;">imahiṅa</span></td></tr>
+</tbody></table>
+</div>
 <hr/>
 <div class="entry" id="go">
 <h2 class="lauvinko">vakiq</h2>
-<h3><span style="font-style:italic;">vāki</span> - fientive root</h3>
-<p>To go.</p>
-<p>im-np <span class="lauvinko">vakiq</span> vāki</p><p>im-pt <span class="lauvinko">evokiq</span> voki</p><p>pf <span class="lauvinko">evkiq</span> veki</p><p>in <span class="lauvinko">Iqnvakiq</span> invāki</p><p>fq-np <span class="lauvinko">evkiq</span> veki</p><p>fq-pt <span class="lauvinko">evokiq</span> voki</p></div>
+<h3><span style="font-style:italic;">vaki</span> - To go. (fientive)</h3>
+<table class="notshown">
+<thead><tr><th colspan="3">Classical Kasanic Inflection - <a onclick="toggleshown(this)">Show</a></th></tr></thead><tbody>
+<tr><td></td><td>Nonpast</td><td>Past</td></tr>
+<tr><td>Imperfective</td><td><span class="lauvinko">vakiq</span><br/><span style="font-style:italic;">vaki</span></td><td><span class="lauvinko">evokiq</span><br/><span style="font-style:italic;">voki</span></td></tr>
+<tr><td>Perfective</td><td colspan="2"><span class="lauvinko">evkiq</span><br/><span style="font-style:italic;">veki</span></td></tr>
+<tr><td>Frequentative</td><td><span class="lauvinko">evevkiq</span><br/><span style="font-style:italic;">veveki</span></td><td><span class="lauvinko">evoevokiq</span><br/><span style="font-style:italic;">vovoki</span></td></tr>
+<tr><td>Inceptive</td><td colspan="2"><span class="lauvinko">Iqmakiq</span><br/><span style="font-style:italic;">imaki</span></td></tr>
+</tbody></table>
+</div>
 <hr/>
 <div class="entry" id="see">
 <h2 class="lauvinko">yahiqga</h2>
-<h3><span style="font-style:italic;">yāhiṅā</span> - fientive root</h3>
-<p>To see.</p>
-<p>im-np <span class="lauvinko">yahiqga</span> yāhiṅā</p><p>im-pt <span class="lauvinko">eyohiqga</span> yohiṅā</p><p>pf <span class="lauvinko">eyhiqga</span> yehiṅā</p><p>in <span class="lauvinko">IqNahiqga</span> iñāhiṅā</p><p>fq-np <span class="lauvinko">eyhiqga</span> yehiṅā</p><p>fq-pt <span class="lauvinko">eyohiqga</span> yohiṅā</p></div>
+<h3><span style="font-style:italic;">yahiṅa</span> - To see. (fientive)</h3>
+<table class="notshown">
+<thead><tr><th colspan="3">Classical Kasanic Inflection - <a onclick="toggleshown(this)">Show</a></th></tr></thead><tbody>
+<tr><td></td><td>Nonpast</td><td>Past</td></tr>
+<tr><td>Imperfective</td><td><span class="lauvinko">yahiqga</span><br/><span style="font-style:italic;">yahiṅa</span></td><td><span class="lauvinko">eyohiqga</span><br/><span style="font-style:italic;">yohiṅa</span></td></tr>
+<tr><td>Perfective</td><td colspan="2"><span class="lauvinko">eyhiqga</span><br/><span style="font-style:italic;">yehiṅa</span></td></tr>
+<tr><td>Frequentative</td><td><span class="lauvinko">eyeyhiqga</span><br/><span style="font-style:italic;">yeyehiṅa</span></td><td><span class="lauvinko">eyoeyohiqga</span><br/><span style="font-style:italic;">yoyohiṅa</span></td></tr>
+<tr><td>Inceptive</td><td colspan="2"><span class="lauvinko">IqNahiqga</span><br/><span style="font-style:italic;">iñahiṅa</span></td></tr>
+</tbody></table>
+</div>
 <hr/>
 <div class="entry" id="weave">
 <h2 class="lauvinko">yaMp</h2>
-<h3><span style="font-style:italic;">yāmpa</span> - fientive root</h3>
-<p>To weave, interlay.</p>
-<p>im-np <span class="lauvinko">yaMp</span> yāmpa</p><p>im-pt <span class="lauvinko">eyoMp</span> yompa</p><p>pf <span class="lauvinko">eyMp</span> yempa</p><p>in <span class="lauvinko">IqNaMp</span> iñāmpa</p><p>fq-np <span class="lauvinko">eyMp</span> yempa</p><p>fq-pt <span class="lauvinko">eyoMp</span> yompa</p></div>
+<h3><span style="font-style:italic;">yampə</span> - To weave, interlay. (fientive)</h3>
+<table class="notshown">
+<thead><tr><th colspan="3">Classical Kasanic Inflection - <a onclick="toggleshown(this)">Show</a></th></tr></thead><tbody>
+<tr><td></td><td>Nonpast</td><td>Past</td></tr>
+<tr><td>Imperfective</td><td><span class="lauvinko">yaMp</span><br/><span style="font-style:italic;">yampə</span></td><td><span class="lauvinko">eyoMp</span><br/><span style="font-style:italic;">yompə</span></td></tr>
+<tr><td>Perfective</td><td colspan="2"><span class="lauvinko">eyMp</span><br/><span style="font-style:italic;">yempə</span></td></tr>
+<tr><td>Frequentative</td><td><span class="lauvinko">eyeyMp</span><br/><span style="font-style:italic;">yeyempə</span></td><td><span class="lauvinko">eyoeyoMp</span><br/><span style="font-style:italic;">yoyompə</span></td></tr>
+<tr><td>Inceptive</td><td colspan="2"><span class="lauvinko">IqNaMp</span><br/><span style="font-style:italic;">iñampə</span></td></tr>
+</tbody></table>
+</div>
 <hr/>
 <div class="entry" id="basa">
 <h2 class="lauvinko">yWHpmi</h2>
-<h3><span style="font-style:italic;">yāu'pami</span> - uninflected root</h3>
-<p>Basa fish.</p>
-<p>gn <span class="lauvinko">yWHpmi</span> yāu'pami</p></div>
+<h3><span style="font-style:italic;">yau'pəmi</span> - Basa fish. (uninflected)</h3>
+</div>
 <hr/>

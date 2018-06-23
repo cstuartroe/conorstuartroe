@@ -135,7 +135,7 @@ class MyContentHandler(ContentHandler):
         self.pages[join_nums(self.location)] = newpage
         self.pages_in_order.append(newpage)
             
-        self.content_ul += '\t'*len(self.location) + '<li><a href="/lauvinko/%s">%s %s</a></li>\n' % (pagename,join_nums(self.location,'.'),pagetitle)
+        self.content_ul += '\t'*len(self.location) + '<a href="/lauvinko/%s"><li>%s %s</li></a>\n' % (pagename,join_nums(self.location,'.'),pagetitle)
 
         if self_closing:
             self.close_page()
@@ -170,22 +170,71 @@ class MyContentHandler(ContentHandler):
         dictionary_text = ''
 
         dictionary_text += '<p>This dictionary has %d entries!</p>\n' % len(entries_alphabetized)
+        dictionary_text += """<script>
+function toggleshown(table_toggler) {
+    var table = $(table_toggler).parent().parent().parent().parent()
+    table.toggleClass("notshown")
+    if(table_toggler.innerHTML == "Show") {
+        table_toggler.innerHTML = "Hide";
+    } else {
+        table_toggler.innerHTML = "Show";
+    }
+}
+</script>
+"""
         
         for entry in entries_alphabetized:
             cf = entry.languages['pk'].get_citation_form()
             dictionary_text += '<div class="entry" id="%s">\n' % entry.ident
             dictionary_text += '<h2 class="lauvinko">%s</h2>\n' % cf.falavay(False)
             dictionary_text += '<h3><span style="font-style:italic;">%s</span>' % cf.classical()
-            dictionary_text += ' - %s root</h3>\n' % entry.category
-            dictionary_text += '<p>%s</p>\n' % cf.defn
-            for form in entry.languages['pk'].forms:
-                dictionary_text += '<p>%s ' % form
-                pkform = entry.languages['pk'].forms[form]
-                dictionary_text += '<span class="lauvinko">%s</span> %s</p>' % (pkform.falavay(), pkform.classical())
+            dictionary_text += ' - %s (%s)</h3>\n' % (cf.defn, entry.category)
+            if entry.category != 'uninflected':
+                dictionary_text += MyContentHandler.pkform_table(entry)
             dictionary_text += '</div>\n<hr/>\n'
             
         with open('src/pages/dictionary/kasanic_dictionary/kasanic_dictionary.xml','w',encoding='utf-8') as fh:
             fh.write(dictionary_text)
+
+    def pkform_table(entry):
+        pkforms = entry.languages['pk'].forms
+        out = '<table class="notshown">\n'
+        out += '<thead><tr><th colspan="3">Classical Kasanic Inflection - <a onclick="toggleshown(this)">Show</a></th></tr></thead><tbody>\n'
+        #tense header
+        out += '<tr><td></td><td>Nonpast</td><td>Past</td></tr>\n'
+        if entry.category in ['fientive','punctual','stative']:
+            #two-tense row
+            out += '<tr><td>%s</td>' % ('Perfective' if entry.category == 'punctual' else 'Imperfective')
+            if entry.category == 'fientive':
+                np = pkforms['im-np']
+                pt = pkforms['im-pt']
+            elif entry.category == 'punctual':
+                np = pkforms['np']
+                pt = pkforms['pt']
+            elif entry.category == 'stative':
+                np = pkforms['gn']
+                pt = pkforms['pt']
+            out += '<td><span class="lauvinko">%s</span><br/><span style="font-style:italic;">%s</span></td>' % (np.falavay(),np.classical())
+            out += '<td><span class="lauvinko">%s</span><br/><span style="font-style:italic;">%s</span></td>' % (pt.falavay(),pt.classical())
+            out += '</tr>\n'
+        if entry.category == 'fientive':
+            #one-tense perfective row
+            out += '<tr><td>Perfective</td>'
+            out += '<td colspan="2"><span class="lauvinko">%s</span><br/><span style="font-style:italic;">%s</span></td>' % (pkforms['pf'].falavay(),pkforms['pf'].classical())
+            out += '</tr>\n'
+        if entry.category in ['fientive','punctual']:
+            #frequentative row
+            out += '<tr><td>Frequentative</td>'
+            out += '<td><span class="lauvinko">%s</span><br/><span style="font-style:italic;">%s</span></td>' % (pkforms['fq-np'].falavay(),pkforms['fq-np'].classical())
+            out += '<td><span class="lauvinko">%s</span><br/><span style="font-style:italic;">%s</span></td>' % (pkforms['fq-pt'].falavay(),pkforms['fq-pt'].classical())
+            out += '</tr>\n'
+        if entry.category in ['fientive','stative']:
+            #inceptive row
+            out += '<tr><td>Inceptive</td>'
+            out += '<td colspan="2"><span class="lauvinko">%s</span><br/><span style="font-style:italic;">%s</span></td>' % (pkforms['in'].falavay(),pkforms['in'].classical())
+            out += '</tr>\n'
+        out += '</tbody></table>\n'
+        return out
 
     def finish_up(self):        
         #build content pages

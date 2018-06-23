@@ -13,7 +13,7 @@
 }
 
 * {
-	transition-duration: .5s;
+	transition-duration: .3s;
 	transition-timing-function: ease;
 }
 
@@ -44,14 +44,13 @@ p {
 	text-align: justify;
 }
 
-ul {
-	list-style-type: none;
-	padding: 0 2em;
-	text-align: left;
-}
-
 a, a:hover {
 	color: #007f00;
+	text-decoration: none;
+}
+
+a:not([href]) {
+    cursor: pointer;
 }
 
 .lauvinko {
@@ -92,13 +91,29 @@ div.go-down div h3 {
 	font-weight: 900;
 }
 
-div.go-down div:hover {
+ul {
+	list-style-type: none;
+	padding: 0 2em;
+	text-align: left;
+}
+
+li, td, th {
+	margin: 0;
+	padding: 10px;
+	border-radius: 15px;
+	border-style: solid;
+	border-width: 2px;
+	border-color: transparent;
+}
+
+div.go-down div:hover, a:hover li {
 	background-color: #8fc78f;
 	border-color: black;
 }
 
-div.go-down div:hover h3 {
+div.go-down div:hover h3, a:hover li {
     color: white;
+	font-weight: 900;
 }
 
 ::-webkit-scrollbar {
@@ -123,6 +138,22 @@ img {
 	display: inline-block; 
 }
 
-.entry > *{
+.entry > * {
 	text-align: left;
+}
+
+th {
+	text-decoration: underline;
+}
+
+th, td {
+	border-color: #f0f0f0;
+}
+
+td {
+	text-align: center;	
+}
+
+.notshown tr td {
+	display: none;
 }
