@@ -312,7 +312,7 @@ class LauvinkoForm:
                               ('([ei][`´]?)ə',r'\1A'),('([ou])([`´]?)ə',r'o\2A'),
                               ('([YUA])([`´])',r'\2\1'),
                               ('([ei][`´]?)A([HM])',r'\1ya\2'),('([ou][`´]?)A([HM])',r'\1va\2'),
-                              ('Y([HM])',r'ye\1'),('V([HM])',r'vo\1')]
+                              ('Y([HM])',r'ye\1'),('U([HM])',r'vo\1')]
         augmented = replacement_suite(replacements_1200s,augmented)
         nonaugmented = replacement_suite(replacements_1200s,nonaugmented)
 
