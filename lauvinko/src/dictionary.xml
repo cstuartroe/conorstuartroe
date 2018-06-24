@@ -1,546 +1,410 @@
 <xml>
 	<entry category="fientive" id="build" origin="kasanic">
 		<pk>
-			<form type="gn">
-				<word>@kaaye</word>
-				<defn>To build, establish, appoint.</defn>
-			</form>
+			<defn>To build, establish, appoint.</defn>
+			<form type="gn">@kaaye</form>
 		</pk>
 	</entry>
 	<entry category="punctual" id="cross" origin="kasanic">
 		<pk>
-			<form type="gn">
-				<word>@kkungi</word>
-				<defn>To cross, go over.</defn>
-			</form>
+			<defn>To cross, go over.</defn>
+			<form type="gn">@kkungi</form>
 		</pk>
 	</entry>
 	<entry category="punctual" id="insert" origin="kasanic">
 		<pk>
-			<form type="gn">
-				<word>@ppaai</word>
-				<defn>To insert, pierce.</defn>
-			</form>
+			<defn>To insert, pierce.</defn>
+			<form type="gn">@ppaai</form>
 		</pk>
 	</entry>
 	<entry category="uninflected" id="manner" origin="kasanic">
 		<pk>
-			<form type="gn">
-				<word>aakkaa</word>
-				<defn>Custom, manner, appearance.</defn>
-			</form>
+			<defn>Custom, manner, appearance.</defn>
+			<form type="gn">aakkaa</form>
 		</pk>
 	</entry>
 	<entry category="uninflected" id="aunt" origin="kasanic">
 		<pk>
-			<form type="gn">
-				<word>aatari</word>
-				<defn>Kin, clanmate, sister, aunt.</defn>
-			</form>
+			<defn>Kin, clanmate, sister, aunt.</defn>
+			<form type="gn">aatari</form>
 		</pk>
 	</entry>
 	<entry category="uninflected" id="kin" origin="kasanic">
 		<pk>
-			<form type="gn">
-				<word>aaute</word>
-				<defn>Kin, sameblooded.</defn>
-			</form>
+			<defn>Kin, sameblooded.</defn>
+			<form type="gn">aaute</form>
 		</pk>
 	</entry>
 	<entry category="punctual" id="bite" origin="kasanic">
 		<pk>
-			<form type="gn">
-				<word>c~kki</word>
-				<defn>To bite, chew.</defn>
-			</form>
+			<defn>To bite, chew.</defn>
+			<form type="gn">c~kki</form>
 		</pk>
 	</entry>
 	<entry category="fientive" id="agitate" origin="kasanic">
 		<pk>
-			<form type="gn">
-				<word>c@ntesaa</word>
-				<defn>To agitate.</defn>
-			</form>
+			<defn>To agitate.</defn>
+			<form type="gn">c@ntesaa</form>
 		</pk>
 	</entry>
 	<entry category="uninflected" id="finger" origin="kasanic">
 		<pk>
-			<form type="gn">
-				<word>cokine</word>
-				<defn>Finger.</defn>
-			</form>
+			<defn>Finger.</defn>
+			<form type="gn">cokine</form>
 		</pk>
 	</entry>
 	<entry category="fientive" id="search" origin="kasanic">
 		<pk>
-			<form type="gn">
-				<word>cc@nko</word>
-				<defn>To search, find.</defn>
-			</form>
+			<defn>To search, find.</defn>
+			<form type="gn">cc@nko</form>
 		</pk>
 	</entry>
 	<entry category="uninflected" id="not" origin="kasanic">
 		<pk>
-			<form type="gn">
-				<word>era</word>
-				<defn>Not, no.</defn>
-			</form>
+			<defn>Not, no.</defn>
+			<form type="gn">era</form>
 		</pk>
 	</entry>
 	<entry category="uninflected" id="water" origin="kasanic">
 		<pk>
-			<form type="gn">
-				<word>heho</word>
-				<defn>Water.</defn>
-			</form>
+			<defn>Water.</defn>
+			<form type="gn">heho</form>
 		</pk>
 	</entry>
 	<entry category="uninflected" id="rice" origin="kasanic">
 		<pk>
-			<form type="gn">
-				<word>hekve</word>
-				<defn>Rice.</defn>
-			</form>
+			<defn>Rice.</defn>
+			<form type="gn">hekve</form>
 		</pk>
 	</entry>
 	<entry category="uninflected" id="toe" origin="kasanic">
 		<pk>
-			<form type="gn">
-				<word>homuma</word>
-				<defn>Toe.</defn>
-			</form>
+			<defn>Toe.</defn>
+			<form type="gn">homuma</form>
 		</pk>
 	</entry>
 	<entry category="fientive" id="fight" origin="kasanic">
 		<pk>
-			<form type="gn">
-				<word>h@naacavi</word>
-				<defn>To fight.</defn>
-			</form>
+			<defn>To fight.</defn>
+			<form type="gn">h@naacavi</form>
 		</pk>
 	</entry>
 	<entry category="uninflected" id="daughter1" origin="kasanic">
 		<pk>
-			<form type="gn">
-				<word>irohi</word>
-				<defn>Father's daughter.</defn>
-			</form>
+			<defn>Father's daughter.</defn>
+			<form type="gn">irohi</form>
 		</pk>
 	</entry>
 	<entry category="fientive" id="speak" origin="kasanic">
 		<pk>
-			<form type="gn">
-				<word>k@ppotaa</word>
-				<defn>To speak, say.</defn>
-			</form>
+			<defn>To speak, say.</defn>
+			<form type="gn">k@ppotaa</form>
 		</pk>
 	</entry>
 	<entry category="uninflected" id="hut" origin="kasanic">
 		<pk>
-			<form type="gn">
-				<word>karaavi</word>
-				<defn>Hut, shelter.</defn>
-			</form>
+			<defn>Hut, shelter.</defn>
+			<form type="gn">karaavi</form>
 		</pk>
 	</entry>
 	<entry category="uninflected" id="son1" origin="kasanic">
 		<pk>
-			<form type="gn">
-				<word>kaankaa</word>
-				<defn>Father's son.</defn>
-			</form>
+			<defn>Father's son.</defn>
+			<form type="gn">kaankaa</form>
 		</pk>
 	</entry>
 	<entry category="uninflected" id="son2" origin="kasanic">
 		<pk>
-			<form type="gn">
-				<word>kaarepaa</word>
-				<defn>Mother's son.</defn>
-			</form>
+			<defn>Mother's son.</defn>
+			<form type="gn">kaarepaa</form>
 		</pk>
 	</entry>
 	<entry category="uninflected" id="much" origin="kasanic">
 		<pk>
-			<form type="gn">
-				<word>koro</word>
-				<defn>Much, many.</defn>
-			</form>
+			<defn>Much, many.</defn>
+			<form type="gn">koro</form>
 		</pk>
 	</entry>
 	<entry category="punctual" id="add" origin="kasanic">
 		<pk>
-			<form type="gn">
-				<word>kv~rentaa</word>
-				<defn>To add.</defn>
-			</form>
+			<defn>To add.</defn>
+			<form type="gn">kv~rentaa</form>
 		</pk>
 	</entry>
 	<entry category="uninflected" id="heel" origin="kasanic">
 		<pk>
-			<form type="gn">
-				<word>kvaai</word>
-				<defn>Heel.</defn>
-			</form>
+			<defn>Heel.</defn>
+			<form type="gn">kvaai</form>
 		</pk>
 	</entry>
 	<entry category="uninflected" id="part" origin="kasanic">
 		<pk>
-			<form type="gn">
-				<word>kvaau</word>
-				<defn>Part, piece.</defn>
-			</form>
+			<defn>Part, piece.</defn>
+			<form type="gn">kvaau</form>
 		</pk>
 	</entry>
 	<entry category="uninflected" id="north" origin="kasanic">
 		<pk>
-			<form type="gn">
-				<word>kamaanaau</word>
-				<defn>North.</defn>
-			</form>
+			<defn>North.</defn>
+			<form type="gn">kamaanaau</form>
 		</pk>
 	</entry>
 	<entry category="punctual" id="gust" origin="kasanic">
 		<pk>
-			<form type="gn">
-				<word>k~nkaakviru</word>
-				<defn>To blow, gust.</defn>
-			</form>
+			<defn>To blow, gust.</defn>
+			<form type="gn">k~nkaakviru</form>
 		</pk>
 	</entry>
 	<entry category="fientive" id="mighty" origin="kasanic">
 		<pk>
-			<form type="gn">
-				<word>kv@niki</word>
-				<defn>To be great, mighty.</defn>
-			</form>
+			<defn>To be great, mighty.</defn>
+			<form type="gn">kv@niki</form>
 		</pk>
 	</entry>
 	<entry category="uninflected" id="egg" origin="kasanic">
 		<pk>
-			<form type="gn">
-				<word>kvaaintaa</word>
-				<defn>Egg.</defn>
-			</form>
+			<defn>Egg.</defn>
+			<form type="gn">kvaaintaa</form>
 		</pk>
 	</entry>
 	<entry category="fientive" id="learn" origin="kasanic">
 		<pk>
-			<form type="gn">
-				<word>r@ppaayo</word>
-				<defn>To learn, teach.</defn>
-			</form>
+			<defn>To learn, teach.</defn>
+			<form type="gn">r@ppaayo</form>
 		</pk>
 	</entry>
 	<entry category="punctual" id="release" origin="kasanic">
 		<pk>
-			<form type="gn">
-				<word>r@seki</word>
-				<defn>Open, release.</defn>
-			</form>
+			<defn>Open, release.</defn>
+			<form type="gn">r@seki</form>
 		</pk>
 	</entry>
 	<entry category="uninflected" id="heir" origin="kasanic">
 		<pk>
-			<form type="gn">
-				<word>raango</word>
-				<defn>Eldest brother, eldest son.</defn>
-			</form>
+			<defn>Eldest brother, eldest son.</defn>
+			<form type="gn">raango</form>
 		</pk>
 	</entry>
 	<entry category="uninflected" id="what" origin="kasanic">
 		<pk>
-			<form type="gn">
-				<word>raase</word>
-				<defn>What, which.</defn>
-			</form>
+			<defn>What, which.</defn>
+			<form type="gn">raase</form>
 		</pk>
 	</entry>
 	<entry category="uninflected" id="man" origin="kasanic">
 		<pk>
-			<form type="gn">
-				<word>leccaa</word>
-				<defn>Man, male.</defn>
-			</form>
+			<defn>Man, male.</defn>
+			<form type="gn">leccaa</form>
 		</pk>
 	</entry>
 	<entry category="fientive" id="eat" origin="kasanic">
 		<pk>
-			<form type="gn">
-				<word>m@nange</word>
-				<defn>To eat, consume.</defn>
-			</form>
+			<defn>To eat, consume.</defn>
+			<form type="gn">m@nange</form>
 		</pk>
 	</entry>
 	<entry category="uninflected" id="hand" origin="kasanic">
 		<pk>
-			<form type="gn">
-				<word>maaccopo</word>
-				<defn>Hand.</defn>
-			</form>
+			<defn>Hand.</defn>
+			<form type="gn">maaccopo</form>
 		</pk>
 	</entry>
 	<entry category="uninflected" id="mother" origin="kasanic">
 		<pk>
-			<form type="gn">
-				<word>maamaa</word>
-				<defn>Mother.</defn>
-			</form>
+			<defn>Mother.</defn>
+			<form type="gn">maamaa</form>
 		</pk>
 	</entry>
 	<entry category="uninflected" id="pandan" origin="kasanic">
 		<pk>
-			<form type="gn">
-				<word>maatoce</word>
-				<defn>Pandan.</defn>
-			</form>
+			<defn>Pandan.</defn>
+			<form type="gn">maatoce</form>
 		</pk>
 	</entry>
 	<entry category="uninflected" id="knife" origin="kasanic">
 		<pk>
-			<form type="gn">
-				<word>mahika</word>
-				<defn>Knife.</defn>
-			</form>
+			<defn>Knife.</defn>
+			<form type="gn">mahika</form>
 		</pk>
 	</entry>
 	<entry category="stative" id="mild" origin="kasanic">
 		<pk>
-			<form type="gn">
-				<word>mentavaau</word>
-				<defn>Mild, easy.</defn>
-			</form>
+			<defn>Mild, easy.</defn>
+			<form type="gn">mentavaau</form>
 		</pk>
 	</entry>
 	<entry category="uninflected" id="sister" origin="kasanic">
 		<pk>
-			<form type="gn">
-				<word>miro</word>
-				<defn>Sister.</defn>
-			</form>
+			<defn>Sister.</defn>
+			<form type="gn">miro</form>
 		</pk>
 	</entry>
 	<entry category="uninflected" id="woman" origin="kasanic">
 		<pk>
-			<form type="gn">
-				<word>mokaa</word>
-				<defn>Woman, female.</defn>
-			</form>
+			<defn>Woman, female.</defn>
+			<form type="gn">mokaa</form>
 		</pk>
 	</entry>
 	<entry category="uninflected" id="mango" origin="kasanic">
 		<pk>
-			<form type="gn">
-				<word>naatami</word>
-				<defn>Mango.</defn>
-			</form>
+			<defn>Mango.</defn>
+			<form type="gn">naatami</form>
 		</pk>
 	</entry>
 	<entry category="stative" id="stand" origin="kasanic">
 		<pk>
-			<form type="gn">
-				<word>ntittoka</word>
-				<defn>To stand.</defn>
-			</form>
+			<defn>To stand.</defn>
+			<form type="gn">ntittoka</form>
 		</pk>
 	</entry>
 	<entry category="uninflected" id="all" origin="kasanic">
 		<pk>
-			<form type="gn">
-				<word>nyaaisaa</word>
-				<defn>All, every.</defn>
-			</form>
+			<defn>All, every.</defn>
+			<form type="gn">nyaaisaa</form>
 		</pk>
 	</entry>
 	<entry category="stative" id="need" origin="kasanic">
 		<pk>
-			<form type="gn">
-				<word>nyovipi</word>
-				<defn>To need.</defn>
-			</form>
+			<defn>To need.</defn>
+			<form type="gn">nyovipi</form>
 		</pk>
 	</entry>
 	<entry category="stative" id="wise" origin="kasanic">
 		<pk>
-			<form type="gn">
-				<word>ncaaye</word>
-				<defn>Wise, intelligent.</defn>
-			</form>
+			<defn>Wise, intelligent.</defn>
+			<form type="gn">ncaaye</form>
 		</pk>
 	</entry>
 	<entry category="punctual" id="trade" origin="kasanic">
 		<pk>
-			<form type="gn">
-				<word>nc@ki</word>
-				<defn>To trade.</defn>
-			</form>
+			<defn>To trade.</defn>
+			<form type="gn">nc@ki</form>
 		</pk>
 	</entry>
 	<entry category="punctual" id="drink" origin="kasanic">
 		<pk>
-			<form type="gn">
-				<word>ng@pikvi</word>
-				<defn>To drink.</defn>
-			</form>
+			<defn>To drink.</defn>
+			<form type="gn">ng@pikvi</form>
 		</pk>
 	</entry>
 	<entry category="stative" id="yellow" origin="kasanic">
 		<pk>
-			<form type="gn">
-				<word>nkimaa</word>
-				<defn>Yellow.</defn>
-			</form>
+			<defn>Yellow.</defn>
+			<form type="gn">nkimaa</form>
 		</pk>
 	</entry>
 	<entry category="fientive" id="carry" origin="kasanic">
 		<pk>
-			<form type="gn">
-				<word>nkv@kkaye</word>
-				<defn>To carry, bear.</defn>
-			</form>
+			<defn>To carry, bear.</defn>
+			<form type="gn">nkv@kkaye</form>
 		</pk>
 	</entry>
 	<entry category="uninflected" id="dog" origin="kasanic">
 		<pk>
-			<form type="gn">
-				<word>ngoyangu</word>
-				<defn>Dog.</defn>
-			</form>
+			<defn>Dog.</defn>
+			<form type="gn">ngoyangu</form>
 		</pk>
 	</entry>
 	<entry category="uninflected" id="father" origin="kasanic">
 		<pk>
-			<form type="gn">
-				<word>opa</word>
-				<defn>Father.</defn>
-			</form>
+			<defn>Father.</defn>
+			<form type="gn">opa</form>
 		</pk>
 	</entry>
 	<entry category="fientive" id="touch" origin="kasanic">
 		<pk>
-			<form type="gn">
-				<word>p@soru</word>
-				<defn>To touch, strike.</defn>
-			</form>
+			<defn>To touch, strike.</defn>
+			<form type="gn">p@soru</form>
 		</pk>
 	</entry>
 	<entry category="uninflected" id="auncle" origin="kasanic">
 		<pk>
-			<form type="gn">
-				<word>ppesa</word>
-				<defn>Aunt, uncle, older relative.</defn>
-			</form>
+			<defn>Aunt, uncle, older relative.</defn>
+			<form type="gn">ppesa</form>
 		</pk>
 	</entry>
 	<entry category="fientive" id="put" origin="kasanic">
 		<pk>
-			<form type="gn">
-				<word>s~haai</word>
-				<defn>To put, place.</defn>
-			</form>
+			<defn>To put, place.</defn>
+			<form type="gn">s~haai</form>
 		</pk>
 	</entry>
 	<entry category="fientive" id="grow" origin="kasanic">
 		<pk>
-			<form type="gn">
-				<word>s@hitu</word>
-				<defn>To grow, expand, mature.</defn>
-			</form>
+			<defn>To grow, expand, mature.</defn>
+			<form type="gn">s@hitu</form>
 		</pk>
 	</entry>
 	<entry category="stative" id="parent" origin="kasanic">
 		<pk>
-			<form type="gn">
-				<word>saattu</word>
-				<defn>To parent, procreate.</defn>
-			</form>
+			<defn>To parent, procreate.</defn>
+			<form type="gn">saattu</form>
 		</pk>
 	</entry>
 	<entry category="uninflected" id="none" origin="kasanic">
 		<pk>
-			<form type="gn">
-				<word>saaye</word>
-				<defn>None, nothing.</defn>
-			</form>
+			<defn>None, nothing.</defn>
+			<form type="gn">saaye</form>
 		</pk>
 	</entry>
 	<entry category="uninflected" id="clan" origin="kasanic">
 		<pk>
-			<form type="gn">
-				<word>sehaanyaa</word>
-				<defn>Clan (family group).</defn>
-			</form>
+			<defn>Clan (family group).</defn>
+			<form type="gn">sehaanyaa</form>
 		</pk>
 	</entry>
 	<entry category="uninflected" id="daughter2" origin="kasanic">
 		<pk>
-			<form type="gn">
-				<word>seno</word>
-				<defn>Mother's daughter.</defn>
-			</form>
+			<defn>Mother's daughter.</defn>
+			<form type="gn">seno</form>
 		</pk>
 	</entry>
 	<entry category="stative" id="red" origin="kasanic">
 		<pk>
-			<form type="gn">
-				<word>settongvi</word>
-				<defn>Red.</defn>
-			</form>
+			<defn>Red.</defn>
+			<form type="gn">settongvi</form>
 		</pk>
 	</entry>
 	<entry category="uninflected" id="brother" origin="kasanic">
 		<pk>
-			<form type="gn">
-				<word>taaro</word>
-				<defn>Brother.</defn>
-			</form>
+			<defn>Brother.</defn>
+			<form type="gn">taaro</form>
 		</pk>
 	</entry>
 	<entry category="stative" id="sun" origin="kasanic">
 		<pk>
-			<form type="gn">
-				<word>tuhisa</word>
-				<defn>Sun.</defn>
-			</form>
+			<defn>Sun.</defn>
+			<form type="gn">tuhisa</form>
 		</pk>
 	</entry>
 	<entry category="stative" id="sleep" origin="kasanic">
 		<pk>
-			<form type="gn">
-				<word>vaahingaa</word>
-				<defn>To sleep.</defn>
-			</form>
+			<defn>To sleep.</defn>
+			<form type="gn">vaahingaa</form>
 		</pk>
 	</entry>
 	<entry category="fientive" id="go" origin="kasanic">
 		<pk>
-			<form type="gn">
-				<word>v@ki</word>
-				<defn>To go.</defn>
-			</form>
+			<defn>To go.</defn>
+			<form type="gn">v@ki</form>
 		</pk>
 	</entry>
 	<entry category="fientive" id="see" origin="kasanic">
 		<pk>
-			<form type="gn">
-				<word>y@hingaa</word>
-				<defn>To see.</defn>
-			</form>
+			<defn>To see.</defn>
+			<form type="gn">y@hingaa</form>
 		</pk>
 	</entry>
 	<entry category="fientive" id="weave" origin="kasanic">
 		<pk>
-			<form type="gn">
-				<word>y@mpa</word>
-				<defn>To weave, interlay.</defn>
-			</form>
+			<defn>To weave, interlay.</defn>
+			<form type="gn">y@mpa</form>
 		</pk>
 	</entry>
 	<entry category="uninflected" id="basa" origin="kasanic">
 		<pk>
-			<form type="gn">
-				<word>yaauppami</word>
-				<defn>Basa fish.</defn>
-			</form>
+			<defn>Basa fish.</defn>
+			<form type="gn">yaauppami</form>
 		</pk>
 	</entry>
 </xml>

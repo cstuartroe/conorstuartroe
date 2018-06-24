@@ -35,53 +35,37 @@ class PKForm:
     prefix_re = option_re(PK_PRES)
     onset_re = option_re(PK_ONSS)
     vowel_re = option_re(PK_VOWS)
-    accent_re = r'!'
+    accent_re = '!'
     syll_re = prefix_re + '?' + onset_re + '?' + vowel_re + accent_re + '?|&'
-    
-##    onsets = ["ṅkv","mp","nt","ñc","ṅk","kv","p","t","c","k","'kv","'p","'t","'c","'k","ṅv","m","n","ñ","ṅ","r","y","v","s","h",'']
-##    nuclei = ["āi","āu","ā","a","e","i","o","u"]
-##    system = [["mp","nt","ñc","ṅk","ṅkv"],
-##              ["p","t","c","k","kv"],
-##              ["'p","'t","'c","'k","'kv"],
-##              ["m","n","ñ","ṅ","ṅv"],
-##              ["v","r","s",'']]
-##    vowheights = [["e","o","āi","āu","ā"],
-##                  ["i","u","e","o","a"]]
 
-    def __init__(self,s):
-        self.structure = PKForm.parse(s)
+    def __init__(self,s,prefix=None):
+        self.structure = PKForm.parse(s,prefix)
         self.check_accent()
         
-        for i in range(len(self.structure)):
-            if self.structure[i][3] == '!':
-                self.accentLocation = copy.copy(i)
-        #self.non = PKWord.safeEvolve(str(self))
-        #self.aug = PKWord.safeEvolve(str(self),False)
-        #self.forms = {"Uninflected":self}
+        if 'əi' in self.transcribe() or 'əu' in self.transcribe():
+            print("Warning: potentially incorrect root: " + self.transcribe())
 
-        self.defn = 'Not defined.'
-        
-        if 'əi' in self.classical() or 'əu' in self.classical():
-            print("Warning: potentially incorrect root: " + self.classical())
-
-    def set_defn(self,s):
-        self.defn = s
-
-    def specialChars(word):
+    def special_chars(word):
         word = str(word)
         orig = word
         replacements = [('[mn]([ptck])',r'M\1'),('[ptck\']([ptck])',r'H\1'),
                         ('aai','Y'),('aau','W'),('aa','ā'),('ngv','G'),('kv','K'),('ny','ñ'),('ng','ṅ'),('l','r'),
-                        ('&(%s?%s%s)' % (PKForm.prefix_re,PKForm.onset_re,PKForm.vowel_re),r'\1\1'),
-                        ('&(%s%s?%s)' % (PKForm.vowel_re,PKForm.prefix_re,PKForm.onset_re),r'\1\1'),
-                        ('N([ptckK])',r'M\1'),('Nv','m'),('Nr','n'),('Ny','ñ'),('N(%s)' % PKForm.vowel_re,r'n\1'),('N',''),]
+                        #stress resolution
+                        ('^(%s?%s?%s)' % (PKForm.prefix_re,PKForm.onset_re,PKForm.vowel_re),r'\1!')]
         word = replacement_suite(replacements,word)
-        if '&' in word:
-            raise ValueError("Invalid ampersand placement: " + orig)
         return word
 
-    def parse(s):
-        prelim = PKForm.specialChars(s)
+    def resolve_prefix(prefix,word):
+        s = prefix + word
+        replacements = [('&(%s?%s%s)' % (PKForm.prefix_re,PKForm.onset_re,PKForm.vowel_re),r'\1\1'),
+                        ('&(%s)(!?)(%s?%s)' % (PKForm.vowel_re,PKForm.prefix_re,PKForm.onset_re),r'\1\3\1\2\3'),
+                        ('N([ptckK])',r'M\1'),('Nv','m'),('Nr','n'),('Ny','ñ'),('N(%s)' % PKForm.vowel_re,r'n\1'),('N',''),]
+        return replacement_suite(replacements,s)
+
+    def parse(s,prefix=None):
+        prelim = PKForm.special_chars(s)
+        if prefix:
+            prelim = PKForm.resolve_prefix(prefix,prelim)
         sylls = re.findall(PKForm.syll_re,prelim)
         if ''.join(sylls) != prelim:
             print(sylls)
@@ -98,7 +82,11 @@ class PKForm:
 
     def check_accent(self):
         if all(syll[3] != '!' for syll in self.structure):
-            self.structure[0][3] = '!'
+            raise ValueError() #self.structure[0][3] = '!'
+        
+        for i in range(len(self.structure)):
+            if self.structure[i][3] == '!':
+                self.accentLocation = copy.copy(i)
 
     def falavay(self,augment=False):       
         i = 0
@@ -136,21 +124,24 @@ class PKForm:
     
         return out
 
-    def classical(self):
+    def transcribe(self):
         flattened = ''.join(flatten(self.structure))
         replacements = [('Y','āi'),('W','āu'),('H','\''),('K','kv'),('G','ṅv'),('Mp','mp'),('Mt','nt'),('Mc','ñc'),('Mk','ṅk'),('!',''),
                         ('a','ə'),('ā','a')]
         return replacement_suite(replacements,flattened)
 
     def alphabetical(self):
-        classical = self.classical()
+        classical = self.transcribe()
         # I'm just using "z" to send digraphs and accented letters to after the related letter, i.e. to send "ā" after "a"
         replacements = [("āi","azy"),("āu","azz"),("ā","azx"),("'p","pz"),("'t","tz"),("'c","cz"),("'k","kz"),
                         ("mp","mz"),("nt","nv"),("ñc","nx"),("ṅk","nz"),("ñ","nw"),("ṅ","ny")]
         return replacement_suite(replacements,classical)
 
-    def __str__(self):
-        return ''.join(s[0]+s[1]+s[2] + ('!' if s[3] == 'high' else '') for s in self.l)
+    def generate_lauvinko(self):
+        self.lauvinko_form = LauvinkoForm.from_pk(self)
+
+##    def __str__(self):
+##        return ''.join(s[0]+s[1]+s[2] + ('!' if s[3] == 'high' else '') for s in self.l)
 
 class PKWord:
     categories = {"fientive":["im-np","im-pt","pf","in","fq-np","fq-pt"],"punctual":["np","pt","fq-np","fq-pt"],
@@ -167,12 +158,12 @@ class PKWord:
             raise ValueError("Invalid word category: " + category)
         self.forms = {}
         self.citation_form = PKWord.citation_forms[self.category]
+        self.defn = 'Not defined.'
 
-    def set_general(self,word,defn):
-        if word is None:
-            raise ValueError("General form declaration must include word.")
-        if defn is None:
-            raise ValueError("General form declaration must include definition.")
+    def set_defn(self,s):
+        self.defn = s
+
+    def set_general(self,word):
         if self.category in ['fientive','punctual']:
             try:
                 assert('@' in word or '~' in word)
@@ -182,43 +173,218 @@ class PKWord:
         for form_name in PKWord.categories[self.category]:
             if form_name in self.forms:
                 raise ValueError("Please declare general forms first.")
-            self.put_form(form_name,word,defn)
+            self.put_form(form_name,word)
 
-    def put_form(self,form_name,word=None,defn=None):
-        if word:
-            if "@" in word:
-                word_form = word.replace("@",PKWord.low_ablauts[form_name])
-            elif "~" in word:
-                word_form = word.replace("~",PKWord.high_ablauts[form_name])
-            else:
-                word_form = word
-            word_form = PKWord.prefixes.get(form_name,"") + word_form
-            form_obj = PKForm(word_form)
-            self.forms[form_name] = form_obj
-        if defn:
-            self.forms[form_name].set_defn(defn)
+    def put_form(self,form_name,word):
+        if "@" in word:
+            word_form = word.replace("@",PKWord.low_ablauts[form_name])
+        elif "~" in word:
+            word_form = word.replace("~",PKWord.high_ablauts[form_name])
+        else:
+            word_form = word
+        prefix = PKWord.prefixes.get(form_name,"")
+        form_obj = PKForm(word_form,prefix=prefix)
+        self.forms[form_name] = form_obj
 
     def get_citation_form(self):
         return self.forms[self.citation_form]
 
     def from_tag(language_tag, category):
         lemma = PKWord(category)
-        for form in language_tag:
-            word = None
-            defn = None
-            for subtag in form:
-                if subtag.tag == "word":
-                    word = subtag.text
-                elif subtag.tag == "defn":
-                    defn = subtag.text
+        for subtag in language_tag:
+            if subtag.tag == "form":
+                word = subtag.text
+                form_name = subtag.get("type")
+                if form_name == "gn":
+                    lemma.set_general(word)
                 else:
-                    raise ValueError("Invalid form tag: " + subtag.tag)
-            form_name = form.get("type")
-            if form_name == "gn":
-                lemma.set_general(word,defn)
+                    lemma.put_form(form_name,word)
+            elif subtag.tag == "defn":
+                lemma.set_defn(subtag.text)
             else:
-                lemma.put_form(form_name,word,defn)
+                raise ValueError("Invalid tag: " + subtag.tag)
+        if lemma.defn == 'Not defined.':
+            raise ValueError("AAAAAHHH")
         return lemma
+
+LF_ONSS = ['m','n','ñ','ṅ','B','D','G','p','t','c','k','P','T','C','K','v','l','s','y','h']
+LF_VOWS = ['a','ə','i','u','e','o']
+LF_CODS = ['Y','U','A','R','M','S','H']
+
+class LauvinkoForm:
+    onsets = LF_ONSS
+    vows = LF_VOWS
+    codas = LF_CODS
+    onset_re = option_re(LF_ONSS)
+    vowel_re = option_re(LF_VOWS) + '[`´]?'
+    coda_re = option_re(LF_CODS)
+    final_subs = {'l':'R','y':'Y','v':'U','m':'M','n':'M','ṅ':'M','p':'H','t':'H','k':'H','c':'S','s':'S'}
+    final_subs_reverse = {'Y':'y','U':'v','A':'@'}
+    types = {'augmented':0,'nonaugmented':1}
+
+    def __init__(self,augmented,nonaugmented):
+        self.words = (LauvinkoForm.syllabify(augmented), LauvinkoForm.syllabify(nonaugmented))
+
+    def syllabify(s):        
+        if s[-1] in LauvinkoForm.final_subs:
+            final = s[-1]
+            s = s[:-1] + LauvinkoForm.final_subs[final]
+        elif s[-1] in LauvinkoForm.final_subs_reverse:
+            final = LauvinkoForm.final_subs_reverse[s[-1]]
+        else:
+            final = '@'
+            
+        sylls = re.findall('[mnṅBDGptckPTCKvlysh]?[aeio][`´]?[YUARMSH]?',s)
+        structure = [LauvinkoForm.parsesyll(syll) for syll in sylls]
+        return structure,final
+
+    def parsesyll(syll):
+        onset = find('[mnṅBDGptckPTCKvlysh]',syll)
+        vowel = find('[aeio]',syll)
+        accent = find('[`´]',syll)
+        coda = find('[YUARMSH]',syll)
+        return [onset,vowel,accent,coda]
+
+    def falavay(self,augment=False):
+        if augment:
+            return self.falavay_forms[0]
+        else:
+            return self.falavay_forms[1]
+
+    def transcribe(self,type_name="both"):
+        if type_name == "both":
+            return self.transcribe("augmented") + ", " + self.transcribe("nonaugmented")
+        structure = self.words[LauvinkoForm.types[type_name]][0]
+        return LauvinkoForm.to_string(structure)
+
+    def to_string(structure):
+        word = ''.join(flatten(structure))
+        replacements = [('B','m'),('D','n'),('G','ṅ'),('P','p'),('T','t'),('C','c'),('K','k'),('ṅ','ng'),
+                        ('a´','á'),('e´','é'),('i´','í'),('o´','ó'),('a`','à'),('e`','è'),('i`','ì'),('o`','ò'),
+                        ('Y','y'),('U','u'),('A','a'),('Rl','ll'),('R','r'),('S','s'),
+                        ('H([ptcks])',r'\1\1'),('H','h'),
+                        ('M([pmv])',r'm\1'),('M$','ng'),('M','n')]
+        return replacement_suite(replacements,word)
+    
+    def from_pk(pkform,showprogress=False):
+        word = ''.join(flatten(pkform.structure))        
+        replacements_pre = [('Y','āi'),('W','āu'),('a','ə'),('ā','a'),('r','l')]
+        word = replacement_suite(replacements_pre, word)
+
+        if showprogress:
+            print(word)
+        
+        replacements_800s = [('([aəeiou]!?)h',r'\1'),('K','p'),('G','m')] #maybe readd ('([ei]!?)h([aəeiou])',r'\1y\2'),('([ou]!?)h([aəeiou])',r'\1v\2'),
+        word = replacement_suite(replacements_800s, word)
+        
+        replacements_900s_non = [('!(%s?%s)a' % (PKForm.prefix_re,LauvinkoForm.onset_re),r'!\1ə'),
+                                 ('!(%s?%s)e' % (PKForm.prefix_re,LauvinkoForm.onset_re),r'!\1i'),
+                                 ('!(%s?%s)o' % (PKForm.prefix_re,LauvinkoForm.onset_re),r'!\1u')]
+        consonant_system = [['p','t','c','k'],
+                            ['m','n','ns','ṅ'],
+                            ['v','l','s','']]
+        for i in range(4):
+            replacements_900s_non.append(('!H' + consonant_system[0][i],'´' + consonant_system[0][i]))
+            replacements_900s_non.append(('!M' + consonant_system[0][i],'´' + consonant_system[1][i]))
+            replacements_900s_non.append(('!' + consonant_system[0][i],'´' + consonant_system[2][i]))
+        replacements_900s_non.append(('!','`'))
+        augmented = word.replace('!','´')
+        nonaugmented = replacement_suite(replacements_900s_non, word)
+
+        if showprogress:
+            print(augmented,nonaugmented)
+        
+        replacements_1000s = [('([ei])([aəeiou][`´])',r'\1y\2'),('([ou])([aəeiou][`´])',r'\1v\2'),
+                             (r'([aəeiou])([`´]?)\1',r'\1\2'),(r'([aəeiou])([`´]?)a',r'\1\2ə'),
+                             (r'([aəeiou])([`´]?)e',r'\1\2i'),(r'([aəeiou])([`´]?)o',r'\1\2u'),
+                             (r'[əe]([`´]?)i',r'e\1'),(r'[əo]([`´]?)u',r'o\1'),(r'a([`´]?)ə',r'a\1')]
+        replacements_1000s *= 3 # a blunt way to ensure compliance
+        replacements_1000s.append(('ñ','n'))
+        augmented = replacement_suite(replacements_1000s,augmented)
+        nonaugmented = replacement_suite(replacements_1000s,nonaugmented)
+
+        if showprogress:
+            print(augmented,nonaugmented)
+
+        replacements_1200s = [('^Mp','B'),('^Mt','D'),('^Mc','anc'),('^Mk','G'),
+                              ('^Hp','P'),('^Ht','T'),('^Hc','C'),('^Hk','K'),
+                              ('([aou][`´]?)i',r'\1Y'),('([aei][`´]?)u',r'\1U'),
+                              ('([ei][`´]?)ə',r'\1A'),('([ou])([`´]?)ə',r'o\2A'),
+                              ('([YUA])([`´])',r'\2\1'),
+                              ('([ei][`´]?)A([HM])',r'\1ya\2'),('([ou][`´]?)A([HM])',r'\1va\2'),
+                              ('Y([HM])',r'ye\1'),('V([HM])',r'vo\1')]
+        augmented = replacement_suite(replacements_1200s,augmented)
+        nonaugmented = replacement_suite(replacements_1200s,nonaugmented)
+
+        if showprogress:
+            print(augmented,nonaugmented)
+        
+        replacements_1400s = [('ə([`´])',r'e\1'),('u([`´])',r'o\1'),('u','ə'),('[ao]$','ə'),('e$','i'),
+                              ('(%s%s)ə$' % (LauvinkoForm.vowel_re,LauvinkoForm.onset_re),r'\1'),
+                              ('(%s)yi$' % LauvinkoForm.vowel_re,r'\1Y'),
+                              ('(%s%s)ə(%s%s)' % (LauvinkoForm.vowel_re,LauvinkoForm.onset_re,LauvinkoForm.onset_re,LauvinkoForm.vowel_re),r'\1\2'),
+                              ('ə','a')]
+        augmented = replacement_suite(replacements_1400s,augmented)
+        nonaugmented = replacement_suite(replacements_1400s,nonaugmented)
+
+        if showprogress:
+            print(augmented,nonaugmented)
+
+        replacements_1500s = [('y(%s)' % LauvinkoForm.onset_re, r'Y\1'),
+                              ('v(%s)' % LauvinkoForm.onset_re, r'U\1'),
+                              ('l(%s)' % LauvinkoForm.onset_re, r'R\1'),
+                              ('[mnṅ](%s)' % LauvinkoForm.onset_re, r'M\1'),
+                              ('[ptk](%s)' % LauvinkoForm.onset_re, r'H\1'),
+                              ('[cs](%s)' % LauvinkoForm.onset_re, r'S\1')]
+        augmented = replacement_suite(replacements_1500s,augmented)
+        nonaugmented = replacement_suite(replacements_1500s,nonaugmented)
+
+        if showprogress:
+            print(augmented,nonaugmented)
+
+        lvform = LauvinkoForm(augmented,nonaugmented)
+        lvform.falavay_forms = (pkform.falavay(True),pkform.falavay(False))
+        return lvform
+
+class LauvinkoWord:
+    def __init__(self):
+        self.category = None
+        self.forms = {}
+        self.defn = 'Not defined.'
+
+    def set_defn(self,s):
+        self.defn = s
+
+    def put_form(self,form_name,lvform):
+        self.forms[form_name] = lvform
+
+    def get_citation_form(self):
+        return self.forms[self.citation_form]
+
+    def update_from_tag(self,language_tag):
+        for subtag in language_tag:
+##            if subtag.tag == "form":
+##                word = subtag.text
+##                form_name = subtag.get("type")
+##                if form_name == "gn":
+##                    lemma.set_general(word)
+##                else:
+##                    lemma.put_form(form_name,word)
+            if subtag.tag == "defn":
+                self.set_defn(subtag.text)
+            else:
+                raise ValueError("Invalid tag: " + subtag.tag)
+        if self.defn == 'Not defined.':
+            raise ValueError("AAAAAHHH")
+
+    def from_pk(pkword):
+        lvword = LauvinkoWord()
+        lvword.category = pkword.category
+        for form_name, word_form in pkword.forms.items():
+            lvword.forms[form_name] = LauvinkoForm.from_pk(word_form)
+        lvword.citation_form = PKWord.citation_forms[lvword.category]
+        lvword.set_defn(pkword.defn)
+        return lvword
 
 class DictEntry:
     origins = ["kasanic","sanskrit","malay","tamil","hokkien","arabic","portuguese","dutch","english"]
@@ -241,6 +407,9 @@ class DictEntry:
         if language_tag.tag == "pk":
             assert(self.origin == "kasanic")
             self.languages["pk"] = PKWord.from_tag(language_tag, self.category)
+            self.languages["lv"] = LauvinkoWord.from_pk(self.languages["pk"])
+        elif language_tag.tag == "lv":
+            self.languages["lv"].update_from_tag(language_tag)
 
     def from_entry(entry):
         category = entry.get("category")
@@ -271,19 +440,19 @@ def run_tests(suite,function,name='Test Suite'):
     print('%d of %d tests passed.' % (passed, suite_size))
     print()
 
-falavay_tests = {'maakina':('mākina','maKqkiqn','makiqn'),
+falavay_tests = {'maakina':('makinə','maKqkiqn','makiqn'),
                  'oi':('oi','OKqIq','OIq'),
-                 'aai':('āi','YKq','Y'),
-                 'naatami':('nātami','naKqtqmi','natqmi'),
-                 'ku\'kuta':('ku\'kuta','kuKqHkutq','kuHkutq'),
-                 'kanka':('kaṅka','kqKqMkq','kqMkq'),
+                 'aai':('ai','YKq','Y'),
+                 'naatami':('natəmi','naKqtqmi','natqmi'),
+                 'ku\'kuta':('ku\'kutə','kuKqHkutq','kuHkutq'),
+                 'kanka':('kəṅkə','kqKqMkq','kqMkq'),
                  'e\'kungi':('e\'kuṅi','EKqHkugi','EHkugi'),
-                 'aakaaye':('ākāye','AqKqkaey','Aqkaey'),
-                 'kvaau':('kvāu','pWKq','pW')}
+                 'aakaaye':('akaye','AqKqkaey','Aqkaey'),
+                 'kvaau':('kvau','pWKq','pW')}
 
 def alltests(word):
     pk = PKForm(word)
-    return pk.classical(), pk.falavay(True), pk.falavay(False)
+    return pk.transcribe(), pk.falavay(True), pk.falavay(False)
 
 if __name__ == "__main__":
     run_tests(falavay_tests,alltests,'Lauvinko Tests')

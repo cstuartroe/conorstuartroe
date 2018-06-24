@@ -11,8 +11,8 @@ function toggleshown(table_toggler) {
 }
 </script>
 <div class="entry" id="build">
-<h2 class="lauvinko">Aqkaey</h2>
-<h3><span style="font-style:italic;">akaye</span> - To build, establish, appoint. (fientive)</h3>
+<h1 class="lauvinko">Aqkaey</h1>
+<h2>Classical Kasanic</h2><h3><span style="font-style:italic;">akaye</span> - To build, establish, appoint. (fientive)</h3>
 <table class="notshown">
 <thead><tr><th colspan="3">Classical Kasanic Inflection - <a onclick="toggleshown(this)">Show</a></th></tr></thead><tbody>
 <tr><td></td><td>Nonpast</td><td>Past</td></tr>
@@ -21,26 +21,38 @@ function toggleshown(table_toggler) {
 <tr><td>Frequentative</td><td><span class="lauvinko">Eekqkaey</span><br/><span style="font-style:italic;">ekekaye</span></td><td><span class="lauvinko">Oekokaey</span><br/><span style="font-style:italic;">okokaye</span></td></tr>
 <tr><td>Inceptive</td><td colspan="2"><span class="lauvinko">Iqnakaey</span><br/><span style="font-style:italic;">inakaye</span></td></tr>
 </tbody></table>
+<h2>Lauvìnko</h2><h3><span style="font-style:italic;">ákay, áy</span> - To build, establish, appoint.</h3>
+<table class="notshown">
+<thead><tr><th colspan="3">Lauvinko Inflection - <a onclick="toggleshown(this)">Show</a></th></tr></thead><tbody>
+<tr><td></td><td>Nonpast</td><td>Past</td></tr>
+<tr><td>Imperfective</td><td><span class="lauvinko">Aqkaey</span><br/><span style="font-style:italic;">ákay, áy</span></td><td><span class="lauvinko">Okaey</span><br/><span style="font-style:italic;">ókay, óayi</span></td></tr>
+<tr><td>Perfective</td><td colspan="2"><span class="lauvinko">Ekaey</span><br/><span style="font-style:italic;">ékay, éayi</span></td></tr>
+<tr><td>Frequentative</td><td><span class="lauvinko">Eekqkaey</span><br/><span style="font-style:italic;">ekékay, ekéayi</span></td><td><span class="lauvinko">Oekokaey</span><br/><span style="font-style:italic;">okókay, okóayi</span></td></tr>
+<tr><td>Inceptive</td><td colspan="2"><span class="lauvinko">Iqnakaey</span><br/><span style="font-style:italic;">inákay, ináy</span></td></tr>
+</tbody></table>
 </div>
 <hr/>
 <div class="entry" id="manner">
-<h2 class="lauvinko">AqHka</h2>
-<h3><span style="font-style:italic;">a'ka</span> - Custom, manner, appearance. (uninflected)</h3>
+<h1 class="lauvinko">AqHka</h1>
+<h2>Classical Kasanic</h2><h3><span style="font-style:italic;">a'ka</span> - Custom, manner, appearance. (uninflected)</h3>
+<h2>Lauvìnko</h2><h3><span style="font-style:italic;">ákka, áh</span> - Custom, manner, appearance.</h3>
 </div>
 <hr/>
 <div class="entry" id="aunt">
-<h2 class="lauvinko">Aqtqri</h2>
-<h3><span style="font-style:italic;">atəri</span> - Kin, clanmate, sister, aunt. (uninflected)</h3>
+<h1 class="lauvinko">Aqtqri</h1>
+<h2>Classical Kasanic</h2><h3><span style="font-style:italic;">atəri</span> - Kin, clanmate, sister, aunt. (uninflected)</h3>
+<h2>Lauvìnko</h2><h3><span style="font-style:italic;">áhli, álli</span> - Kin, clanmate, sister, aunt.</h3>
 </div>
 <hr/>
 <div class="entry" id="kin">
-<h2 class="lauvinko">Wetq</h2>
-<h3><span style="font-style:italic;">aute</span> - Kin, sameblooded. (uninflected)</h3>
+<h1 class="lauvinko">Wetq</h1>
+<h2>Classical Kasanic</h2><h3><span style="font-style:italic;">aute</span> - Kin, sameblooded. (uninflected)</h3>
+<h2>Lauvìnko</h2><h3><span style="font-style:italic;">áuti, áuli</span> - Kin, sameblooded.</h3>
 </div>
 <hr/>
 <div class="entry" id="agitate">
-<h2 class="lauvinko">caMetqsa</h2>
-<h3><span style="font-style:italic;">cantesa</span> - To agitate. (fientive)</h3>
+<h1 class="lauvinko">caMetqsa</h1>
+<h2>Classical Kasanic</h2><h3><span style="font-style:italic;">cantesa</span> - To agitate. (fientive)</h3>
 <table class="notshown">
 <thead><tr><th colspan="3">Classical Kasanic Inflection - <a onclick="toggleshown(this)">Show</a></th></tr></thead><tbody>
 <tr><td></td><td>Nonpast</td><td>Past</td></tr>
@@ -49,27 +61,44 @@ function toggleshown(table_toggler) {
 <tr><td>Frequentative</td><td><span class="lauvinko">ececMetqsa</span><br/><span style="font-style:italic;">cecentesa</span></td><td><span class="lauvinko">ecoecoMetqsa</span><br/><span style="font-style:italic;">cocontesa</span></td></tr>
 <tr><td>Inceptive</td><td colspan="2"><span class="lauvinko">IqMcaMetqsa</span><br/><span style="font-style:italic;">iñcantesa</span></td></tr>
 </tbody></table>
+<h2>Lauvìnko</h2><h3><span style="font-style:italic;">cántes, cánis</span> - To agitate.</h3>
+<table class="notshown">
+<thead><tr><th colspan="3">Lauvinko Inflection - <a onclick="toggleshown(this)">Show</a></th></tr></thead><tbody>
+<tr><td></td><td>Nonpast</td><td>Past</td></tr>
+<tr><td>Imperfective</td><td><span class="lauvinko">caMetqsa</span><br/><span style="font-style:italic;">cántes, cánis</span></td><td><span class="lauvinko">ecoMetqsa</span><br/><span style="font-style:italic;">cóntes, cónis</span></td></tr>
+<tr><td>Perfective</td><td colspan="2"><span class="lauvinko">ecMetqsa</span><br/><span style="font-style:italic;">céntes, cénis</span></td></tr>
+<tr><td>Frequentative</td><td><span class="lauvinko">ececMetqsa</span><br/><span style="font-style:italic;">cecéntes, cecénis</span></td><td><span class="lauvinko">ecoecoMetqsa</span><br/><span style="font-style:italic;">cocóntes, cocónis</span></td></tr>
+<tr><td>Inceptive</td><td colspan="2"><span class="lauvinko">IqMcaMetqsa</span><br/><span style="font-style:italic;">incántes, incánis</span></td></tr>
+</tbody></table>
 </div>
 <hr/>
 <div class="entry" id="bite">
-<h2 class="lauvinko">ciHkiq</h2>
-<h3><span style="font-style:italic;">ci'ki</span> - To bite, chew. (punctual)</h3>
+<h1 class="lauvinko">ciHkiq</h1>
+<h2>Classical Kasanic</h2><h3><span style="font-style:italic;">ci'ki</span> - To bite, chew. (punctual)</h3>
 <table class="notshown">
 <thead><tr><th colspan="3">Classical Kasanic Inflection - <a onclick="toggleshown(this)">Show</a></th></tr></thead><tbody>
 <tr><td></td><td>Nonpast</td><td>Past</td></tr>
 <tr><td>Perfective</td><td><span class="lauvinko">ciHkiq</span><br/><span style="font-style:italic;">ci'ki</span></td><td><span class="lauvinko">cuHkiq</span><br/><span style="font-style:italic;">cu'ki</span></td></tr>
 <tr><td>Frequentative</td><td><span class="lauvinko">ciciHkiq</span><br/><span style="font-style:italic;">cici'ki</span></td><td><span class="lauvinko">cucuHkiq</span><br/><span style="font-style:italic;">cucu'ki</span></td></tr>
 </tbody></table>
+<h2>Lauvìnko</h2><h3><span style="font-style:italic;">cíkki, cíki</span> - To bite, chew.</h3>
+<table class="notshown">
+<thead><tr><th colspan="3">Lauvinko Inflection - <a onclick="toggleshown(this)">Show</a></th></tr></thead><tbody>
+<tr><td></td><td>Nonpast</td><td>Past</td></tr>
+<tr><td>Perfective</td><td><span class="lauvinko">ciHkiq</span><br/><span style="font-style:italic;">cíkki, cíki</span></td><td><span class="lauvinko">cuHkiq</span><br/><span style="font-style:italic;">cókki, cóki</span></td></tr>
+<tr><td>Frequentative</td><td><span class="lauvinko">ciciHkiq</span><br/><span style="font-style:italic;">cicíkki, cicíki</span></td><td><span class="lauvinko">cucuHkiq</span><br/><span style="font-style:italic;">cacókki, cacóki</span></td></tr>
+</tbody></table>
 </div>
 <hr/>
 <div class="entry" id="finger">
-<h2 class="lauvinko">ecokiqen</h2>
-<h3><span style="font-style:italic;">cokine</span> - Finger. (uninflected)</h3>
+<h1 class="lauvinko">ecokiqen</h1>
+<h2>Classical Kasanic</h2><h3><span style="font-style:italic;">cokine</span> - Finger. (uninflected)</h3>
+<h2>Lauvìnko</h2><h3><span style="font-style:italic;">cókini, cóyni</span> - Finger.</h3>
 </div>
 <hr/>
 <div class="entry" id="search">
-<h2 class="lauvinko">HcaMeko</h2>
-<h3><span style="font-style:italic;">'caṅko</span> - To search, find. (fientive)</h3>
+<h1 class="lauvinko">HcaMeko</h1>
+<h2>Classical Kasanic</h2><h3><span style="font-style:italic;">'caṅko</span> - To search, find. (fientive)</h3>
 <table class="notshown">
 <thead><tr><th colspan="3">Classical Kasanic Inflection - <a onclick="toggleshown(this)">Show</a></th></tr></thead><tbody>
 <tr><td></td><td>Nonpast</td><td>Past</td></tr>
@@ -78,38 +107,62 @@ function toggleshown(table_toggler) {
 <tr><td>Frequentative</td><td><span class="lauvinko">HecHecMeko</span><br/><span style="font-style:italic;">'ce'ceṅko</span></td><td><span class="lauvinko">HecoHecoMeko</span><br/><span style="font-style:italic;">'co'coṅko</span></td></tr>
 <tr><td>Inceptive</td><td colspan="2"><span class="lauvinko">IqHcaMeko</span><br/><span style="font-style:italic;">i'caṅko</span></td></tr>
 </tbody></table>
+<h2>Lauvìnko</h2><h3><span style="font-style:italic;">cánka, cáng</span> - To search, find.</h3>
+<table class="notshown">
+<thead><tr><th colspan="3">Lauvinko Inflection - <a onclick="toggleshown(this)">Show</a></th></tr></thead><tbody>
+<tr><td></td><td>Nonpast</td><td>Past</td></tr>
+<tr><td>Imperfective</td><td><span class="lauvinko">HcaMeko</span><br/><span style="font-style:italic;">cánka, cáng</span></td><td><span class="lauvinko">HecoMeko</span><br/><span style="font-style:italic;">cónka, cóng</span></td></tr>
+<tr><td>Perfective</td><td colspan="2"><span class="lauvinko">HecMeko</span><br/><span style="font-style:italic;">cénka, céng</span></td></tr>
+<tr><td>Frequentative</td><td><span class="lauvinko">HecHecMeko</span><br/><span style="font-style:italic;">ceccénka, ceccéng</span></td><td><span class="lauvinko">HecoHecoMeko</span><br/><span style="font-style:italic;">coccónka, coccóng</span></td></tr>
+<tr><td>Inceptive</td><td colspan="2"><span class="lauvinko">IqHcaMeko</span><br/><span style="font-style:italic;">iccánka, iccáng</span></td></tr>
+</tbody></table>
 </div>
 <hr/>
 <div class="entry" id="cross">
-<h2 class="lauvinko">EHkugi</h2>
-<h3><span style="font-style:italic;">e'kuṅi</span> - To cross, go over. (punctual)</h3>
+<h1 class="lauvinko">EHkugi</h1>
+<h2>Classical Kasanic</h2><h3><span style="font-style:italic;">e'kuṅi</span> - To cross, go over. (punctual)</h3>
 <table class="notshown">
 <thead><tr><th colspan="3">Classical Kasanic Inflection - <a onclick="toggleshown(this)">Show</a></th></tr></thead><tbody>
 <tr><td></td><td>Nonpast</td><td>Past</td></tr>
 <tr><td>Perfective</td><td><span class="lauvinko">EHkugi</span><br/><span style="font-style:italic;">e'kuṅi</span></td><td><span class="lauvinko">OHkugi</span><br/><span style="font-style:italic;">o'kuṅi</span></td></tr>
 <tr><td>Frequentative</td><td><span class="lauvinko">EHekqHkugi</span><br/><span style="font-style:italic;">e'ke'kuṅi</span></td><td><span class="lauvinko">OHekoHkugi</span><br/><span style="font-style:italic;">o'ko'kuṅi</span></td></tr>
 </tbody></table>
+<h2>Lauvìnko</h2><h3><span style="font-style:italic;">ékkangi, éhngi</span> - To cross, go over.</h3>
+<table class="notshown">
+<thead><tr><th colspan="3">Lauvinko Inflection - <a onclick="toggleshown(this)">Show</a></th></tr></thead><tbody>
+<tr><td></td><td>Nonpast</td><td>Past</td></tr>
+<tr><td>Perfective</td><td><span class="lauvinko">EHkugi</span><br/><span style="font-style:italic;">ékkangi, éhngi</span></td><td><span class="lauvinko">OHkugi</span><br/><span style="font-style:italic;">ókkangi, óhngi</span></td></tr>
+<tr><td>Frequentative</td><td><span class="lauvinko">EHekqHkugi</span><br/><span style="font-style:italic;">ekkékkangi, ekkéhngi</span></td><td><span class="lauvinko">OHekoHkugi</span><br/><span style="font-style:italic;">okkókkangi, okkóhngi</span></td></tr>
+</tbody></table>
 </div>
 <hr/>
 <div class="entry" id="insert">
-<h2 class="lauvinko">EHpY</h2>
-<h3><span style="font-style:italic;">e'pai</span> - To insert, pierce. (punctual)</h3>
+<h1 class="lauvinko">EHpY</h1>
+<h2>Classical Kasanic</h2><h3><span style="font-style:italic;">e'pai</span> - To insert, pierce. (punctual)</h3>
 <table class="notshown">
 <thead><tr><th colspan="3">Classical Kasanic Inflection - <a onclick="toggleshown(this)">Show</a></th></tr></thead><tbody>
 <tr><td></td><td>Nonpast</td><td>Past</td></tr>
 <tr><td>Perfective</td><td><span class="lauvinko">EHpY</span><br/><span style="font-style:italic;">e'pai</span></td><td><span class="lauvinko">OHpY</span><br/><span style="font-style:italic;">o'pai</span></td></tr>
 <tr><td>Frequentative</td><td><span class="lauvinko">EHepHpY</span><br/><span style="font-style:italic;">e'pe'pai</span></td><td><span class="lauvinko">OHepoHpY</span><br/><span style="font-style:italic;">o'po'pai</span></td></tr>
 </tbody></table>
+<h2>Lauvìnko</h2><h3><span style="font-style:italic;">éppay, épi</span> - To insert, pierce.</h3>
+<table class="notshown">
+<thead><tr><th colspan="3">Lauvinko Inflection - <a onclick="toggleshown(this)">Show</a></th></tr></thead><tbody>
+<tr><td></td><td>Nonpast</td><td>Past</td></tr>
+<tr><td>Perfective</td><td><span class="lauvinko">EHpY</span><br/><span style="font-style:italic;">éppay, épi</span></td><td><span class="lauvinko">OHpY</span><br/><span style="font-style:italic;">óppay, ópi</span></td></tr>
+<tr><td>Frequentative</td><td><span class="lauvinko">EHepHpY</span><br/><span style="font-style:italic;">eppéppay, eppépi</span></td><td><span class="lauvinko">OHepoHpY</span><br/><span style="font-style:italic;">oppóppay, oppópi</span></td></tr>
+</tbody></table>
 </div>
 <hr/>
 <div class="entry" id="not">
-<h2 class="lauvinko">Er</h2>
-<h3><span style="font-style:italic;">erə</span> - Not, no. (uninflected)</h3>
+<h1 class="lauvinko">Er</h1>
+<h2>Classical Kasanic</h2><h3><span style="font-style:italic;">erə</span> - Not, no. (uninflected)</h3>
+<h2>Lauvìnko</h2><h3><span style="font-style:italic;">ér, èr</span> - Not, no.</h3>
 </div>
 <hr/>
 <div class="entry" id="fight">
-<h2 class="lauvinko">hanacvi</h2>
-<h3><span style="font-style:italic;">hanacəvi</span> - To fight. (fientive)</h3>
+<h1 class="lauvinko">hanacvi</h1>
+<h2>Classical Kasanic</h2><h3><span style="font-style:italic;">hanacəvi</span> - To fight. (fientive)</h3>
 <table class="notshown">
 <thead><tr><th colspan="3">Classical Kasanic Inflection - <a onclick="toggleshown(this)">Show</a></th></tr></thead><tbody>
 <tr><td></td><td>Nonpast</td><td>Past</td></tr>
@@ -118,36 +171,50 @@ function toggleshown(table_toggler) {
 <tr><td>Frequentative</td><td><span class="lauvinko">ehqehqnacvi</span><br/><span style="font-style:italic;">hehenacəvi</span></td><td><span class="lauvinko">ehoehonacvi</span><br/><span style="font-style:italic;">hohonacəvi</span></td></tr>
 <tr><td>Inceptive</td><td colspan="2"><span class="lauvinko">Iqhanacvi</span><br/><span style="font-style:italic;">ihanacəvi</span></td></tr>
 </tbody></table>
+<h2>Lauvìnko</h2><h3><span style="font-style:italic;">hánasvi, hàncavi</span> - To fight.</h3>
+<table class="notshown">
+<thead><tr><th colspan="3">Lauvinko Inflection - <a onclick="toggleshown(this)">Show</a></th></tr></thead><tbody>
+<tr><td></td><td>Nonpast</td><td>Past</td></tr>
+<tr><td>Imperfective</td><td><span class="lauvinko">hanacvi</span><br/><span style="font-style:italic;">hánasvi, hàncavi</span></td><td><span class="lauvinko">ehonacvi</span><br/><span style="font-style:italic;">hónasvi, hòncavi</span></td></tr>
+<tr><td>Perfective</td><td colspan="2"><span class="lauvinko">ehqnacvi</span><br/><span style="font-style:italic;">hénasvi, hèncavi</span></td></tr>
+<tr><td>Frequentative</td><td><span class="lauvinko">ehqehqnacvi</span><br/><span style="font-style:italic;">heyénasvi, heyèncavi</span></td><td><span class="lauvinko">ehoehonacvi</span><br/><span style="font-style:italic;">hovónasvi, hovòncavi</span></td></tr>
+<tr><td>Inceptive</td><td colspan="2"><span class="lauvinko">Iqhanacvi</span><br/><span style="font-style:italic;">iyánasvi, iyàncavi</span></td></tr>
+</tbody></table>
 </div>
 <hr/>
 <div class="entry" id="water">
-<h2 class="lauvinko">ehqeho</h2>
-<h3><span style="font-style:italic;">heho</span> - Water. (uninflected)</h3>
+<h1 class="lauvinko">ehqeho</h1>
+<h2>Classical Kasanic</h2><h3><span style="font-style:italic;">heho</span> - Water. (uninflected)</h3>
+<h2>Lauvìnko</h2><h3><span style="font-style:italic;">héu, hèu</span> - Water.</h3>
 </div>
 <hr/>
 <div class="entry" id="rice">
-<h2 class="lauvinko">ehqep</h2>
-<h3><span style="font-style:italic;">hekve</span> - Rice. (uninflected)</h3>
+<h1 class="lauvinko">ehqep</h1>
+<h2>Classical Kasanic</h2><h3><span style="font-style:italic;">hekve</span> - Rice. (uninflected)</h3>
+<h2>Lauvìnko</h2><h3><span style="font-style:italic;">hépi, hévi</span> - Rice.</h3>
 </div>
 <hr/>
 <div class="entry" id="toe">
-<h2 class="lauvinko">ehomum</h2>
-<h3><span style="font-style:italic;">homumə</span> - Toe. (uninflected)</h3>
+<h1 class="lauvinko">ehomum</h1>
+<h2>Classical Kasanic</h2><h3><span style="font-style:italic;">homumə</span> - Toe. (uninflected)</h3>
+<h2>Lauvìnko</h2><h3><span style="font-style:italic;">hómang, hòmang</span> - Toe.</h3>
 </div>
 <hr/>
 <div class="entry" id="daughter1">
-<h2 class="lauvinko">Iqerohiq</h2>
-<h3><span style="font-style:italic;">irohi</span> - Father's daughter. (uninflected)</h3>
+<h1 class="lauvinko">Iqerohiq</h1>
+<h2>Classical Kasanic</h2><h3><span style="font-style:italic;">irohi</span> - Father's daughter. (uninflected)</h3>
+<h2>Lauvìnko</h2><h3><span style="font-style:italic;">íloy, ìlay</span> - Father's daughter.</h3>
 </div>
 <hr/>
 <div class="entry" id="son1">
-<h2 class="lauvinko">kaMka</h2>
-<h3><span style="font-style:italic;">kaṅka</span> - Father's son. (uninflected)</h3>
+<h1 class="lauvinko">kaMka</h1>
+<h2>Classical Kasanic</h2><h3><span style="font-style:italic;">kaṅka</span> - Father's son. (uninflected)</h3>
+<h2>Lauvìnko</h2><h3><span style="font-style:italic;">kánka, káng</span> - Father's son.</h3>
 </div>
 <hr/>
 <div class="entry" id="speak">
-<h2 class="lauvinko">kaHepota</h2>
-<h3><span style="font-style:italic;">ka'pota</span> - To speak, say. (fientive)</h3>
+<h1 class="lauvinko">kaHepota</h1>
+<h2>Classical Kasanic</h2><h3><span style="font-style:italic;">ka'pota</span> - To speak, say. (fientive)</h3>
 <table class="notshown">
 <thead><tr><th colspan="3">Classical Kasanic Inflection - <a onclick="toggleshown(this)">Show</a></th></tr></thead><tbody>
 <tr><td></td><td>Nonpast</td><td>Past</td></tr>
@@ -156,42 +223,62 @@ function toggleshown(table_toggler) {
 <tr><td>Frequentative</td><td><span class="lauvinko">ekqekqHepota</span><br/><span style="font-style:italic;">keke'pota</span></td><td><span class="lauvinko">ekoekoHepota</span><br/><span style="font-style:italic;">koko'pota</span></td></tr>
 <tr><td>Inceptive</td><td colspan="2"><span class="lauvinko">IqMkaHepota</span><br/><span style="font-style:italic;">iṅka'pota</span></td></tr>
 </tbody></table>
+<h2>Lauvìnko</h2><h3><span style="font-style:italic;">káppoh, kápah</span> - To speak, say.</h3>
+<table class="notshown">
+<thead><tr><th colspan="3">Lauvinko Inflection - <a onclick="toggleshown(this)">Show</a></th></tr></thead><tbody>
+<tr><td></td><td>Nonpast</td><td>Past</td></tr>
+<tr><td>Imperfective</td><td><span class="lauvinko">kaHepota</span><br/><span style="font-style:italic;">káppoh, kápah</span></td><td><span class="lauvinko">ekoHepota</span><br/><span style="font-style:italic;">kóppoh, kópah</span></td></tr>
+<tr><td>Perfective</td><td colspan="2"><span class="lauvinko">ekqHepota</span><br/><span style="font-style:italic;">képpoh, képah</span></td></tr>
+<tr><td>Frequentative</td><td><span class="lauvinko">ekqekqHepota</span><br/><span style="font-style:italic;">keképpoh, keképah</span></td><td><span class="lauvinko">ekoekoHepota</span><br/><span style="font-style:italic;">kokóppoh, kokópah</span></td></tr>
+<tr><td>Inceptive</td><td colspan="2"><span class="lauvinko">IqMkaHepota</span><br/><span style="font-style:italic;">inkáppoh, inkápah</span></td></tr>
+</tbody></table>
 </div>
 <hr/>
 <div class="entry" id="son2">
-<h2 class="lauvinko">kaerpa</h2>
-<h3><span style="font-style:italic;">karepa</span> - Mother's son. (uninflected)</h3>
+<h1 class="lauvinko">kaerpa</h1>
+<h2>Classical Kasanic</h2><h3><span style="font-style:italic;">karepa</span> - Mother's son. (uninflected)</h3>
+<h2>Lauvìnko</h2><h3><span style="font-style:italic;">káleh, kàlih</span> - Mother's son.</h3>
 </div>
 <hr/>
 <div class="entry" id="gust">
-<h2 class="lauvinko">kiqMkapiru</h2>
-<h3><span style="font-style:italic;">kiṅkakviru</span> - To blow, gust. (punctual)</h3>
+<h1 class="lauvinko">kiqMkapiru</h1>
+<h2>Classical Kasanic</h2><h3><span style="font-style:italic;">kiṅkakviru</span> - To blow, gust. (punctual)</h3>
 <table class="notshown">
 <thead><tr><th colspan="3">Classical Kasanic Inflection - <a onclick="toggleshown(this)">Show</a></th></tr></thead><tbody>
 <tr><td></td><td>Nonpast</td><td>Past</td></tr>
 <tr><td>Perfective</td><td><span class="lauvinko">kiqMkapiru</span><br/><span style="font-style:italic;">kiṅkakviru</span></td><td><span class="lauvinko">kuMkapiru</span><br/><span style="font-style:italic;">kuṅkakviru</span></td></tr>
 <tr><td>Frequentative</td><td><span class="lauvinko">kiqkiqMkapiru</span><br/><span style="font-style:italic;">kikiṅkakviru</span></td><td><span class="lauvinko">kukuMkapiru</span><br/><span style="font-style:italic;">kukuṅkakviru</span></td></tr>
 </tbody></table>
+<h2>Lauvìnko</h2><h3><span style="font-style:italic;">kínkapir, kímpir</span> - To blow, gust.</h3>
+<table class="notshown">
+<thead><tr><th colspan="3">Lauvinko Inflection - <a onclick="toggleshown(this)">Show</a></th></tr></thead><tbody>
+<tr><td></td><td>Nonpast</td><td>Past</td></tr>
+<tr><td>Perfective</td><td><span class="lauvinko">kiqMkapiru</span><br/><span style="font-style:italic;">kínkapir, kímpir</span></td><td><span class="lauvinko">kuMkapiru</span><br/><span style="font-style:italic;">kónkapir, kómpir</span></td></tr>
+<tr><td>Frequentative</td><td><span class="lauvinko">kiqkiqMkapiru</span><br/><span style="font-style:italic;">kikínkapir, kikímpir</span></td><td><span class="lauvinko">kukuMkapiru</span><br/><span style="font-style:italic;">kakónkapir, kakómpir</span></td></tr>
+</tbody></table>
 </div>
 <hr/>
 <div class="entry" id="much">
-<h2 class="lauvinko">ekoero</h2>
-<h3><span style="font-style:italic;">koro</span> - Much, many. (uninflected)</h3>
+<h1 class="lauvinko">ekoero</h1>
+<h2>Classical Kasanic</h2><h3><span style="font-style:italic;">koro</span> - Much, many. (uninflected)</h3>
+<h2>Lauvìnko</h2><h3><span style="font-style:italic;">kór, kòr</span> - Much, many.</h3>
 </div>
 <hr/>
 <div class="entry" id="heel">
-<h2 class="lauvinko">pY</h2>
-<h3><span style="font-style:italic;">kvai</span> - Heel. (uninflected)</h3>
+<h1 class="lauvinko">pY</h1>
+<h2>Classical Kasanic</h2><h3><span style="font-style:italic;">kvai</span> - Heel. (uninflected)</h3>
+<h2>Lauvìnko</h2><h3><span style="font-style:italic;">páy, pày</span> - Heel.</h3>
 </div>
 <hr/>
 <div class="entry" id="egg">
-<h2 class="lauvinko">pYMta</h2>
-<h3><span style="font-style:italic;">kvainta</span> - Egg. (uninflected)</h3>
+<h1 class="lauvinko">pYMta</h1>
+<h2>Classical Kasanic</h2><h3><span style="font-style:italic;">kvainta</span> - Egg. (uninflected)</h3>
+<h2>Lauvìnko</h2><h3><span style="font-style:italic;">páyenta, páyna</span> - Egg.</h3>
 </div>
 <hr/>
 <div class="entry" id="mighty">
-<h2 class="lauvinko">panikiq</h2>
-<h3><span style="font-style:italic;">kvaniki</span> - To be great, mighty. (fientive)</h3>
+<h1 class="lauvinko">panikiq</h1>
+<h2>Classical Kasanic</h2><h3><span style="font-style:italic;">kvaniki</span> - To be great, mighty. (fientive)</h3>
 <table class="notshown">
 <thead><tr><th colspan="3">Classical Kasanic Inflection - <a onclick="toggleshown(this)">Show</a></th></tr></thead><tbody>
 <tr><td></td><td>Nonpast</td><td>Past</td></tr>
@@ -200,47 +287,68 @@ function toggleshown(table_toggler) {
 <tr><td>Frequentative</td><td><span class="lauvinko">epepnikiq</span><br/><span style="font-style:italic;">kvekveniki</span></td><td><span class="lauvinko">epoeponikiq</span><br/><span style="font-style:italic;">kvokvoniki</span></td></tr>
 <tr><td>Inceptive</td><td colspan="2"><span class="lauvinko">IqMpanikiq</span><br/><span style="font-style:italic;">iṅkvaniki</span></td></tr>
 </tbody></table>
+<h2>Lauvìnko</h2><h3><span style="font-style:italic;">pániki, pàniki</span> - To be great, mighty.</h3>
+<table class="notshown">
+<thead><tr><th colspan="3">Lauvinko Inflection - <a onclick="toggleshown(this)">Show</a></th></tr></thead><tbody>
+<tr><td></td><td>Nonpast</td><td>Past</td></tr>
+<tr><td>Imperfective</td><td><span class="lauvinko">panikiq</span><br/><span style="font-style:italic;">pániki, pàniki</span></td><td><span class="lauvinko">eponikiq</span><br/><span style="font-style:italic;">póniki, pòniki</span></td></tr>
+<tr><td>Perfective</td><td colspan="2"><span class="lauvinko">epnikiq</span><br/><span style="font-style:italic;">péniki, pèniki</span></td></tr>
+<tr><td>Frequentative</td><td><span class="lauvinko">epepnikiq</span><br/><span style="font-style:italic;">pepéniki, pepèniki</span></td><td><span class="lauvinko">epoeponikiq</span><br/><span style="font-style:italic;">popóniki, popòniki</span></td></tr>
+<tr><td>Inceptive</td><td colspan="2"><span class="lauvinko">IqMpanikiq</span><br/><span style="font-style:italic;">impániki, impàniki</span></td></tr>
+</tbody></table>
 </div>
 <hr/>
 <div class="entry" id="part">
-<h2 class="lauvinko">pW</h2>
-<h3><span style="font-style:italic;">kvau</span> - Part, piece. (uninflected)</h3>
+<h1 class="lauvinko">pW</h1>
+<h2>Classical Kasanic</h2><h3><span style="font-style:italic;">kvau</span> - Part, piece. (uninflected)</h3>
+<h2>Lauvìnko</h2><h3><span style="font-style:italic;">páu, pàu</span> - Part, piece.</h3>
 </div>
 <hr/>
 <div class="entry" id="add">
-<h2 class="lauvinko">pierMta</h2>
-<h3><span style="font-style:italic;">kvirenta</span> - To add. (punctual)</h3>
+<h1 class="lauvinko">pierMta</h1>
+<h2>Classical Kasanic</h2><h3><span style="font-style:italic;">kvirenta</span> - To add. (punctual)</h3>
 <table class="notshown">
 <thead><tr><th colspan="3">Classical Kasanic Inflection - <a onclick="toggleshown(this)">Show</a></th></tr></thead><tbody>
 <tr><td></td><td>Nonpast</td><td>Past</td></tr>
 <tr><td>Perfective</td><td><span class="lauvinko">pierMta</span><br/><span style="font-style:italic;">kvirenta</span></td><td><span class="lauvinko">puerMta</span><br/><span style="font-style:italic;">kvurenta</span></td></tr>
 <tr><td>Frequentative</td><td><span class="lauvinko">pipierMta</span><br/><span style="font-style:italic;">kvikvirenta</span></td><td><span class="lauvinko">pupuerMta</span><br/><span style="font-style:italic;">kvukvurenta</span></td></tr>
 </tbody></table>
+<h2>Lauvìnko</h2><h3><span style="font-style:italic;">pílenta, pìlinta</span> - To add.</h3>
+<table class="notshown">
+<thead><tr><th colspan="3">Lauvinko Inflection - <a onclick="toggleshown(this)">Show</a></th></tr></thead><tbody>
+<tr><td></td><td>Nonpast</td><td>Past</td></tr>
+<tr><td>Perfective</td><td><span class="lauvinko">pierMta</span><br/><span style="font-style:italic;">pílenta, pìlinta</span></td><td><span class="lauvinko">puerMta</span><br/><span style="font-style:italic;">pólenta, pòlinta</span></td></tr>
+<tr><td>Frequentative</td><td><span class="lauvinko">pipierMta</span><br/><span style="font-style:italic;">pipílenta, pipìlinta</span></td><td><span class="lauvinko">pupuerMta</span><br/><span style="font-style:italic;">papólenta, papòlinta</span></td></tr>
+</tbody></table>
 </div>
 <hr/>
 <div class="entry" id="north">
-<h2 class="lauvinko">kqmanW</h2>
-<h3><span style="font-style:italic;">kəmanau</span> - North. (uninflected)</h3>
+<h1 class="lauvinko">kqmanW</h1>
+<h2>Classical Kasanic</h2><h3><span style="font-style:italic;">kəmanau</span> - North. (uninflected)</h3>
+<h2>Lauvìnko</h2><h3><span style="font-style:italic;">kémanau, kènnau</span> - North.</h3>
 </div>
 <hr/>
 <div class="entry" id="hut">
-<h2 class="lauvinko">kqravi</h2>
-<h3><span style="font-style:italic;">kəravi</span> - Hut, shelter. (uninflected)</h3>
+<h1 class="lauvinko">kqravi</h1>
+<h2>Classical Kasanic</h2><h3><span style="font-style:italic;">kəravi</span> - Hut, shelter. (uninflected)</h3>
+<h2>Lauvìnko</h2><h3><span style="font-style:italic;">kélavi, kèrvi</span> - Hut, shelter.</h3>
 </div>
 <hr/>
 <div class="entry" id="hand">
-<h2 class="lauvinko">maHecoepo</h2>
-<h3><span style="font-style:italic;">ma'copo</span> - Hand. (uninflected)</h3>
+<h1 class="lauvinko">maHecoepo</h1>
+<h2>Classical Kasanic</h2><h3><span style="font-style:italic;">ma'copo</span> - Hand. (uninflected)</h3>
+<h2>Lauvìnko</h2><h3><span style="font-style:italic;">máccoh, mácah</span> - Hand.</h3>
 </div>
 <hr/>
 <div class="entry" id="mother">
-<h2 class="lauvinko">mama</h2>
-<h3><span style="font-style:italic;">mama</span> - Mother. (uninflected)</h3>
+<h1 class="lauvinko">mama</h1>
+<h2>Classical Kasanic</h2><h3><span style="font-style:italic;">mama</span> - Mother. (uninflected)</h3>
+<h2>Lauvìnko</h2><h3><span style="font-style:italic;">máng, màng</span> - Mother.</h3>
 </div>
 <hr/>
 <div class="entry" id="eat">
-<h2 class="lauvinko">maneg</h2>
-<h3><span style="font-style:italic;">manəṅe</span> - To eat, consume. (fientive)</h3>
+<h1 class="lauvinko">maneg</h1>
+<h2>Classical Kasanic</h2><h3><span style="font-style:italic;">manəṅe</span> - To eat, consume. (fientive)</h3>
 <table class="notshown">
 <thead><tr><th colspan="3">Classical Kasanic Inflection - <a onclick="toggleshown(this)">Show</a></th></tr></thead><tbody>
 <tr><td></td><td>Nonpast</td><td>Past</td></tr>
@@ -249,123 +357,188 @@ function toggleshown(table_toggler) {
 <tr><td>Frequentative</td><td><span class="lauvinko">ememneg</span><br/><span style="font-style:italic;">memenəṅe</span></td><td><span class="lauvinko">emoemoneg</span><br/><span style="font-style:italic;">momonəṅe</span></td></tr>
 <tr><td>Inceptive</td><td colspan="2"><span class="lauvinko">Iqmaneg</span><br/><span style="font-style:italic;">imanəṅe</span></td></tr>
 </tbody></table>
+<h2>Lauvìnko</h2><h3><span style="font-style:italic;">mánngi, mànngi</span> - To eat, consume.</h3>
+<table class="notshown">
+<thead><tr><th colspan="3">Lauvinko Inflection - <a onclick="toggleshown(this)">Show</a></th></tr></thead><tbody>
+<tr><td></td><td>Nonpast</td><td>Past</td></tr>
+<tr><td>Imperfective</td><td><span class="lauvinko">maneg</span><br/><span style="font-style:italic;">mánngi, mànngi</span></td><td><span class="lauvinko">emoneg</span><br/><span style="font-style:italic;">mónngi, mònngi</span></td></tr>
+<tr><td>Perfective</td><td colspan="2"><span class="lauvinko">emneg</span><br/><span style="font-style:italic;">ménngi, mènngi</span></td></tr>
+<tr><td>Frequentative</td><td><span class="lauvinko">ememneg</span><br/><span style="font-style:italic;">meménngi, memènngi</span></td><td><span class="lauvinko">emoemoneg</span><br/><span style="font-style:italic;">momónngi, momònngi</span></td></tr>
+<tr><td>Inceptive</td><td colspan="2"><span class="lauvinko">Iqmaneg</span><br/><span style="font-style:italic;">imánngi, imànngi</span></td></tr>
+</tbody></table>
 </div>
 <hr/>
 <div class="entry" id="pandan">
-<h2 class="lauvinko">maetoec</h2>
-<h3><span style="font-style:italic;">matoce</span> - Pandan. (uninflected)</h3>
+<h1 class="lauvinko">maetoec</h1>
+<h2>Classical Kasanic</h2><h3><span style="font-style:italic;">matoce</span> - Pandan. (uninflected)</h3>
+<h2>Lauvìnko</h2><h3><span style="font-style:italic;">mátoci, márci</span> - Pandan.</h3>
 </div>
 <hr/>
 <div class="entry" id="mild">
-<h2 class="lauvinko">emMtqvW</h2>
-<h3><span style="font-style:italic;">mentəvau</span> - Mild, easy. (stative)</h3>
+<h1 class="lauvinko">emMtqvW</h1>
+<h2>Classical Kasanic</h2><h3><span style="font-style:italic;">mentəvau</span> - Mild, easy. (stative)</h3>
 <table class="notshown">
 <thead><tr><th colspan="3">Classical Kasanic Inflection - <a onclick="toggleshown(this)">Show</a></th></tr></thead><tbody>
 <tr><td></td><td>Nonpast</td><td>Past</td></tr>
 <tr><td>Imperfective</td><td><span class="lauvinko">emMtqvW</span><br/><span style="font-style:italic;">mentəvau</span></td><td><span class="lauvinko">emMtqvW</span><br/><span style="font-style:italic;">mentəvau</span></td></tr>
 <tr><td>Inceptive</td><td colspan="2"><span class="lauvinko">IqemMtqvW</span><br/><span style="font-style:italic;">imentəvau</span></td></tr>
 </tbody></table>
+<h2>Lauvìnko</h2><h3><span style="font-style:italic;">méntavau, mémvau</span> - Mild, easy.</h3>
+<table class="notshown">
+<thead><tr><th colspan="3">Lauvinko Inflection - <a onclick="toggleshown(this)">Show</a></th></tr></thead><tbody>
+<tr><td></td><td>Nonpast</td><td>Past</td></tr>
+<tr><td>Imperfective</td><td><span class="lauvinko">emMtqvW</span><br/><span style="font-style:italic;">méntavau, mémvau</span></td><td><span class="lauvinko">emMtqvW</span><br/><span style="font-style:italic;">méntavau, mémvau</span></td></tr>
+<tr><td>Inceptive</td><td colspan="2"><span class="lauvinko">IqemMtqvW</span><br/><span style="font-style:italic;">iméntavau, imémvau</span></td></tr>
+</tbody></table>
 </div>
 <hr/>
 <div class="entry" id="sister">
-<h2 class="lauvinko">miero</h2>
-<h3><span style="font-style:italic;">miro</span> - Sister. (uninflected)</h3>
+<h1 class="lauvinko">miero</h1>
+<h2>Classical Kasanic</h2><h3><span style="font-style:italic;">miro</span> - Sister. (uninflected)</h3>
+<h2>Lauvìnko</h2><h3><span style="font-style:italic;">mír, mìr</span> - Sister.</h3>
 </div>
 <hr/>
 <div class="entry" id="woman">
-<h2 class="lauvinko">emoka</h2>
-<h3><span style="font-style:italic;">moka</span> - Woman, female. (uninflected)</h3>
+<h1 class="lauvinko">emoka</h1>
+<h2>Classical Kasanic</h2><h3><span style="font-style:italic;">moka</span> - Woman, female. (uninflected)</h3>
+<h2>Lauvìnko</h2><h3><span style="font-style:italic;">móh, móa</span> - Woman, female.</h3>
 </div>
 <hr/>
 <div class="entry" id="knife">
-<h2 class="lauvinko">mhiqkq</h2>
-<h3><span style="font-style:italic;">məhikə</span> - Knife. (uninflected)</h3>
+<h1 class="lauvinko">mhiqkq</h1>
+<h2>Classical Kasanic</h2><h3><span style="font-style:italic;">məhikə</span> - Knife. (uninflected)</h3>
+<h2>Lauvìnko</h2><h3><span style="font-style:italic;">méh, mèh</span> - Knife.</h3>
 </div>
 <hr/>
 <div class="entry" id="mango">
-<h2 class="lauvinko">natqmi</h2>
-<h3><span style="font-style:italic;">natəmi</span> - Mango. (uninflected)</h3>
+<h1 class="lauvinko">natqmi</h1>
+<h2>Classical Kasanic</h2><h3><span style="font-style:italic;">natəmi</span> - Mango. (uninflected)</h3>
+<h2>Lauvìnko</h2><h3><span style="font-style:italic;">náhmi, nármi</span> - Mango.</h3>
 </div>
 <hr/>
 <div class="entry" id="stand">
-<h2 class="lauvinko">MtiqHetokq</h2>
-<h3><span style="font-style:italic;">nti'tokə</span> - To stand. (stative)</h3>
+<h1 class="lauvinko">MtiqHetokq</h1>
+<h2>Classical Kasanic</h2><h3><span style="font-style:italic;">nti'tokə</span> - To stand. (stative)</h3>
 <table class="notshown">
 <thead><tr><th colspan="3">Classical Kasanic Inflection - <a onclick="toggleshown(this)">Show</a></th></tr></thead><tbody>
 <tr><td></td><td>Nonpast</td><td>Past</td></tr>
 <tr><td>Imperfective</td><td><span class="lauvinko">MtiqHetokq</span><br/><span style="font-style:italic;">nti'tokə</span></td><td><span class="lauvinko">MtiqHetokq</span><br/><span style="font-style:italic;">nti'tokə</span></td></tr>
 <tr><td>Inceptive</td><td colspan="2"><span class="lauvinko">IqMtiqHetokq</span><br/><span style="font-style:italic;">inti'tokə</span></td></tr>
 </tbody></table>
+<h2>Lauvìnko</h2><h3><span style="font-style:italic;">níttoh, nítah</span> - To stand.</h3>
+<table class="notshown">
+<thead><tr><th colspan="3">Lauvinko Inflection - <a onclick="toggleshown(this)">Show</a></th></tr></thead><tbody>
+<tr><td></td><td>Nonpast</td><td>Past</td></tr>
+<tr><td>Imperfective</td><td><span class="lauvinko">MtiqHetokq</span><br/><span style="font-style:italic;">níttoh, nítah</span></td><td><span class="lauvinko">MtiqHetokq</span><br/><span style="font-style:italic;">níttoh, nítah</span></td></tr>
+<tr><td>Inceptive</td><td colspan="2"><span class="lauvinko">IqMtiqHetokq</span><br/><span style="font-style:italic;">intíttoh, intítah</span></td></tr>
+</tbody></table>
 </div>
 <hr/>
 <div class="entry" id="all">
-<h2 class="lauvinko">NYsa</h2>
-<h3><span style="font-style:italic;">ñaisa</span> - All, every. (uninflected)</h3>
+<h1 class="lauvinko">NYsa</h1>
+<h2>Classical Kasanic</h2><h3><span style="font-style:italic;">ñaisa</span> - All, every. (uninflected)</h3>
+<h2>Lauvìnko</h2><h3><span style="font-style:italic;">náysa, nàysa</span> - All, every.</h3>
 </div>
 <hr/>
 <div class="entry" id="need">
-<h2 class="lauvinko">eNovipi</h2>
-<h3><span style="font-style:italic;">ñovipi</span> - To need. (stative)</h3>
+<h1 class="lauvinko">eNovipi</h1>
+<h2>Classical Kasanic</h2><h3><span style="font-style:italic;">ñovipi</span> - To need. (stative)</h3>
 <table class="notshown">
 <thead><tr><th colspan="3">Classical Kasanic Inflection - <a onclick="toggleshown(this)">Show</a></th></tr></thead><tbody>
 <tr><td></td><td>Nonpast</td><td>Past</td></tr>
 <tr><td>Imperfective</td><td><span class="lauvinko">eNovipi</span><br/><span style="font-style:italic;">ñovipi</span></td><td><span class="lauvinko">eNovipi</span><br/><span style="font-style:italic;">ñovipi</span></td></tr>
 <tr><td>Inceptive</td><td colspan="2"><span class="lauvinko">IqeNovipi</span><br/><span style="font-style:italic;">iñovipi</span></td></tr>
 </tbody></table>
+<h2>Lauvìnko</h2><h3><span style="font-style:italic;">nóvipi, nòvipi</span> - To need.</h3>
+<table class="notshown">
+<thead><tr><th colspan="3">Lauvinko Inflection - <a onclick="toggleshown(this)">Show</a></th></tr></thead><tbody>
+<tr><td></td><td>Nonpast</td><td>Past</td></tr>
+<tr><td>Imperfective</td><td><span class="lauvinko">eNovipi</span><br/><span style="font-style:italic;">nóvipi, nòvipi</span></td><td><span class="lauvinko">eNovipi</span><br/><span style="font-style:italic;">nóvipi, nòvipi</span></td></tr>
+<tr><td>Inceptive</td><td colspan="2"><span class="lauvinko">IqeNovipi</span><br/><span style="font-style:italic;">inóvipi, inòvipi</span></td></tr>
+</tbody></table>
 </div>
 <hr/>
 <div class="entry" id="wise">
-<h2 class="lauvinko">Mcaey</h2>
-<h3><span style="font-style:italic;">ñcaye</span> - Wise, intelligent. (stative)</h3>
+<h1 class="lauvinko">Mcaey</h1>
+<h2>Classical Kasanic</h2><h3><span style="font-style:italic;">ñcaye</span> - Wise, intelligent. (stative)</h3>
 <table class="notshown">
 <thead><tr><th colspan="3">Classical Kasanic Inflection - <a onclick="toggleshown(this)">Show</a></th></tr></thead><tbody>
 <tr><td></td><td>Nonpast</td><td>Past</td></tr>
 <tr><td>Imperfective</td><td><span class="lauvinko">Mcaey</span><br/><span style="font-style:italic;">ñcaye</span></td><td><span class="lauvinko">Mcaey</span><br/><span style="font-style:italic;">ñcaye</span></td></tr>
 <tr><td>Inceptive</td><td colspan="2"><span class="lauvinko">IqMcaey</span><br/><span style="font-style:italic;">iñcaye</span></td></tr>
 </tbody></table>
+<h2>Lauvìnko</h2><h3><span style="font-style:italic;">ancáy, ancày</span> - Wise, intelligent.</h3>
+<table class="notshown">
+<thead><tr><th colspan="3">Lauvinko Inflection - <a onclick="toggleshown(this)">Show</a></th></tr></thead><tbody>
+<tr><td></td><td>Nonpast</td><td>Past</td></tr>
+<tr><td>Imperfective</td><td><span class="lauvinko">Mcaey</span><br/><span style="font-style:italic;">ancáy, ancày</span></td><td><span class="lauvinko">Mcaey</span><br/><span style="font-style:italic;">ancáy, ancày</span></td></tr>
+<tr><td>Inceptive</td><td colspan="2"><span class="lauvinko">IqMcaey</span><br/><span style="font-style:italic;">incáy, incày</span></td></tr>
+</tbody></table>
 </div>
 <hr/>
 <div class="entry" id="trade">
-<h2 class="lauvinko">Meckiq</h2>
-<h3><span style="font-style:italic;">ñceki</span> - To trade. (punctual)</h3>
+<h1 class="lauvinko">Meckiq</h1>
+<h2>Classical Kasanic</h2><h3><span style="font-style:italic;">ñceki</span> - To trade. (punctual)</h3>
 <table class="notshown">
 <thead><tr><th colspan="3">Classical Kasanic Inflection - <a onclick="toggleshown(this)">Show</a></th></tr></thead><tbody>
 <tr><td></td><td>Nonpast</td><td>Past</td></tr>
 <tr><td>Perfective</td><td><span class="lauvinko">Meckiq</span><br/><span style="font-style:italic;">ñceki</span></td><td><span class="lauvinko">Mecokiq</span><br/><span style="font-style:italic;">ñcoki</span></td></tr>
 <tr><td>Frequentative</td><td><span class="lauvinko">MecMeckiq</span><br/><span style="font-style:italic;">ñceñceki</span></td><td><span class="lauvinko">MecoMecokiq</span><br/><span style="font-style:italic;">ñcoñcoki</span></td></tr>
 </tbody></table>
+<h2>Lauvìnko</h2><h3><span style="font-style:italic;">ancéki, ancé</span> - To trade.</h3>
+<table class="notshown">
+<thead><tr><th colspan="3">Lauvinko Inflection - <a onclick="toggleshown(this)">Show</a></th></tr></thead><tbody>
+<tr><td></td><td>Nonpast</td><td>Past</td></tr>
+<tr><td>Perfective</td><td><span class="lauvinko">Meckiq</span><br/><span style="font-style:italic;">ancéki, ancé</span></td><td><span class="lauvinko">Mecokiq</span><br/><span style="font-style:italic;">ancóki, ancóy</span></td></tr>
+<tr><td>Frequentative</td><td><span class="lauvinko">MecMeckiq</span><br/><span style="font-style:italic;">ancencéki, ancencé</span></td><td><span class="lauvinko">MecoMecokiq</span><br/><span style="font-style:italic;">anconcóki, anconcóy</span></td></tr>
+</tbody></table>
 </div>
 <hr/>
 <div class="entry" id="drink">
-<h2 class="lauvinko">egpipi</h2>
-<h3><span style="font-style:italic;">ṅepikvi</span> - To drink. (punctual)</h3>
+<h1 class="lauvinko">egpipi</h1>
+<h2>Classical Kasanic</h2><h3><span style="font-style:italic;">ṅepikvi</span> - To drink. (punctual)</h3>
 <table class="notshown">
 <thead><tr><th colspan="3">Classical Kasanic Inflection - <a onclick="toggleshown(this)">Show</a></th></tr></thead><tbody>
 <tr><td></td><td>Nonpast</td><td>Past</td></tr>
 <tr><td>Perfective</td><td><span class="lauvinko">egpipi</span><br/><span style="font-style:italic;">ṅepikvi</span></td><td><span class="lauvinko">egopipi</span><br/><span style="font-style:italic;">ṅopikvi</span></td></tr>
 <tr><td>Frequentative</td><td><span class="lauvinko">egegpipi</span><br/><span style="font-style:italic;">ṅeṅepikvi</span></td><td><span class="lauvinko">egoegopipi</span><br/><span style="font-style:italic;">ṅoṅopikvi</span></td></tr>
 </tbody></table>
+<h2>Lauvìnko</h2><h3><span style="font-style:italic;">ngépipi, ngévipi</span> - To drink.</h3>
+<table class="notshown">
+<thead><tr><th colspan="3">Lauvinko Inflection - <a onclick="toggleshown(this)">Show</a></th></tr></thead><tbody>
+<tr><td></td><td>Nonpast</td><td>Past</td></tr>
+<tr><td>Perfective</td><td><span class="lauvinko">egpipi</span><br/><span style="font-style:italic;">ngépipi, ngévipi</span></td><td><span class="lauvinko">egopipi</span><br/><span style="font-style:italic;">ngópipi, ngóvipi</span></td></tr>
+<tr><td>Frequentative</td><td><span class="lauvinko">egegpipi</span><br/><span style="font-style:italic;">ngengépipi, ngengévipi</span></td><td><span class="lauvinko">egoegopipi</span><br/><span style="font-style:italic;">ngongópipi, ngongóvipi</span></td></tr>
+</tbody></table>
 </div>
 <hr/>
 <div class="entry" id="dog">
-<h2 class="lauvinko">egoygu</h2>
-<h3><span style="font-style:italic;">ṅoyəṅu</span> - Dog. (uninflected)</h3>
+<h1 class="lauvinko">egoygu</h1>
+<h2>Classical Kasanic</h2><h3><span style="font-style:italic;">ṅoyəṅu</span> - Dog. (uninflected)</h3>
+<h2>Lauvìnko</h2><h3><span style="font-style:italic;">ngóyang, ngòyang</span> - Dog.</h3>
 </div>
 <hr/>
 <div class="entry" id="yellow">
-<h2 class="lauvinko">Mkiqma</h2>
-<h3><span style="font-style:italic;">ṅkima</span> - Yellow. (stative)</h3>
+<h1 class="lauvinko">Mkiqma</h1>
+<h2>Classical Kasanic</h2><h3><span style="font-style:italic;">ṅkima</span> - Yellow. (stative)</h3>
 <table class="notshown">
 <thead><tr><th colspan="3">Classical Kasanic Inflection - <a onclick="toggleshown(this)">Show</a></th></tr></thead><tbody>
 <tr><td></td><td>Nonpast</td><td>Past</td></tr>
 <tr><td>Imperfective</td><td><span class="lauvinko">Mkiqma</span><br/><span style="font-style:italic;">ṅkima</span></td><td><span class="lauvinko">Mkiqma</span><br/><span style="font-style:italic;">ṅkima</span></td></tr>
 <tr><td>Inceptive</td><td colspan="2"><span class="lauvinko">IqMkiqma</span><br/><span style="font-style:italic;">iṅkima</span></td></tr>
 </tbody></table>
+<h2>Lauvìnko</h2><h3><span style="font-style:italic;">ngíng, ngìng</span> - Yellow.</h3>
+<table class="notshown">
+<thead><tr><th colspan="3">Lauvinko Inflection - <a onclick="toggleshown(this)">Show</a></th></tr></thead><tbody>
+<tr><td></td><td>Nonpast</td><td>Past</td></tr>
+<tr><td>Imperfective</td><td><span class="lauvinko">Mkiqma</span><br/><span style="font-style:italic;">ngíng, ngìng</span></td><td><span class="lauvinko">Mkiqma</span><br/><span style="font-style:italic;">ngíng, ngìng</span></td></tr>
+<tr><td>Inceptive</td><td colspan="2"><span class="lauvinko">IqMkiqma</span><br/><span style="font-style:italic;">inkíng, inkìng</span></td></tr>
+</tbody></table>
 </div>
 <hr/>
 <div class="entry" id="carry">
-<h2 class="lauvinko">MpaHkqey</h2>
-<h3><span style="font-style:italic;">ṅkva'kəye</span> - To carry, bear. (fientive)</h3>
+<h1 class="lauvinko">MpaHkqey</h1>
+<h2>Classical Kasanic</h2><h3><span style="font-style:italic;">ṅkva'kəye</span> - To carry, bear. (fientive)</h3>
 <table class="notshown">
 <thead><tr><th colspan="3">Classical Kasanic Inflection - <a onclick="toggleshown(this)">Show</a></th></tr></thead><tbody>
 <tr><td></td><td>Nonpast</td><td>Past</td></tr>
@@ -374,16 +547,26 @@ function toggleshown(table_toggler) {
 <tr><td>Frequentative</td><td><span class="lauvinko">MepMepHkqey</span><br/><span style="font-style:italic;">ṅkveṅkve'kəye</span></td><td><span class="lauvinko">MepoMepoHkqey</span><br/><span style="font-style:italic;">ṅkvoṅkvo'kəye</span></td></tr>
 <tr><td>Inceptive</td><td colspan="2"><span class="lauvinko">IqMpaHkqey</span><br/><span style="font-style:italic;">iṅkva'kəye</span></td></tr>
 </tbody></table>
+<h2>Lauvìnko</h2><h3><span style="font-style:italic;">mákkay, mákay</span> - To carry, bear.</h3>
+<table class="notshown">
+<thead><tr><th colspan="3">Lauvinko Inflection - <a onclick="toggleshown(this)">Show</a></th></tr></thead><tbody>
+<tr><td></td><td>Nonpast</td><td>Past</td></tr>
+<tr><td>Imperfective</td><td><span class="lauvinko">MpaHkqey</span><br/><span style="font-style:italic;">mákkay, mákay</span></td><td><span class="lauvinko">MepoHkqey</span><br/><span style="font-style:italic;">mókkay, mókay</span></td></tr>
+<tr><td>Perfective</td><td colspan="2"><span class="lauvinko">MepHkqey</span><br/><span style="font-style:italic;">mékkay, mékay</span></td></tr>
+<tr><td>Frequentative</td><td><span class="lauvinko">MepMepHkqey</span><br/><span style="font-style:italic;">mempékkay, mempékay</span></td><td><span class="lauvinko">MepoMepoHkqey</span><br/><span style="font-style:italic;">mompókkay, mompókay</span></td></tr>
+<tr><td>Inceptive</td><td colspan="2"><span class="lauvinko">IqMpaHkqey</span><br/><span style="font-style:italic;">impákkay, impákay</span></td></tr>
+</tbody></table>
 </div>
 <hr/>
 <div class="entry" id="father">
-<h2 class="lauvinko">Op</h2>
-<h3><span style="font-style:italic;">opə</span> - Father. (uninflected)</h3>
+<h1 class="lauvinko">Op</h1>
+<h2>Classical Kasanic</h2><h3><span style="font-style:italic;">opə</span> - Father. (uninflected)</h3>
+<h2>Lauvìnko</h2><h3><span style="font-style:italic;">óh, óu</span> - Father.</h3>
 </div>
 <hr/>
 <div class="entry" id="touch">
-<h2 class="lauvinko">paesoru</h2>
-<h3><span style="font-style:italic;">pasoru</span> - To touch, strike. (fientive)</h3>
+<h1 class="lauvinko">paesoru</h1>
+<h2>Classical Kasanic</h2><h3><span style="font-style:italic;">pasoru</span> - To touch, strike. (fientive)</h3>
 <table class="notshown">
 <thead><tr><th colspan="3">Classical Kasanic Inflection - <a onclick="toggleshown(this)">Show</a></th></tr></thead><tbody>
 <tr><td></td><td>Nonpast</td><td>Past</td></tr>
@@ -392,21 +575,32 @@ function toggleshown(table_toggler) {
 <tr><td>Frequentative</td><td><span class="lauvinko">epepesoru</span><br/><span style="font-style:italic;">pepesoru</span></td><td><span class="lauvinko">epoepoesoru</span><br/><span style="font-style:italic;">poposoru</span></td></tr>
 <tr><td>Inceptive</td><td colspan="2"><span class="lauvinko">IqMpaesoru</span><br/><span style="font-style:italic;">impasoru</span></td></tr>
 </tbody></table>
+<h2>Lauvìnko</h2><h3><span style="font-style:italic;">pásor, pàsar</span> - To touch, strike.</h3>
+<table class="notshown">
+<thead><tr><th colspan="3">Lauvinko Inflection - <a onclick="toggleshown(this)">Show</a></th></tr></thead><tbody>
+<tr><td></td><td>Nonpast</td><td>Past</td></tr>
+<tr><td>Imperfective</td><td><span class="lauvinko">paesoru</span><br/><span style="font-style:italic;">pásor, pàsar</span></td><td><span class="lauvinko">epoesoru</span><br/><span style="font-style:italic;">pósor, pòsar</span></td></tr>
+<tr><td>Perfective</td><td colspan="2"><span class="lauvinko">epesoru</span><br/><span style="font-style:italic;">pésor, pèsar</span></td></tr>
+<tr><td>Frequentative</td><td><span class="lauvinko">epepesoru</span><br/><span style="font-style:italic;">pepésor, pepèsar</span></td><td><span class="lauvinko">epoepoesoru</span><br/><span style="font-style:italic;">popósor, popòsar</span></td></tr>
+<tr><td>Inceptive</td><td colspan="2"><span class="lauvinko">IqMpaesoru</span><br/><span style="font-style:italic;">impásor, impàsar</span></td></tr>
+</tbody></table>
 </div>
 <hr/>
 <div class="entry" id="auncle">
-<h2 class="lauvinko">Hepsq</h2>
-<h3><span style="font-style:italic;">'pesə</span> - Aunt, uncle, older relative. (uninflected)</h3>
+<h1 class="lauvinko">Hepsq</h1>
+<h2>Classical Kasanic</h2><h3><span style="font-style:italic;">'pesə</span> - Aunt, uncle, older relative. (uninflected)</h3>
+<h2>Lauvìnko</h2><h3><span style="font-style:italic;">pés, pès</span> - Aunt, uncle, older relative.</h3>
 </div>
 <hr/>
 <div class="entry" id="heir">
-<h2 class="lauvinko">raego</h2>
-<h3><span style="font-style:italic;">raṅo</span> - Eldest brother, eldest son. (uninflected)</h3>
+<h1 class="lauvinko">raego</h1>
+<h2>Classical Kasanic</h2><h3><span style="font-style:italic;">raṅo</span> - Eldest brother, eldest son. (uninflected)</h3>
+<h2>Lauvìnko</h2><h3><span style="font-style:italic;">láng, làng</span> - Eldest brother, eldest son.</h3>
 </div>
 <hr/>
 <div class="entry" id="learn">
-<h2 class="lauvinko">raHpaeyo</h2>
-<h3><span style="font-style:italic;">ra'payo</span> - To learn, teach. (fientive)</h3>
+<h1 class="lauvinko">raHpaeyo</h1>
+<h2>Classical Kasanic</h2><h3><span style="font-style:italic;">ra'payo</span> - To learn, teach. (fientive)</h3>
 <table class="notshown">
 <thead><tr><th colspan="3">Classical Kasanic Inflection - <a onclick="toggleshown(this)">Show</a></th></tr></thead><tbody>
 <tr><td></td><td>Nonpast</td><td>Past</td></tr>
@@ -415,32 +609,50 @@ function toggleshown(table_toggler) {
 <tr><td>Frequentative</td><td><span class="lauvinko">ererHpaeyo</span><br/><span style="font-style:italic;">rere'payo</span></td><td><span class="lauvinko">eroeroHpaeyo</span><br/><span style="font-style:italic;">roro'payo</span></td></tr>
 <tr><td>Inceptive</td><td colspan="2"><span class="lauvinko">IqnaHpaeyo</span><br/><span style="font-style:italic;">ina'payo</span></td></tr>
 </tbody></table>
+<h2>Lauvìnko</h2><h3><span style="font-style:italic;">láppay, lápay</span> - To learn, teach.</h3>
+<table class="notshown">
+<thead><tr><th colspan="3">Lauvinko Inflection - <a onclick="toggleshown(this)">Show</a></th></tr></thead><tbody>
+<tr><td></td><td>Nonpast</td><td>Past</td></tr>
+<tr><td>Imperfective</td><td><span class="lauvinko">raHpaeyo</span><br/><span style="font-style:italic;">láppay, lápay</span></td><td><span class="lauvinko">eroHpaeyo</span><br/><span style="font-style:italic;">lóppay, lópay</span></td></tr>
+<tr><td>Perfective</td><td colspan="2"><span class="lauvinko">erHpaeyo</span><br/><span style="font-style:italic;">léppay, lépay</span></td></tr>
+<tr><td>Frequentative</td><td><span class="lauvinko">ererHpaeyo</span><br/><span style="font-style:italic;">leléppay, lelépay</span></td><td><span class="lauvinko">eroeroHpaeyo</span><br/><span style="font-style:italic;">lolóppay, lolópay</span></td></tr>
+<tr><td>Inceptive</td><td colspan="2"><span class="lauvinko">IqnaHpaeyo</span><br/><span style="font-style:italic;">ináppay, inápay</span></td></tr>
+</tbody></table>
 </div>
 <hr/>
 <div class="entry" id="what">
-<h2 class="lauvinko">raesq</h2>
-<h3><span style="font-style:italic;">rase</span> - What, which. (uninflected)</h3>
+<h1 class="lauvinko">raesq</h1>
+<h2>Classical Kasanic</h2><h3><span style="font-style:italic;">rase</span> - What, which. (uninflected)</h3>
+<h2>Lauvìnko</h2><h3><span style="font-style:italic;">lási, làsi</span> - What, which.</h3>
 </div>
 <hr/>
 <div class="entry" id="man">
-<h2 class="lauvinko">erHca</h2>
-<h3><span style="font-style:italic;">re'ca</span> - Man, male. (uninflected)</h3>
+<h1 class="lauvinko">erHca</h1>
+<h2>Classical Kasanic</h2><h3><span style="font-style:italic;">re'ca</span> - Man, male. (uninflected)</h3>
+<h2>Lauvìnko</h2><h3><span style="font-style:italic;">lécca, lés</span> - Man, male.</h3>
 </div>
 <hr/>
 <div class="entry" id="release">
-<h2 class="lauvinko">eresqkiq</h2>
-<h3><span style="font-style:italic;">reseki</span> - Open, release. (punctual)</h3>
+<h1 class="lauvinko">eresqkiq</h1>
+<h2>Classical Kasanic</h2><h3><span style="font-style:italic;">reseki</span> - Open, release. (punctual)</h3>
 <table class="notshown">
 <thead><tr><th colspan="3">Classical Kasanic Inflection - <a onclick="toggleshown(this)">Show</a></th></tr></thead><tbody>
 <tr><td></td><td>Nonpast</td><td>Past</td></tr>
 <tr><td>Perfective</td><td><span class="lauvinko">eresqkiq</span><br/><span style="font-style:italic;">reseki</span></td><td><span class="lauvinko">eroesqkiq</span><br/><span style="font-style:italic;">roseki</span></td></tr>
 <tr><td>Frequentative</td><td><span class="lauvinko">ereresqkiq</span><br/><span style="font-style:italic;">rereseki</span></td><td><span class="lauvinko">eroeroesqkiq</span><br/><span style="font-style:italic;">roroseki</span></td></tr>
 </tbody></table>
+<h2>Lauvìnko</h2><h3><span style="font-style:italic;">léseki, lèsiki</span> - Open, release.</h3>
+<table class="notshown">
+<thead><tr><th colspan="3">Lauvinko Inflection - <a onclick="toggleshown(this)">Show</a></th></tr></thead><tbody>
+<tr><td></td><td>Nonpast</td><td>Past</td></tr>
+<tr><td>Perfective</td><td><span class="lauvinko">eresqkiq</span><br/><span style="font-style:italic;">léseki, lèsiki</span></td><td><span class="lauvinko">eroesqkiq</span><br/><span style="font-style:italic;">lóseki, lòsiki</span></td></tr>
+<tr><td>Frequentative</td><td><span class="lauvinko">ereresqkiq</span><br/><span style="font-style:italic;">leléseki, lelèsiki</span></td><td><span class="lauvinko">eroeroesqkiq</span><br/><span style="font-style:italic;">lolóseki, lolòsiki</span></td></tr>
+</tbody></table>
 </div>
 <hr/>
 <div class="entry" id="grow">
-<h2 class="lauvinko">sahiqtu</h2>
-<h3><span style="font-style:italic;">sahitu</span> - To grow, expand, mature. (fientive)</h3>
+<h1 class="lauvinko">sahiqtu</h1>
+<h2>Classical Kasanic</h2><h3><span style="font-style:italic;">sahitu</span> - To grow, expand, mature. (fientive)</h3>
 <table class="notshown">
 <thead><tr><th colspan="3">Classical Kasanic Inflection - <a onclick="toggleshown(this)">Show</a></th></tr></thead><tbody>
 <tr><td></td><td>Nonpast</td><td>Past</td></tr>
@@ -449,48 +661,74 @@ function toggleshown(table_toggler) {
 <tr><td>Frequentative</td><td><span class="lauvinko">esqesqhiqtu</span><br/><span style="font-style:italic;">sesehitu</span></td><td><span class="lauvinko">esoesohiqtu</span><br/><span style="font-style:italic;">sosohitu</span></td></tr>
 <tr><td>Inceptive</td><td colspan="2"><span class="lauvinko">Iqsahiqtu</span><br/><span style="font-style:italic;">isahitu</span></td></tr>
 </tbody></table>
+<h2>Lauvìnko</h2><h3><span style="font-style:italic;">sáyta, sàyta</span> - To grow, expand, mature.</h3>
+<table class="notshown">
+<thead><tr><th colspan="3">Lauvinko Inflection - <a onclick="toggleshown(this)">Show</a></th></tr></thead><tbody>
+<tr><td></td><td>Nonpast</td><td>Past</td></tr>
+<tr><td>Imperfective</td><td><span class="lauvinko">sahiqtu</span><br/><span style="font-style:italic;">sáyta, sàyta</span></td><td><span class="lauvinko">esohiqtu</span><br/><span style="font-style:italic;">sóyta, sòyta</span></td></tr>
+<tr><td>Perfective</td><td colspan="2"><span class="lauvinko">esqhiqtu</span><br/><span style="font-style:italic;">séh, sèh</span></td></tr>
+<tr><td>Frequentative</td><td><span class="lauvinko">esqesqhiqtu</span><br/><span style="font-style:italic;">seséh, sesèh</span></td><td><span class="lauvinko">esoesohiqtu</span><br/><span style="font-style:italic;">sosóyta, sosòyta</span></td></tr>
+<tr><td>Inceptive</td><td colspan="2"><span class="lauvinko">Iqsahiqtu</span><br/><span style="font-style:italic;">isáyta, isàyta</span></td></tr>
+</tbody></table>
 </div>
 <hr/>
 <div class="entry" id="parent">
-<h2 class="lauvinko">saHtu</h2>
-<h3><span style="font-style:italic;">sa'tu</span> - To parent, procreate. (stative)</h3>
+<h1 class="lauvinko">saHtu</h1>
+<h2>Classical Kasanic</h2><h3><span style="font-style:italic;">sa'tu</span> - To parent, procreate. (stative)</h3>
 <table class="notshown">
 <thead><tr><th colspan="3">Classical Kasanic Inflection - <a onclick="toggleshown(this)">Show</a></th></tr></thead><tbody>
 <tr><td></td><td>Nonpast</td><td>Past</td></tr>
 <tr><td>Imperfective</td><td><span class="lauvinko">saHtu</span><br/><span style="font-style:italic;">sa'tu</span></td><td><span class="lauvinko">saHtu</span><br/><span style="font-style:italic;">sa'tu</span></td></tr>
 <tr><td>Inceptive</td><td colspan="2"><span class="lauvinko">IqsaHtu</span><br/><span style="font-style:italic;">isa'tu</span></td></tr>
 </tbody></table>
+<h2>Lauvìnko</h2><h3><span style="font-style:italic;">sátta, sáh</span> - To parent, procreate.</h3>
+<table class="notshown">
+<thead><tr><th colspan="3">Lauvinko Inflection - <a onclick="toggleshown(this)">Show</a></th></tr></thead><tbody>
+<tr><td></td><td>Nonpast</td><td>Past</td></tr>
+<tr><td>Imperfective</td><td><span class="lauvinko">saHtu</span><br/><span style="font-style:italic;">sátta, sáh</span></td><td><span class="lauvinko">saHtu</span><br/><span style="font-style:italic;">sátta, sáh</span></td></tr>
+<tr><td>Inceptive</td><td colspan="2"><span class="lauvinko">IqsaHtu</span><br/><span style="font-style:italic;">isátta, isáh</span></td></tr>
+</tbody></table>
 </div>
 <hr/>
 <div class="entry" id="none">
-<h2 class="lauvinko">saey</h2>
-<h3><span style="font-style:italic;">saye</span> - None, nothing. (uninflected)</h3>
+<h1 class="lauvinko">saey</h1>
+<h2>Classical Kasanic</h2><h3><span style="font-style:italic;">saye</span> - None, nothing. (uninflected)</h3>
+<h2>Lauvìnko</h2><h3><span style="font-style:italic;">sáy, sày</span> - None, nothing.</h3>
 </div>
 <hr/>
 <div class="entry" id="clan">
-<h2 class="lauvinko">esqhaNa</h2>
-<h3><span style="font-style:italic;">sehaña</span> - Clan (family group). (uninflected)</h3>
+<h1 class="lauvinko">esqhaNa</h1>
+<h2>Classical Kasanic</h2><h3><span style="font-style:italic;">sehaña</span> - Clan (family group). (uninflected)</h3>
+<h2>Lauvìnko</h2><h3><span style="font-style:italic;">séana, sèana</span> - Clan (family group).</h3>
 </div>
 <hr/>
 <div class="entry" id="daughter2">
-<h2 class="lauvinko">esqeno</h2>
-<h3><span style="font-style:italic;">seno</span> - Mother's daughter. (uninflected)</h3>
+<h1 class="lauvinko">esqeno</h1>
+<h2>Classical Kasanic</h2><h3><span style="font-style:italic;">seno</span> - Mother's daughter. (uninflected)</h3>
+<h2>Lauvìnko</h2><h3><span style="font-style:italic;">séng, sèng</span> - Mother's daughter.</h3>
 </div>
 <hr/>
 <div class="entry" id="red">
-<h2 class="lauvinko">esqHetomi</h2>
-<h3><span style="font-style:italic;">se'toṅvi</span> - Red. (stative)</h3>
+<h1 class="lauvinko">esqHetomi</h1>
+<h2>Classical Kasanic</h2><h3><span style="font-style:italic;">se'toṅvi</span> - Red. (stative)</h3>
 <table class="notshown">
 <thead><tr><th colspan="3">Classical Kasanic Inflection - <a onclick="toggleshown(this)">Show</a></th></tr></thead><tbody>
 <tr><td></td><td>Nonpast</td><td>Past</td></tr>
 <tr><td>Imperfective</td><td><span class="lauvinko">esqHetomi</span><br/><span style="font-style:italic;">se'toṅvi</span></td><td><span class="lauvinko">esqHetomi</span><br/><span style="font-style:italic;">se'toṅvi</span></td></tr>
 <tr><td>Inceptive</td><td colspan="2"><span class="lauvinko">IqesqHetomi</span><br/><span style="font-style:italic;">ise'toṅvi</span></td></tr>
 </tbody></table>
+<h2>Lauvìnko</h2><h3><span style="font-style:italic;">séttomi, séhmi</span> - Red.</h3>
+<table class="notshown">
+<thead><tr><th colspan="3">Lauvinko Inflection - <a onclick="toggleshown(this)">Show</a></th></tr></thead><tbody>
+<tr><td></td><td>Nonpast</td><td>Past</td></tr>
+<tr><td>Imperfective</td><td><span class="lauvinko">esqHetomi</span><br/><span style="font-style:italic;">séttomi, séhmi</span></td><td><span class="lauvinko">esqHetomi</span><br/><span style="font-style:italic;">séttomi, séhmi</span></td></tr>
+<tr><td>Inceptive</td><td colspan="2"><span class="lauvinko">IqesqHetomi</span><br/><span style="font-style:italic;">iséttomi, iséhmi</span></td></tr>
+</tbody></table>
 </div>
 <hr/>
 <div class="entry" id="put">
-<h2 class="lauvinko">sqhqY</h2>
-<h3><span style="font-style:italic;">səhai</span> - To put, place. (fientive)</h3>
+<h1 class="lauvinko">sqhqY</h1>
+<h2>Classical Kasanic</h2><h3><span style="font-style:italic;">səhai</span> - To put, place. (fientive)</h3>
 <table class="notshown">
 <thead><tr><th colspan="3">Classical Kasanic Inflection - <a onclick="toggleshown(this)">Show</a></th></tr></thead><tbody>
 <tr><td></td><td>Nonpast</td><td>Past</td></tr>
@@ -499,38 +737,62 @@ function toggleshown(table_toggler) {
 <tr><td>Frequentative</td><td><span class="lauvinko">siqsiqhqY</span><br/><span style="font-style:italic;">sisihai</span></td><td><span class="lauvinko">susuhqY</span><br/><span style="font-style:italic;">susuhai</span></td></tr>
 <tr><td>Inceptive</td><td colspan="2"><span class="lauvinko">IqsqhqY</span><br/><span style="font-style:italic;">isəhai</span></td></tr>
 </tbody></table>
+<h2>Lauvìnko</h2><h3><span style="font-style:italic;">sé, sè</span> - To put, place.</h3>
+<table class="notshown">
+<thead><tr><th colspan="3">Lauvinko Inflection - <a onclick="toggleshown(this)">Show</a></th></tr></thead><tbody>
+<tr><td></td><td>Nonpast</td><td>Past</td></tr>
+<tr><td>Imperfective</td><td><span class="lauvinko">sqhqY</span><br/><span style="font-style:italic;">sé, sè</span></td><td><span class="lauvinko">suhqY</span><br/><span style="font-style:italic;">sóy, sòy</span></td></tr>
+<tr><td>Perfective</td><td colspan="2"><span class="lauvinko">siqhqY</span><br/><span style="font-style:italic;">sí, sì</span></td></tr>
+<tr><td>Frequentative</td><td><span class="lauvinko">siqsiqhqY</span><br/><span style="font-style:italic;">sisí, sisì</span></td><td><span class="lauvinko">susuhqY</span><br/><span style="font-style:italic;">sasóy, sasòy</span></td></tr>
+<tr><td>Inceptive</td><td colspan="2"><span class="lauvinko">IqsqhqY</span><br/><span style="font-style:italic;">isé, isè</span></td></tr>
+</tbody></table>
 </div>
 <hr/>
 <div class="entry" id="brother">
-<h2 class="lauvinko">taero</h2>
-<h3><span style="font-style:italic;">taro</span> - Brother. (uninflected)</h3>
+<h1 class="lauvinko">taero</h1>
+<h2>Classical Kasanic</h2><h3><span style="font-style:italic;">taro</span> - Brother. (uninflected)</h3>
+<h2>Lauvìnko</h2><h3><span style="font-style:italic;">tár, tàr</span> - Brother.</h3>
 </div>
 <hr/>
 <div class="entry" id="sun">
-<h2 class="lauvinko">tuhiqsq</h2>
-<h3><span style="font-style:italic;">tuhisə</span> - Sun. (stative)</h3>
+<h1 class="lauvinko">tuhiqsq</h1>
+<h2>Classical Kasanic</h2><h3><span style="font-style:italic;">tuhisə</span> - Sun. (stative)</h3>
 <table class="notshown">
 <thead><tr><th colspan="3">Classical Kasanic Inflection - <a onclick="toggleshown(this)">Show</a></th></tr></thead><tbody>
 <tr><td></td><td>Nonpast</td><td>Past</td></tr>
 <tr><td>Imperfective</td><td><span class="lauvinko">tuhiqsq</span><br/><span style="font-style:italic;">tuhisə</span></td><td><span class="lauvinko">tuhiqsq</span><br/><span style="font-style:italic;">tuhisə</span></td></tr>
 <tr><td>Inceptive</td><td colspan="2"><span class="lauvinko">IqMtuhiqsq</span><br/><span style="font-style:italic;">intuhisə</span></td></tr>
 </tbody></table>
+<h2>Lauvìnko</h2><h3><span style="font-style:italic;">tóysa, tòysa</span> - Sun.</h3>
+<table class="notshown">
+<thead><tr><th colspan="3">Lauvinko Inflection - <a onclick="toggleshown(this)">Show</a></th></tr></thead><tbody>
+<tr><td></td><td>Nonpast</td><td>Past</td></tr>
+<tr><td>Imperfective</td><td><span class="lauvinko">tuhiqsq</span><br/><span style="font-style:italic;">tóysa, tòysa</span></td><td><span class="lauvinko">tuhiqsq</span><br/><span style="font-style:italic;">tóysa, tòysa</span></td></tr>
+<tr><td>Inceptive</td><td colspan="2"><span class="lauvinko">IqMtuhiqsq</span><br/><span style="font-style:italic;">intóysa, intòysa</span></td></tr>
+</tbody></table>
 </div>
 <hr/>
 <div class="entry" id="sleep">
-<h2 class="lauvinko">vahiqga</h2>
-<h3><span style="font-style:italic;">vahiṅa</span> - To sleep. (stative)</h3>
+<h1 class="lauvinko">vahiqga</h1>
+<h2>Classical Kasanic</h2><h3><span style="font-style:italic;">vahiṅa</span> - To sleep. (stative)</h3>
 <table class="notshown">
 <thead><tr><th colspan="3">Classical Kasanic Inflection - <a onclick="toggleshown(this)">Show</a></th></tr></thead><tbody>
 <tr><td></td><td>Nonpast</td><td>Past</td></tr>
 <tr><td>Imperfective</td><td><span class="lauvinko">vahiqga</span><br/><span style="font-style:italic;">vahiṅa</span></td><td><span class="lauvinko">vahiqga</span><br/><span style="font-style:italic;">vahiṅa</span></td></tr>
 <tr><td>Inceptive</td><td colspan="2"><span class="lauvinko">Iqmahiqga</span><br/><span style="font-style:italic;">imahiṅa</span></td></tr>
 </tbody></table>
+<h2>Lauvìnko</h2><h3><span style="font-style:italic;">váynga, vàynga</span> - To sleep.</h3>
+<table class="notshown">
+<thead><tr><th colspan="3">Lauvinko Inflection - <a onclick="toggleshown(this)">Show</a></th></tr></thead><tbody>
+<tr><td></td><td>Nonpast</td><td>Past</td></tr>
+<tr><td>Imperfective</td><td><span class="lauvinko">vahiqga</span><br/><span style="font-style:italic;">váynga, vàynga</span></td><td><span class="lauvinko">vahiqga</span><br/><span style="font-style:italic;">váynga, vàynga</span></td></tr>
+<tr><td>Inceptive</td><td colspan="2"><span class="lauvinko">Iqmahiqga</span><br/><span style="font-style:italic;">imáynga, imàynga</span></td></tr>
+</tbody></table>
 </div>
 <hr/>
 <div class="entry" id="go">
-<h2 class="lauvinko">vakiq</h2>
-<h3><span style="font-style:italic;">vaki</span> - To go. (fientive)</h3>
+<h1 class="lauvinko">vakiq</h1>
+<h2>Classical Kasanic</h2><h3><span style="font-style:italic;">vaki</span> - To go. (fientive)</h3>
 <table class="notshown">
 <thead><tr><th colspan="3">Classical Kasanic Inflection - <a onclick="toggleshown(this)">Show</a></th></tr></thead><tbody>
 <tr><td></td><td>Nonpast</td><td>Past</td></tr>
@@ -539,11 +801,20 @@ function toggleshown(table_toggler) {
 <tr><td>Frequentative</td><td><span class="lauvinko">evevkiq</span><br/><span style="font-style:italic;">veveki</span></td><td><span class="lauvinko">evoevokiq</span><br/><span style="font-style:italic;">vovoki</span></td></tr>
 <tr><td>Inceptive</td><td colspan="2"><span class="lauvinko">Iqmakiq</span><br/><span style="font-style:italic;">imaki</span></td></tr>
 </tbody></table>
+<h2>Lauvìnko</h2><h3><span style="font-style:italic;">váki, váy</span> - To go.</h3>
+<table class="notshown">
+<thead><tr><th colspan="3">Lauvinko Inflection - <a onclick="toggleshown(this)">Show</a></th></tr></thead><tbody>
+<tr><td></td><td>Nonpast</td><td>Past</td></tr>
+<tr><td>Imperfective</td><td><span class="lauvinko">vakiq</span><br/><span style="font-style:italic;">váki, váy</span></td><td><span class="lauvinko">evokiq</span><br/><span style="font-style:italic;">vóki, vóy</span></td></tr>
+<tr><td>Perfective</td><td colspan="2"><span class="lauvinko">evkiq</span><br/><span style="font-style:italic;">véki, vé</span></td></tr>
+<tr><td>Frequentative</td><td><span class="lauvinko">evevkiq</span><br/><span style="font-style:italic;">vevéki, vevé</span></td><td><span class="lauvinko">evoevokiq</span><br/><span style="font-style:italic;">vovóki, vovóy</span></td></tr>
+<tr><td>Inceptive</td><td colspan="2"><span class="lauvinko">Iqmakiq</span><br/><span style="font-style:italic;">imáki, imáy</span></td></tr>
+</tbody></table>
 </div>
 <hr/>
 <div class="entry" id="see">
-<h2 class="lauvinko">yahiqga</h2>
-<h3><span style="font-style:italic;">yahiṅa</span> - To see. (fientive)</h3>
+<h1 class="lauvinko">yahiqga</h1>
+<h2>Classical Kasanic</h2><h3><span style="font-style:italic;">yahiṅa</span> - To see. (fientive)</h3>
 <table class="notshown">
 <thead><tr><th colspan="3">Classical Kasanic Inflection - <a onclick="toggleshown(this)">Show</a></th></tr></thead><tbody>
 <tr><td></td><td>Nonpast</td><td>Past</td></tr>
@@ -552,11 +823,20 @@ function toggleshown(table_toggler) {
 <tr><td>Frequentative</td><td><span class="lauvinko">eyeyhiqga</span><br/><span style="font-style:italic;">yeyehiṅa</span></td><td><span class="lauvinko">eyoeyohiqga</span><br/><span style="font-style:italic;">yoyohiṅa</span></td></tr>
 <tr><td>Inceptive</td><td colspan="2"><span class="lauvinko">IqNahiqga</span><br/><span style="font-style:italic;">iñahiṅa</span></td></tr>
 </tbody></table>
+<h2>Lauvìnko</h2><h3><span style="font-style:italic;">yáynga, yàynga</span> - To see.</h3>
+<table class="notshown">
+<thead><tr><th colspan="3">Lauvinko Inflection - <a onclick="toggleshown(this)">Show</a></th></tr></thead><tbody>
+<tr><td></td><td>Nonpast</td><td>Past</td></tr>
+<tr><td>Imperfective</td><td><span class="lauvinko">yahiqga</span><br/><span style="font-style:italic;">yáynga, yàynga</span></td><td><span class="lauvinko">eyohiqga</span><br/><span style="font-style:italic;">yóynga, yòynga</span></td></tr>
+<tr><td>Perfective</td><td colspan="2"><span class="lauvinko">eyhiqga</span><br/><span style="font-style:italic;">yéng, yèng</span></td></tr>
+<tr><td>Frequentative</td><td><span class="lauvinko">eyeyhiqga</span><br/><span style="font-style:italic;">yeyéng, yeyèng</span></td><td><span class="lauvinko">eyoeyohiqga</span><br/><span style="font-style:italic;">yoyóynga, yoyòynga</span></td></tr>
+<tr><td>Inceptive</td><td colspan="2"><span class="lauvinko">IqNahiqga</span><br/><span style="font-style:italic;">ináynga, inàynga</span></td></tr>
+</tbody></table>
 </div>
 <hr/>
 <div class="entry" id="weave">
-<h2 class="lauvinko">yaMp</h2>
-<h3><span style="font-style:italic;">yampə</span> - To weave, interlay. (fientive)</h3>
+<h1 class="lauvinko">yaMp</h1>
+<h2>Classical Kasanic</h2><h3><span style="font-style:italic;">yampə</span> - To weave, interlay. (fientive)</h3>
 <table class="notshown">
 <thead><tr><th colspan="3">Classical Kasanic Inflection - <a onclick="toggleshown(this)">Show</a></th></tr></thead><tbody>
 <tr><td></td><td>Nonpast</td><td>Past</td></tr>
@@ -565,10 +845,20 @@ function toggleshown(table_toggler) {
 <tr><td>Frequentative</td><td><span class="lauvinko">eyeyMp</span><br/><span style="font-style:italic;">yeyempə</span></td><td><span class="lauvinko">eyoeyoMp</span><br/><span style="font-style:italic;">yoyompə</span></td></tr>
 <tr><td>Inceptive</td><td colspan="2"><span class="lauvinko">IqNaMp</span><br/><span style="font-style:italic;">iñampə</span></td></tr>
 </tbody></table>
+<h2>Lauvìnko</h2><h3><span style="font-style:italic;">yámpa, yáng</span> - To weave, interlay.</h3>
+<table class="notshown">
+<thead><tr><th colspan="3">Lauvinko Inflection - <a onclick="toggleshown(this)">Show</a></th></tr></thead><tbody>
+<tr><td></td><td>Nonpast</td><td>Past</td></tr>
+<tr><td>Imperfective</td><td><span class="lauvinko">yaMp</span><br/><span style="font-style:italic;">yámpa, yáng</span></td><td><span class="lauvinko">eyoMp</span><br/><span style="font-style:italic;">yómpa, yóng</span></td></tr>
+<tr><td>Perfective</td><td colspan="2"><span class="lauvinko">eyMp</span><br/><span style="font-style:italic;">yémpa, yéng</span></td></tr>
+<tr><td>Frequentative</td><td><span class="lauvinko">eyeyMp</span><br/><span style="font-style:italic;">yeyémpa, yeyéng</span></td><td><span class="lauvinko">eyoeyoMp</span><br/><span style="font-style:italic;">yoyómpa, yoyóng</span></td></tr>
+<tr><td>Inceptive</td><td colspan="2"><span class="lauvinko">IqNaMp</span><br/><span style="font-style:italic;">inámpa, ináng</span></td></tr>
+</tbody></table>
 </div>
 <hr/>
 <div class="entry" id="basa">
-<h2 class="lauvinko">yWHpmi</h2>
-<h3><span style="font-style:italic;">yau'pəmi</span> - Basa fish. (uninflected)</h3>
+<h1 class="lauvinko">yWHpmi</h1>
+<h2>Classical Kasanic</h2><h3><span style="font-style:italic;">yau'pəmi</span> - Basa fish. (uninflected)</h3>
+<h2>Lauvìnko</h2><h3><span style="font-style:italic;">yáupami, yáupami</span> - Basa fish.</h3>
 </div>
 <hr/>
