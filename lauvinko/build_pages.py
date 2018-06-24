@@ -188,6 +188,8 @@ function toggleshown(table_toggler) {
             cf = pk.get_citation_form()
             lv = entry.languages['lv']
             lv_cf = lv.get_citation_form()
+            bt = entry.languages['bt']
+            bt_cf = bt.get_citation_form()
             
             dictionary_text += '<div class="entry" id="%s">\n' % entry.ident
             dictionary_text += '<h1 class="lauvinko">%s</h1>\n' % cf.falavay(False)
@@ -202,6 +204,13 @@ function toggleshown(table_toggler) {
             dictionary_text += ' - %s</h3>\n' % lv.defn
             if entry.category != 'uninflected':
                 dictionary_text += MyContentHandler.form_table(lv,'lv')
+
+            dictionary_text += '<h2>Botharu</h2>'
+            dictionary_text += '<h3><span style="font-style:italic;">%s</span>' % bt_cf.transcribe()
+            dictionary_text += ' - %s</h3>\n' % bt.defn
+            if entry.category != 'uninflected':
+                dictionary_text += MyContentHandler.form_table(bt,'bt')
+                
             dictionary_text += '</div>\n<hr/>\n'
             
         with open('src/pages/dictionary/kasanic_dictionary/kasanic_dictionary.xml','w',encoding='utf-8') as fh:
@@ -209,7 +218,7 @@ function toggleshown(table_toggler) {
 
     def form_table(word,language):
         forms = word.forms
-        headings = {'pk':'Classical Kasanic Inflection','lv':'Lauvinko Inflection'}
+        headings = {'pk':'Classical Kasanic Inflection','lv':'Lauvinko Inflection','bt':'Botharu Inflection'}
         
         out = '<table class="notshown">\n'
         out += '<thead><tr><th colspan="3">%s - <a onclick="toggleshown(this)">Show</a></th></tr></thead><tbody>\n' % headings[language]
@@ -235,13 +244,13 @@ function toggleshown(table_toggler) {
             out += '<tr><td>Perfective</td>'
             out += '<td colspan="2"><span class="lauvinko">%s</span><br/><span style="font-style:italic;">%s</span></td>' % (forms['pf'].falavay(),forms['pf'].transcribe())
             out += '</tr>\n'
-        if word.category in ['fientive','punctual']:
+        if word.category in ['fientive','punctual'] and language != 'bt':
             #frequentative row
             out += '<tr><td>Frequentative</td>'
             out += '<td><span class="lauvinko">%s</span><br/><span style="font-style:italic;">%s</span></td>' % (forms['fq-np'].falavay(),forms['fq-np'].transcribe())
             out += '<td><span class="lauvinko">%s</span><br/><span style="font-style:italic;">%s</span></td>' % (forms['fq-pt'].falavay(),forms['fq-pt'].transcribe())
             out += '</tr>\n'
-        if word.category in ['fientive','stative']:
+        if word.category in ['fientive','stative'] and language != 'bt':
             #inceptive row
             out += '<tr><td>Inceptive</td>'
             out += '<td colspan="2"><span class="lauvinko">%s</span><br/><span style="font-style:italic;">%s</span></td>' % (forms['in'].falavay(),forms['in'].transcribe())
