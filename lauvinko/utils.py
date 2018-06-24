@@ -335,7 +335,8 @@ class LauvinkoForm:
                               ('l(%s)' % LauvinkoForm.onset_re, r'R\1'),
                               ('[mnṅ](%s)' % LauvinkoForm.onset_re, r'M\1'),
                               ('[ptk](%s)' % LauvinkoForm.onset_re, r'H\1'),
-                              ('[cs](%s)' % LauvinkoForm.onset_re, r'S\1')]
+                              ('[cs](%s)' % LauvinkoForm.onset_re, r'S\1'),
+                              ('([ei][`´]?)y$',r'\1'),('(o[`´]?)v$',r'\1'),]
         augmented = replacement_suite(replacements_1500s,augmented)
         nonaugmented = replacement_suite(replacements_1500s,nonaugmented)
 
