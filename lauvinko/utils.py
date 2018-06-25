@@ -269,7 +269,7 @@ class LauvinkoForm:
     
     def from_pk(pkform,showprogress=False):
         word = ''.join(flatten(pkform.structure))        
-        replacements_pre = [('Y','āi'),('W','āu'),('a','ə'),('ā','a'),('r','l')]
+        replacements_pre = [('Y!','ā!i'),('W!','ā!u'),('Y','āi'),('W','āu'),('a','ə'),('ā','a'),('r','l')]
         word = replacement_suite(replacements_pre, word)
 
         if showprogress:

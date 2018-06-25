@@ -58,7 +58,7 @@ function toggleshown(table_toggler) {
 <div class="entry" id="kin">
 <h1 class="lauvinko">Wetq</h1>
 <h2>Classical Kasanic</h2><h3><span style="font-style:italic;">aute</span> - Kin, sameblooded. (uninflected)</h3>
-<h2>Lauvìnko</h2><h3><span style="font-style:italic;">óti, óli</span> - Kin, sameblooded.</h3>
+<h2>Lauvìnko</h2><h3><span style="font-style:italic;">áuti, àuti</span> - Kin, sameblooded.</h3>
 <h2>Botharu</h2><h3><span style="font-style:italic;">ooche</span> - Kin, sameblooded.</h3>
 </div>
 <hr/>
@@ -356,14 +356,14 @@ function toggleshown(table_toggler) {
 <div class="entry" id="heel">
 <h1 class="lauvinko">pY</h1>
 <h2>Classical Kasanic</h2><h3><span style="font-style:italic;">kvai</span> - Heel. (uninflected)</h3>
-<h2>Lauvìnko</h2><h3><span style="font-style:italic;">pí, pì</span> - Heel.</h3>
+<h2>Lauvìnko</h2><h3><span style="font-style:italic;">páy, pày</span> - Heel.</h3>
 <h2>Botharu</h2><h3><span style="font-style:italic;">kwee</span> - Heel.</h3>
 </div>
 <hr/>
 <div class="entry" id="egg">
 <h1 class="lauvinko">pYMta</h1>
 <h2>Classical Kasanic</h2><h3><span style="font-style:italic;">kvainta</span> - Egg. (uninflected)</h3>
-<h2>Lauvìnko</h2><h3><span style="font-style:italic;">pínta, píng</span> - Egg.</h3>
+<h2>Lauvìnko</h2><h3><span style="font-style:italic;">páyenta, pàyenta</span> - Egg.</h3>
 <h2>Botharu</h2><h3><span style="font-style:italic;">kwęęta</span> - Egg.</h3>
 </div>
 <hr/>
@@ -401,7 +401,7 @@ function toggleshown(table_toggler) {
 <div class="entry" id="part">
 <h1 class="lauvinko">pW</h1>
 <h2>Classical Kasanic</h2><h3><span style="font-style:italic;">kvau</span> - Part, piece. (uninflected)</h3>
-<h2>Lauvìnko</h2><h3><span style="font-style:italic;">pó, pò</span> - Part, piece.</h3>
+<h2>Lauvìnko</h2><h3><span style="font-style:italic;">páu, pàu</span> - Part, piece.</h3>
 <h2>Botharu</h2><h3><span style="font-style:italic;">koo</span> - Part, piece.</h3>
 </div>
 <hr/>
@@ -580,7 +580,7 @@ function toggleshown(table_toggler) {
 <div class="entry" id="all">
 <h1 class="lauvinko">NYsa</h1>
 <h2>Classical Kasanic</h2><h3><span style="font-style:italic;">ñaisa</span> - All, every. (uninflected)</h3>
-<h2>Lauvìnko</h2><h3><span style="font-style:italic;">nís, nìs</span> - All, every.</h3>
+<h2>Lauvìnko</h2><h3><span style="font-style:italic;">náysa, nàysa</span> - All, every.</h3>
 <h2>Botharu</h2><h3><span style="font-style:italic;">shaa</span> - All, every.</h3>
 </div>
 <hr/>
@@ -1165,7 +1165,7 @@ function toggleshown(table_toggler) {
 <div class="entry" id="basa">
 <h1 class="lauvinko">yWHpmi</h1>
 <h2>Classical Kasanic</h2><h3><span style="font-style:italic;">yau'pəmi</span> - Basa fish. (uninflected)</h3>
-<h2>Lauvìnko</h2><h3><span style="font-style:italic;">yóppami, yóhmi</span> - Basa fish.</h3>
+<h2>Lauvìnko</h2><h3><span style="font-style:italic;">yávoppami, yàvoppami</span> - Basa fish.</h3>
 <h2>Botharu</h2><h3><span style="font-style:italic;">yóóbimę</span> - Basa fish.</h3>
 </div>
 <hr/>
