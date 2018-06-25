@@ -255,6 +255,11 @@ function toggleshown(table_toggler) {
             out += '<tr><td>Inceptive</td>'
             out += '<td colspan="2"><span class="lauvinko">%s</span><br/><span style="font-style:italic;">%s</span></td>' % (forms['in'].falavay(),forms['in'].transcribe())
             out += '</tr>\n'
+        if word.category in ['fientive','punctual','stative'] and language != 'bt':
+            #inceptive row
+            out += '<tr><td>Experiential</td>'
+            out += '<td colspan="2"><span class="lauvinko">%s</span><br/><span style="font-style:italic;">%s</span></td>' % (forms['ex'].falavay(),forms['ex'].transcribe())
+            out += '</tr>\n'
         out += '</tbody></table>\n'
         return out
 

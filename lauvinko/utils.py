@@ -59,7 +59,8 @@ class PKForm:
         s = prefix + word
         replacements = [('&(%s?%s%s)' % (PKForm.prefix_re,PKForm.onset_re,PKForm.vowel_re),r'\1\1'),
                         ('&(%s)(!?)(%s?%s)' % (PKForm.vowel_re,PKForm.prefix_re,PKForm.onset_re),r'\1\3\1\2\3'),
-                        ('N([ptckK])',r'M\1'),('Nv','m'),('Nr','n'),('Ny','ñ'),('N(%s)' % PKForm.vowel_re,r'n\1'),('N',''),]
+                        ('N([ptckK])',r'M\1'),('Nv','m'),('Nr','n'),('Ny','ñ'),('N(%s)' % PKForm.vowel_re,r'n\1'),('N',''),
+                        ('F([ptckK])',r'H\1'),('Fs','c'),('F','')]
         return replacement_suite(replacements,s)
 
     def parse(s,prefix=None):
@@ -144,12 +145,12 @@ class PKForm:
 ##        return ''.join(s[0]+s[1]+s[2] + ('!' if s[3] == 'high' else '') for s in self.l)
 
 class PKWord:
-    categories = {"fientive":["im-np","im-pt","pf","in","fq-np","fq-pt"],"punctual":["np","pt","fq-np","fq-pt"],
-                  "stative":["gn","pt","in"],"uninflected":["gn"]}
+    categories = {"fientive":["im-np","im-pt","pf","in","fq-np","fq-pt","ex"],"punctual":["np","pt","fq-np","fq-pt","ex"],
+                  "stative":["gn","pt","in","ex"],"uninflected":["gn"]}
     citation_forms = {"fientive":"im-np","punctual":"np","stative":"gn","uninflected":"gn"}
-    low_ablauts = {"np":"e","pt":"o","im-np":"aa","im-pt":"o","pf":"e","in":"aa","fq-np":"e","fq-pt":"o"}
-    high_ablauts = {"np":"i","pt":"u","im-np":"a","im-pt":"u","pf":"i","in":"a","fq-np":"i","fq-pt":"u"}
-    prefixes = {"in":"iN","fq-np":"&","fq-pt":"&"}
+    low_ablauts = {"np":"e","pt":"o","im-np":"aa","im-pt":"o","pf":"e","in":"aa","fq-np":"e","fq-pt":"o","ex":"o"}
+    high_ablauts = {"np":"i","pt":"u","im-np":"a","im-pt":"u","pf":"i","in":"a","fq-np":"i","fq-pt":"u","ex":"u"}
+    prefixes = {"in":"iN","fq-np":"&","fq-pt":"&","ex":"rāF"}
 
     def __init__(self, category):
         if category in PKWord.categories:
@@ -294,7 +295,7 @@ class LauvinkoForm:
         if showprogress:
             print(augmented,nonaugmented)
         
-        replacements_1000s = [('([ei])([aəeiou][`´])',r'\1y\2'),('([ou])([aəeiou][`´])',r'\1v\2'),
+        replacements_1000s = [('([ei])([aəeiou][`´])',r'\1y\2'),('([ou])([aəeiou][`´])',r'\1v\2'),('([aə])([aəeiou][`´])',r'\2'),
                              (r'([aəeiou])([`´]?)\1',r'\1\2'),(r'([aəeiou])([`´]?)a',r'\1\2ə'),
                              (r'([aəeiou])([`´]?)e',r'\1\2i'),(r'([aəeiou])([`´]?)o',r'\1\2u'),
                              (r'[əe]([`´]?)i',r'e\1'),(r'[əo]([`´]?)u',r'o\1'),(r'a([`´]?)ə',r'a\1')]
