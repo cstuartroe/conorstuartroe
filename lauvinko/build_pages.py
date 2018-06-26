@@ -94,6 +94,9 @@ class LauvinkoPage:
                 go_down += '</h3></div></div></a>\n'
             go_down += '</div>\n'
             self.html += go_down
+
+        self.html = re.sub('\$(.*?)\$',r'<span style="font-variant: small-caps;">\1</span>',self.html)
+        self.html = self.html.replace('**','&#x06DE;') # triple dot &#x061E;
         
         self.html = django_wrap(self.html)
         with open(os.path.join('templates','lauvinko',self.name + '.html'),'w',encoding="utf-8") as fh:
@@ -194,20 +197,20 @@ function toggleshown(table_toggler) {
             dictionary_text += '<div class="entry" id="%s">\n' % entry.ident
             dictionary_text += '<h1 class="lauvinko">%s</h1>\n' % cf.falavay(False)
             dictionary_text += '<h2>Classical Kasanic</h2>'
-            dictionary_text += '<h3><span style="font-style:italic;">%s</span>' % cf.transcribe()
-            dictionary_text += ' - %s (%s)</h3>\n' % (pk.defn, pk.category)
+            dictionary_text += '<h3><span style="font-style:italic;">%s</span></h3>\n' % cf.transcribe()
+            dictionary_text += '<p>%s (%s)</p>\n' % (pk.defn, pk.category)
             if pk.category != 'uninflected':
                 dictionary_text += MyContentHandler.form_table(pk,'pk')
 
             dictionary_text += '<h2>Lauvìnko</h2>'
-            dictionary_text += '<h3><span style="font-style:italic;">%s</span>' % lv_cf.transcribe()
-            dictionary_text += ' - %s</h3>\n' % lv.defn
+            dictionary_text += '<h3><span style="font-style:italic;">%s</span></h3>\n' % lv_cf.transcribe()
+            dictionary_text += '<p>%s</p>\n' % lv.defn
             if entry.category != 'uninflected':
                 dictionary_text += MyContentHandler.form_table(lv,'lv')
 
             dictionary_text += '<h2>Botharu</h2>'
-            dictionary_text += '<h3><span style="font-style:italic;">%s</span>' % bt_cf.transcribe()
-            dictionary_text += ' - %s</h3>\n' % bt.defn
+            dictionary_text += '<h3><span style="font-style:italic;">%s</span></h3>' % bt_cf.transcribe()
+            dictionary_text += '<p>%s</p>\n' % bt.defn
             if entry.category != 'uninflected':
                 dictionary_text += MyContentHandler.form_table(bt,'bt')
                 

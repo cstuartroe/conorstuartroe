@@ -12,7 +12,8 @@ function toggleshown(table_toggler) {
 </script>
 <div class="entry" id="build">
 <h1 class="lauvinko">Aqkaey</h1>
-<h2>Classical Kasanic</h2><h3><span style="font-style:italic;">akaye</span> - To build, establish, appoint. (fientive)</h3>
+<h2>Classical Kasanic</h2><h3><span style="font-style:italic;">akaye</span></h3>
+<p>To build, establish, appoint. (fientive)</p>
 <table class="notshown">
 <thead><tr><th colspan="3">Classical Kasanic Inflection - <a onclick="toggleshown(this)">Show</a></th></tr></thead><tbody>
 <tr><td></td><td>Nonpast</td><td>Past</td></tr>
@@ -22,7 +23,8 @@ function toggleshown(table_toggler) {
 <tr><td>Inceptive</td><td colspan="2"><span class="lauvinko">Iqnakaey</span><br/><span style="font-style:italic;">inakaye</span></td></tr>
 <tr><td>Experiential</td><td colspan="2"><span class="lauvinko">raOkaey</span><br/><span style="font-style:italic;">raokaye</span></td></tr>
 </tbody></table>
-<h2>Lauvìnko</h2><h3><span style="font-style:italic;">ákay, áy</span> - To build, establish, appoint.</h3>
+<h2>Lauvìnko</h2><h3><span style="font-style:italic;">ákay, áy</span></h3>
+<p>$vol$ builds $pat$, a building or ship. ** (inchoative) $vol$ establishes, founds, begins construction on $pat$ ** $vol$ nominates $dat$ for public office.</p>
 <table class="notshown">
 <thead><tr><th colspan="3">Lauvinko Inflection - <a onclick="toggleshown(this)">Show</a></th></tr></thead><tbody>
 <tr><td></td><td>Nonpast</td><td>Past</td></tr>
@@ -32,7 +34,7 @@ function toggleshown(table_toggler) {
 <tr><td>Inceptive</td><td colspan="2"><span class="lauvinko">Iqnakaey</span><br/><span style="font-style:italic;">inákay, ináy</span></td></tr>
 <tr><td>Experiential</td><td colspan="2"><span class="lauvinko">raOkaey</span><br/><span style="font-style:italic;">lókay, lóayi</span></td></tr>
 </tbody></table>
-<h2>Botharu</h2><h3><span style="font-style:italic;">akaye</span> - To build, establish, appoint.</h3>
+<h2>Botharu</h2><h3><span style="font-style:italic;">akaye</span></h3><p>To build, establish, appoint.</p>
 <table class="notshown">
 <thead><tr><th colspan="3">Botharu Inflection - <a onclick="toggleshown(this)">Show</a></th></tr></thead><tbody>
 <tr><td></td><td>Nonpast</td><td>Past</td></tr>
@@ -43,28 +45,35 @@ function toggleshown(table_toggler) {
 <hr/>
 <div class="entry" id="manner">
 <h1 class="lauvinko">AqHka</h1>
-<h2>Classical Kasanic</h2><h3><span style="font-style:italic;">a'ka</span> - Custom, manner, appearance. (uninflected)</h3>
-<h2>Lauvìnko</h2><h3><span style="font-style:italic;">ákka, áh</span> - Custom, manner, appearance.</h3>
-<h2>Botharu</h2><h3><span style="font-style:italic;">áka</span> - Custom, manner, appearance.</h3>
+<h2>Classical Kasanic</h2><h3><span style="font-style:italic;">a'ka</span></h3>
+<p>Custom, manner, appearance. (uninflected)</p>
+<h2>Lauvìnko</h2><h3><span style="font-style:italic;">ákka, áh</span></h3>
+<p>Way, manner.</p>
+<h2>Botharu</h2><h3><span style="font-style:italic;">áka</span></h3><p>Custom, manner, appearance.</p>
 </div>
 <hr/>
 <div class="entry" id="aunt">
 <h1 class="lauvinko">Aqtqri</h1>
-<h2>Classical Kasanic</h2><h3><span style="font-style:italic;">atəri</span> - Kin, clanmate, sister, aunt. (uninflected)</h3>
-<h2>Lauvìnko</h2><h3><span style="font-style:italic;">áhli, álli</span> - Kin, clanmate, sister, aunt.</h3>
-<h2>Botharu</h2><h3><span style="font-style:italic;">atiri</span> - Kin, clanmate, sister, aunt.</h3>
+<h2>Classical Kasanic</h2><h3><span style="font-style:italic;">atəri</span></h3>
+<p>Kin, clanmate, sister, aunt. (uninflected)</p>
+<h2>Lauvìnko</h2><h3><span style="font-style:italic;">áhli, álli</span></h3>
+<p>(reflexive) $pat$ and $pat$ are of the same clan.</p>
+<h2>Botharu</h2><h3><span style="font-style:italic;">atiri</span></h3><p>Kin, clanmate, sister, aunt.</p>
 </div>
 <hr/>
 <div class="entry" id="kin">
 <h1 class="lauvinko">Wetq</h1>
-<h2>Classical Kasanic</h2><h3><span style="font-style:italic;">aute</span> - Kin, sameblooded. (uninflected)</h3>
-<h2>Lauvìnko</h2><h3><span style="font-style:italic;">áuti, àuti</span> - Kin, sameblooded.</h3>
-<h2>Botharu</h2><h3><span style="font-style:italic;">ooche</span> - Kin, sameblooded.</h3>
+<h2>Classical Kasanic</h2><h3><span style="font-style:italic;">aute</span></h3>
+<p>Kin, sameblooded. (uninflected)</p>
+<h2>Lauvìnko</h2><h3><span style="font-style:italic;">áuti, àuti</span></h3>
+<p>(reflexive) $pat$ and $pat$ are kin, related.</p>
+<h2>Botharu</h2><h3><span style="font-style:italic;">ooche</span></h3><p>Kin, sameblooded.</p>
 </div>
 <hr/>
 <div class="entry" id="agitate">
 <h1 class="lauvinko">caMetqsa</h1>
-<h2>Classical Kasanic</h2><h3><span style="font-style:italic;">cantesa</span> - To agitate. (fientive)</h3>
+<h2>Classical Kasanic</h2><h3><span style="font-style:italic;">cantesa</span></h3>
+<p>To agitate. (fientive)</p>
 <table class="notshown">
 <thead><tr><th colspan="3">Classical Kasanic Inflection - <a onclick="toggleshown(this)">Show</a></th></tr></thead><tbody>
 <tr><td></td><td>Nonpast</td><td>Past</td></tr>
@@ -74,7 +83,8 @@ function toggleshown(table_toggler) {
 <tr><td>Inceptive</td><td colspan="2"><span class="lauvinko">IqMcaMetqsa</span><br/><span style="font-style:italic;">iñcantesa</span></td></tr>
 <tr><td>Experiential</td><td colspan="2"><span class="lauvinko">raHecoMetqsa</span><br/><span style="font-style:italic;">ra'contesa</span></td></tr>
 </tbody></table>
-<h2>Lauvìnko</h2><h3><span style="font-style:italic;">cántes, cánis</span> - To agitate.</h3>
+<h2>Lauvìnko</h2><h3><span style="font-style:italic;">cántes, cánis</span></h3>
+<p>$pat$ is boiling. ** $vol$ cooks, boils $pat$. ** $vol$ bothers, startles $pat$.</p>
 <table class="notshown">
 <thead><tr><th colspan="3">Lauvinko Inflection - <a onclick="toggleshown(this)">Show</a></th></tr></thead><tbody>
 <tr><td></td><td>Nonpast</td><td>Past</td></tr>
@@ -84,7 +94,7 @@ function toggleshown(table_toggler) {
 <tr><td>Inceptive</td><td colspan="2"><span class="lauvinko">IqMcaMetqsa</span><br/><span style="font-style:italic;">incántes, incánis</span></td></tr>
 <tr><td>Experiential</td><td colspan="2"><span class="lauvinko">raHecoMetqsa</span><br/><span style="font-style:italic;">laccóntes, laccónis</span></td></tr>
 </tbody></table>
-<h2>Botharu</h2><h3><span style="font-style:italic;">tsąchhaa</span> - To agitate.</h3>
+<h2>Botharu</h2><h3><span style="font-style:italic;">tsąchhaa</span></h3><p>To agitate.</p>
 <table class="notshown">
 <thead><tr><th colspan="3">Botharu Inflection - <a onclick="toggleshown(this)">Show</a></th></tr></thead><tbody>
 <tr><td></td><td>Nonpast</td><td>Past</td></tr>
@@ -95,7 +105,8 @@ function toggleshown(table_toggler) {
 <hr/>
 <div class="entry" id="bite">
 <h1 class="lauvinko">ciHkiq</h1>
-<h2>Classical Kasanic</h2><h3><span style="font-style:italic;">ci'ki</span> - To bite, chew. (punctual)</h3>
+<h2>Classical Kasanic</h2><h3><span style="font-style:italic;">ci'ki</span></h3>
+<p>To bite, chew. (punctual)</p>
 <table class="notshown">
 <thead><tr><th colspan="3">Classical Kasanic Inflection - <a onclick="toggleshown(this)">Show</a></th></tr></thead><tbody>
 <tr><td></td><td>Nonpast</td><td>Past</td></tr>
@@ -103,7 +114,8 @@ function toggleshown(table_toggler) {
 <tr><td>Frequentative</td><td><span class="lauvinko">ciciHkiq</span><br/><span style="font-style:italic;">cici'ki</span></td><td><span class="lauvinko">cucuHkiq</span><br/><span style="font-style:italic;">cucu'ki</span></td></tr>
 <tr><td>Experiential</td><td colspan="2"><span class="lauvinko">raHcuHkiq</span><br/><span style="font-style:italic;">ra'cu'ki</span></td></tr>
 </tbody></table>
-<h2>Lauvìnko</h2><h3><span style="font-style:italic;">cíkki, cíki</span> - To bite, chew.</h3>
+<h2>Lauvìnko</h2><h3><span style="font-style:italic;">cíkki, cíki</span></h3>
+<p>$vol$ bites $pat$. ** (frequentative) $vol$ chews, eats $pat$.</p>
 <table class="notshown">
 <thead><tr><th colspan="3">Lauvinko Inflection - <a onclick="toggleshown(this)">Show</a></th></tr></thead><tbody>
 <tr><td></td><td>Nonpast</td><td>Past</td></tr>
@@ -111,7 +123,7 @@ function toggleshown(table_toggler) {
 <tr><td>Frequentative</td><td><span class="lauvinko">ciciHkiq</span><br/><span style="font-style:italic;">cicíkki, cicíki</span></td><td><span class="lauvinko">cucuHkiq</span><br/><span style="font-style:italic;">cacókki, cacóki</span></td></tr>
 <tr><td>Experiential</td><td colspan="2"><span class="lauvinko">raHcuHkiq</span><br/><span style="font-style:italic;">laccókki, laccóki</span></td></tr>
 </tbody></table>
-<h2>Botharu</h2><h3><span style="font-style:italic;">chíchi</span> - To bite, chew.</h3>
+<h2>Botharu</h2><h3><span style="font-style:italic;">chíchi</span></h3><p>To bite, chew.</p>
 <table class="notshown">
 <thead><tr><th colspan="3">Botharu Inflection - <a onclick="toggleshown(this)">Show</a></th></tr></thead><tbody>
 <tr><td></td><td>Nonpast</td><td>Past</td></tr>
@@ -121,14 +133,17 @@ function toggleshown(table_toggler) {
 <hr/>
 <div class="entry" id="finger">
 <h1 class="lauvinko">ecokiqen</h1>
-<h2>Classical Kasanic</h2><h3><span style="font-style:italic;">cokine</span> - Finger. (uninflected)</h3>
-<h2>Lauvìnko</h2><h3><span style="font-style:italic;">cókini, cóyni</span> - Finger.</h3>
-<h2>Botharu</h2><h3><span style="font-style:italic;">tlochile</span> - Finger.</h3>
+<h2>Classical Kasanic</h2><h3><span style="font-style:italic;">cokine</span></h3>
+<p>Finger. (uninflected)</p>
+<h2>Lauvìnko</h2><h3><span style="font-style:italic;">cókini, cóyni</span></h3>
+<p>Finger.</p>
+<h2>Botharu</h2><h3><span style="font-style:italic;">tlochile</span></h3><p>Finger.</p>
 </div>
 <hr/>
 <div class="entry" id="search">
 <h1 class="lauvinko">HcaMeko</h1>
-<h2>Classical Kasanic</h2><h3><span style="font-style:italic;">'caṅko</span> - To search, find. (fientive)</h3>
+<h2>Classical Kasanic</h2><h3><span style="font-style:italic;">'caṅko</span></h3>
+<p>To search, find. (fientive)</p>
 <table class="notshown">
 <thead><tr><th colspan="3">Classical Kasanic Inflection - <a onclick="toggleshown(this)">Show</a></th></tr></thead><tbody>
 <tr><td></td><td>Nonpast</td><td>Past</td></tr>
@@ -138,7 +153,8 @@ function toggleshown(table_toggler) {
 <tr><td>Inceptive</td><td colspan="2"><span class="lauvinko">IqHcaMeko</span><br/><span style="font-style:italic;">i'caṅko</span></td></tr>
 <tr><td>Experiential</td><td colspan="2"><span class="lauvinko">raHecoMeko</span><br/><span style="font-style:italic;">ra'coṅko</span></td></tr>
 </tbody></table>
-<h2>Lauvìnko</h2><h3><span style="font-style:italic;">cánka, cáng</span> - To search, find.</h3>
+<h2>Lauvìnko</h2><h3><span style="font-style:italic;">cánka, cáng</span></h3>
+<p>$vol$ searches for $dat$. ** $vol$ wants $dat$. ** (perfective) $vol$ finds $dat$. ** $vol$ meets, meets up with $dat$. ** $vol$ invents, creates $pat$. ** $vol$ receives $pat$.</p>
 <table class="notshown">
 <thead><tr><th colspan="3">Lauvinko Inflection - <a onclick="toggleshown(this)">Show</a></th></tr></thead><tbody>
 <tr><td></td><td>Nonpast</td><td>Past</td></tr>
@@ -148,7 +164,7 @@ function toggleshown(table_toggler) {
 <tr><td>Inceptive</td><td colspan="2"><span class="lauvinko">IqHcaMeko</span><br/><span style="font-style:italic;">iccánka, iccáng</span></td></tr>
 <tr><td>Experiential</td><td colspan="2"><span class="lauvinko">raHecoMeko</span><br/><span style="font-style:italic;">laccónka, laccóng</span></td></tr>
 </tbody></table>
-<h2>Botharu</h2><h3><span style="font-style:italic;">tsąko</span> - To search, find.</h3>
+<h2>Botharu</h2><h3><span style="font-style:italic;">tsąko</span></h3><p>To search, find.</p>
 <table class="notshown">
 <thead><tr><th colspan="3">Botharu Inflection - <a onclick="toggleshown(this)">Show</a></th></tr></thead><tbody>
 <tr><td></td><td>Nonpast</td><td>Past</td></tr>
@@ -159,7 +175,8 @@ function toggleshown(table_toggler) {
 <hr/>
 <div class="entry" id="cross">
 <h1 class="lauvinko">EHkugi</h1>
-<h2>Classical Kasanic</h2><h3><span style="font-style:italic;">e'kuṅi</span> - To cross, go over. (punctual)</h3>
+<h2>Classical Kasanic</h2><h3><span style="font-style:italic;">e'kuṅi</span></h3>
+<p>To cross, go over. (punctual)</p>
 <table class="notshown">
 <thead><tr><th colspan="3">Classical Kasanic Inflection - <a onclick="toggleshown(this)">Show</a></th></tr></thead><tbody>
 <tr><td></td><td>Nonpast</td><td>Past</td></tr>
@@ -167,7 +184,8 @@ function toggleshown(table_toggler) {
 <tr><td>Frequentative</td><td><span class="lauvinko">EHekqHkugi</span><br/><span style="font-style:italic;">e'ke'kuṅi</span></td><td><span class="lauvinko">OHekoHkugi</span><br/><span style="font-style:italic;">o'ko'kuṅi</span></td></tr>
 <tr><td>Experiential</td><td colspan="2"><span class="lauvinko">raOHkugi</span><br/><span style="font-style:italic;">rao'kuṅi</span></td></tr>
 </tbody></table>
-<h2>Lauvìnko</h2><h3><span style="font-style:italic;">ékkangi, éhngi</span> - To cross, go over.</h3>
+<h2>Lauvìnko</h2><h3><span style="font-style:italic;">ékkangi, éhngi</span></h3>
+<p>$vol$ crosses, passes over $pat$. ** (frequentative) $vol$ migrates, wanders.</p>
 <table class="notshown">
 <thead><tr><th colspan="3">Lauvinko Inflection - <a onclick="toggleshown(this)">Show</a></th></tr></thead><tbody>
 <tr><td></td><td>Nonpast</td><td>Past</td></tr>
@@ -175,7 +193,7 @@ function toggleshown(table_toggler) {
 <tr><td>Frequentative</td><td><span class="lauvinko">EHekqHkugi</span><br/><span style="font-style:italic;">ekkékkangi, ekkéhngi</span></td><td><span class="lauvinko">OHekoHkugi</span><br/><span style="font-style:italic;">okkókkangi, okkóhngi</span></td></tr>
 <tr><td>Experiential</td><td colspan="2"><span class="lauvinko">raOHkugi</span><br/><span style="font-style:italic;">lókkangi, lóhngi</span></td></tr>
 </tbody></table>
-<h2>Botharu</h2><h3><span style="font-style:italic;">yékwęę</span> - To cross, go over.</h3>
+<h2>Botharu</h2><h3><span style="font-style:italic;">yékwęę</span></h3><p>To cross, go over.</p>
 <table class="notshown">
 <thead><tr><th colspan="3">Botharu Inflection - <a onclick="toggleshown(this)">Show</a></th></tr></thead><tbody>
 <tr><td></td><td>Nonpast</td><td>Past</td></tr>
@@ -185,7 +203,8 @@ function toggleshown(table_toggler) {
 <hr/>
 <div class="entry" id="insert">
 <h1 class="lauvinko">EHpY</h1>
-<h2>Classical Kasanic</h2><h3><span style="font-style:italic;">e'pai</span> - To insert, pierce. (punctual)</h3>
+<h2>Classical Kasanic</h2><h3><span style="font-style:italic;">e'pai</span></h3>
+<p>To insert, pierce. (punctual)</p>
 <table class="notshown">
 <thead><tr><th colspan="3">Classical Kasanic Inflection - <a onclick="toggleshown(this)">Show</a></th></tr></thead><tbody>
 <tr><td></td><td>Nonpast</td><td>Past</td></tr>
@@ -193,7 +212,8 @@ function toggleshown(table_toggler) {
 <tr><td>Frequentative</td><td><span class="lauvinko">EHepHpY</span><br/><span style="font-style:italic;">e'pe'pai</span></td><td><span class="lauvinko">OHepoHpY</span><br/><span style="font-style:italic;">o'po'pai</span></td></tr>
 <tr><td>Experiential</td><td colspan="2"><span class="lauvinko">raOHpY</span><br/><span style="font-style:italic;">rao'pai</span></td></tr>
 </tbody></table>
-<h2>Lauvìnko</h2><h3><span style="font-style:italic;">éppay, épi</span> - To insert, pierce.</h3>
+<h2>Lauvìnko</h2><h3><span style="font-style:italic;">éppay, épi</span></h3>
+<p>$vol$ pierces, stings, stabs $pat$ with $ins$. ** $vol$ inserts $ins$ into $all$. ** (vulgar) $vol$ penetrates $pat$.</p>
 <table class="notshown">
 <thead><tr><th colspan="3">Lauvinko Inflection - <a onclick="toggleshown(this)">Show</a></th></tr></thead><tbody>
 <tr><td></td><td>Nonpast</td><td>Past</td></tr>
@@ -201,7 +221,7 @@ function toggleshown(table_toggler) {
 <tr><td>Frequentative</td><td><span class="lauvinko">EHepHpY</span><br/><span style="font-style:italic;">eppéppay, eppépi</span></td><td><span class="lauvinko">OHepoHpY</span><br/><span style="font-style:italic;">oppóppay, oppópi</span></td></tr>
 <tr><td>Experiential</td><td colspan="2"><span class="lauvinko">raOHpY</span><br/><span style="font-style:italic;">lóppay, lópi</span></td></tr>
 </tbody></table>
-<h2>Botharu</h2><h3><span style="font-style:italic;">yébee</span> - To insert, pierce.</h3>
+<h2>Botharu</h2><h3><span style="font-style:italic;">yébee</span></h3><p>To insert, pierce.</p>
 <table class="notshown">
 <thead><tr><th colspan="3">Botharu Inflection - <a onclick="toggleshown(this)">Show</a></th></tr></thead><tbody>
 <tr><td></td><td>Nonpast</td><td>Past</td></tr>
@@ -211,14 +231,17 @@ function toggleshown(table_toggler) {
 <hr/>
 <div class="entry" id="not">
 <h1 class="lauvinko">Er</h1>
-<h2>Classical Kasanic</h2><h3><span style="font-style:italic;">erə</span> - Not, no. (uninflected)</h3>
-<h2>Lauvìnko</h2><h3><span style="font-style:italic;">ér, èr</span> - Not, no.</h3>
-<h2>Botharu</h2><h3><span style="font-style:italic;">yeri</span> - Not, no.</h3>
+<h2>Classical Kasanic</h2><h3><span style="font-style:italic;">erə</span></h3>
+<p>Not, no. (uninflected)</p>
+<h2>Lauvìnko</h2><h3><span style="font-style:italic;">ér, èr</span></h3>
+<p>Not, don't.</p>
+<h2>Botharu</h2><h3><span style="font-style:italic;">yeri</span></h3><p>Not, no.</p>
 </div>
 <hr/>
 <div class="entry" id="fight">
 <h1 class="lauvinko">hanacvi</h1>
-<h2>Classical Kasanic</h2><h3><span style="font-style:italic;">hanacəvi</span> - To fight. (fientive)</h3>
+<h2>Classical Kasanic</h2><h3><span style="font-style:italic;">hanacəvi</span></h3>
+<p>To fight. (fientive)</p>
 <table class="notshown">
 <thead><tr><th colspan="3">Classical Kasanic Inflection - <a onclick="toggleshown(this)">Show</a></th></tr></thead><tbody>
 <tr><td></td><td>Nonpast</td><td>Past</td></tr>
@@ -228,7 +251,8 @@ function toggleshown(table_toggler) {
 <tr><td>Inceptive</td><td colspan="2"><span class="lauvinko">Iqhanacvi</span><br/><span style="font-style:italic;">ihanacəvi</span></td></tr>
 <tr><td>Experiential</td><td colspan="2"><span class="lauvinko">raehonacvi</span><br/><span style="font-style:italic;">rahonacəvi</span></td></tr>
 </tbody></table>
-<h2>Lauvìnko</h2><h3><span style="font-style:italic;">hánasvi, hàncavi</span> - To fight.</h3>
+<h2>Lauvìnko</h2><h3><span style="font-style:italic;">hánasvi, hàncavi</span></h3>
+<p>$vol$ fights. ** (reflexive) $vol$ and $vol$ fight against one another. ** (frequentative, literary) $vol$ struggles against, slaughters $pat$.</p>
 <table class="notshown">
 <thead><tr><th colspan="3">Lauvinko Inflection - <a onclick="toggleshown(this)">Show</a></th></tr></thead><tbody>
 <tr><td></td><td>Nonpast</td><td>Past</td></tr>
@@ -238,7 +262,7 @@ function toggleshown(table_toggler) {
 <tr><td>Inceptive</td><td colspan="2"><span class="lauvinko">Iqhanacvi</span><br/><span style="font-style:italic;">iyánasvi, iyàncavi</span></td></tr>
 <tr><td>Experiential</td><td colspan="2"><span class="lauvinko">raehonacvi</span><br/><span style="font-style:italic;">lónasvi, lòncavi</span></td></tr>
 </tbody></table>
-<h2>Botharu</h2><h3><span style="font-style:italic;">halatsivi</span> - To fight.</h3>
+<h2>Botharu</h2><h3><span style="font-style:italic;">halatsivi</span></h3><p>To fight.</p>
 <table class="notshown">
 <thead><tr><th colspan="3">Botharu Inflection - <a onclick="toggleshown(this)">Show</a></th></tr></thead><tbody>
 <tr><td></td><td>Nonpast</td><td>Past</td></tr>
@@ -249,42 +273,53 @@ function toggleshown(table_toggler) {
 <hr/>
 <div class="entry" id="water">
 <h1 class="lauvinko">ehqeho</h1>
-<h2>Classical Kasanic</h2><h3><span style="font-style:italic;">heho</span> - Water. (uninflected)</h3>
-<h2>Lauvìnko</h2><h3><span style="font-style:italic;">héu, hèu</span> - Water.</h3>
-<h2>Botharu</h2><h3><span style="font-style:italic;">shoo</span> - Water.</h3>
+<h2>Classical Kasanic</h2><h3><span style="font-style:italic;">heho</span></h3>
+<p>Water. (uninflected)</p>
+<h2>Lauvìnko</h2><h3><span style="font-style:italic;">héu, hèu</span></h3>
+<p>Water.</p>
+<h2>Botharu</h2><h3><span style="font-style:italic;">shoo</span></h3><p>Water.</p>
 </div>
 <hr/>
 <div class="entry" id="rice">
 <h1 class="lauvinko">ehqep</h1>
-<h2>Classical Kasanic</h2><h3><span style="font-style:italic;">hekve</span> - Rice. (uninflected)</h3>
-<h2>Lauvìnko</h2><h3><span style="font-style:italic;">hépi, hévi</span> - Rice.</h3>
-<h2>Botharu</h2><h3><span style="font-style:italic;">sheche</span> - Rice.</h3>
+<h2>Classical Kasanic</h2><h3><span style="font-style:italic;">hekve</span></h3>
+<p>Rice. (uninflected)</p>
+<h2>Lauvìnko</h2><h3><span style="font-style:italic;">hépi, hévi</span></h3>
+<p>Rice.</p>
+<h2>Botharu</h2><h3><span style="font-style:italic;">sheche</span></h3><p>Rice.</p>
 </div>
 <hr/>
 <div class="entry" id="toe">
 <h1 class="lauvinko">ehomum</h1>
-<h2>Classical Kasanic</h2><h3><span style="font-style:italic;">homumə</span> - Toe. (uninflected)</h3>
-<h2>Lauvìnko</h2><h3><span style="font-style:italic;">hómang, hòmang</span> - Toe.</h3>
-<h2>Botharu</h2><h3><span style="font-style:italic;">womǫmą</span> - Toe.</h3>
+<h2>Classical Kasanic</h2><h3><span style="font-style:italic;">homumə</span></h3>
+<p>Toe. (uninflected)</p>
+<h2>Lauvìnko</h2><h3><span style="font-style:italic;">hómang, hòmang</span></h3>
+<p>Toe.</p>
+<h2>Botharu</h2><h3><span style="font-style:italic;">womǫmą</span></h3><p>Toe.</p>
 </div>
 <hr/>
 <div class="entry" id="daughter1">
 <h1 class="lauvinko">Iqerohiq</h1>
-<h2>Classical Kasanic</h2><h3><span style="font-style:italic;">irohi</span> - Father's daughter. (uninflected)</h3>
-<h2>Lauvìnko</h2><h3><span style="font-style:italic;">íloy, ìlay</span> - Father's daughter.</h3>
-<h2>Botharu</h2><h3><span style="font-style:italic;">yiswee</span> - Father's daughter.</h3>
+<h2>Classical Kasanic</h2><h3><span style="font-style:italic;">irohi</span></h3>
+<p>Father's daughter. (uninflected)</p>
+<h2>Lauvìnko</h2><h3><span style="font-style:italic;">íloy, ìlay</span></h3>
+<p>Father&#8217;s daughter. ** (literary) Treasure, precious, darling.</p>
+<h2>Botharu</h2><h3><span style="font-style:italic;">yiswee</span></h3><p>Father's daughter.</p>
 </div>
 <hr/>
 <div class="entry" id="son1">
 <h1 class="lauvinko">kaMka</h1>
-<h2>Classical Kasanic</h2><h3><span style="font-style:italic;">kaṅka</span> - Father's son. (uninflected)</h3>
-<h2>Lauvìnko</h2><h3><span style="font-style:italic;">kánka, káng</span> - Father's son.</h3>
-<h2>Botharu</h2><h3><span style="font-style:italic;">kąka</span> - Father's son.</h3>
+<h2>Classical Kasanic</h2><h3><span style="font-style:italic;">kaṅka</span></h3>
+<p>Father's son. (uninflected)</p>
+<h2>Lauvìnko</h2><h3><span style="font-style:italic;">kánka, káng</span></h3>
+<p>Father&#8217;s son. ** Heir, beneficiary (of estate), successor.</p>
+<h2>Botharu</h2><h3><span style="font-style:italic;">kąka</span></h3><p>Father's son.</p>
 </div>
 <hr/>
 <div class="entry" id="speak">
 <h1 class="lauvinko">kaHepota</h1>
-<h2>Classical Kasanic</h2><h3><span style="font-style:italic;">ka'pota</span> - To speak, say. (fientive)</h3>
+<h2>Classical Kasanic</h2><h3><span style="font-style:italic;">ka'pota</span></h3>
+<p>To speak, say. (fientive)</p>
 <table class="notshown">
 <thead><tr><th colspan="3">Classical Kasanic Inflection - <a onclick="toggleshown(this)">Show</a></th></tr></thead><tbody>
 <tr><td></td><td>Nonpast</td><td>Past</td></tr>
@@ -294,7 +329,8 @@ function toggleshown(table_toggler) {
 <tr><td>Inceptive</td><td colspan="2"><span class="lauvinko">IqMkaHepota</span><br/><span style="font-style:italic;">iṅka'pota</span></td></tr>
 <tr><td>Experiential</td><td colspan="2"><span class="lauvinko">raHekoHepota</span><br/><span style="font-style:italic;">ra'ko'pota</span></td></tr>
 </tbody></table>
-<h2>Lauvìnko</h2><h3><span style="font-style:italic;">káppoh, kápah</span> - To speak, say.</h3>
+<h2>Lauvìnko</h2><h3><span style="font-style:italic;">káppoh, kápah</span></h3>
+<p>$vol$ speaks, says $pat$, a word (not a whole phrase). ** $vol$ speaks about $dat$. ** $vol$ speaks to, tells $all$. ** (frequentative) $vol$ commands, is in charge.</p>
 <table class="notshown">
 <thead><tr><th colspan="3">Lauvinko Inflection - <a onclick="toggleshown(this)">Show</a></th></tr></thead><tbody>
 <tr><td></td><td>Nonpast</td><td>Past</td></tr>
@@ -304,7 +340,7 @@ function toggleshown(table_toggler) {
 <tr><td>Inceptive</td><td colspan="2"><span class="lauvinko">IqMkaHepota</span><br/><span style="font-style:italic;">inkáppoh, inkápah</span></td></tr>
 <tr><td>Experiential</td><td colspan="2"><span class="lauvinko">raHekoHepota</span><br/><span style="font-style:italic;">lakkóppoh, lakkópah</span></td></tr>
 </tbody></table>
-<h2>Botharu</h2><h3><span style="font-style:italic;">kábota</span> - To speak, say.</h3>
+<h2>Botharu</h2><h3><span style="font-style:italic;">kábota</span></h3><p>To speak, say.</p>
 <table class="notshown">
 <thead><tr><th colspan="3">Botharu Inflection - <a onclick="toggleshown(this)">Show</a></th></tr></thead><tbody>
 <tr><td></td><td>Nonpast</td><td>Past</td></tr>
@@ -315,14 +351,17 @@ function toggleshown(table_toggler) {
 <hr/>
 <div class="entry" id="son2">
 <h1 class="lauvinko">kaerpa</h1>
-<h2>Classical Kasanic</h2><h3><span style="font-style:italic;">karepa</span> - Mother's son. (uninflected)</h3>
-<h2>Lauvìnko</h2><h3><span style="font-style:italic;">káleh, kàlih</span> - Mother's son.</h3>
-<h2>Botharu</h2><h3><span style="font-style:italic;">kashaa</span> - Mother's son.</h3>
+<h2>Classical Kasanic</h2><h3><span style="font-style:italic;">karepa</span></h3>
+<p>Mother's son. (uninflected)</p>
+<h2>Lauvìnko</h2><h3><span style="font-style:italic;">káleh, kàlih</span></h3>
+<p>Mother&#8217;s son. ** (literary) Life&#8217;s work, oeuvre.</p>
+<h2>Botharu</h2><h3><span style="font-style:italic;">kashaa</span></h3><p>Mother's son.</p>
 </div>
 <hr/>
 <div class="entry" id="gust">
 <h1 class="lauvinko">kiqMkapiru</h1>
-<h2>Classical Kasanic</h2><h3><span style="font-style:italic;">kiṅkakviru</span> - To blow, gust. (punctual)</h3>
+<h2>Classical Kasanic</h2><h3><span style="font-style:italic;">kiṅkakviru</span></h3>
+<p>To blow, gust. (punctual)</p>
 <table class="notshown">
 <thead><tr><th colspan="3">Classical Kasanic Inflection - <a onclick="toggleshown(this)">Show</a></th></tr></thead><tbody>
 <tr><td></td><td>Nonpast</td><td>Past</td></tr>
@@ -330,7 +369,8 @@ function toggleshown(table_toggler) {
 <tr><td>Frequentative</td><td><span class="lauvinko">kiqkiqMkapiru</span><br/><span style="font-style:italic;">kikiṅkakviru</span></td><td><span class="lauvinko">kukuMkapiru</span><br/><span style="font-style:italic;">kukuṅkakviru</span></td></tr>
 <tr><td>Experiential</td><td colspan="2"><span class="lauvinko">raHkuMkapiru</span><br/><span style="font-style:italic;">ra'kuṅkakviru</span></td></tr>
 </tbody></table>
-<h2>Lauvìnko</h2><h3><span style="font-style:italic;">kínkapir, kímpir</span> - To blow, gust.</h3>
+<h2>Lauvìnko</h2><h3><span style="font-style:italic;">kínkapir, kímpir</span></h3>
+<p>$vol$ (a person) blows, exhales on $all$. ** (frequentative) $vol$ (a wind) blows, gusts.</p>
 <table class="notshown">
 <thead><tr><th colspan="3">Lauvinko Inflection - <a onclick="toggleshown(this)">Show</a></th></tr></thead><tbody>
 <tr><td></td><td>Nonpast</td><td>Past</td></tr>
@@ -338,7 +378,7 @@ function toggleshown(table_toggler) {
 <tr><td>Frequentative</td><td><span class="lauvinko">kiqkiqMkapiru</span><br/><span style="font-style:italic;">kikínkapir, kikímpir</span></td><td><span class="lauvinko">kukuMkapiru</span><br/><span style="font-style:italic;">kakónkapir, kakómpir</span></td></tr>
 <tr><td>Experiential</td><td colspan="2"><span class="lauvinko">raHkuMkapiru</span><br/><span style="font-style:italic;">lakkónkapir, lakkómpir</span></td></tr>
 </tbody></table>
-<h2>Botharu</h2><h3><span style="font-style:italic;">chękachiru</span> - To blow, gust.</h3>
+<h2>Botharu</h2><h3><span style="font-style:italic;">chękachiru</span></h3><p>To blow, gust.</p>
 <table class="notshown">
 <thead><tr><th colspan="3">Botharu Inflection - <a onclick="toggleshown(this)">Show</a></th></tr></thead><tbody>
 <tr><td></td><td>Nonpast</td><td>Past</td></tr>
@@ -348,28 +388,35 @@ function toggleshown(table_toggler) {
 <hr/>
 <div class="entry" id="much">
 <h1 class="lauvinko">ekoero</h1>
-<h2>Classical Kasanic</h2><h3><span style="font-style:italic;">koro</span> - Much, many. (uninflected)</h3>
-<h2>Lauvìnko</h2><h3><span style="font-style:italic;">kór, kòr</span> - Much, many.</h3>
-<h2>Botharu</h2><h3><span style="font-style:italic;">koro</span> - Much, many.</h3>
+<h2>Classical Kasanic</h2><h3><span style="font-style:italic;">koro</span></h3>
+<p>Much, many. (uninflected)</p>
+<h2>Lauvìnko</h2><h3><span style="font-style:italic;">kór, kòr</span></h3>
+<p>Much, many, a lot, very.</p>
+<h2>Botharu</h2><h3><span style="font-style:italic;">koro</span></h3><p>Much, many.</p>
 </div>
 <hr/>
 <div class="entry" id="heel">
 <h1 class="lauvinko">pY</h1>
-<h2>Classical Kasanic</h2><h3><span style="font-style:italic;">kvai</span> - Heel. (uninflected)</h3>
-<h2>Lauvìnko</h2><h3><span style="font-style:italic;">páy, pày</span> - Heel.</h3>
-<h2>Botharu</h2><h3><span style="font-style:italic;">kwee</span> - Heel.</h3>
+<h2>Classical Kasanic</h2><h3><span style="font-style:italic;">kvai</span></h3>
+<p>Heel. (uninflected)</p>
+<h2>Lauvìnko</h2><h3><span style="font-style:italic;">páy, pày</span></h3>
+<p>Heel. ** With, together (used in positional constructions). ** (modal prefix) Together.</p>
+<h2>Botharu</h2><h3><span style="font-style:italic;">kwee</span></h3><p>Heel.</p>
 </div>
 <hr/>
 <div class="entry" id="egg">
 <h1 class="lauvinko">pYMta</h1>
-<h2>Classical Kasanic</h2><h3><span style="font-style:italic;">kvainta</span> - Egg. (uninflected)</h3>
-<h2>Lauvìnko</h2><h3><span style="font-style:italic;">páyenta, pàyenta</span> - Egg.</h3>
-<h2>Botharu</h2><h3><span style="font-style:italic;">kwęęta</span> - Egg.</h3>
+<h2>Classical Kasanic</h2><h3><span style="font-style:italic;">kvainta</span></h3>
+<p>Egg. (uninflected)</p>
+<h2>Lauvìnko</h2><h3><span style="font-style:italic;">páyenta, pàyenta</span></h3>
+<p>Egg, testicle.</p>
+<h2>Botharu</h2><h3><span style="font-style:italic;">kwęęta</span></h3><p>Egg.</p>
 </div>
 <hr/>
 <div class="entry" id="mighty">
 <h1 class="lauvinko">panikiq</h1>
-<h2>Classical Kasanic</h2><h3><span style="font-style:italic;">kvaniki</span> - To be great, mighty. (fientive)</h3>
+<h2>Classical Kasanic</h2><h3><span style="font-style:italic;">kvaniki</span></h3>
+<p>To be great, mighty. (fientive)</p>
 <table class="notshown">
 <thead><tr><th colspan="3">Classical Kasanic Inflection - <a onclick="toggleshown(this)">Show</a></th></tr></thead><tbody>
 <tr><td></td><td>Nonpast</td><td>Past</td></tr>
@@ -379,7 +426,8 @@ function toggleshown(table_toggler) {
 <tr><td>Inceptive</td><td colspan="2"><span class="lauvinko">IqMpanikiq</span><br/><span style="font-style:italic;">iṅkvaniki</span></td></tr>
 <tr><td>Experiential</td><td colspan="2"><span class="lauvinko">raHeponikiq</span><br/><span style="font-style:italic;">ra'kvoniki</span></td></tr>
 </tbody></table>
-<h2>Lauvìnko</h2><h3><span style="font-style:italic;">pániki, pàniki</span> - To be great, mighty.</h3>
+<h2>Lauvìnko</h2><h3><span style="font-style:italic;">pániki, pàniki</span></h3>
+<p>(frequentative) $vol$ is great, mighty.</p>
 <table class="notshown">
 <thead><tr><th colspan="3">Lauvinko Inflection - <a onclick="toggleshown(this)">Show</a></th></tr></thead><tbody>
 <tr><td></td><td>Nonpast</td><td>Past</td></tr>
@@ -389,7 +437,7 @@ function toggleshown(table_toggler) {
 <tr><td>Inceptive</td><td colspan="2"><span class="lauvinko">IqMpanikiq</span><br/><span style="font-style:italic;">impániki, impàniki</span></td></tr>
 <tr><td>Experiential</td><td colspan="2"><span class="lauvinko">raHeponikiq</span><br/><span style="font-style:italic;">lappóniki, lappòniki</span></td></tr>
 </tbody></table>
-<h2>Botharu</h2><h3><span style="font-style:italic;">kwalichi</span> - To be great, mighty.</h3>
+<h2>Botharu</h2><h3><span style="font-style:italic;">kwalichi</span></h3><p>To be great, mighty.</p>
 <table class="notshown">
 <thead><tr><th colspan="3">Botharu Inflection - <a onclick="toggleshown(this)">Show</a></th></tr></thead><tbody>
 <tr><td></td><td>Nonpast</td><td>Past</td></tr>
@@ -400,14 +448,17 @@ function toggleshown(table_toggler) {
 <hr/>
 <div class="entry" id="part">
 <h1 class="lauvinko">pW</h1>
-<h2>Classical Kasanic</h2><h3><span style="font-style:italic;">kvau</span> - Part, piece. (uninflected)</h3>
-<h2>Lauvìnko</h2><h3><span style="font-style:italic;">páu, pàu</span> - Part, piece.</h3>
-<h2>Botharu</h2><h3><span style="font-style:italic;">koo</span> - Part, piece.</h3>
+<h2>Classical Kasanic</h2><h3><span style="font-style:italic;">kvau</span></h3>
+<p>Part, piece. (uninflected)</p>
+<h2>Lauvìnko</h2><h3><span style="font-style:italic;">páu, pàu</span></h3>
+<p>Part, component. ** (modal prefix) Partially, incompletely, somewhat.</p>
+<h2>Botharu</h2><h3><span style="font-style:italic;">koo</span></h3><p>Part, piece.</p>
 </div>
 <hr/>
 <div class="entry" id="add">
 <h1 class="lauvinko">pierMta</h1>
-<h2>Classical Kasanic</h2><h3><span style="font-style:italic;">kvirenta</span> - To add. (punctual)</h3>
+<h2>Classical Kasanic</h2><h3><span style="font-style:italic;">kvirenta</span></h3>
+<p>To add. (punctual)</p>
 <table class="notshown">
 <thead><tr><th colspan="3">Classical Kasanic Inflection - <a onclick="toggleshown(this)">Show</a></th></tr></thead><tbody>
 <tr><td></td><td>Nonpast</td><td>Past</td></tr>
@@ -415,7 +466,8 @@ function toggleshown(table_toggler) {
 <tr><td>Frequentative</td><td><span class="lauvinko">pipierMta</span><br/><span style="font-style:italic;">kvikvirenta</span></td><td><span class="lauvinko">pupuerMta</span><br/><span style="font-style:italic;">kvukvurenta</span></td></tr>
 <tr><td>Experiential</td><td colspan="2"><span class="lauvinko">raHpuerMta</span><br/><span style="font-style:italic;">ra'kvurenta</span></td></tr>
 </tbody></table>
-<h2>Lauvìnko</h2><h3><span style="font-style:italic;">pílenta, pìlinta</span> - To add.</h3>
+<h2>Lauvìnko</h2><h3><span style="font-style:italic;">pílenta, pìlinta</span></h3>
+<p>$vol$ adds $pat$ onto $all$. ** (reflexive) $ins$ grows, increases. (frequentative) $vol$ loads $pat$, cargo.</p>
 <table class="notshown">
 <thead><tr><th colspan="3">Lauvinko Inflection - <a onclick="toggleshown(this)">Show</a></th></tr></thead><tbody>
 <tr><td></td><td>Nonpast</td><td>Past</td></tr>
@@ -423,7 +475,7 @@ function toggleshown(table_toggler) {
 <tr><td>Frequentative</td><td><span class="lauvinko">pipierMta</span><br/><span style="font-style:italic;">pipílenta, pipìlinta</span></td><td><span class="lauvinko">pupuerMta</span><br/><span style="font-style:italic;">papólenta, papòlinta</span></td></tr>
 <tr><td>Experiential</td><td colspan="2"><span class="lauvinko">raHpuerMta</span><br/><span style="font-style:italic;">lappólenta, lappòlinta</span></td></tr>
 </tbody></table>
-<h2>Botharu</h2><h3><span style="font-style:italic;">chiręta</span> - To add.</h3>
+<h2>Botharu</h2><h3><span style="font-style:italic;">chiręta</span></h3><p>To add.</p>
 <table class="notshown">
 <thead><tr><th colspan="3">Botharu Inflection - <a onclick="toggleshown(this)">Show</a></th></tr></thead><tbody>
 <tr><td></td><td>Nonpast</td><td>Past</td></tr>
@@ -433,35 +485,44 @@ function toggleshown(table_toggler) {
 <hr/>
 <div class="entry" id="north">
 <h1 class="lauvinko">kqmanW</h1>
-<h2>Classical Kasanic</h2><h3><span style="font-style:italic;">kəmanau</span> - North. (uninflected)</h3>
-<h2>Lauvìnko</h2><h3><span style="font-style:italic;">kémanau, kènnau</span> - North.</h3>
-<h2>Botharu</h2><h3><span style="font-style:italic;">kimąloo</span> - North.</h3>
+<h2>Classical Kasanic</h2><h3><span style="font-style:italic;">kəmanau</span></h3>
+<p>North. (uninflected)</p>
+<h2>Lauvìnko</h2><h3><span style="font-style:italic;">kémanau, kènnau</span></h3>
+<p>North.</p>
+<h2>Botharu</h2><h3><span style="font-style:italic;">kimąloo</span></h3><p>North.</p>
 </div>
 <hr/>
 <div class="entry" id="hut">
 <h1 class="lauvinko">kqravi</h1>
-<h2>Classical Kasanic</h2><h3><span style="font-style:italic;">kəravi</span> - Hut, shelter. (uninflected)</h3>
-<h2>Lauvìnko</h2><h3><span style="font-style:italic;">kélavi, kèrvi</span> - Hut, shelter.</h3>
-<h2>Botharu</h2><h3><span style="font-style:italic;">kiravi</span> - Hut, shelter.</h3>
+<h2>Classical Kasanic</h2><h3><span style="font-style:italic;">kəravi</span></h3>
+<p>Hut, shelter. (uninflected)</p>
+<h2>Lauvìnko</h2><h3><span style="font-style:italic;">kélavi, kèrvi</span></h3>
+<p>Shelter, space, room, living quarters.</p>
+<h2>Botharu</h2><h3><span style="font-style:italic;">kiravi</span></h3><p>Hut, shelter.</p>
 </div>
 <hr/>
 <div class="entry" id="hand">
 <h1 class="lauvinko">maHecoepo</h1>
-<h2>Classical Kasanic</h2><h3><span style="font-style:italic;">ma'copo</span> - Hand. (uninflected)</h3>
-<h2>Lauvìnko</h2><h3><span style="font-style:italic;">máccoh, mácah</span> - Hand.</h3>
-<h2>Botharu</h2><h3><span style="font-style:italic;">mą́tlhoo</span> - Hand.</h3>
+<h2>Classical Kasanic</h2><h3><span style="font-style:italic;">ma'copo</span></h3>
+<p>Hand. (uninflected)</p>
+<h2>Lauvìnko</h2><h3><span style="font-style:italic;">máccoh, mácah</span></h3>
+<p>Arm, hand. ** Ownership, possession.</p>
+<h2>Botharu</h2><h3><span style="font-style:italic;">mą́tlhoo</span></h3><p>Hand.</p>
 </div>
 <hr/>
 <div class="entry" id="mother">
 <h1 class="lauvinko">mama</h1>
-<h2>Classical Kasanic</h2><h3><span style="font-style:italic;">mama</span> - Mother. (uninflected)</h3>
-<h2>Lauvìnko</h2><h3><span style="font-style:italic;">máng, màng</span> - Mother.</h3>
-<h2>Botharu</h2><h3><span style="font-style:italic;">mąmą</span> - Mother.</h3>
+<h2>Classical Kasanic</h2><h3><span style="font-style:italic;">mama</span></h3>
+<p>Mother. (uninflected)</p>
+<h2>Lauvìnko</h2><h3><span style="font-style:italic;">máng, màng</span></h3>
+<p>Mother.</p>
+<h2>Botharu</h2><h3><span style="font-style:italic;">mąmą</span></h3><p>Mother.</p>
 </div>
 <hr/>
 <div class="entry" id="eat">
 <h1 class="lauvinko">maneg</h1>
-<h2>Classical Kasanic</h2><h3><span style="font-style:italic;">manəṅe</span> - To eat, consume. (fientive)</h3>
+<h2>Classical Kasanic</h2><h3><span style="font-style:italic;">manəṅe</span></h3>
+<p>To eat, consume. (fientive)</p>
 <table class="notshown">
 <thead><tr><th colspan="3">Classical Kasanic Inflection - <a onclick="toggleshown(this)">Show</a></th></tr></thead><tbody>
 <tr><td></td><td>Nonpast</td><td>Past</td></tr>
@@ -471,7 +532,8 @@ function toggleshown(table_toggler) {
 <tr><td>Inceptive</td><td colspan="2"><span class="lauvinko">Iqmaneg</span><br/><span style="font-style:italic;">imanəṅe</span></td></tr>
 <tr><td>Experiential</td><td colspan="2"><span class="lauvinko">raemoneg</span><br/><span style="font-style:italic;">ramonəṅe</span></td></tr>
 </tbody></table>
-<h2>Lauvìnko</h2><h3><span style="font-style:italic;">mánngi, mànngi</span> - To eat, consume.</h3>
+<h2>Lauvìnko</h2><h3><span style="font-style:italic;">mánngi, mànngi</span></h3>
+<p>$vol$ eats $pat$. ** (frequentative) $pat$ is a part of $vol$&#8217;s diet.</p>
 <table class="notshown">
 <thead><tr><th colspan="3">Lauvinko Inflection - <a onclick="toggleshown(this)">Show</a></th></tr></thead><tbody>
 <tr><td></td><td>Nonpast</td><td>Past</td></tr>
@@ -481,7 +543,7 @@ function toggleshown(table_toggler) {
 <tr><td>Inceptive</td><td colspan="2"><span class="lauvinko">Iqmaneg</span><br/><span style="font-style:italic;">imánngi, imànngi</span></td></tr>
 <tr><td>Experiential</td><td colspan="2"><span class="lauvinko">raemoneg</span><br/><span style="font-style:italic;">lamónngi, lamònngi</span></td></tr>
 </tbody></table>
-<h2>Botharu</h2><h3><span style="font-style:italic;">mąlęę</span> - To eat, consume.</h3>
+<h2>Botharu</h2><h3><span style="font-style:italic;">mąlęę</span></h3><p>To eat, consume.</p>
 <table class="notshown">
 <thead><tr><th colspan="3">Botharu Inflection - <a onclick="toggleshown(this)">Show</a></th></tr></thead><tbody>
 <tr><td></td><td>Nonpast</td><td>Past</td></tr>
@@ -492,14 +554,17 @@ function toggleshown(table_toggler) {
 <hr/>
 <div class="entry" id="pandan">
 <h1 class="lauvinko">maetoec</h1>
-<h2>Classical Kasanic</h2><h3><span style="font-style:italic;">matoce</span> - Pandan. (uninflected)</h3>
-<h2>Lauvìnko</h2><h3><span style="font-style:italic;">mátoci, márci</span> - Pandan.</h3>
-<h2>Botharu</h2><h3><span style="font-style:italic;">mątoche</span> - Pandan.</h3>
+<h2>Classical Kasanic</h2><h3><span style="font-style:italic;">matoce</span></h3>
+<p>Pandan. (uninflected)</p>
+<h2>Lauvìnko</h2><h3><span style="font-style:italic;">mátoci, márci</span></h3>
+<p>Pandan.</p>
+<h2>Botharu</h2><h3><span style="font-style:italic;">mątoche</span></h3><p>Pandan.</p>
 </div>
 <hr/>
 <div class="entry" id="mild">
 <h1 class="lauvinko">emMtqvW</h1>
-<h2>Classical Kasanic</h2><h3><span style="font-style:italic;">mentəvau</span> - Mild, easy. (stative)</h3>
+<h2>Classical Kasanic</h2><h3><span style="font-style:italic;">mentəvau</span></h3>
+<p>Mild, easy. (stative)</p>
 <table class="notshown">
 <thead><tr><th colspan="3">Classical Kasanic Inflection - <a onclick="toggleshown(this)">Show</a></th></tr></thead><tbody>
 <tr><td></td><td>Nonpast</td><td>Past</td></tr>
@@ -507,7 +572,8 @@ function toggleshown(table_toggler) {
 <tr><td>Inceptive</td><td colspan="2"><span class="lauvinko">IqemMtqvW</span><br/><span style="font-style:italic;">imentəvau</span></td></tr>
 <tr><td>Experiential</td><td colspan="2"><span class="lauvinko">raemMtqvW</span><br/><span style="font-style:italic;">ramentəvau</span></td></tr>
 </tbody></table>
-<h2>Lauvìnko</h2><h3><span style="font-style:italic;">méntavau, mémvau</span> - Mild, easy.</h3>
+<h2>Lauvìnko</h2><h3><span style="font-style:italic;">méntavau, mémvau</span></h3>
+<p>$ins$ (inanimate) is warm, mild. ** $pat$ (animate) feels warm, comfortable. ** $vol$ (animate) is affectionate, friendly, relaxed.</p>
 <table class="notshown">
 <thead><tr><th colspan="3">Lauvinko Inflection - <a onclick="toggleshown(this)">Show</a></th></tr></thead><tbody>
 <tr><td></td><td>Nonpast</td><td>Past</td></tr>
@@ -515,7 +581,7 @@ function toggleshown(table_toggler) {
 <tr><td>Inceptive</td><td colspan="2"><span class="lauvinko">IqemMtqvW</span><br/><span style="font-style:italic;">iméntavau, imémvau</span></td></tr>
 <tr><td>Experiential</td><td colspan="2"><span class="lauvinko">raemMtqvW</span><br/><span style="font-style:italic;">laméntavau, lamémvau</span></td></tr>
 </tbody></table>
-<h2>Botharu</h2><h3><span style="font-style:italic;">mętiwoo</span> - Mild, easy.</h3>
+<h2>Botharu</h2><h3><span style="font-style:italic;">mętiwoo</span></h3><p>Mild, easy.</p>
 <table class="notshown">
 <thead><tr><th colspan="3">Botharu Inflection - <a onclick="toggleshown(this)">Show</a></th></tr></thead><tbody>
 <tr><td></td><td>Nonpast</td><td>Past</td></tr>
@@ -525,35 +591,44 @@ function toggleshown(table_toggler) {
 <hr/>
 <div class="entry" id="sister">
 <h1 class="lauvinko">miero</h1>
-<h2>Classical Kasanic</h2><h3><span style="font-style:italic;">miro</span> - Sister. (uninflected)</h3>
-<h2>Lauvìnko</h2><h3><span style="font-style:italic;">mír, mìr</span> - Sister.</h3>
-<h2>Botharu</h2><h3><span style="font-style:italic;">męro</span> - Sister.</h3>
+<h2>Classical Kasanic</h2><h3><span style="font-style:italic;">miro</span></h3>
+<p>Sister. (uninflected)</p>
+<h2>Lauvìnko</h2><h3><span style="font-style:italic;">mír, mìr</span></h3>
+<p>Sister, female friend.</p>
+<h2>Botharu</h2><h3><span style="font-style:italic;">męro</span></h3><p>Sister.</p>
 </div>
 <hr/>
 <div class="entry" id="woman">
 <h1 class="lauvinko">emoka</h1>
-<h2>Classical Kasanic</h2><h3><span style="font-style:italic;">moka</span> - Woman, female. (uninflected)</h3>
-<h2>Lauvìnko</h2><h3><span style="font-style:italic;">móh, móa</span> - Woman, female.</h3>
-<h2>Botharu</h2><h3><span style="font-style:italic;">mǫka</span> - Woman, female.</h3>
+<h2>Classical Kasanic</h2><h3><span style="font-style:italic;">moka</span></h3>
+<p>Woman, female. (uninflected)</p>
+<h2>Lauvìnko</h2><h3><span style="font-style:italic;">móh, móa</span></h3>
+<p>Woman. ** (inchoative) $pat$ reaches menarche.</p>
+<h2>Botharu</h2><h3><span style="font-style:italic;">mǫka</span></h3><p>Woman, female.</p>
 </div>
 <hr/>
 <div class="entry" id="knife">
 <h1 class="lauvinko">mhiqkq</h1>
-<h2>Classical Kasanic</h2><h3><span style="font-style:italic;">məhikə</span> - Knife. (uninflected)</h3>
-<h2>Lauvìnko</h2><h3><span style="font-style:italic;">méh, mèh</span> - Knife.</h3>
-<h2>Botharu</h2><h3><span style="font-style:italic;">mhęęki</span> - Knife.</h3>
+<h2>Classical Kasanic</h2><h3><span style="font-style:italic;">məhikə</span></h3>
+<p>Knife. (uninflected)</p>
+<h2>Lauvìnko</h2><h3><span style="font-style:italic;">méh, mèh</span></h3>
+<p>Knife.</p>
+<h2>Botharu</h2><h3><span style="font-style:italic;">mhęęki</span></h3><p>Knife.</p>
 </div>
 <hr/>
 <div class="entry" id="mango">
 <h1 class="lauvinko">natqmi</h1>
-<h2>Classical Kasanic</h2><h3><span style="font-style:italic;">natəmi</span> - Mango. (uninflected)</h3>
-<h2>Lauvìnko</h2><h3><span style="font-style:italic;">náhmi, nármi</span> - Mango.</h3>
-<h2>Botharu</h2><h3><span style="font-style:italic;">latimę</span> - Mango.</h3>
+<h2>Classical Kasanic</h2><h3><span style="font-style:italic;">natəmi</span></h3>
+<p>Mango. (uninflected)</p>
+<h2>Lauvìnko</h2><h3><span style="font-style:italic;">náhmi, nármi</span></h3>
+<p>Mango.</p>
+<h2>Botharu</h2><h3><span style="font-style:italic;">latimę</span></h3><p>Mango.</p>
 </div>
 <hr/>
 <div class="entry" id="stand">
 <h1 class="lauvinko">MtiqHetokq</h1>
-<h2>Classical Kasanic</h2><h3><span style="font-style:italic;">nti'tokə</span> - To stand. (stative)</h3>
+<h2>Classical Kasanic</h2><h3><span style="font-style:italic;">nti'tokə</span></h3>
+<p>To stand. (stative)</p>
 <table class="notshown">
 <thead><tr><th colspan="3">Classical Kasanic Inflection - <a onclick="toggleshown(this)">Show</a></th></tr></thead><tbody>
 <tr><td></td><td>Nonpast</td><td>Past</td></tr>
@@ -561,7 +636,8 @@ function toggleshown(table_toggler) {
 <tr><td>Inceptive</td><td colspan="2"><span class="lauvinko">IqMtiqHetokq</span><br/><span style="font-style:italic;">inti'tokə</span></td></tr>
 <tr><td>Experiential</td><td colspan="2"><span class="lauvinko">raMtiqHetokq</span><br/><span style="font-style:italic;">ranti'tokə</span></td></tr>
 </tbody></table>
-<h2>Lauvìnko</h2><h3><span style="font-style:italic;">níttoh, nítah</span> - To stand.</h3>
+<h2>Lauvìnko</h2><h3><span style="font-style:italic;">níttoh, nítah</span></h3>
+<p>$pat$ stands. ** $pat$, a formally animate noun, exists (used with adpositional statements).</p>
 <table class="notshown">
 <thead><tr><th colspan="3">Lauvinko Inflection - <a onclick="toggleshown(this)">Show</a></th></tr></thead><tbody>
 <tr><td></td><td>Nonpast</td><td>Past</td></tr>
@@ -569,7 +645,7 @@ function toggleshown(table_toggler) {
 <tr><td>Inceptive</td><td colspan="2"><span class="lauvinko">IqMtiqHetokq</span><br/><span style="font-style:italic;">intíttoh, intítah</span></td></tr>
 <tr><td>Experiential</td><td colspan="2"><span class="lauvinko">raMtiqHetokq</span><br/><span style="font-style:italic;">lantíttoh, lantítah</span></td></tr>
 </tbody></table>
-<h2>Botharu</h2><h3><span style="font-style:italic;">chídoki</span> - To stand.</h3>
+<h2>Botharu</h2><h3><span style="font-style:italic;">chídoki</span></h3><p>To stand.</p>
 <table class="notshown">
 <thead><tr><th colspan="3">Botharu Inflection - <a onclick="toggleshown(this)">Show</a></th></tr></thead><tbody>
 <tr><td></td><td>Nonpast</td><td>Past</td></tr>
@@ -579,14 +655,17 @@ function toggleshown(table_toggler) {
 <hr/>
 <div class="entry" id="all">
 <h1 class="lauvinko">NYsa</h1>
-<h2>Classical Kasanic</h2><h3><span style="font-style:italic;">ñaisa</span> - All, every. (uninflected)</h3>
-<h2>Lauvìnko</h2><h3><span style="font-style:italic;">náysa, nàysa</span> - All, every.</h3>
-<h2>Botharu</h2><h3><span style="font-style:italic;">shaa</span> - All, every.</h3>
+<h2>Classical Kasanic</h2><h3><span style="font-style:italic;">ñaisa</span></h3>
+<p>All, every. (uninflected)</p>
+<h2>Lauvìnko</h2><h3><span style="font-style:italic;">náysa, nàysa</span></h3>
+<p>All, every, each.</p>
+<h2>Botharu</h2><h3><span style="font-style:italic;">shaa</span></h3><p>All, every.</p>
 </div>
 <hr/>
 <div class="entry" id="need">
 <h1 class="lauvinko">eNovipi</h1>
-<h2>Classical Kasanic</h2><h3><span style="font-style:italic;">ñovipi</span> - To need. (stative)</h3>
+<h2>Classical Kasanic</h2><h3><span style="font-style:italic;">ñovipi</span></h3>
+<p>To need. (stative)</p>
 <table class="notshown">
 <thead><tr><th colspan="3">Classical Kasanic Inflection - <a onclick="toggleshown(this)">Show</a></th></tr></thead><tbody>
 <tr><td></td><td>Nonpast</td><td>Past</td></tr>
@@ -594,7 +673,8 @@ function toggleshown(table_toggler) {
 <tr><td>Inceptive</td><td colspan="2"><span class="lauvinko">IqeNovipi</span><br/><span style="font-style:italic;">iñovipi</span></td></tr>
 <tr><td>Experiential</td><td colspan="2"><span class="lauvinko">raeNovipi</span><br/><span style="font-style:italic;">rañovipi</span></td></tr>
 </tbody></table>
-<h2>Lauvìnko</h2><h3><span style="font-style:italic;">nóvipi, nòvipi</span> - To need.</h3>
+<h2>Lauvìnko</h2><h3><span style="font-style:italic;">nóvipi, nòvipi</span></h3>
+<p>$pat$ needs $dat$.</p>
 <table class="notshown">
 <thead><tr><th colspan="3">Lauvinko Inflection - <a onclick="toggleshown(this)">Show</a></th></tr></thead><tbody>
 <tr><td></td><td>Nonpast</td><td>Past</td></tr>
@@ -602,7 +682,7 @@ function toggleshown(table_toggler) {
 <tr><td>Inceptive</td><td colspan="2"><span class="lauvinko">IqeNovipi</span><br/><span style="font-style:italic;">inóvipi, inòvipi</span></td></tr>
 <tr><td>Experiential</td><td colspan="2"><span class="lauvinko">raeNovipi</span><br/><span style="font-style:italic;">lanóvipi, lanòvipi</span></td></tr>
 </tbody></table>
-<h2>Botharu</h2><h3><span style="font-style:italic;">lovii</span> - To need.</h3>
+<h2>Botharu</h2><h3><span style="font-style:italic;">lovii</span></h3><p>To need.</p>
 <table class="notshown">
 <thead><tr><th colspan="3">Botharu Inflection - <a onclick="toggleshown(this)">Show</a></th></tr></thead><tbody>
 <tr><td></td><td>Nonpast</td><td>Past</td></tr>
@@ -612,7 +692,8 @@ function toggleshown(table_toggler) {
 <hr/>
 <div class="entry" id="wise">
 <h1 class="lauvinko">Mcaey</h1>
-<h2>Classical Kasanic</h2><h3><span style="font-style:italic;">ñcaye</span> - Wise, intelligent. (stative)</h3>
+<h2>Classical Kasanic</h2><h3><span style="font-style:italic;">ñcaye</span></h3>
+<p>Wise, intelligent. (stative)</p>
 <table class="notshown">
 <thead><tr><th colspan="3">Classical Kasanic Inflection - <a onclick="toggleshown(this)">Show</a></th></tr></thead><tbody>
 <tr><td></td><td>Nonpast</td><td>Past</td></tr>
@@ -620,7 +701,8 @@ function toggleshown(table_toggler) {
 <tr><td>Inceptive</td><td colspan="2"><span class="lauvinko">IqMcaey</span><br/><span style="font-style:italic;">iñcaye</span></td></tr>
 <tr><td>Experiential</td><td colspan="2"><span class="lauvinko">raMcaey</span><br/><span style="font-style:italic;">rañcaye</span></td></tr>
 </tbody></table>
-<h2>Lauvìnko</h2><h3><span style="font-style:italic;">ancáy, ancày</span> - Wise, intelligent.</h3>
+<h2>Lauvìnko</h2><h3><span style="font-style:italic;">ancáy, ancày</span></h3>
+<p>$vol$ is wise. ** (inchoative, typically religious) $vol$ instructs or presents a revelation to $ins$.</p>
 <table class="notshown">
 <thead><tr><th colspan="3">Lauvinko Inflection - <a onclick="toggleshown(this)">Show</a></th></tr></thead><tbody>
 <tr><td></td><td>Nonpast</td><td>Past</td></tr>
@@ -628,7 +710,7 @@ function toggleshown(table_toggler) {
 <tr><td>Inceptive</td><td colspan="2"><span class="lauvinko">IqMcaey</span><br/><span style="font-style:italic;">incáy, incày</span></td></tr>
 <tr><td>Experiential</td><td colspan="2"><span class="lauvinko">raMcaey</span><br/><span style="font-style:italic;">lancáy, lancày</span></td></tr>
 </tbody></table>
-<h2>Botharu</h2><h3><span style="font-style:italic;">tsaye</span> - Wise, intelligent.</h3>
+<h2>Botharu</h2><h3><span style="font-style:italic;">tsaye</span></h3><p>Wise, intelligent.</p>
 <table class="notshown">
 <thead><tr><th colspan="3">Botharu Inflection - <a onclick="toggleshown(this)">Show</a></th></tr></thead><tbody>
 <tr><td></td><td>Nonpast</td><td>Past</td></tr>
@@ -638,7 +720,8 @@ function toggleshown(table_toggler) {
 <hr/>
 <div class="entry" id="trade">
 <h1 class="lauvinko">Meckiq</h1>
-<h2>Classical Kasanic</h2><h3><span style="font-style:italic;">ñceki</span> - To trade. (punctual)</h3>
+<h2>Classical Kasanic</h2><h3><span style="font-style:italic;">ñceki</span></h3>
+<p>To trade. (punctual)</p>
 <table class="notshown">
 <thead><tr><th colspan="3">Classical Kasanic Inflection - <a onclick="toggleshown(this)">Show</a></th></tr></thead><tbody>
 <tr><td></td><td>Nonpast</td><td>Past</td></tr>
@@ -646,7 +729,8 @@ function toggleshown(table_toggler) {
 <tr><td>Frequentative</td><td><span class="lauvinko">MecMeckiq</span><br/><span style="font-style:italic;">ñceñceki</span></td><td><span class="lauvinko">MecoMecokiq</span><br/><span style="font-style:italic;">ñcoñcoki</span></td></tr>
 <tr><td>Experiential</td><td colspan="2"><span class="lauvinko">raMecokiq</span><br/><span style="font-style:italic;">rañcoki</span></td></tr>
 </tbody></table>
-<h2>Lauvìnko</h2><h3><span style="font-style:italic;">ancéki, ancé</span> - To trade.</h3>
+<h2>Lauvìnko</h2><h3><span style="font-style:italic;">ancéki, ancé</span></h3>
+<p>$vol$ trades, exchanges $pat$.</p>
 <table class="notshown">
 <thead><tr><th colspan="3">Lauvinko Inflection - <a onclick="toggleshown(this)">Show</a></th></tr></thead><tbody>
 <tr><td></td><td>Nonpast</td><td>Past</td></tr>
@@ -654,7 +738,7 @@ function toggleshown(table_toggler) {
 <tr><td>Frequentative</td><td><span class="lauvinko">MecMeckiq</span><br/><span style="font-style:italic;">ancencéki, ancencé</span></td><td><span class="lauvinko">MecoMecokiq</span><br/><span style="font-style:italic;">anconcóki, anconcóy</span></td></tr>
 <tr><td>Experiential</td><td colspan="2"><span class="lauvinko">raMecokiq</span><br/><span style="font-style:italic;">lancóki, lancóy</span></td></tr>
 </tbody></table>
-<h2>Botharu</h2><h3><span style="font-style:italic;">chechi</span> - To trade.</h3>
+<h2>Botharu</h2><h3><span style="font-style:italic;">chechi</span></h3><p>To trade.</p>
 <table class="notshown">
 <thead><tr><th colspan="3">Botharu Inflection - <a onclick="toggleshown(this)">Show</a></th></tr></thead><tbody>
 <tr><td></td><td>Nonpast</td><td>Past</td></tr>
@@ -664,7 +748,8 @@ function toggleshown(table_toggler) {
 <hr/>
 <div class="entry" id="drink">
 <h1 class="lauvinko">egpipi</h1>
-<h2>Classical Kasanic</h2><h3><span style="font-style:italic;">ṅepikvi</span> - To drink. (punctual)</h3>
+<h2>Classical Kasanic</h2><h3><span style="font-style:italic;">ṅepikvi</span></h3>
+<p>To drink. (punctual)</p>
 <table class="notshown">
 <thead><tr><th colspan="3">Classical Kasanic Inflection - <a onclick="toggleshown(this)">Show</a></th></tr></thead><tbody>
 <tr><td></td><td>Nonpast</td><td>Past</td></tr>
@@ -672,7 +757,8 @@ function toggleshown(table_toggler) {
 <tr><td>Frequentative</td><td><span class="lauvinko">egegpipi</span><br/><span style="font-style:italic;">ṅeṅepikvi</span></td><td><span class="lauvinko">egoegopipi</span><br/><span style="font-style:italic;">ṅoṅopikvi</span></td></tr>
 <tr><td>Experiential</td><td colspan="2"><span class="lauvinko">raegopipi</span><br/><span style="font-style:italic;">raṅopikvi</span></td></tr>
 </tbody></table>
-<h2>Lauvìnko</h2><h3><span style="font-style:italic;">ngépipi, ngévipi</span> - To drink.</h3>
+<h2>Lauvìnko</h2><h3><span style="font-style:italic;">ngépipi, ngévipi</span></h3>
+<p>$vol$ drinks, swallows $pat$. ** $vol$ inhales, smokes $pat$. ** (frequentative) $vol$ slurps, sucks $pat$. ** (vulgar) $vol$ performs oral sex on $pat$.</p>
 <table class="notshown">
 <thead><tr><th colspan="3">Lauvinko Inflection - <a onclick="toggleshown(this)">Show</a></th></tr></thead><tbody>
 <tr><td></td><td>Nonpast</td><td>Past</td></tr>
@@ -680,7 +766,7 @@ function toggleshown(table_toggler) {
 <tr><td>Frequentative</td><td><span class="lauvinko">egegpipi</span><br/><span style="font-style:italic;">ngengépipi, ngengévipi</span></td><td><span class="lauvinko">egoegopipi</span><br/><span style="font-style:italic;">ngongópipi, ngongóvipi</span></td></tr>
 <tr><td>Experiential</td><td colspan="2"><span class="lauvinko">raegopipi</span><br/><span style="font-style:italic;">langópipi, langóvipi</span></td></tr>
 </tbody></table>
-<h2>Botharu</h2><h3><span style="font-style:italic;">shęęchi</span> - To drink.</h3>
+<h2>Botharu</h2><h3><span style="font-style:italic;">shęęchi</span></h3><p>To drink.</p>
 <table class="notshown">
 <thead><tr><th colspan="3">Botharu Inflection - <a onclick="toggleshown(this)">Show</a></th></tr></thead><tbody>
 <tr><td></td><td>Nonpast</td><td>Past</td></tr>
@@ -690,14 +776,17 @@ function toggleshown(table_toggler) {
 <hr/>
 <div class="entry" id="dog">
 <h1 class="lauvinko">egoygu</h1>
-<h2>Classical Kasanic</h2><h3><span style="font-style:italic;">ṅoyəṅu</span> - Dog. (uninflected)</h3>
-<h2>Lauvìnko</h2><h3><span style="font-style:italic;">ngóyang, ngòyang</span> - Dog.</h3>
-<h2>Botharu</h2><h3><span style="font-style:italic;">wǫyǫǫ</span> - Dog.</h3>
+<h2>Classical Kasanic</h2><h3><span style="font-style:italic;">ṅoyəṅu</span></h3>
+<p>Dog. (uninflected)</p>
+<h2>Lauvìnko</h2><h3><span style="font-style:italic;">ngóyang, ngòyang</span></h3>
+<p>Dog.</p>
+<h2>Botharu</h2><h3><span style="font-style:italic;">wǫyǫǫ</span></h3><p>Dog.</p>
 </div>
 <hr/>
 <div class="entry" id="yellow">
 <h1 class="lauvinko">Mkiqma</h1>
-<h2>Classical Kasanic</h2><h3><span style="font-style:italic;">ṅkima</span> - Yellow. (stative)</h3>
+<h2>Classical Kasanic</h2><h3><span style="font-style:italic;">ṅkima</span></h3>
+<p>Yellow. (stative)</p>
 <table class="notshown">
 <thead><tr><th colspan="3">Classical Kasanic Inflection - <a onclick="toggleshown(this)">Show</a></th></tr></thead><tbody>
 <tr><td></td><td>Nonpast</td><td>Past</td></tr>
@@ -705,7 +794,8 @@ function toggleshown(table_toggler) {
 <tr><td>Inceptive</td><td colspan="2"><span class="lauvinko">IqMkiqma</span><br/><span style="font-style:italic;">iṅkima</span></td></tr>
 <tr><td>Experiential</td><td colspan="2"><span class="lauvinko">raMkiqma</span><br/><span style="font-style:italic;">raṅkima</span></td></tr>
 </tbody></table>
-<h2>Lauvìnko</h2><h3><span style="font-style:italic;">ngíng, ngìng</span> - Yellow.</h3>
+<h2>Lauvìnko</h2><h3><span style="font-style:italic;">ngíng, ngìng</span></h3>
+<p>$pat$ is yellow. ** $pat$ is exuberant, spontaneous, fun. ** (inchoative) $pat$ cuts loose, gets high.</p>
 <table class="notshown">
 <thead><tr><th colspan="3">Lauvinko Inflection - <a onclick="toggleshown(this)">Show</a></th></tr></thead><tbody>
 <tr><td></td><td>Nonpast</td><td>Past</td></tr>
@@ -713,7 +803,7 @@ function toggleshown(table_toggler) {
 <tr><td>Inceptive</td><td colspan="2"><span class="lauvinko">IqMkiqma</span><br/><span style="font-style:italic;">inkíng, inkìng</span></td></tr>
 <tr><td>Experiential</td><td colspan="2"><span class="lauvinko">raMkiqma</span><br/><span style="font-style:italic;">lankíng, lankìng</span></td></tr>
 </tbody></table>
-<h2>Botharu</h2><h3><span style="font-style:italic;">chimą</span> - Yellow.</h3>
+<h2>Botharu</h2><h3><span style="font-style:italic;">chimą</span></h3><p>Yellow.</p>
 <table class="notshown">
 <thead><tr><th colspan="3">Botharu Inflection - <a onclick="toggleshown(this)">Show</a></th></tr></thead><tbody>
 <tr><td></td><td>Nonpast</td><td>Past</td></tr>
@@ -723,7 +813,8 @@ function toggleshown(table_toggler) {
 <hr/>
 <div class="entry" id="carry">
 <h1 class="lauvinko">MpaHkqey</h1>
-<h2>Classical Kasanic</h2><h3><span style="font-style:italic;">ṅkva'kəye</span> - To carry, bear. (fientive)</h3>
+<h2>Classical Kasanic</h2><h3><span style="font-style:italic;">ṅkva'kəye</span></h3>
+<p>To carry, bear. (fientive)</p>
 <table class="notshown">
 <thead><tr><th colspan="3">Classical Kasanic Inflection - <a onclick="toggleshown(this)">Show</a></th></tr></thead><tbody>
 <tr><td></td><td>Nonpast</td><td>Past</td></tr>
@@ -733,7 +824,8 @@ function toggleshown(table_toggler) {
 <tr><td>Inceptive</td><td colspan="2"><span class="lauvinko">IqMpaHkqey</span><br/><span style="font-style:italic;">iṅkva'kəye</span></td></tr>
 <tr><td>Experiential</td><td colspan="2"><span class="lauvinko">raMepoHkqey</span><br/><span style="font-style:italic;">raṅkvo'kəye</span></td></tr>
 </tbody></table>
-<h2>Lauvìnko</h2><h3><span style="font-style:italic;">mákkay, mákay</span> - To carry, bear.</h3>
+<h2>Lauvìnko</h2><h3><span style="font-style:italic;">mákkay, mákay</span></h3>
+<p>$vol$ carries, holds $pat$ with difficulty. ** $vol$/$loc$ contains, is pregnant with $pat$. ** $pat$ is heavy, serious, burdensome. ** $pat$ is difficult for $vol$. ** (perfective) $vol$ gives birth to $pat$. ** $vol$ conceives $pat$.</p>
 <table class="notshown">
 <thead><tr><th colspan="3">Lauvinko Inflection - <a onclick="toggleshown(this)">Show</a></th></tr></thead><tbody>
 <tr><td></td><td>Nonpast</td><td>Past</td></tr>
@@ -743,7 +835,7 @@ function toggleshown(table_toggler) {
 <tr><td>Inceptive</td><td colspan="2"><span class="lauvinko">IqMpaHkqey</span><br/><span style="font-style:italic;">impákkay, impákay</span></td></tr>
 <tr><td>Experiential</td><td colspan="2"><span class="lauvinko">raMepoHkqey</span><br/><span style="font-style:italic;">lampókkay, lampókay</span></td></tr>
 </tbody></table>
-<h2>Botharu</h2><h3><span style="font-style:italic;">kwákiye</span> - To carry, bear.</h3>
+<h2>Botharu</h2><h3><span style="font-style:italic;">kwákiye</span></h3><p>To carry, bear.</p>
 <table class="notshown">
 <thead><tr><th colspan="3">Botharu Inflection - <a onclick="toggleshown(this)">Show</a></th></tr></thead><tbody>
 <tr><td></td><td>Nonpast</td><td>Past</td></tr>
@@ -754,14 +846,17 @@ function toggleshown(table_toggler) {
 <hr/>
 <div class="entry" id="father">
 <h1 class="lauvinko">Op</h1>
-<h2>Classical Kasanic</h2><h3><span style="font-style:italic;">opə</span> - Father. (uninflected)</h3>
-<h2>Lauvìnko</h2><h3><span style="font-style:italic;">óh, ó</span> - Father.</h3>
-<h2>Botharu</h2><h3><span style="font-style:italic;">waa</span> - Father.</h3>
+<h2>Classical Kasanic</h2><h3><span style="font-style:italic;">opə</span></h3>
+<p>Father. (uninflected)</p>
+<h2>Lauvìnko</h2><h3><span style="font-style:italic;">óh, ó</span></h3>
+<p>Father.</p>
+<h2>Botharu</h2><h3><span style="font-style:italic;">waa</span></h3><p>Father.</p>
 </div>
 <hr/>
 <div class="entry" id="touch">
 <h1 class="lauvinko">paesoru</h1>
-<h2>Classical Kasanic</h2><h3><span style="font-style:italic;">pasoru</span> - To touch, strike. (fientive)</h3>
+<h2>Classical Kasanic</h2><h3><span style="font-style:italic;">pasoru</span></h3>
+<p>To touch, strike. (fientive)</p>
 <table class="notshown">
 <thead><tr><th colspan="3">Classical Kasanic Inflection - <a onclick="toggleshown(this)">Show</a></th></tr></thead><tbody>
 <tr><td></td><td>Nonpast</td><td>Past</td></tr>
@@ -771,7 +866,8 @@ function toggleshown(table_toggler) {
 <tr><td>Inceptive</td><td colspan="2"><span class="lauvinko">IqMpaesoru</span><br/><span style="font-style:italic;">impasoru</span></td></tr>
 <tr><td>Experiential</td><td colspan="2"><span class="lauvinko">raHepoesoru</span><br/><span style="font-style:italic;">ra'posoru</span></td></tr>
 </tbody></table>
-<h2>Lauvìnko</h2><h3><span style="font-style:italic;">pásor, pàsar</span> - To touch, strike.</h3>
+<h2>Lauvìnko</h2><h3><span style="font-style:italic;">pásor, pàsar</span></h3>
+<p>$vol$ touches, feels $pat$. ** $vol$ affects, disturbs $pat$. ** (frequentative) $vol$ strikes, hits $pat$.</p>
 <table class="notshown">
 <thead><tr><th colspan="3">Lauvinko Inflection - <a onclick="toggleshown(this)">Show</a></th></tr></thead><tbody>
 <tr><td></td><td>Nonpast</td><td>Past</td></tr>
@@ -781,7 +877,7 @@ function toggleshown(table_toggler) {
 <tr><td>Inceptive</td><td colspan="2"><span class="lauvinko">IqMpaesoru</span><br/><span style="font-style:italic;">impásor, impàsar</span></td></tr>
 <tr><td>Experiential</td><td colspan="2"><span class="lauvinko">raHepoesoru</span><br/><span style="font-style:italic;">lappósor, lappòsar</span></td></tr>
 </tbody></table>
-<h2>Botharu</h2><h3><span style="font-style:italic;">hooru</span> - To touch, strike.</h3>
+<h2>Botharu</h2><h3><span style="font-style:italic;">hooru</span></h3><p>To touch, strike.</p>
 <table class="notshown">
 <thead><tr><th colspan="3">Botharu Inflection - <a onclick="toggleshown(this)">Show</a></th></tr></thead><tbody>
 <tr><td></td><td>Nonpast</td><td>Past</td></tr>
@@ -792,21 +888,26 @@ function toggleshown(table_toggler) {
 <hr/>
 <div class="entry" id="auncle">
 <h1 class="lauvinko">Hepsq</h1>
-<h2>Classical Kasanic</h2><h3><span style="font-style:italic;">'pesə</span> - Aunt, uncle, older relative. (uninflected)</h3>
-<h2>Lauvìnko</h2><h3><span style="font-style:italic;">pés, pès</span> - Aunt, uncle, older relative.</h3>
-<h2>Botharu</h2><h3><span style="font-style:italic;">phyaa</span> - Aunt, uncle, older relative.</h3>
+<h2>Classical Kasanic</h2><h3><span style="font-style:italic;">'pesə</span></h3>
+<p>Aunt, uncle, older relative. (uninflected)</p>
+<h2>Lauvìnko</h2><h3><span style="font-style:italic;">pés, pès</span></h3>
+<p>Aunt, uncle. ** Any indirect relative of an older generation.</p>
+<h2>Botharu</h2><h3><span style="font-style:italic;">phyaa</span></h3><p>Aunt, uncle, older relative.</p>
 </div>
 <hr/>
 <div class="entry" id="heir">
 <h1 class="lauvinko">raego</h1>
-<h2>Classical Kasanic</h2><h3><span style="font-style:italic;">raṅo</span> - Eldest brother, eldest son. (uninflected)</h3>
-<h2>Lauvìnko</h2><h3><span style="font-style:italic;">láng, làng</span> - Eldest brother, eldest son.</h3>
-<h2>Botharu</h2><h3><span style="font-style:italic;">rǫǫ</span> - Eldest brother, eldest son.</h3>
+<h2>Classical Kasanic</h2><h3><span style="font-style:italic;">raṅo</span></h3>
+<p>Eldest brother, eldest son. (uninflected)</p>
+<h2>Lauvìnko</h2><h3><span style="font-style:italic;">láng, làng</span></h3>
+<p>Eldest brother, heir. ** Boss, big-man, chief.</p>
+<h2>Botharu</h2><h3><span style="font-style:italic;">rǫǫ</span></h3><p>Eldest brother, eldest son.</p>
 </div>
 <hr/>
 <div class="entry" id="learn">
 <h1 class="lauvinko">raHpaeyo</h1>
-<h2>Classical Kasanic</h2><h3><span style="font-style:italic;">ra'payo</span> - To learn, teach. (fientive)</h3>
+<h2>Classical Kasanic</h2><h3><span style="font-style:italic;">ra'payo</span></h3>
+<p>To learn, teach. (fientive)</p>
 <table class="notshown">
 <thead><tr><th colspan="3">Classical Kasanic Inflection - <a onclick="toggleshown(this)">Show</a></th></tr></thead><tbody>
 <tr><td></td><td>Nonpast</td><td>Past</td></tr>
@@ -816,7 +917,8 @@ function toggleshown(table_toggler) {
 <tr><td>Inceptive</td><td colspan="2"><span class="lauvinko">IqnaHpaeyo</span><br/><span style="font-style:italic;">ina'payo</span></td></tr>
 <tr><td>Experiential</td><td colspan="2"><span class="lauvinko">raeroHpaeyo</span><br/><span style="font-style:italic;">raro'payo</span></td></tr>
 </tbody></table>
-<h2>Lauvìnko</h2><h3><span style="font-style:italic;">láppay, lápay</span> - To learn, teach.</h3>
+<h2>Lauvìnko</h2><h3><span style="font-style:italic;">láppay, lápay</span></h3>
+<p>(reflexive) $vol$ studies $dat$. ** (reflexive) $ins$ learns $dat$ through experience. ** $vol$ teaches $ins$ about $dat$.</p>
 <table class="notshown">
 <thead><tr><th colspan="3">Lauvinko Inflection - <a onclick="toggleshown(this)">Show</a></th></tr></thead><tbody>
 <tr><td></td><td>Nonpast</td><td>Past</td></tr>
@@ -826,7 +928,7 @@ function toggleshown(table_toggler) {
 <tr><td>Inceptive</td><td colspan="2"><span class="lauvinko">IqnaHpaeyo</span><br/><span style="font-style:italic;">ináppay, inápay</span></td></tr>
 <tr><td>Experiential</td><td colspan="2"><span class="lauvinko">raeroHpaeyo</span><br/><span style="font-style:italic;">lalóppay, lalópay</span></td></tr>
 </tbody></table>
-<h2>Botharu</h2><h3><span style="font-style:italic;">rábawo</span> - To learn, teach.</h3>
+<h2>Botharu</h2><h3><span style="font-style:italic;">rábawo</span></h3><p>To learn, teach.</p>
 <table class="notshown">
 <thead><tr><th colspan="3">Botharu Inflection - <a onclick="toggleshown(this)">Show</a></th></tr></thead><tbody>
 <tr><td></td><td>Nonpast</td><td>Past</td></tr>
@@ -837,21 +939,26 @@ function toggleshown(table_toggler) {
 <hr/>
 <div class="entry" id="what">
 <h1 class="lauvinko">raesq</h1>
-<h2>Classical Kasanic</h2><h3><span style="font-style:italic;">rase</span> - What, which. (uninflected)</h3>
-<h2>Lauvìnko</h2><h3><span style="font-style:italic;">lási, làsi</span> - What, which.</h3>
-<h2>Botharu</h2><h3><span style="font-style:italic;">see</span> - What, which.</h3>
+<h2>Classical Kasanic</h2><h3><span style="font-style:italic;">rase</span></h3>
+<p>What, which. (uninflected)</p>
+<h2>Lauvìnko</h2><h3><span style="font-style:italic;">lási, làsi</span></h3>
+<p>Some, any, what, which.</p>
+<h2>Botharu</h2><h3><span style="font-style:italic;">see</span></h3><p>What, which.</p>
 </div>
 <hr/>
 <div class="entry" id="man">
 <h1 class="lauvinko">erHca</h1>
-<h2>Classical Kasanic</h2><h3><span style="font-style:italic;">re'ca</span> - Man, male. (uninflected)</h3>
-<h2>Lauvìnko</h2><h3><span style="font-style:italic;">lécca, lés</span> - Man, male.</h3>
-<h2>Botharu</h2><h3><span style="font-style:italic;">rétsa</span> - Man, male.</h3>
+<h2>Classical Kasanic</h2><h3><span style="font-style:italic;">re'ca</span></h3>
+<p>Man, male. (uninflected)</p>
+<h2>Lauvìnko</h2><h3><span style="font-style:italic;">lécca, lés</span></h3>
+<p>Man. ** $vol$ initiates $pat$ into manhood.</p>
+<h2>Botharu</h2><h3><span style="font-style:italic;">rétsa</span></h3><p>Man, male.</p>
 </div>
 <hr/>
 <div class="entry" id="release">
 <h1 class="lauvinko">eresqkiq</h1>
-<h2>Classical Kasanic</h2><h3><span style="font-style:italic;">reseki</span> - Open, release. (punctual)</h3>
+<h2>Classical Kasanic</h2><h3><span style="font-style:italic;">reseki</span></h3>
+<p>Open, release. (punctual)</p>
 <table class="notshown">
 <thead><tr><th colspan="3">Classical Kasanic Inflection - <a onclick="toggleshown(this)">Show</a></th></tr></thead><tbody>
 <tr><td></td><td>Nonpast</td><td>Past</td></tr>
@@ -859,7 +966,8 @@ function toggleshown(table_toggler) {
 <tr><td>Frequentative</td><td><span class="lauvinko">ereresqkiq</span><br/><span style="font-style:italic;">rereseki</span></td><td><span class="lauvinko">eroeroesqkiq</span><br/><span style="font-style:italic;">roroseki</span></td></tr>
 <tr><td>Experiential</td><td colspan="2"><span class="lauvinko">raeroesqkiq</span><br/><span style="font-style:italic;">raroseki</span></td></tr>
 </tbody></table>
-<h2>Lauvìnko</h2><h3><span style="font-style:italic;">léseki, lèsiki</span> - Open, release.</h3>
+<h2>Lauvìnko</h2><h3><span style="font-style:italic;">léseki, lèsiki</span></h3>
+<p>$vol$ opens, unlocks, $pat$. ** $vol$ releases, turns loose $pat$. $vol$ frees, surrenders $pat$.</p>
 <table class="notshown">
 <thead><tr><th colspan="3">Lauvinko Inflection - <a onclick="toggleshown(this)">Show</a></th></tr></thead><tbody>
 <tr><td></td><td>Nonpast</td><td>Past</td></tr>
@@ -867,7 +975,7 @@ function toggleshown(table_toggler) {
 <tr><td>Frequentative</td><td><span class="lauvinko">ereresqkiq</span><br/><span style="font-style:italic;">leléseki, lelèsiki</span></td><td><span class="lauvinko">eroeroesqkiq</span><br/><span style="font-style:italic;">lolóseki, lolòsiki</span></td></tr>
 <tr><td>Experiential</td><td colspan="2"><span class="lauvinko">raeroesqkiq</span><br/><span style="font-style:italic;">lalóseki, lalòsiki</span></td></tr>
 </tbody></table>
-<h2>Botharu</h2><h3><span style="font-style:italic;">sheechi</span> - Open, release.</h3>
+<h2>Botharu</h2><h3><span style="font-style:italic;">sheechi</span></h3><p>Open, release.</p>
 <table class="notshown">
 <thead><tr><th colspan="3">Botharu Inflection - <a onclick="toggleshown(this)">Show</a></th></tr></thead><tbody>
 <tr><td></td><td>Nonpast</td><td>Past</td></tr>
@@ -877,7 +985,8 @@ function toggleshown(table_toggler) {
 <hr/>
 <div class="entry" id="grow">
 <h1 class="lauvinko">sahiqtu</h1>
-<h2>Classical Kasanic</h2><h3><span style="font-style:italic;">sahitu</span> - To grow, expand, mature. (fientive)</h3>
+<h2>Classical Kasanic</h2><h3><span style="font-style:italic;">sahitu</span></h3>
+<p>To grow, expand, mature. (fientive)</p>
 <table class="notshown">
 <thead><tr><th colspan="3">Classical Kasanic Inflection - <a onclick="toggleshown(this)">Show</a></th></tr></thead><tbody>
 <tr><td></td><td>Nonpast</td><td>Past</td></tr>
@@ -887,7 +996,8 @@ function toggleshown(table_toggler) {
 <tr><td>Inceptive</td><td colspan="2"><span class="lauvinko">Iqsahiqtu</span><br/><span style="font-style:italic;">isahitu</span></td></tr>
 <tr><td>Experiential</td><td colspan="2"><span class="lauvinko">raecohiqtu</span><br/><span style="font-style:italic;">racohitu</span></td></tr>
 </tbody></table>
-<h2>Lauvìnko</h2><h3><span style="font-style:italic;">sáyta, sàyta</span> - To grow, expand, mature.</h3>
+<h2>Lauvìnko</h2><h3><span style="font-style:italic;">sáyta, sàyta</span></h3>
+<p>(reflexive) $ins$ grows, ages. ** $pat$ expands in size. ** (reflexive) $ins$ ripens. ** $vol$ cultivates, rears $ins$, an agricultural product.</p>
 <table class="notshown">
 <thead><tr><th colspan="3">Lauvinko Inflection - <a onclick="toggleshown(this)">Show</a></th></tr></thead><tbody>
 <tr><td></td><td>Nonpast</td><td>Past</td></tr>
@@ -897,7 +1007,7 @@ function toggleshown(table_toggler) {
 <tr><td>Inceptive</td><td colspan="2"><span class="lauvinko">Iqsahiqtu</span><br/><span style="font-style:italic;">isáyta, isàyta</span></td></tr>
 <tr><td>Experiential</td><td colspan="2"><span class="lauvinko">raecohiqtu</span><br/><span style="font-style:italic;">lacóyta, lacòyta</span></td></tr>
 </tbody></table>
-<h2>Botharu</h2><h3><span style="font-style:italic;">heetu</span> - To grow, expand, mature.</h3>
+<h2>Botharu</h2><h3><span style="font-style:italic;">heetu</span></h3><p>To grow, expand, mature.</p>
 <table class="notshown">
 <thead><tr><th colspan="3">Botharu Inflection - <a onclick="toggleshown(this)">Show</a></th></tr></thead><tbody>
 <tr><td></td><td>Nonpast</td><td>Past</td></tr>
@@ -908,7 +1018,8 @@ function toggleshown(table_toggler) {
 <hr/>
 <div class="entry" id="parent">
 <h1 class="lauvinko">saHtu</h1>
-<h2>Classical Kasanic</h2><h3><span style="font-style:italic;">sa'tu</span> - To parent, procreate. (stative)</h3>
+<h2>Classical Kasanic</h2><h3><span style="font-style:italic;">sa'tu</span></h3>
+<p>To parent, procreate. (stative)</p>
 <table class="notshown">
 <thead><tr><th colspan="3">Classical Kasanic Inflection - <a onclick="toggleshown(this)">Show</a></th></tr></thead><tbody>
 <tr><td></td><td>Nonpast</td><td>Past</td></tr>
@@ -916,7 +1027,8 @@ function toggleshown(table_toggler) {
 <tr><td>Inceptive</td><td colspan="2"><span class="lauvinko">IqsaHtu</span><br/><span style="font-style:italic;">isa'tu</span></td></tr>
 <tr><td>Experiential</td><td colspan="2"><span class="lauvinko">racaHtu</span><br/><span style="font-style:italic;">raca'tu</span></td></tr>
 </tbody></table>
-<h2>Lauvìnko</h2><h3><span style="font-style:italic;">sátta, sáh</span> - To parent, procreate.</h3>
+<h2>Lauvìnko</h2><h3><span style="font-style:italic;">sátta, sáh</span></h3>
+<p>$vol$ is the parent of $pat$.</p>
 <table class="notshown">
 <thead><tr><th colspan="3">Lauvinko Inflection - <a onclick="toggleshown(this)">Show</a></th></tr></thead><tbody>
 <tr><td></td><td>Nonpast</td><td>Past</td></tr>
@@ -924,7 +1036,7 @@ function toggleshown(table_toggler) {
 <tr><td>Inceptive</td><td colspan="2"><span class="lauvinko">IqsaHtu</span><br/><span style="font-style:italic;">isátta, isáh</span></td></tr>
 <tr><td>Experiential</td><td colspan="2"><span class="lauvinko">racaHtu</span><br/><span style="font-style:italic;">lacátta, lacáh</span></td></tr>
 </tbody></table>
-<h2>Botharu</h2><h3><span style="font-style:italic;">hádu</span> - To parent, procreate.</h3>
+<h2>Botharu</h2><h3><span style="font-style:italic;">hádu</span></h3><p>To parent, procreate.</p>
 <table class="notshown">
 <thead><tr><th colspan="3">Botharu Inflection - <a onclick="toggleshown(this)">Show</a></th></tr></thead><tbody>
 <tr><td></td><td>Nonpast</td><td>Past</td></tr>
@@ -934,28 +1046,35 @@ function toggleshown(table_toggler) {
 <hr/>
 <div class="entry" id="none">
 <h1 class="lauvinko">saey</h1>
-<h2>Classical Kasanic</h2><h3><span style="font-style:italic;">saye</span> - None, nothing. (uninflected)</h3>
-<h2>Lauvìnko</h2><h3><span style="font-style:italic;">sáy, sày</span> - None, nothing.</h3>
-<h2>Botharu</h2><h3><span style="font-style:italic;">haye</span> - None, nothing.</h3>
+<h2>Classical Kasanic</h2><h3><span style="font-style:italic;">saye</span></h3>
+<p>None, nothing. (uninflected)</p>
+<h2>Lauvìnko</h2><h3><span style="font-style:italic;">sáy, sày</span></h3>
+<p>Nothing, zero.</p>
+<h2>Botharu</h2><h3><span style="font-style:italic;">haye</span></h3><p>None, nothing.</p>
 </div>
 <hr/>
 <div class="entry" id="clan">
 <h1 class="lauvinko">esqhaNa</h1>
-<h2>Classical Kasanic</h2><h3><span style="font-style:italic;">sehaña</span> - Clan (family group). (uninflected)</h3>
-<h2>Lauvìnko</h2><h3><span style="font-style:italic;">séana, sèana</span> - Clan (family group).</h3>
-<h2>Botharu</h2><h3><span style="font-style:italic;">shaalya</span> - Clan (family group).</h3>
+<h2>Classical Kasanic</h2><h3><span style="font-style:italic;">sehaña</span></h3>
+<p>Clan (family group). (uninflected)</p>
+<h2>Lauvìnko</h2><h3><span style="font-style:italic;">séana, sèana</span></h3>
+<p><a href="/lauvinko/clans">Lauv&#236;nko clan.</a></p>
+<h2>Botharu</h2><h3><span style="font-style:italic;">shaalya</span></h3><p>Clan (family group).</p>
 </div>
 <hr/>
 <div class="entry" id="daughter2">
 <h1 class="lauvinko">esqeno</h1>
-<h2>Classical Kasanic</h2><h3><span style="font-style:italic;">seno</span> - Mother's daughter. (uninflected)</h3>
-<h2>Lauvìnko</h2><h3><span style="font-style:italic;">séng, sèng</span> - Mother's daughter.</h3>
-<h2>Botharu</h2><h3><span style="font-style:italic;">shelo</span> - Mother's daughter.</h3>
+<h2>Classical Kasanic</h2><h3><span style="font-style:italic;">seno</span></h3>
+<p>Mother's daughter. (uninflected)</p>
+<h2>Lauvìnko</h2><h3><span style="font-style:italic;">séng, sèng</span></h3>
+<p>Mother&#8217;s daughter.</p>
+<h2>Botharu</h2><h3><span style="font-style:italic;">shelo</span></h3><p>Mother's daughter.</p>
 </div>
 <hr/>
 <div class="entry" id="red">
 <h1 class="lauvinko">esqHetomi</h1>
-<h2>Classical Kasanic</h2><h3><span style="font-style:italic;">se'toṅvi</span> - Red. (stative)</h3>
+<h2>Classical Kasanic</h2><h3><span style="font-style:italic;">se'toṅvi</span></h3>
+<p>Red. (stative)</p>
 <table class="notshown">
 <thead><tr><th colspan="3">Classical Kasanic Inflection - <a onclick="toggleshown(this)">Show</a></th></tr></thead><tbody>
 <tr><td></td><td>Nonpast</td><td>Past</td></tr>
@@ -963,7 +1082,8 @@ function toggleshown(table_toggler) {
 <tr><td>Inceptive</td><td colspan="2"><span class="lauvinko">IqesqHetomi</span><br/><span style="font-style:italic;">ise'toṅvi</span></td></tr>
 <tr><td>Experiential</td><td colspan="2"><span class="lauvinko">raecHetomi</span><br/><span style="font-style:italic;">race'toṅvi</span></td></tr>
 </tbody></table>
-<h2>Lauvìnko</h2><h3><span style="font-style:italic;">séttomi, séhmi</span> - Red.</h3>
+<h2>Lauvìnko</h2><h3><span style="font-style:italic;">séttomi, séhmi</span></h3>
+<p>$pat$ is red.</p>
 <table class="notshown">
 <thead><tr><th colspan="3">Lauvinko Inflection - <a onclick="toggleshown(this)">Show</a></th></tr></thead><tbody>
 <tr><td></td><td>Nonpast</td><td>Past</td></tr>
@@ -971,7 +1091,7 @@ function toggleshown(table_toggler) {
 <tr><td>Inceptive</td><td colspan="2"><span class="lauvinko">IqesqHetomi</span><br/><span style="font-style:italic;">iséttomi, iséhmi</span></td></tr>
 <tr><td>Experiential</td><td colspan="2"><span class="lauvinko">raecHetomi</span><br/><span style="font-style:italic;">lacéttomi, lacéhmi</span></td></tr>
 </tbody></table>
-<h2>Botharu</h2><h3><span style="font-style:italic;">shédǫvę</span> - Red.</h3>
+<h2>Botharu</h2><h3><span style="font-style:italic;">shédǫvę</span></h3><p>Red.</p>
 <table class="notshown">
 <thead><tr><th colspan="3">Botharu Inflection - <a onclick="toggleshown(this)">Show</a></th></tr></thead><tbody>
 <tr><td></td><td>Nonpast</td><td>Past</td></tr>
@@ -981,7 +1101,8 @@ function toggleshown(table_toggler) {
 <hr/>
 <div class="entry" id="put">
 <h1 class="lauvinko">sqhqY</h1>
-<h2>Classical Kasanic</h2><h3><span style="font-style:italic;">səhai</span> - To put, place. (fientive)</h3>
+<h2>Classical Kasanic</h2><h3><span style="font-style:italic;">səhai</span></h3>
+<p>To put, place. (fientive)</p>
 <table class="notshown">
 <thead><tr><th colspan="3">Classical Kasanic Inflection - <a onclick="toggleshown(this)">Show</a></th></tr></thead><tbody>
 <tr><td></td><td>Nonpast</td><td>Past</td></tr>
@@ -991,7 +1112,8 @@ function toggleshown(table_toggler) {
 <tr><td>Inceptive</td><td colspan="2"><span class="lauvinko">IqsqhqY</span><br/><span style="font-style:italic;">isəhai</span></td></tr>
 <tr><td>Experiential</td><td colspan="2"><span class="lauvinko">racuhqY</span><br/><span style="font-style:italic;">racuhai</span></td></tr>
 </tbody></table>
-<h2>Lauvìnko</h2><h3><span style="font-style:italic;">sé, sè</span> - To put, place.</h3>
+<h2>Lauvìnko</h2><h3><span style="font-style:italic;">sé, sè</span></h3>
+<p>To put, place.</p>
 <table class="notshown">
 <thead><tr><th colspan="3">Lauvinko Inflection - <a onclick="toggleshown(this)">Show</a></th></tr></thead><tbody>
 <tr><td></td><td>Nonpast</td><td>Past</td></tr>
@@ -1001,7 +1123,7 @@ function toggleshown(table_toggler) {
 <tr><td>Inceptive</td><td colspan="2"><span class="lauvinko">IqsqhqY</span><br/><span style="font-style:italic;">isé, isè</span></td></tr>
 <tr><td>Experiential</td><td colspan="2"><span class="lauvinko">racuhqY</span><br/><span style="font-style:italic;">lacóy, lacòy</span></td></tr>
 </tbody></table>
-<h2>Botharu</h2><h3><span style="font-style:italic;">hee</span> - To put, place.</h3>
+<h2>Botharu</h2><h3><span style="font-style:italic;">hee</span></h3><p>To put, place.</p>
 <table class="notshown">
 <thead><tr><th colspan="3">Botharu Inflection - <a onclick="toggleshown(this)">Show</a></th></tr></thead><tbody>
 <tr><td></td><td>Nonpast</td><td>Past</td></tr>
@@ -1012,14 +1134,17 @@ function toggleshown(table_toggler) {
 <hr/>
 <div class="entry" id="brother">
 <h1 class="lauvinko">taero</h1>
-<h2>Classical Kasanic</h2><h3><span style="font-style:italic;">taro</span> - Brother. (uninflected)</h3>
-<h2>Lauvìnko</h2><h3><span style="font-style:italic;">tár, tàr</span> - Brother.</h3>
-<h2>Botharu</h2><h3><span style="font-style:italic;">taro</span> - Brother.</h3>
+<h2>Classical Kasanic</h2><h3><span style="font-style:italic;">taro</span></h3>
+<p>Brother. (uninflected)</p>
+<h2>Lauvìnko</h2><h3><span style="font-style:italic;">tár, tàr</span></h3>
+<p>Non-eldest brother, male friend.</p>
+<h2>Botharu</h2><h3><span style="font-style:italic;">taro</span></h3><p>Brother.</p>
 </div>
 <hr/>
 <div class="entry" id="sun">
 <h1 class="lauvinko">tuhiqsq</h1>
-<h2>Classical Kasanic</h2><h3><span style="font-style:italic;">tuhisə</span> - Sun. (stative)</h3>
+<h2>Classical Kasanic</h2><h3><span style="font-style:italic;">tuhisə</span></h3>
+<p>Sun. (stative)</p>
 <table class="notshown">
 <thead><tr><th colspan="3">Classical Kasanic Inflection - <a onclick="toggleshown(this)">Show</a></th></tr></thead><tbody>
 <tr><td></td><td>Nonpast</td><td>Past</td></tr>
@@ -1027,7 +1152,8 @@ function toggleshown(table_toggler) {
 <tr><td>Inceptive</td><td colspan="2"><span class="lauvinko">IqMtuhiqsq</span><br/><span style="font-style:italic;">intuhisə</span></td></tr>
 <tr><td>Experiential</td><td colspan="2"><span class="lauvinko">raHtuhiqsq</span><br/><span style="font-style:italic;">ra'tuhisə</span></td></tr>
 </tbody></table>
-<h2>Lauvìnko</h2><h3><span style="font-style:italic;">tóysa, tòysa</span> - Sun.</h3>
+<h2>Lauvìnko</h2><h3><span style="font-style:italic;">tóysa, tòysa</span></h3>
+<p>$pat$ shines, is bright. ** The sun.</p>
 <table class="notshown">
 <thead><tr><th colspan="3">Lauvinko Inflection - <a onclick="toggleshown(this)">Show</a></th></tr></thead><tbody>
 <tr><td></td><td>Nonpast</td><td>Past</td></tr>
@@ -1035,7 +1161,7 @@ function toggleshown(table_toggler) {
 <tr><td>Inceptive</td><td colspan="2"><span class="lauvinko">IqMtuhiqsq</span><br/><span style="font-style:italic;">intóysa, intòysa</span></td></tr>
 <tr><td>Experiential</td><td colspan="2"><span class="lauvinko">raHtuhiqsq</span><br/><span style="font-style:italic;">lattóysa, lattòysa</span></td></tr>
 </tbody></table>
-<h2>Botharu</h2><h3><span style="font-style:italic;">thwii</span> - Sun.</h3>
+<h2>Botharu</h2><h3><span style="font-style:italic;">thwii</span></h3><p>Sun.</p>
 <table class="notshown">
 <thead><tr><th colspan="3">Botharu Inflection - <a onclick="toggleshown(this)">Show</a></th></tr></thead><tbody>
 <tr><td></td><td>Nonpast</td><td>Past</td></tr>
@@ -1045,7 +1171,8 @@ function toggleshown(table_toggler) {
 <hr/>
 <div class="entry" id="sleep">
 <h1 class="lauvinko">vahiqga</h1>
-<h2>Classical Kasanic</h2><h3><span style="font-style:italic;">vahiṅa</span> - To sleep. (stative)</h3>
+<h2>Classical Kasanic</h2><h3><span style="font-style:italic;">vahiṅa</span></h3>
+<p>To sleep. (stative)</p>
 <table class="notshown">
 <thead><tr><th colspan="3">Classical Kasanic Inflection - <a onclick="toggleshown(this)">Show</a></th></tr></thead><tbody>
 <tr><td></td><td>Nonpast</td><td>Past</td></tr>
@@ -1053,7 +1180,8 @@ function toggleshown(table_toggler) {
 <tr><td>Inceptive</td><td colspan="2"><span class="lauvinko">Iqmahiqga</span><br/><span style="font-style:italic;">imahiṅa</span></td></tr>
 <tr><td>Experiential</td><td colspan="2"><span class="lauvinko">ravahiqga</span><br/><span style="font-style:italic;">ravahiṅa</span></td></tr>
 </tbody></table>
-<h2>Lauvìnko</h2><h3><span style="font-style:italic;">váynga, vàynga</span> - To sleep.</h3>
+<h2>Lauvìnko</h2><h3><span style="font-style:italic;">váynga, vàynga</span></h3>
+<p>(reflexive) $ins$ sleeps. ** (frequentative reflexive) $ins$ inhabits, resides in $loc$.</p>
 <table class="notshown">
 <thead><tr><th colspan="3">Lauvinko Inflection - <a onclick="toggleshown(this)">Show</a></th></tr></thead><tbody>
 <tr><td></td><td>Nonpast</td><td>Past</td></tr>
@@ -1061,7 +1189,7 @@ function toggleshown(table_toggler) {
 <tr><td>Inceptive</td><td colspan="2"><span class="lauvinko">Iqmahiqga</span><br/><span style="font-style:italic;">imáynga, imàynga</span></td></tr>
 <tr><td>Experiential</td><td colspan="2"><span class="lauvinko">ravahiqga</span><br/><span style="font-style:italic;">laváynga, lavàynga</span></td></tr>
 </tbody></table>
-<h2>Botharu</h2><h3><span style="font-style:italic;">wąą</span> - To sleep.</h3>
+<h2>Botharu</h2><h3><span style="font-style:italic;">wąą</span></h3><p>To sleep.</p>
 <table class="notshown">
 <thead><tr><th colspan="3">Botharu Inflection - <a onclick="toggleshown(this)">Show</a></th></tr></thead><tbody>
 <tr><td></td><td>Nonpast</td><td>Past</td></tr>
@@ -1071,7 +1199,8 @@ function toggleshown(table_toggler) {
 <hr/>
 <div class="entry" id="go">
 <h1 class="lauvinko">vakiq</h1>
-<h2>Classical Kasanic</h2><h3><span style="font-style:italic;">vaki</span> - To go. (fientive)</h3>
+<h2>Classical Kasanic</h2><h3><span style="font-style:italic;">vaki</span></h3>
+<p>To go. (fientive)</p>
 <table class="notshown">
 <thead><tr><th colspan="3">Classical Kasanic Inflection - <a onclick="toggleshown(this)">Show</a></th></tr></thead><tbody>
 <tr><td></td><td>Nonpast</td><td>Past</td></tr>
@@ -1081,7 +1210,8 @@ function toggleshown(table_toggler) {
 <tr><td>Inceptive</td><td colspan="2"><span class="lauvinko">Iqmakiq</span><br/><span style="font-style:italic;">imaki</span></td></tr>
 <tr><td>Experiential</td><td colspan="2"><span class="lauvinko">raevokiq</span><br/><span style="font-style:italic;">ravoki</span></td></tr>
 </tbody></table>
-<h2>Lauvìnko</h2><h3><span style="font-style:italic;">váki, váy</span> - To go.</h3>
+<h2>Lauvìnko</h2><h3><span style="font-style:italic;">váki, váy</span></h3>
+<p>$vol$ goes.</p>
 <table class="notshown">
 <thead><tr><th colspan="3">Lauvinko Inflection - <a onclick="toggleshown(this)">Show</a></th></tr></thead><tbody>
 <tr><td></td><td>Nonpast</td><td>Past</td></tr>
@@ -1091,7 +1221,7 @@ function toggleshown(table_toggler) {
 <tr><td>Inceptive</td><td colspan="2"><span class="lauvinko">Iqmakiq</span><br/><span style="font-style:italic;">imáki, imáy</span></td></tr>
 <tr><td>Experiential</td><td colspan="2"><span class="lauvinko">raevokiq</span><br/><span style="font-style:italic;">lavóki, lavóy</span></td></tr>
 </tbody></table>
-<h2>Botharu</h2><h3><span style="font-style:italic;">wachi</span> - To go.</h3>
+<h2>Botharu</h2><h3><span style="font-style:italic;">wachi</span></h3><p>To go.</p>
 <table class="notshown">
 <thead><tr><th colspan="3">Botharu Inflection - <a onclick="toggleshown(this)">Show</a></th></tr></thead><tbody>
 <tr><td></td><td>Nonpast</td><td>Past</td></tr>
@@ -1102,7 +1232,8 @@ function toggleshown(table_toggler) {
 <hr/>
 <div class="entry" id="see">
 <h1 class="lauvinko">yahiqga</h1>
-<h2>Classical Kasanic</h2><h3><span style="font-style:italic;">yahiṅa</span> - To see. (fientive)</h3>
+<h2>Classical Kasanic</h2><h3><span style="font-style:italic;">yahiṅa</span></h3>
+<p>To see. (fientive)</p>
 <table class="notshown">
 <thead><tr><th colspan="3">Classical Kasanic Inflection - <a onclick="toggleshown(this)">Show</a></th></tr></thead><tbody>
 <tr><td></td><td>Nonpast</td><td>Past</td></tr>
@@ -1112,7 +1243,8 @@ function toggleshown(table_toggler) {
 <tr><td>Inceptive</td><td colspan="2"><span class="lauvinko">IqNahiqga</span><br/><span style="font-style:italic;">iñahiṅa</span></td></tr>
 <tr><td>Experiential</td><td colspan="2"><span class="lauvinko">raeyohiqga</span><br/><span style="font-style:italic;">rayohiṅa</span></td></tr>
 </tbody></table>
-<h2>Lauvìnko</h2><h3><span style="font-style:italic;">yáynga, yàynga</span> - To see.</h3>
+<h2>Lauvìnko</h2><h3><span style="font-style:italic;">yáynga, yàynga</span></h3>
+<p>$vol$ looks at, watches $dat$. ** (vulgar) $vol$ has sex with, fucks $pat$. ** (inceptive) $vol$ catches sight of $dat$. ** $vol$ meets $dat$. ** (frequentative) $vol$ understands, comprehends, empathizes with $dat$, a person or idea.</p>
 <table class="notshown">
 <thead><tr><th colspan="3">Lauvinko Inflection - <a onclick="toggleshown(this)">Show</a></th></tr></thead><tbody>
 <tr><td></td><td>Nonpast</td><td>Past</td></tr>
@@ -1122,7 +1254,7 @@ function toggleshown(table_toggler) {
 <tr><td>Inceptive</td><td colspan="2"><span class="lauvinko">IqNahiqga</span><br/><span style="font-style:italic;">ináynga, inàynga</span></td></tr>
 <tr><td>Experiential</td><td colspan="2"><span class="lauvinko">raeyohiqga</span><br/><span style="font-style:italic;">layóynga, layòynga</span></td></tr>
 </tbody></table>
-<h2>Botharu</h2><h3><span style="font-style:italic;">yąą</span> - To see.</h3>
+<h2>Botharu</h2><h3><span style="font-style:italic;">yąą</span></h3><p>To see.</p>
 <table class="notshown">
 <thead><tr><th colspan="3">Botharu Inflection - <a onclick="toggleshown(this)">Show</a></th></tr></thead><tbody>
 <tr><td></td><td>Nonpast</td><td>Past</td></tr>
@@ -1133,7 +1265,8 @@ function toggleshown(table_toggler) {
 <hr/>
 <div class="entry" id="weave">
 <h1 class="lauvinko">yaMp</h1>
-<h2>Classical Kasanic</h2><h3><span style="font-style:italic;">yampə</span> - To weave, interlay. (fientive)</h3>
+<h2>Classical Kasanic</h2><h3><span style="font-style:italic;">yampə</span></h3>
+<p>To weave, interlay. (fientive)</p>
 <table class="notshown">
 <thead><tr><th colspan="3">Classical Kasanic Inflection - <a onclick="toggleshown(this)">Show</a></th></tr></thead><tbody>
 <tr><td></td><td>Nonpast</td><td>Past</td></tr>
@@ -1143,7 +1276,8 @@ function toggleshown(table_toggler) {
 <tr><td>Inceptive</td><td colspan="2"><span class="lauvinko">IqNaMp</span><br/><span style="font-style:italic;">iñampə</span></td></tr>
 <tr><td>Experiential</td><td colspan="2"><span class="lauvinko">raeyoMp</span><br/><span style="font-style:italic;">rayompə</span></td></tr>
 </tbody></table>
-<h2>Lauvìnko</h2><h3><span style="font-style:italic;">yámpa, yáng</span> - To weave, interlay.</h3>
+<h2>Lauvìnko</h2><h3><span style="font-style:italic;">yámpa, yáng</span></h3>
+<p>$vol$ weaves, intersperses $pat$.</p>
 <table class="notshown">
 <thead><tr><th colspan="3">Lauvinko Inflection - <a onclick="toggleshown(this)">Show</a></th></tr></thead><tbody>
 <tr><td></td><td>Nonpast</td><td>Past</td></tr>
@@ -1153,7 +1287,7 @@ function toggleshown(table_toggler) {
 <tr><td>Inceptive</td><td colspan="2"><span class="lauvinko">IqNaMp</span><br/><span style="font-style:italic;">inámpa, ináng</span></td></tr>
 <tr><td>Experiential</td><td colspan="2"><span class="lauvinko">raeyoMp</span><br/><span style="font-style:italic;">layómpa, layóng</span></td></tr>
 </tbody></table>
-<h2>Botharu</h2><h3><span style="font-style:italic;">yąpi</span> - To weave, interlay.</h3>
+<h2>Botharu</h2><h3><span style="font-style:italic;">yąpi</span></h3><p>To weave, interlay.</p>
 <table class="notshown">
 <thead><tr><th colspan="3">Botharu Inflection - <a onclick="toggleshown(this)">Show</a></th></tr></thead><tbody>
 <tr><td></td><td>Nonpast</td><td>Past</td></tr>
@@ -1164,8 +1298,10 @@ function toggleshown(table_toggler) {
 <hr/>
 <div class="entry" id="basa">
 <h1 class="lauvinko">yWHpmi</h1>
-<h2>Classical Kasanic</h2><h3><span style="font-style:italic;">yau'pəmi</span> - Basa fish. (uninflected)</h3>
-<h2>Lauvìnko</h2><h3><span style="font-style:italic;">yávoppami, yàvoppami</span> - Basa fish.</h3>
-<h2>Botharu</h2><h3><span style="font-style:italic;">yóóbimę</span> - Basa fish.</h3>
+<h2>Classical Kasanic</h2><h3><span style="font-style:italic;">yau'pəmi</span></h3>
+<p>Basa fish. (uninflected)</p>
+<h2>Lauvìnko</h2><h3><span style="font-style:italic;">yávoppami, yàvoppami</span></h3>
+<p>Basa fish.</p>
+<h2>Botharu</h2><h3><span style="font-style:italic;">yóóbimę</span></h3><p>Basa fish.</p>
 </div>
 <hr/>

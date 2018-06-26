@@ -18,6 +18,12 @@ def find(regex,s):
     else:
         return result[0]
 
+def inner_markup(tag):
+    whole = etree.tostring(tag).decode('utf-8')
+    chop = len(tag.tag) + 2
+    inner = whole.strip()[chop:-chop-1]
+    return inner
+
 flatten = lambda l: [item for sublist in l for item in sublist]
 
 PK_PRES = ['H','M']
@@ -201,7 +207,7 @@ class PKWord:
                 else:
                     lemma.put_form(form_name,word)
             elif subtag.tag == "defn":
-                lemma.set_defn(subtag.text)
+                lemma.set_defn(inner_markup(subtag))
             else:
                 raise ValueError("Invalid tag: " + subtag.tag)
         if lemma.defn == 'Not defined.':
@@ -373,7 +379,7 @@ class LauvinkoWord:
 ##                else:
 ##                    lemma.put_form(form_name,word)
             if subtag.tag == "defn":
-                self.set_defn(subtag.text)
+                self.set_defn(inner_markup(subtag))
             else:
                 raise ValueError("Invalid tag: " + subtag.tag)
         if self.defn == 'Not defined.':
@@ -545,7 +551,7 @@ class BotharuWord:
 ##                else:
 ##                    lemma.put_form(form_name,word)
             if subtag.tag == "defn":
-                self.set_defn(subtag.text)
+                self.set_defn(inner_markup(subtag))
             else:
                 raise ValueError("Invalid tag: " + subtag.tag)
         if self.defn == 'Not defined.':

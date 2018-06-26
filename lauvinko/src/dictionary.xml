@@ -4,407 +4,611 @@
 			<defn>To build, establish, appoint.</defn>
 			<form type="gn">@kaaye</form>
 		</pk>
+		<lv>
+			<defn>$vol$ builds $pat$, a building or ship. ** (inchoative) $vol$ establishes, founds, begins construction on $pat$ ** $vol$ nominates $dat$ for public office.</defn>
+		</lv>
 	</entry>
 	<entry category="punctual" id="cross" origin="kasanic">
 		<pk>
 			<defn>To cross, go over.</defn>
 			<form type="gn">@kkungi</form>
 		</pk>
+		<lv>
+			<defn>$vol$ crosses, passes over $pat$. ** (frequentative) $vol$ migrates, wanders.</defn>
+		</lv>
 	</entry>
 	<entry category="punctual" id="insert" origin="kasanic">
 		<pk>
 			<defn>To insert, pierce.</defn>
 			<form type="gn">@ppaai</form>
 		</pk>
+		<lv>
+			<defn>$vol$ pierces, stings, stabs $pat$ with $ins$. ** $vol$ inserts $ins$ into $all$. ** (vulgar) $vol$ penetrates $pat$.</defn>
+		</lv>
 	</entry>
 	<entry category="uninflected" id="manner" origin="kasanic">
 		<pk>
 			<defn>Custom, manner, appearance.</defn>
 			<form type="gn">aakkaa</form>
 		</pk>
+		<lv>
+			<defn>Way, manner.</defn>
+		</lv>
 	</entry>
 	<entry category="uninflected" id="aunt" origin="kasanic">
 		<pk>
 			<defn>Kin, clanmate, sister, aunt.</defn>
 			<form type="gn">aatari</form>
 		</pk>
+		<lv>
+			<defn>(reflexive) $pat$ and $pat$ are of the same clan.</defn>
+		</lv>
 	</entry>
 	<entry category="uninflected" id="kin" origin="kasanic">
 		<pk>
 			<defn>Kin, sameblooded.</defn>
 			<form type="gn">aaute</form>
 		</pk>
+		<lv>
+			<defn>(reflexive) $pat$ and $pat$ are kin, related.</defn>
+		</lv>
 	</entry>
 	<entry category="punctual" id="bite" origin="kasanic">
 		<pk>
 			<defn>To bite, chew.</defn>
 			<form type="gn">c~kki</form>
 		</pk>
+		<lv>
+			<defn>$vol$ bites $pat$. ** (frequentative) $vol$ chews, eats $pat$.</defn>
+		</lv>
 	</entry>
 	<entry category="fientive" id="agitate" origin="kasanic">
 		<pk>
 			<defn>To agitate.</defn>
 			<form type="gn">c@ntesaa</form>
 		</pk>
+		<lv>
+			<defn>$pat$ is boiling. ** $vol$ cooks, boils $pat$. ** $vol$ bothers, startles $pat$.</defn>
+		</lv>
 	</entry>
 	<entry category="uninflected" id="finger" origin="kasanic">
 		<pk>
 			<defn>Finger.</defn>
 			<form type="gn">cokine</form>
 		</pk>
+		<lv>
+			<defn>Finger.</defn>
+		</lv>
 	</entry>
 	<entry category="fientive" id="search" origin="kasanic">
 		<pk>
 			<defn>To search, find.</defn>
 			<form type="gn">cc@nko</form>
 		</pk>
+		<lv>
+			<defn>$vol$ searches for $dat$. ** $vol$ wants $dat$. ** (perfective) $vol$ finds $dat$. ** $vol$ meets, meets up with $dat$. ** $vol$ invents, creates $pat$. ** $vol$ receives $pat$.</defn>
+		</lv>
 	</entry>
 	<entry category="uninflected" id="not" origin="kasanic">
 		<pk>
 			<defn>Not, no.</defn>
 			<form type="gn">era</form>
 		</pk>
+		<lv>
+			<defn>Not, don't.</defn>
+		</lv>
 	</entry>
 	<entry category="uninflected" id="water" origin="kasanic">
 		<pk>
 			<defn>Water.</defn>
 			<form type="gn">heho</form>
 		</pk>
+		<lv>
+			<defn>Water.</defn>
+		</lv>
 	</entry>
 	<entry category="uninflected" id="rice" origin="kasanic">
 		<pk>
 			<defn>Rice.</defn>
 			<form type="gn">hekve</form>
 		</pk>
+		<lv>
+			<defn>Rice.</defn>
+		</lv>
 	</entry>
 	<entry category="uninflected" id="toe" origin="kasanic">
 		<pk>
 			<defn>Toe.</defn>
 			<form type="gn">homuma</form>
 		</pk>
+		<lv>
+			<defn>Toe.</defn>
+		</lv>
 	</entry>
 	<entry category="fientive" id="fight" origin="kasanic">
 		<pk>
 			<defn>To fight.</defn>
 			<form type="gn">h@naacavi</form>
 		</pk>
+		<lv>
+			<defn>$vol$ fights. ** (reflexive) $vol$ and $vol$ fight against one another. ** (frequentative, literary) $vol$ struggles against, slaughters $pat$.</defn>
+		</lv>
 	</entry>
 	<entry category="uninflected" id="daughter1" origin="kasanic">
 		<pk>
 			<defn>Father's daughter.</defn>
 			<form type="gn">irohi</form>
 		</pk>
+		<lv>
+			<defn>Father’s daughter. ** (literary) Treasure, precious, darling.</defn>
+		</lv>
 	</entry>
 	<entry category="fientive" id="speak" origin="kasanic">
 		<pk>
 			<defn>To speak, say.</defn>
 			<form type="gn">k@ppotaa</form>
 		</pk>
+		<lv>
+			<defn>$vol$ speaks, says $pat$, a word (not a whole phrase). ** $vol$ speaks about $dat$. ** $vol$ speaks to, tells $all$. ** (frequentative) $vol$ commands, is in charge.</defn>
+		</lv>
 	</entry>
 	<entry category="uninflected" id="hut" origin="kasanic">
 		<pk>
 			<defn>Hut, shelter.</defn>
 			<form type="gn">karaavi</form>
 		</pk>
+		<lv>
+			<defn>Shelter, space, room, living quarters.</defn>
+		</lv>
 	</entry>
 	<entry category="uninflected" id="son1" origin="kasanic">
 		<pk>
 			<defn>Father's son.</defn>
 			<form type="gn">kaankaa</form>
 		</pk>
+		<lv>
+			<defn>Father’s son. ** Heir, beneficiary (of estate), successor.</defn>
+		</lv>
 	</entry>
 	<entry category="uninflected" id="son2" origin="kasanic">
 		<pk>
 			<defn>Mother's son.</defn>
 			<form type="gn">kaarepaa</form>
 		</pk>
+		<lv>
+			<defn>Mother’s son. ** (literary) Life’s work, oeuvre.</defn>
+		</lv>
 	</entry>
 	<entry category="uninflected" id="much" origin="kasanic">
 		<pk>
 			<defn>Much, many.</defn>
 			<form type="gn">koro</form>
 		</pk>
+		<lv>
+			<defn>Much, many, a lot, very.</defn>
+		</lv>
 	</entry>
 	<entry category="punctual" id="add" origin="kasanic">
 		<pk>
 			<defn>To add.</defn>
 			<form type="gn">kv~rentaa</form>
 		</pk>
+		<lv>
+			<defn>$vol$ adds $pat$ onto $all$. ** (reflexive) $ins$ grows, increases. (frequentative) $vol$ loads $pat$, cargo.</defn>
+		</lv>
 	</entry>
 	<entry category="uninflected" id="heel" origin="kasanic">
 		<pk>
 			<defn>Heel.</defn>
 			<form type="gn">kvaai</form>
 		</pk>
+		<lv>
+			<defn>Heel. ** With, together (used in positional constructions). ** (modal prefix) Together.</defn>
+		</lv>
 	</entry>
 	<entry category="uninflected" id="part" origin="kasanic">
 		<pk>
 			<defn>Part, piece.</defn>
 			<form type="gn">kvaau</form>
 		</pk>
+		<lv>
+			<defn>Part, component. ** (modal prefix) Partially, incompletely, somewhat.</defn>
+		</lv>
 	</entry>
 	<entry category="uninflected" id="north" origin="kasanic">
 		<pk>
 			<defn>North.</defn>
 			<form type="gn">kamaanaau</form>
 		</pk>
+		<lv>
+			<defn>North.</defn>
+		</lv>
 	</entry>
 	<entry category="punctual" id="gust" origin="kasanic">
 		<pk>
 			<defn>To blow, gust.</defn>
 			<form type="gn">k~nkaakviru</form>
 		</pk>
+		<lv>
+			<defn>$vol$ (a person) blows, exhales on $all$. ** (frequentative) $vol$ (a wind) blows, gusts.</defn>
+		</lv>
 	</entry>
 	<entry category="fientive" id="mighty" origin="kasanic">
 		<pk>
 			<defn>To be great, mighty.</defn>
 			<form type="gn">kv@niki</form>
 		</pk>
+		<lv>
+			<defn>(frequentative) $vol$ is great, mighty.</defn>
+		</lv>
 	</entry>
 	<entry category="uninflected" id="egg" origin="kasanic">
 		<pk>
 			<defn>Egg.</defn>
 			<form type="gn">kvaaintaa</form>
 		</pk>
+		<lv>
+			<defn>Egg, testicle.</defn>
+		</lv>
 	</entry>
 	<entry category="fientive" id="learn" origin="kasanic">
 		<pk>
 			<defn>To learn, teach.</defn>
 			<form type="gn">r@ppaayo</form>
 		</pk>
+		<lv>
+			<defn>(reflexive) $vol$ studies $dat$. ** (reflexive) $ins$ learns $dat$ through experience. ** $vol$ teaches $ins$ about $dat$.</defn>
+		</lv>
 	</entry>
 	<entry category="punctual" id="release" origin="kasanic">
 		<pk>
 			<defn>Open, release.</defn>
 			<form type="gn">r@seki</form>
 		</pk>
+		<lv>
+			<defn>$vol$ opens, unlocks, $pat$. ** $vol$ releases, turns loose $pat$. $vol$ frees, surrenders $pat$.</defn>
+		</lv>
 	</entry>
 	<entry category="uninflected" id="heir" origin="kasanic">
 		<pk>
 			<defn>Eldest brother, eldest son.</defn>
 			<form type="gn">raango</form>
 		</pk>
+		<lv>
+			<defn>Eldest brother, heir. ** Boss, big-man, chief.</defn>
+		</lv>
 	</entry>
 	<entry category="uninflected" id="what" origin="kasanic">
 		<pk>
 			<defn>What, which.</defn>
 			<form type="gn">raase</form>
 		</pk>
+		<lv>
+			<defn>Some, any, what, which.</defn>
+		</lv>
 	</entry>
 	<entry category="uninflected" id="man" origin="kasanic">
 		<pk>
 			<defn>Man, male.</defn>
 			<form type="gn">leccaa</form>
 		</pk>
+		<lv>
+			<defn>Man. ** $vol$ initiates $pat$ into manhood.</defn>
+		</lv>
 	</entry>
 	<entry category="fientive" id="eat" origin="kasanic">
 		<pk>
 			<defn>To eat, consume.</defn>
 			<form type="gn">m@nange</form>
 		</pk>
+		<lv>
+			<defn>$vol$ eats $pat$. ** (frequentative) $pat$ is a part of $vol$’s diet.</defn>
+		</lv>
 	</entry>
 	<entry category="uninflected" id="hand" origin="kasanic">
 		<pk>
 			<defn>Hand.</defn>
 			<form type="gn">maaccopo</form>
 		</pk>
+		<lv>
+			<defn>Arm, hand. ** Ownership, possession.</defn>
+		</lv>
 	</entry>
 	<entry category="uninflected" id="mother" origin="kasanic">
 		<pk>
 			<defn>Mother.</defn>
 			<form type="gn">maamaa</form>
 		</pk>
+		<lv>
+			<defn>Mother.</defn>
+		</lv>
 	</entry>
 	<entry category="uninflected" id="pandan" origin="kasanic">
 		<pk>
 			<defn>Pandan.</defn>
 			<form type="gn">maatoce</form>
 		</pk>
+		<lv>
+			<defn>Pandan.</defn>
+		</lv>
 	</entry>
 	<entry category="uninflected" id="knife" origin="kasanic">
 		<pk>
 			<defn>Knife.</defn>
 			<form type="gn">mahika</form>
 		</pk>
+		<lv>
+			<defn>Knife.</defn>
+		</lv>
 	</entry>
 	<entry category="stative" id="mild" origin="kasanic">
 		<pk>
 			<defn>Mild, easy.</defn>
 			<form type="gn">mentavaau</form>
 		</pk>
+		<lv>
+			<defn>$ins$ (inanimate) is warm, mild. ** $pat$ (animate) feels warm, comfortable. ** $vol$ (animate) is affectionate, friendly, relaxed.</defn>
+		</lv>
 	</entry>
 	<entry category="uninflected" id="sister" origin="kasanic">
 		<pk>
 			<defn>Sister.</defn>
 			<form type="gn">miro</form>
 		</pk>
+		<lv>
+			<defn>Sister, female friend.</defn>
+		</lv>
 	</entry>
 	<entry category="uninflected" id="woman" origin="kasanic">
 		<pk>
 			<defn>Woman, female.</defn>
 			<form type="gn">mokaa</form>
 		</pk>
+		<lv>
+			<defn>Woman. ** (inchoative) $pat$ reaches menarche.</defn>
+		</lv>
 	</entry>
 	<entry category="uninflected" id="mango" origin="kasanic">
 		<pk>
 			<defn>Mango.</defn>
 			<form type="gn">naatami</form>
 		</pk>
+		<lv>
+			<defn>Mango.</defn>
+		</lv>
 	</entry>
 	<entry category="stative" id="stand" origin="kasanic">
 		<pk>
 			<defn>To stand.</defn>
 			<form type="gn">ntittoka</form>
 		</pk>
+		<lv>
+			<defn>$pat$ stands. ** $pat$, a formally animate noun, exists (used with adpositional statements).</defn>
+		</lv>
 	</entry>
 	<entry category="uninflected" id="all" origin="kasanic">
 		<pk>
 			<defn>All, every.</defn>
 			<form type="gn">nyaaisaa</form>
 		</pk>
+		<lv>
+			<defn>All, every, each.</defn>
+		</lv>
 	</entry>
 	<entry category="stative" id="need" origin="kasanic">
 		<pk>
 			<defn>To need.</defn>
 			<form type="gn">nyovipi</form>
 		</pk>
+		<lv>
+			<defn>$pat$ needs $dat$.</defn>
+		</lv>
 	</entry>
 	<entry category="stative" id="wise" origin="kasanic">
 		<pk>
 			<defn>Wise, intelligent.</defn>
 			<form type="gn">ncaaye</form>
 		</pk>
+		<lv>
+			<defn>$vol$ is wise. ** (inchoative, typically religious) $vol$ instructs or presents a revelation to $ins$.</defn>
+		</lv>
 	</entry>
 	<entry category="punctual" id="trade" origin="kasanic">
 		<pk>
 			<defn>To trade.</defn>
 			<form type="gn">nc@ki</form>
 		</pk>
+		<lv>
+			<defn>$vol$ trades, exchanges $pat$.</defn>
+		</lv>
 	</entry>
 	<entry category="punctual" id="drink" origin="kasanic">
 		<pk>
 			<defn>To drink.</defn>
 			<form type="gn">ng@pikvi</form>
 		</pk>
+		<lv>
+			<defn>$vol$ drinks, swallows $pat$. ** $vol$ inhales, smokes $pat$. ** (frequentative) $vol$ slurps, sucks $pat$. ** (vulgar) $vol$ performs oral sex on $pat$.</defn>
+		</lv>
 	</entry>
 	<entry category="stative" id="yellow" origin="kasanic">
 		<pk>
 			<defn>Yellow.</defn>
 			<form type="gn">nkimaa</form>
 		</pk>
+		<lv>
+			<defn>$pat$ is yellow. ** $pat$ is exuberant, spontaneous, fun. ** (inchoative) $pat$ cuts loose, gets high.</defn>
+		</lv>
 	</entry>
 	<entry category="fientive" id="carry" origin="kasanic">
 		<pk>
 			<defn>To carry, bear.</defn>
 			<form type="gn">nkv@kkaye</form>
 		</pk>
+		<lv>
+			<defn>$vol$ carries, holds $pat$ with difficulty. ** $vol$/$loc$ contains, is pregnant with $pat$. ** $pat$ is heavy, serious, burdensome. ** $pat$ is difficult for $vol$. ** (perfective) $vol$ gives birth to $pat$. ** $vol$ conceives $pat$.</defn>
+		</lv>
 	</entry>
 	<entry category="uninflected" id="dog" origin="kasanic">
 		<pk>
 			<defn>Dog.</defn>
 			<form type="gn">ngoyangu</form>
 		</pk>
+		<lv>
+			<defn>Dog.</defn>
+		</lv>
 	</entry>
 	<entry category="uninflected" id="father" origin="kasanic">
 		<pk>
 			<defn>Father.</defn>
 			<form type="gn">opa</form>
 		</pk>
+		<lv>
+			<defn>Father.</defn>
+		</lv>
 	</entry>
 	<entry category="fientive" id="touch" origin="kasanic">
 		<pk>
 			<defn>To touch, strike.</defn>
 			<form type="gn">p@soru</form>
 		</pk>
+		<lv>
+			<defn>$vol$ touches, feels $pat$. ** $vol$ affects, disturbs $pat$. ** (frequentative) $vol$ strikes, hits $pat$.</defn>
+		</lv>
 	</entry>
 	<entry category="uninflected" id="auncle" origin="kasanic">
 		<pk>
 			<defn>Aunt, uncle, older relative.</defn>
 			<form type="gn">ppesa</form>
 		</pk>
+		<lv>
+			<defn>Aunt, uncle. ** Any indirect relative of an older generation.</defn>
+		</lv>
 	</entry>
 	<entry category="fientive" id="put" origin="kasanic">
 		<pk>
 			<defn>To put, place.</defn>
 			<form type="gn">s~haai</form>
 		</pk>
+		<lv>
+			<defn>To put, place.</defn>
+		</lv>
 	</entry>
 	<entry category="fientive" id="grow" origin="kasanic">
 		<pk>
 			<defn>To grow, expand, mature.</defn>
 			<form type="gn">s@hitu</form>
 		</pk>
+		<lv>
+			<defn>(reflexive) $ins$ grows, ages. ** $pat$ expands in size. ** (reflexive) $ins$ ripens. ** $vol$ cultivates, rears $ins$, an agricultural product.</defn>
+		</lv>
 	</entry>
 	<entry category="stative" id="parent" origin="kasanic">
 		<pk>
 			<defn>To parent, procreate.</defn>
 			<form type="gn">saattu</form>
 		</pk>
+		<lv>
+			<defn>$vol$ is the parent of $pat$.</defn>
+		</lv>
 	</entry>
 	<entry category="uninflected" id="none" origin="kasanic">
 		<pk>
 			<defn>None, nothing.</defn>
 			<form type="gn">saaye</form>
 		</pk>
+		<lv>
+			<defn>Nothing, zero.</defn>
+		</lv>
 	</entry>
 	<entry category="uninflected" id="clan" origin="kasanic">
 		<pk>
 			<defn>Clan (family group).</defn>
 			<form type="gn">sehaanyaa</form>
 		</pk>
+		<lv>
+			<defn><a href="/lauvinko/clans">Lauvìnko clan.</a></defn>
+		</lv>
 	</entry>
 	<entry category="uninflected" id="daughter2" origin="kasanic">
 		<pk>
 			<defn>Mother's daughter.</defn>
 			<form type="gn">seno</form>
 		</pk>
+		<lv>
+			<defn>Mother’s daughter.</defn>
+		</lv>
 	</entry>
 	<entry category="stative" id="red" origin="kasanic">
 		<pk>
 			<defn>Red.</defn>
 			<form type="gn">settongvi</form>
 		</pk>
+		<lv>
+			<defn>$pat$ is red.</defn>
+		</lv>
 	</entry>
 	<entry category="uninflected" id="brother" origin="kasanic">
 		<pk>
 			<defn>Brother.</defn>
 			<form type="gn">taaro</form>
 		</pk>
+		<lv>
+			<defn>Non-eldest brother, male friend.</defn>
+		</lv>
 	</entry>
 	<entry category="stative" id="sun" origin="kasanic">
 		<pk>
 			<defn>Sun.</defn>
 			<form type="gn">tuhisa</form>
 		</pk>
+		<lv>
+			<defn>$pat$ shines, is bright. ** The sun.</defn>
+		</lv>
 	</entry>
 	<entry category="stative" id="sleep" origin="kasanic">
 		<pk>
 			<defn>To sleep.</defn>
 			<form type="gn">vaahingaa</form>
 		</pk>
+		<lv>
+			<defn>(reflexive) $ins$ sleeps. ** (frequentative reflexive) $ins$ inhabits, resides in $loc$.</defn>
+		</lv>
 	</entry>
 	<entry category="fientive" id="go" origin="kasanic">
 		<pk>
 			<defn>To go.</defn>
 			<form type="gn">v@ki</form>
 		</pk>
+		<lv>
+			<defn>$vol$ goes.</defn>
+		</lv>
 	</entry>
 	<entry category="fientive" id="see" origin="kasanic">
 		<pk>
 			<defn>To see.</defn>
 			<form type="gn">y@hingaa</form>
 		</pk>
+		<lv>
+			<defn>$vol$ looks at, watches $dat$. ** (vulgar) $vol$ has sex with, fucks $pat$. ** (inceptive) $vol$ catches sight of $dat$. ** $vol$ meets $dat$. ** (frequentative) $vol$ understands, comprehends, empathizes with $dat$, a person or idea.</defn>
+		</lv>
 	</entry>
 	<entry category="fientive" id="weave" origin="kasanic">
 		<pk>
 			<defn>To weave, interlay.</defn>
 			<form type="gn">y@mpa</form>
 		</pk>
+		<lv>
+			<defn>$vol$ weaves, intersperses $pat$.</defn>
+		</lv>
 	</entry>
 	<entry category="uninflected" id="basa" origin="kasanic">
 		<pk>
 			<defn>Basa fish.</defn>
 			<form type="gn">yaauppami</form>
 		</pk>
+		<lv>
+			<defn>Basa fish.</defn>
+		</lv>
 	</entry>
 </xml>
