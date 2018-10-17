@@ -611,4 +611,58 @@
 			<defn>Basa fish.</defn>
 		</lv>
 	</entry>
+	<entry category="uninflected" id="day" origin="kasanic">
+		<pk>
+			<defn>Day (period of 24 hours).</defn>
+			<form type="gn">tteso</form>
+		</pk>
+		<lv>
+			<defn>Day (period of 24 hours).</defn>
+		</lv>
+	</entry>
+	<entry category="stative" id="hot" origin="kasanic">
+		<pk>
+			<defn>Hot, warm.</defn>
+			<form type="gn">saaive</form>
+		</pk>
+	</entry>
+	<entry category="uninflected" id="air" origin="kasanic">
+		<pk>
+			<defn>Air, weather, environment, conditions.</defn>
+			<form type="gn">tokkvo</form>
+		</pk>
+	</entry>
+	<entry category="stative" id="lie" origin="kasanic">
+		<pk>
+			<defn>To lie, to be (with prepositional phrase)</defn>
+			<form type="gn">konco</form>
+		</pk>
+	</entry>
+	<entry category="stative" id="drape" origin="kasanic">
+		<pk>
+			<defn>To cover, to hang, to drape.</defn>
+			<form type="gn">taaici</form>
+		</pk>
+		<lv>
+			<defn>To cover, to hang, to drape. Cloud; curtain; spider's web.</defn>
+		</lv>
+	</entry>
+	<entry category="stative" id="dark" origin="kasanic">
+		<pk>
+			<defn>To be dark.</defn>
+			<form type="gn">kaamengaa</form>
+		</pk>
+		<lv>
+			<defn>To be dark. Night.</defn>
+		</lv>
+	</entry>
+	<entry category="stative" id="reach" origin="kasanic">
+		<pk>
+			<defn>To reach, to stretch</defn>
+			<form type="gn">pesavaai</form>
+		</pk>
+		<lv>
+			<defn>$pat$ reaches, attains $all$</defn>
+		</lv>
+	</entry>
 </xml>
