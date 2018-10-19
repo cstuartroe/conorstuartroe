@@ -71,8 +71,8 @@ class LauvinkoPage:
     def add_child(self,other):
         self.children.append(other)
 
-    def generate_HTML(self):
-        self.html = self.xml
+    def generate_HTML(self,info):
+        self.html = LauvinkoPage.tag_operations(self.xml, info)
 
         if self.parent:
             go_up = '<p class="go-up">%s</p>\n' % self.parent.link('Go up to ')
@@ -102,6 +102,54 @@ class LauvinkoPage:
         with open(os.path.join('templates','lauvinko',self.name + '.html'),'w',encoding="utf-8") as fh:
             fh.write(self.html)
 
+    def tag_operations(xml, info):
+        try:
+            tree = etree.fromstring("<root>" + xml + "</root>") # just checking valid xml here
+        except etree.XMLSyntaxError as e:
+            print(xml)
+            raise e
+        soup = bs(xml,"lxml")
+
+        for ref in soup.find_all("ref"):
+            to = ref["to"]
+            ref_metadata = info['pages'][to]
+            
+            ref.name = "a"
+            ref.attrs = {'href':'/lauvinko/' + to}
+            ref.string = ".".join([str(n) for n in ref_metadata['location']]) + ' ' + ref_metadata['title']
+
+        for gloss in soup.find_all("gloss"):
+            outline = gloss["outline"]
+            gloss_obj = Gloss(outline,info['dictionary'])
+            
+            gloss.name = "table"
+            gloss.attrs = {"class":"gloss"}
+            tbody = soup.new_tag("tbody")
+            gloss.append(tbody)
+
+            text_row = soup.new_tag("tr")
+            tbody.append(text_row)
+            transcription_row = soup.new_tag("tr")
+            tbody.append(transcription_row)
+            analysis_row = soup.new_tag("tr")
+            tbody.append(analysis_row)
+
+            for i in range(gloss_obj.size):
+                text_td = soup.new_tag("td")
+                text_td["class"] = "lauvinko"
+                text_td.string = gloss_obj.fields['falavay'][i]
+                text_row.append(text_td)
+                
+                transcription_td = soup.new_tag("td",style="font-style:italic;")
+                transcription_td.string = gloss_obj.fields['transcription'][i]
+                transcription_row.append(transcription_td)
+                
+                analysis_td = soup.new_tag("td")
+                analysis_td.string = gloss_obj.fields['analysis'][i]
+                analysis_row.append(analysis_td)
+        
+        return soup.prettify()[14:-16]
+
     def __repr__(self):
         return 'LauvinkoPage(%s,%s,%s)' % (str(self.location),self.name,self.title)
     
@@ -110,6 +158,7 @@ class MyContentHandler(ContentHandler):
         self.location = []
         self.just_closed = False
         self.pages = {}
+        self.pages_by_name = {}
         self.pages_in_order = []
         self.content_ul = ''
         self.build_dictionary()
@@ -136,6 +185,7 @@ class MyContentHandler(ContentHandler):
 
         newpage = LauvinkoPage(copy.copy(self.location),pagename,pagetitle,self.pages)
         self.pages[join_nums(self.location)] = newpage
+        self.pages_by_name[pagename] = {"title":pagetitle,"location":copy.copy(self.location)}
         self.pages_in_order.append(newpage)
             
         self.content_ul += '\t'*len(self.location) + '<a href="/lauvinko/%s"><li>%s %s</li></a>\n' % (pagename,join_nums(self.location,'.'),pagetitle)
@@ -223,16 +273,16 @@ function toggleshown(table_toggler) {
         forms = word.forms
         headings = {'pk':'Classical Kasanic Inflection','lv':'Lauvinko Inflection','bt':'Botharu Inflection'}
         
-        out = '<table class="notshown">\n'
+        out = '<table class="notshown boldfirst">\n'
         out += '<thead><tr><th colspan="3">%s - <a onclick="toggleshown(this)">Show</a></th></tr></thead><tbody>\n' % headings[language]
         #tense header
-        out += '<tr><td></td><td>Nonpast</td><td>Past</td></tr>\n'
+        out += '<tr><th></th><th>Nonpast</th><th>Past</th></tr>\n'
         if word.category in ['fientive','punctual','stative']:
             #two-tense row
             out += '<tr><td>%s</td>' % ('Perfective' if word.category == 'punctual' else 'Imperfective')
             if word.category == 'fientive':
-                np = forms['im-np']
-                pt = forms['im-pt']
+                np = forms['imnp']
+                pt = forms['impt']
             elif word.category == 'punctual':
                 np = forms['np']
                 pt = forms['pt']
@@ -250,8 +300,8 @@ function toggleshown(table_toggler) {
         if word.category in ['fientive','punctual'] and language != 'bt':
             #frequentative row
             out += '<tr><td>Frequentative</td>'
-            out += '<td><span class="lauvinko">%s</span><br/><span style="font-style:italic;">%s</span></td>' % (forms['fq-np'].falavay(),forms['fq-np'].transcribe())
-            out += '<td><span class="lauvinko">%s</span><br/><span style="font-style:italic;">%s</span></td>' % (forms['fq-pt'].falavay(),forms['fq-pt'].transcribe())
+            out += '<td><span class="lauvinko">%s</span><br/><span style="font-style:italic;">%s</span></td>' % (forms['fqnp'].falavay(),forms['fqnp'].transcribe())
+            out += '<td><span class="lauvinko">%s</span><br/><span style="font-style:italic;">%s</span></td>' % (forms['fqpt'].falavay(),forms['fqpt'].transcribe())
             out += '</tr>\n'
         if word.category in ['fientive','stative'] and language != 'bt':
             #inceptive row
@@ -269,7 +319,7 @@ function toggleshown(table_toggler) {
     def finish_up(self):        
         #build content pages
         for page in self.pages.values():
-            page.generate_HTML()
+            page.generate_HTML({"pages":self.pages_by_name,"dictionary":self.dict_entries})
 
         #build index page
         with open('src/lauvinko_index.xml','r',encoding="utf-8") as fh:

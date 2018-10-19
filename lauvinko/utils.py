@@ -151,12 +151,12 @@ class PKForm:
 ##        return ''.join(s[0]+s[1]+s[2] + ('!' if s[3] == 'high' else '') for s in self.l)
 
 class PKWord:
-    categories = {"fientive":["im-np","im-pt","pf","in","fq-np","fq-pt","ex"],"punctual":["np","pt","fq-np","fq-pt","ex"],
+    categories = {"fientive":["imnp","impt","pf","in","fqnp","fqpt","ex"],"punctual":["np","pt","fqnp","fqpt","ex"],
                   "stative":["gn","pt","in","ex"],"uninflected":["gn"]}
-    citation_forms = {"fientive":"im-np","punctual":"np","stative":"gn","uninflected":"gn"}
-    low_ablauts = {"np":"e","pt":"o","im-np":"aa","im-pt":"o","pf":"e","in":"aa","fq-np":"e","fq-pt":"o","ex":"o"}
-    high_ablauts = {"np":"i","pt":"u","im-np":"a","im-pt":"u","pf":"i","in":"a","fq-np":"i","fq-pt":"u","ex":"u"}
-    prefixes = {"in":"iN","fq-np":"&","fq-pt":"&","ex":"rāF"}
+    citation_forms = {"fientive":"imnp","punctual":"np","stative":"gn","uninflected":"gn"}
+    low_ablauts = {"np":"e","pt":"o","imnp":"aa","impt":"o","pf":"e","in":"aa","fqnp":"e","fqpt":"o","ex":"o"}
+    high_ablauts = {"np":"i","pt":"u","imnp":"a","impt":"u","pf":"i","in":"a","fqnp":"i","fqpt":"u","ex":"u"}
+    prefixes = {"in":"iN","fqnp":"&","fqpt":"&","ex":"rāF"}
 
     def __init__(self, category):
         if category in PKWord.categories:
@@ -183,12 +183,19 @@ class PKWord:
             self.put_form(form_name,word)
 
     def put_form(self,form_name,word):
-        if "@" in word:
-            word_form = word.replace("@",PKWord.low_ablauts[form_name])
-        elif "~" in word:
-            word_form = word.replace("~",PKWord.high_ablauts[form_name])
+        if form_name == "gn":
+            word_form = re.sub("[@~]","",word)
         else:
-            word_form = word
+            if re.search("@[aeiuo]{1,3}",word):
+                word_form = re.sub("@[aeiuo]{1,3}",PKWord.low_ablauts[form_name],word)
+            elif re.search("~[aeiuo]{1,3}",word):
+                word_form = re.sub("~[aeiuo]{1,3}",PKWord.high_ablauts[form_name],word)
+            elif "@" in word:
+                word_form = word.replace("@",PKWord.low_ablauts[form_name])
+            elif "~" in word:
+                word_form = word.replace("~",PKWord.high_ablauts[form_name])
+            else:
+                raise ValueError(form_name + " form must have archiphoneme but doesn't: " + word)
         prefix = PKWord.prefixes.get(form_name,"")
         form_obj = PKForm(word_form,prefix=prefix)
         self.forms[form_name] = form_obj
@@ -561,7 +568,7 @@ class BotharuWord:
         btword = BotharuWord()
         btword.category = pkword.category
         for form_name, word_form in pkword.forms.items():
-            if form_name in ['im-np','im-pt','np','pt','pf','gn']:
+            if form_name in ['imnp','impt','np','pt','pf','gn']:
                 btword.forms[form_name] = BotharuForm.from_pk(word_form)
         btword.citation_form = PKWord.citation_forms[btword.category]
         btword.set_defn(pkword.defn)
@@ -607,6 +614,56 @@ class DictEntry:
         for language_tag in entry:
             de.new_language(language_tag)
         return de
+
+class Gloss:
+    def __init__(self,_outline,dictionary,_language="lv"):
+        self.outline = _outline
+        self.language = _language
+
+        if self.language == "lv":
+            self.gloss_lv(dictionary)
+
+    def gloss_lv(self,dictionary):
+        self.fields = {"falavay":[],"transcription":[],"morphemes":[],"analysis":[],"translation":[]}
+        self.fields["analysis"] = self.outline.split(" ")
+        self.size = len(self.fields["analysis"])
+        
+        for word in self.fields["analysis"]:
+            word_falavay = ""
+            word_transcription = ""
+            for morpheme in word.split("-"):
+                parts = morpheme.split(".")
+                if len(parts) == 2:
+                    stem_id, augment = parts
+                    form = None
+                elif len(parts) == 3:
+                    stem_id, form, augment = parts
+                else:
+                    raise ValueError("Invalid morpheme: " + morpheme)
+
+                try:
+                    lv_stem = dictionary[stem_id].languages['lv']
+                except:
+                    raise ValueError("No stem called " + stem_id)
+
+                if augment == "$au$":
+                    augment = "augmented"
+                elif augment == "$na$":
+                    augment = "nonaugmented"
+                else:
+                    raise ValueError("Invalid augment: " + augment)
+
+                if form is None:
+                    assert(lv_stem.category == "uninflected")
+                    lv_word = lv_stem.forms["gn"]
+                else:
+                    lv_word = lv_stem.forms[form[1:-1]]
+
+                word_transcription += lv_word.transcribe(augment)
+                word_falavay += lv_word.falavay(augment)
+                
+            self.fields['transcription'].append(word_transcription)
+            self.fields['falavay'].append(word_falavay)
 
 # tests be below
 

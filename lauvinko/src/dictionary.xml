@@ -344,7 +344,7 @@
 	<entry category="stative" id="mild" origin="kasanic">
 		<pk>
 			<defn>Mild, easy.</defn>
-			<form type="gn">mentavaau</form>
+			<form type="gn">m@entavaau</form>
 		</pk>
 		<lv>
 			<defn>$ins$ (inanimate) is warm, mild. ** $pat$ (animate) feels warm, comfortable. ** $vol$ (animate) is affectionate, friendly, relaxed.</defn>
@@ -380,7 +380,7 @@
 	<entry category="stative" id="stand" origin="kasanic">
 		<pk>
 			<defn>To stand.</defn>
-			<form type="gn">ntittoka</form>
+			<form type="gn">nt~ittoka</form>
 		</pk>
 		<lv>
 			<defn>$pat$ stands. ** $pat$, a formally animate noun, exists (used with adpositional statements).</defn>
@@ -398,7 +398,7 @@
 	<entry category="stative" id="need" origin="kasanic">
 		<pk>
 			<defn>To need.</defn>
-			<form type="gn">nyovipi</form>
+			<form type="gn">ny@ovipi</form>
 		</pk>
 		<lv>
 			<defn>$pat$ needs $dat$.</defn>
@@ -407,7 +407,7 @@
 	<entry category="stative" id="wise" origin="kasanic">
 		<pk>
 			<defn>Wise, intelligent.</defn>
-			<form type="gn">ncaaye</form>
+			<form type="gn">nc@aaye</form>
 		</pk>
 		<lv>
 			<defn>$vol$ is wise. ** (inchoative, typically religious) $vol$ instructs or presents a revelation to $ins$.</defn>
@@ -434,7 +434,7 @@
 	<entry category="stative" id="yellow" origin="kasanic">
 		<pk>
 			<defn>Yellow.</defn>
-			<form type="gn">nkimaa</form>
+			<form type="gn">nk~imaa</form>
 		</pk>
 		<lv>
 			<defn>$pat$ is yellow. ** $pat$ is exuberant, spontaneous, fun. ** (inchoative) $pat$ cuts loose, gets high.</defn>
@@ -506,7 +506,7 @@
 	<entry category="stative" id="parent" origin="kasanic">
 		<pk>
 			<defn>To parent, procreate.</defn>
-			<form type="gn">saattu</form>
+			<form type="gn">s@aattu</form>
 		</pk>
 		<lv>
 			<defn>$vol$ is the parent of $pat$.</defn>
@@ -542,7 +542,7 @@
 	<entry category="stative" id="red" origin="kasanic">
 		<pk>
 			<defn>Red.</defn>
-			<form type="gn">settongvi</form>
+			<form type="gn">s@ettongvi</form>
 		</pk>
 		<lv>
 			<defn>$pat$ is red.</defn>
@@ -560,7 +560,7 @@
 	<entry category="stative" id="sun" origin="kasanic">
 		<pk>
 			<defn>Sun.</defn>
-			<form type="gn">tuhisa</form>
+			<form type="gn">t~uhisa</form>
 		</pk>
 		<lv>
 			<defn>$pat$ shines, is bright. ** The sun.</defn>
@@ -569,7 +569,7 @@
 	<entry category="stative" id="sleep" origin="kasanic">
 		<pk>
 			<defn>To sleep.</defn>
-			<form type="gn">vaahingaa</form>
+			<form type="gn">v@aahingaa</form>
 		</pk>
 		<lv>
 			<defn>(reflexive) $ins$ sleeps. ** (frequentative reflexive) $ins$ inhabits, resides in $loc$.</defn>
@@ -623,7 +623,7 @@
 	<entry category="stative" id="hot" origin="kasanic">
 		<pk>
 			<defn>Hot, warm.</defn>
-			<form type="gn">saaive</form>
+			<form type="gn">s@aaive</form>
 		</pk>
 	</entry>
 	<entry category="uninflected" id="air" origin="kasanic">
@@ -635,13 +635,13 @@
 	<entry category="stative" id="lie" origin="kasanic">
 		<pk>
 			<defn>To lie, to be (with prepositional phrase)</defn>
-			<form type="gn">konco</form>
+			<form type="gn">k@onco</form>
 		</pk>
 	</entry>
 	<entry category="stative" id="drape" origin="kasanic">
 		<pk>
 			<defn>To cover, to hang, to drape.</defn>
-			<form type="gn">taaici</form>
+			<form type="gn">t@aaici</form>
 		</pk>
 		<lv>
 			<defn>To cover, to hang, to drape. Cloud; curtain; spider's web.</defn>
@@ -650,7 +650,7 @@
 	<entry category="stative" id="dark" origin="kasanic">
 		<pk>
 			<defn>To be dark.</defn>
-			<form type="gn">kaamengaa</form>
+			<form type="gn">k@aamengaa</form>
 		</pk>
 		<lv>
 			<defn>To be dark. Night.</defn>
@@ -659,7 +659,7 @@
 	<entry category="stative" id="reach" origin="kasanic">
 		<pk>
 			<defn>To reach, to stretch</defn>
-			<form type="gn">pesavaai</form>
+			<form type="gn">p@esavaai</form>
 		</pk>
 		<lv>
 			<defn>$pat$ reaches, attains $all$</defn>
