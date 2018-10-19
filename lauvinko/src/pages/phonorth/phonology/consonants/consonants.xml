@@ -1,0 +1,28 @@
+<p>According to my analysis, Lauvìnko has a quite small consonant inventory of only 12 phonemes, though it exhibits a moderate degree of allophony in the coronals:</p>
+
+<table class="boldfirst inline"><tbody>
+	<tr><th></th>         <th>Labial</th><th>Dental</th><th>Alveolar</th><th>Retroflex</th><th>Palatal</th><th>Velar</th><th>Glottal</th></tr>
+	<tr><td>Nasal</td>    <td>m</td>     <td></td>      <td>n</td>       <td>(ɳː)</td>     <td>(ɲ)</td>    <td>ŋ</td>    <td></td>       </tr>	
+	<tr><td>Stop</td>     <td>p</td>     <td>t</td>     <td></td>        <td>(ʈː)</td>     <td></td>       <td>k</td>    <td></td>       </tr>	
+	<tr><td>Affricate</td><td></td>      <td></td>      <td>t͡͡s</td>      <td>(ʈ͡ːʂ)</td>    <td>(t͡ɕ)</td>   <td></td>     <td></td>       </tr>	
+	<tr><td>Fricative</td><td></td>      <td></td>      <td>s</td>       <td>(ʂː)</td>     <td>(ɕ)</td>    <td></td>     <td>h</td>      </tr>
+	<tr><td>Approximant</td><td>ʋ</td>   <td></td>      <td></td>        <td></td>         <td>j</td>      <td></td>     <td></td>       </tr>	
+	<tr><td>Lateral</td>  <td></td>      <td>l</td>     <td></td>        <td></td>         <td>(ʎ)</td>    <td></td>     <td></td>       </tr>	
+	<tr><td>Tap</td>      <td></td>      <td></td>      <td></td>        <td>(ɽ)</td>      <td></td>       <td></td>     <td></td>       </tr>	
+</tbody></table>
+
+<p>/t l/ are typically dental, while /n t͡͡s s/ are alveolar. Stops are pronounced unaspirated.</p>
+
+<p>[ɽ] is an allophone of /l/ that appears syllable-finally before peripheral consonants or word boundaries, and the other retroflex sounds emerge from mutual assimilation of /l/ with a following coronal /n t t͡͡s s/, and only appear geminate. Retroflex consonants have apparent minimal pairs with alveolar/dental consonants in the middle of words:</p>
+
+			mielosiq									miesosiq
+			mìrsi										mìssi
+			/milsi/								/missi/
+			[mɪʂːɪ]									[mɪsːɪ]
+			“the sister”						“the nonce word” [gotta get a real example…]
+
+<p>The palatal and alveolo-palatal sounds /ɲ t͡ɕ ʎ ɕ/ appear as allophones of coronal consonants /n t͡͡s l s/ before /i/. They also appear geminate as a result of mutual assimilation between any consonant besides /ʋ/ and a following /j/. Apparent minimal pairs between (alveolo-)palatals and other coronals can thus appear in two ways, both due to merger of /e/ and /i/ in unstressed open syllables, and due to assimilation of a consonant with a following /j/:</p>
+
+<gloss outline="grow.$fqpt$.$au$ hot.$gn$.$na$ sleep.$pt$.$au$"/>
+
+<p>For more on consonant allophony cf. <ref to="consonant_sandhi"/>.</p>
