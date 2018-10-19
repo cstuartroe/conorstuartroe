@@ -147,6 +147,9 @@ class PKForm:
     def generate_lauvinko(self):
         self.lauvinko_form = LauvinkoForm.from_pk(self)
 
+    def to_json(self):
+        return {"falavay":self.falavay(),"transcription":self.transcribe()}
+
 ##    def __str__(self):
 ##        return ''.join(s[0]+s[1]+s[2] + ('!' if s[3] == 'high' else '') for s in self.l)
 
@@ -220,6 +223,12 @@ class PKWord:
         if lemma.defn == 'Not defined.':
             raise ValueError("AAAAAHHH")
         return lemma
+
+    def to_json(self):
+        output = {"definition":self.defn, "forms":{}}
+        for name,form in self.forms.items():
+            output["forms"][name] = form.to_json()
+        return output
 
 LF_ONSS = ['m','n','ñ','ṅ','B','D','G','p','t','c','k','P','T','C','K','v','l','s','y','h']
 LF_VOWS = ['a','ə','i','u','e','o']
@@ -361,6 +370,10 @@ class LauvinkoForm:
         lvform.falavay_forms = (pkform.falavay(True),pkform.falavay(False))
         return lvform
 
+    def to_json(self):
+        return {"augmented":{"falavay":self.falavay_forms[0],"transcription":self.transcribe("augmented")},
+                "nonaugmented":{"falavay":self.falavay_forms[1],"transcription":self.transcribe("nonaugmented")}}
+
 class LauvinkoWord:
     def __init__(self):
         self.category = None
@@ -400,6 +413,12 @@ class LauvinkoWord:
         lvword.citation_form = PKWord.citation_forms[lvword.category]
         lvword.set_defn(pkword.defn)
         return lvword
+
+    def to_json(self):
+        output = {"definition":self.defn, "forms":{}}
+        for name,form in self.forms.items():
+            output["forms"][name] = form.to_json()
+        return output
 
 BT_ONSS = ['m','p','t','z','c','k',
            'M','P','T','Z','C','K',
@@ -533,6 +552,9 @@ class BotharuForm:
         btform.falavay_form = pkform.falavay(False)
         return btform
 
+    def to_json(self):
+        return {"falavay":self.falavay(),"transcription":self.transcribe()}
+
 class BotharuWord:
     def __init__(self):
         self.category = None
@@ -574,6 +596,12 @@ class BotharuWord:
         btword.set_defn(pkword.defn)
         return btword
 
+    def to_json(self):
+        output = {"definition":self.defn, "forms":{}}
+        for name,form in self.forms.items():
+            output["forms"][name] = form.to_json()
+        return output
+
 class DictEntry:
     origins = ["kasanic","sanskrit","malay","tamil","hokkien","arabic","portuguese","dutch","english"]
     
@@ -603,7 +631,7 @@ class DictEntry:
             self.languages["bt"].update_from_tag(language_tag)
 
 
-    def from_entry(entry):
+    def from_xml(entry):
         category = entry.get("category")
         ident = entry.get("id")
         origin = entry.get("origin")
@@ -615,6 +643,22 @@ class DictEntry:
             de.new_language(language_tag)
         return de
 
+    def to_json(self):
+        output = {"ident":self.ident,"category":self.category,"languages":{}}
+        for language in self.languages:
+            output["languages"][language] = self.languages[language].to_json()
+        return output
+
+class KasanicDictionary:
+    def __init__(self):
+        self.entries = {}
+        entries_xml = etree.parse('src/dictionary.xml').getroot()
+        for entry in entries_xml:
+            de = DictEntry.from_xml(entry)
+            if de.ident in self.entries:
+                raise KeyError('Root "%s" has multiple definitions.' % de.ident)
+            self.entries[de.ident] = de
+
 class Gloss:
     def __init__(self,_outline,dictionary,_language="lv"):
         self.outline = _outline
@@ -624,9 +668,9 @@ class Gloss:
             self.gloss_lv(dictionary)
 
     def gloss_lv(self,dictionary):
-        self.fields = {"falavay":[],"transcription":[],"morphemes":[],"analysis":[],"translation":[]}
+        self.fields = {"falavay":[],"transcription":[],"morphemes":[],"analysis":[]}
         self.fields["analysis"] = self.outline.split(" ")
-        self.size = len(self.fields["analysis"])
+        self.length = len(self.fields["analysis"])
         
         for word in self.fields["analysis"]:
             word_falavay = ""
@@ -642,8 +686,9 @@ class Gloss:
                     raise ValueError("Invalid morpheme: " + morpheme)
 
                 try:
-                    lv_stem = dictionary[stem_id].languages['lv']
+                    lv_stem = dictionary.entries[stem_id].languages['lv']
                 except:
+                    print(dictionary.entries.keys())
                     raise ValueError("No stem called " + stem_id)
 
                 if augment == "$au$":

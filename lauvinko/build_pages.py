@@ -134,7 +134,7 @@ class LauvinkoPage:
             analysis_row = soup.new_tag("tr")
             tbody.append(analysis_row)
 
-            for i in range(gloss_obj.size):
+            for i in range(gloss_obj.length):
                 text_td = soup.new_tag("td")
                 text_td["class"] = "lauvinko"
                 text_td.string = gloss_obj.fields['falavay'][i]
@@ -209,15 +209,9 @@ class MyContentHandler(ContentHandler):
         self.just_closed = True
 
     def build_dictionary(self):
-        self.dict_entries = {}
-        dictionary = etree.parse('src/dictionary.xml').getroot()
-        for entry in dictionary:
-            de = DictEntry.from_entry(entry)
-            if de.ident in self.dict_entries:
-                raise KeyError('Root "%s" has multiple definitions.' % de.ident)
-            self.dict_entries[de.ident] = de
+        self.dictionary = KasanicDictionary()
 
-        entries_alphabetized = list(self.dict_entries.values())
+        entries_alphabetized = list(self.dictionary.entries.values())
         entries_alphabetized.sort(key = lambda x: x.languages['pk'].get_citation_form().alphabetical())
 
         dictionary_text = ''
@@ -319,7 +313,7 @@ function toggleshown(table_toggler) {
     def finish_up(self):        
         #build content pages
         for page in self.pages.values():
-            page.generate_HTML({"pages":self.pages_by_name,"dictionary":self.dict_entries})
+            page.generate_HTML({"pages":self.pages_by_name,"dictionary":self.dictionary})
 
         #build index page
         with open('src/lauvinko_index.xml','r',encoding="utf-8") as fh:
