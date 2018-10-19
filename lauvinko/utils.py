@@ -1,6 +1,7 @@
 import re
 import logging
 import copy
+import os
 from lxml import etree
 
 def replacement_suite(replacements,word):
@@ -29,6 +30,10 @@ flatten = lambda l: [item for sublist in l for item in sublist]
 PK_PRES = ['H','M']
 PK_ONSS = ['m','n','ñ','ṅ','G','p','t','c','k','K','v','r','s','y','h']
 PK_VOWS = ['ā','a','i','u','e','o','Y','W']
+
+class LauvinkoError(ValueError):
+    def __init__(self,*args,**kwargs):
+        super(LauvinkoError,self).__init__(*args,**kwargs)
 
 class PKForm:
     prefixes = PK_PRES
@@ -652,12 +657,19 @@ class DictEntry:
 class KasanicDictionary:
     def __init__(self):
         self.entries = {}
-        entries_xml = etree.parse('src/dictionary.xml').getroot()
+        dict_filename = os.path.join(os.path.dirname(os.path.realpath(__file__)),'src/dictionary.xml')
+        entries_xml = etree.parse(dict_filename).getroot()
         for entry in entries_xml:
             de = DictEntry.from_xml(entry)
             if de.ident in self.entries:
                 raise KeyError('Root "%s" has multiple definitions.' % de.ident)
             self.entries[de.ident] = de
+
+    def lookup_stem(self,stem_id):
+        if stem_id in self.entries:
+            return self.entries[stem_id]
+        else:
+            raise LauvinkoError("No stem called " + stem_id)
 
 class Gloss:
     def __init__(self,_outline,dictionary,_language="lv"):
@@ -683,13 +695,9 @@ class Gloss:
                 elif len(parts) == 3:
                     stem_id, form, augment = parts
                 else:
-                    raise ValueError("Invalid morpheme: " + morpheme)
+                    raise LauvinkoError("Invalid morpheme: " + morpheme)
 
-                try:
-                    lv_stem = dictionary.entries[stem_id].languages['lv']
-                except:
-                    print(dictionary.entries.keys())
-                    raise ValueError("No stem called " + stem_id)
+                lv_stem = dictionary.lookup_stem(stem_id).languages['lv']
 
                 if augment == "$au$":
                     augment = "augmented"

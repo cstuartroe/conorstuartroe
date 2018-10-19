@@ -15,36 +15,33 @@ def page(request,name):
         return HttpResponseRedirect('/lauvinko')
 
 def gloss_api(request):
-    try:
-        outline = request.GET.get("outline",None).replace("_"," ")
-        language = request.GET.get("language","lv")
+    outline = request.GET.get("outline",None).replace("_"," ")
+    language = request.GET.get("language","lv")
 
-        dictionary = KasanicDictionary()
+    dictionary = KasanicDictionary()
+    try:
         gloss = Gloss(outline,dictionary,language)
-        
         output = {"status":"success","gloss":gloss.fields,"length":gloss.length}
-    except BaseException as e:
-        output = {"status":"fail","message":str(e)}
+    except LauvinkoError as e:
+        output = {"status":"failed","reason":str(e)}
     return HttpResponse(json.dumps(output,indent=4),content_type='application/json')
 
 def dict_api(request):
-##    try:
     stem_id = request.GET.get("stem_id")
     dictionary = KasanicDictionary()
     
-    output = {"status":"success","entry":dictionary.entries[stem_id].to_json()}
-##    except BaseException as e:
-##        output = {"status":"fail","message":str(e)}
+    try:
+        output = {"status":"success","entry":dictionary.lookup_stem(stem_id).to_json()}
+    except LauvinkoError as e:
+        output = {"status":"failed","reason":str(e)}
     return HttpResponse(json.dumps(output,indent=4),content_type='application/json')
 
 def wholedict_api(request):
-    try:
-        stem_id = request.GET.get("stem_id")
-        dictionary = KasanicDictionary()
+    stem_id = request.GET.get("stem_id")
+    dictionary = KasanicDictionary()
         
-        output = {"status":"success","length":len(dictionary.entries),"entries":{}}
-        for ident,entry in dictionary.entries.items():
-            output["entries"][ident] = entry.to_json()
-    except BaseException as e:
-        output = {"status":"fail","message":str(e)}
+    output = {"status":"success","length":len(dictionary.entries),"entries":{}}
+    for ident,entry in dictionary.entries.items():
+        output["entries"][ident] = entry.to_json()
+    
     return HttpResponse(json.dumps(output,indent=4),content_type='application/json')
