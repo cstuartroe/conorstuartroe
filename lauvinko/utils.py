@@ -694,6 +694,10 @@ class Gloss:
                     form = None
                 elif len(parts) == 3:
                     stem_id, form, augment = parts
+                    if form[-1] != '$' or form[0] != '$':
+                        raise LauvinkoError("Invalid form: " + form)
+                    else:
+                        form = form[1:-1]
                 else:
                     raise LauvinkoError("Invalid morpheme: " + morpheme)
 
@@ -704,13 +708,18 @@ class Gloss:
                 elif augment == "$na$":
                     augment = "nonaugmented"
                 else:
-                    raise ValueError("Invalid augment: " + augment)
+                    raise LauvinkoError("Invalid augment: " + augment)
 
                 if form is None:
-                    assert(lv_stem.category == "uninflected")
-                    lv_word = lv_stem.forms["gn"]
+                    if lv_stem.category == "uninflected":
+                        lv_word = lv_stem.forms["gn"]
+                    else:
+                        raise LauvinkoError(stem_id + " is an inflected stem - please provide stem form.")
                 else:
-                    lv_word = lv_stem.forms[form[1:-1]]
+                    if form in lv_stem.forms:
+                        lv_word = lv_stem.forms[form]
+                    else:
+                        raise LauvinkoError("Stem " + stem_id + " has forms " + ",".join(lv_stem.forms.keys()))
 
                 word_transcription += lv_word.transcribe(augment)
                 word_falavay += lv_word.falavay(augment)
