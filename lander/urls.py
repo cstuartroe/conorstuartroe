@@ -10,5 +10,6 @@ urlpatterns = [
     path('guide/webtech', views.webguide, name='webguide'),
     path('clock', views.clock, name='clock'),
     path('calendar', views.calendar, name='calendar'),
+    path('negaternary', views.negaternary, name='negaternary'),
     path('', views.index, name='index')
 ]

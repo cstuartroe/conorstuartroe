@@ -1,0 +1,66 @@
+{% extends 'lander/base.html' %}
+
+{% block content %}
+<div ng-app="negaternary" ng-controller="myCtrl">
+    <h1 style="padding-bottom:1em;">The Negaternarizer</h1>
+	<div class="container"><div class="row">
+		<div class="col-xs-10">
+  			<textarea ng-model="stuff" style="width:100%; height:40vh;"></textarea>
+  			<p id="output" ng-bind="transform(stuff)" style="word-break: break-all;"></p>
+		</div>
+		<div class="col-xs-2">
+			<button style="width:100%; height:60vh; border-radius: 1em;" ng-click="swap()" ng-bind="swapname"></button>
+		</div>
+	</div></div>
+</div>
+
+<script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.6.9/angular.min.js"></script>
+<script>
+	var app = angular.module('negaternary', []);
+
+	app.controller('myCtrl', function($scope) {
+		$scope.stuff = "";
+		$scope.encoding = true;
+		$scope.swapname = "Switch to decoding";
+
+		$scope.codings = {" ":"000","a":"001","b":"002","c":"120","d":"121","e":"122","f":"110","g":"111","h":"112",
+						  "i":"100","j":"101","k":"102","l":"220","m":"221","n":"222","o":"210","p":"211","q":"212",
+						  "r":"200","s":"201","t":"202","u":"020","v":"021","w":"022","x":"010","y":"011","z":"012"}
+		$scope.decodings = Object.keys($scope.codings).reduce(function(obj,key){
+			obj[ $scope.codings[key] ] = key;
+			return obj;
+		},{});
+
+		$scope.encode = function(plain){
+			plain = plain.normalize('NFD').replace(/[\u0300-\u036f]/g, "").toLowerCase();
+			var code = "";
+			for (var i = 0; i < plain.length; i++) {
+				code += $scope.codings[plain.charAt(i)] || "";
+			}
+			return code;
+		};
+		$scope.decode = function(code){
+			var plain = "";
+			for (var i = 0; i < (code.length/3); i++) {
+				plain += $scope.decodings[code.slice((3*i),(3*i+3))] || "";
+			}
+			return plain;
+		};
+
+	    $scope.transform = $scope.encode;
+	    $scope.swap = function() {
+	    	$scope.stuff = $scope.transform($scope.stuff);
+	    	if($scope.encoding){
+	    		$scope.encoding = false;
+	    		$scope.transform = $scope.decode;
+				$scope.swapname = "Switch to encoding";
+	    	}
+	    	else {
+	    		$scope.encoding = true;
+	    		$scope.transform = $scope.encode;
+				$scope.swapname = "Switch to decoding";
+	    	}
+	    };
+	});
+</script>
+{% endblock %}

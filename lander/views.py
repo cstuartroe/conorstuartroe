@@ -28,3 +28,6 @@ def clock(request):
 
 def calendar(request):
     return render(request, 'lander/calendar.html')
+
+def negaternary(request):
+    return render(request, 'lander/negaternary.html')
