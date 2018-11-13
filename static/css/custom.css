@@ -8,7 +8,6 @@ other2 #834B80
 placeholderB8D29F
 */
 
-
 @font-face {
     font-family: "Gentium";
     src: url("/static/font/GentiumPlus-R.ttf") format('truetype'),
@@ -60,16 +59,23 @@ p, td, th, textarea, button {
 	text-align: center;
 }
 
-textarea {
-	background-color: #303438;
-	color: #E1E6D4;
-}
-
 p, td, th, button {
 	color: #303438;
 	padding: 0;
 	font-weight: 600;
 	margin: 1em;	
+}
+
+textarea {
+	background-color: #303438;
+	color: #E1E6D4;
+}
+
+button {
+	margin: 1em 0;
+	line-height: 1;
+	border-radius: 1em; 
+	padding: 3vw;
 }
 
 td, th {
