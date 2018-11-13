@@ -11,5 +11,7 @@ urlpatterns = [
     path('clock', views.clock, name='clock'),
     path('calendar', views.calendar, name='calendar'),
     path('negaternary', views.negaternary, name='negaternary'),
+    path('negabinary', views.negabinary, name='negabinary'),
+    path('amcyezs', views.amcyezs, name='amcyezs'),
     path('', views.index, name='index')
 ]

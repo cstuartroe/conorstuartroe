@@ -31,3 +31,9 @@ def calendar(request):
 
 def negaternary(request):
     return render(request, 'lander/negaternary.html')
+
+def negabinary(request):
+    return render(request, 'lander/negabinary.html')
+
+def amcyezs(request):
+    return render(request, 'lander/amcyezs.html')
