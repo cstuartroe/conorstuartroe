@@ -25,6 +25,15 @@
 	  			<p id="output" ng-bind="transform(stuff)" style="word-break: break-all;"></p>
   			</div>
 		</div>
+		<div class="row"><div class="col-xs-12">
+			<h2>How does it work?</h2>
+
+			<p>We've all heard of number systems with different bases - binary is base 2, hexidecimal is base 16, and decimal, our most familiar system, is base 10. Surprisingly, it's also possible to use number systems with <i>negative</i> bases. Negaternary is base -3: the rightmost digit represents 1s (as in all number systems), the next represents -3s, the next represents 9s, then -27s, and so on. It's possible to represent any integer in negaternary with the digits 0, 1, and 2, without the need for negative signs.</p>
+
+			<p>Three digit negaternary numbers cover the range between -6 and 20, and range with 27 elements. This is perfect, the exact number of encodings needed to unambiguously encode 26 letters and space! I encode space as 0, "a" as 1, on up to "t" as 20, then wrap around and encode "u" as -6, on to "z" as -1. You can encode text simply by sending the negaternary digits, or you can perform one or two bitshifts in either direction and take the enciphered letters.</p>
+
+			<p>This is not a cryptographically secure encoder! Don't send state secrets with it! It's just for making you and your friends feel like spies.</p>
+		</div></div>
 	</div></div>
 </div>
 
