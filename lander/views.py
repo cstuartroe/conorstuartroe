@@ -1,5 +1,5 @@
 from django.shortcuts import render
-from django.http import HttpResponse
+from django.http import HttpResponse, HttpResponseRedirect
 from .wpfetch import *
 from .RSS_reader import *
 import json
@@ -52,3 +52,8 @@ def boxdata(request):
     with open("lander/boxdata.json","w") as fh:
         json.dump(data,fh,indent=4)
     return HttpResponse(json.dumps(data,indent=4),content_type='application/json')
+
+def boxreset(request):
+    with open('lander/boxdata.json','w') as fh:
+        fh.write("{}")
+    return HttpResponseRedirect('/boxes')

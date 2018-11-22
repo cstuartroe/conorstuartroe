@@ -2,3 +2,4 @@ venv
 __pycache__
 settings_secret.py
 lauvinko/templates/lauvinko
+boxdata.json

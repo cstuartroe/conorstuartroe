@@ -15,5 +15,6 @@ urlpatterns = [
     path('amcyezs', views.amcyezs, name='amcyezs'),
     path('boxes', views.boxes, name='boxes'),
     path('boxdata', views.boxdata, name='boxdata'),
+    path('boxreset', views.boxreset, name='boxreset'),
     path('', views.index, name='index')
 ]
