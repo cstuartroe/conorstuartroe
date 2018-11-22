@@ -1,0 +1,112 @@
+{% extends 'lander/base.html' %}
+
+{% block content %}
+<div id="details">
+	<h2>Your Username:</h2>
+	<input type="text" id="username"/>
+	<br/>
+	<button id="theButt">Let's go!</button>
+</div>
+<table style="margin: 10vh;" id="grid">
+	<tr>
+		<td class="cell"></td>
+		<td class="cell"></td>
+		<td class="cell"></td>
+		<td class="cell"></td>
+		<td class="cell"></td>
+		<td class="cell"></td>
+	</tr>
+	<tr>
+		<td class="cell"></td>
+		<td class="cell"></td>
+		<td class="cell"></td>
+		<td class="cell"></td>
+		<td class="cell"></td>
+		<td class="cell"></td>
+	</tr>
+	<tr>
+		<td class="cell"></td>
+		<td class="cell"></td>
+		<td class="cell"></td>
+		<td class="cell"></td>
+		<td class="cell"></td>
+		<td class="cell"></td>
+	</tr>
+	<tr>
+		<td class="cell"></td>
+		<td class="cell"></td>
+		<td class="cell"></td>
+		<td class="cell"></td>
+		<td class="cell"></td>
+		<td class="cell"></td>
+	</tr>
+	<tr>
+		<td class="cell"></td>
+		<td class="cell"></td>
+		<td class="cell"></td>
+		<td class="cell"></td>
+		<td class="cell"></td>
+		<td class="cell"></td>
+	</tr>
+	<tr>
+		<td class="cell"></td>
+		<td class="cell"></td>
+		<td class="cell"></td>
+		<td class="cell"></td>
+		<td class="cell"></td>
+		<td class="cell"></td>
+	</tr>
+</table>
+
+<script>
+	var myX = 1;
+	var myY = 1;
+	window.onkeyup = function(e) {
+		var key = e.keyCode ? e.keyCode : e.which;
+
+		if (key == 38) {
+   			myY -= 1;
+   			if (myY < 1) {myY = 1; }
+		} else if (key == 40) {
+   			myY += 1;
+   			if (myY > 6) {myY = 6; }
+		} else if (key == 39) {
+   			myX += 1;
+   			if (myX > 6) {myY = 6; }
+		} else if (key == 37) {
+   			myX -= 1;
+   			if (myX < 1) {myX = 1; }
+		}
+	}
+	$("#theButt").click(function(){
+		var name = $("#username").val();
+		if (!name || name.length == 0) { 
+			alert("Please enter a username");
+		} else { 
+			document.getElementById('username').readOnly = true;
+			$("#details").css("display","none");
+			setInterval(function(){
+				$.get("boxdata",
+				{
+					"user":name,
+					"x":myX,
+					"y":myY
+				},
+				function(data, status){
+					$("#grid tr td").removeClass("filled");
+					$("#grid tr td").text("");
+					for (var user in data) {
+						var x = data[user]["x"];
+						var y = data[user]["y"];
+						var selector = "#grid tr:nth-child(" + y + ") td:nth-child(" + x + ")";
+						console.log(user);
+						console.log(selector);
+						$(selector).addClass("filled");
+						$(selector).text(user);
+					}
+				});
+			}, 200);
+		}
+	});
+</script>
+{% endblock %}

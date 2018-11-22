@@ -237,3 +237,24 @@ table {
 	position: fixed;
 	bottom: 0px;
 }
+
+.cell {
+	background-color: #444444;
+	border-style: solid;
+	width: 6vw; 
+	height: 6vw;
+	text-align: center;
+}
+
+.filled {
+	background-color: red;
+}
+
+input {
+	background-color: white;
+	font-size: 2em;
+}
+
+input[readonly] {
+	background-color: #888;
+}

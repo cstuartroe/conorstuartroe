@@ -13,5 +13,7 @@ urlpatterns = [
     path('negaternary', views.negaternary, name='negaternary'),
     path('negabinary', views.negabinary, name='negabinary'),
     path('amcyezs', views.amcyezs, name='amcyezs'),
+    path('boxes', views.boxes, name='boxes'),
+    path('boxdata', views.boxdata, name='boxdata'),
     path('', views.index, name='index')
 ]
