@@ -30,6 +30,9 @@ def clock(request):
 def calendar(request):
     return render(request, 'lander/calendar.html')
 
+def new_calendar(request):
+    return render(request, 'lander/calendar2.html')
+
 def negaternary(request):
     return render(request, 'lander/negaternary.html')
 

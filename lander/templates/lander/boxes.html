@@ -9,52 +9,52 @@
 </div>
 <table style="margin: 10vh;" id="grid">
 	<tr>
-		<td class="cell"></td>
-		<td class="cell"></td>
-		<td class="cell"></td>
-		<td class="cell"></td>
-		<td class="cell"></td>
-		<td class="cell"></td>
+		<td><div class="cell"></div></td>
+		<td><div class="cell"></div></td>
+		<td><div class="cell"></div></td>
+		<td><div class="cell"></div></td>
+		<td><div class="cell"></div></td>
+		<td><div class="cell"></div></td>
 	</tr>
 	<tr>
-		<td class="cell"></td>
-		<td class="cell"></td>
-		<td class="cell"></td>
-		<td class="cell"></td>
-		<td class="cell"></td>
-		<td class="cell"></td>
+		<td><div class="cell"></div></td>
+		<td><div class="cell"></div></td>
+		<td><div class="cell"></div></td>
+		<td><div class="cell"></div></td>
+		<td><div class="cell"></div></td>
+		<td><div class="cell"></div></td>
 	</tr>
 	<tr>
-		<td class="cell"></td>
-		<td class="cell"></td>
-		<td class="cell"></td>
-		<td class="cell"></td>
-		<td class="cell"></td>
-		<td class="cell"></td>
+		<td><div class="cell"></div></td>
+		<td><div class="cell"></div></td>
+		<td><div class="cell"></div></td>
+		<td><div class="cell"></div></td>
+		<td><div class="cell"></div></td>
+		<td><div class="cell"></div></td>
 	</tr>
 	<tr>
-		<td class="cell"></td>
-		<td class="cell"></td>
-		<td class="cell"></td>
-		<td class="cell"></td>
-		<td class="cell"></td>
-		<td class="cell"></td>
+		<td><div class="cell"></div></td>
+		<td><div class="cell"></div></td>
+		<td><div class="cell"></div></td>
+		<td><div class="cell"></div></td>
+		<td><div class="cell"></div></td>
+		<td><div class="cell"></div></td>
 	</tr>
 	<tr>
-		<td class="cell"></td>
-		<td class="cell"></td>
-		<td class="cell"></td>
-		<td class="cell"></td>
-		<td class="cell"></td>
-		<td class="cell"></td>
+		<td><div class="cell"></div></td>
+		<td><div class="cell"></div></td>
+		<td><div class="cell"></div></td>
+		<td><div class="cell"></div></td>
+		<td><div class="cell"></div></td>
+		<td><div class="cell"></div></td>
 	</tr>
 	<tr>
-		<td class="cell"></td>
-		<td class="cell"></td>
-		<td class="cell"></td>
-		<td class="cell"></td>
-		<td class="cell"></td>
-		<td class="cell"></td>
+		<td><div class="cell"></div></td>
+		<td><div class="cell"></div></td>
+		<td><div class="cell"></div></td>
+		<td><div class="cell"></div></td>
+		<td><div class="cell"></div></td>
+		<td><div class="cell"></div></td>
 	</tr>
 </table>
 
@@ -93,12 +93,12 @@
 					"y":myY
 				},
 				function(data, status){
-					$("#grid tr td").removeClass("filled");
-					$("#grid tr td").text("");
+					$("#grid tr td div").removeClass("filled");
+					$("#grid tr td div").text("");
 					for (var user in data) {
 						var x = data[user]["x"];
 						var y = data[user]["y"];
-						var selector = "#grid tr:nth-child(" + y + ") td:nth-child(" + x + ")";
+						var selector = "#grid tr:nth-child(" + y + ") td:nth-child(" + x + ") div";
 						console.log(user);
 						console.log(selector);
 						$(selector).addClass("filled");

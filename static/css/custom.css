@@ -238,12 +238,18 @@ table {
 	bottom: 0px;
 }
 
+#grid td {
+	padding: 0;
+	margin: 0;
+}
+
 .cell {
 	background-color: #444444;
 	border-style: solid;
 	width: 6vw; 
 	height: 6vw;
 	text-align: center;
+	margin: 0;
 }
 
 .filled {

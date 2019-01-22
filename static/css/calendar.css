@@ -1,7 +1,7 @@
 @font-face {
-    font-family: "Arabic Typesetting";
-    src: url('/arabtype.ttf') format('truetype'),
-    	url('/arabtype.svg') format('svg');
+    font-family: "Gentium";
+    src: url("/static/font/GentiumPlus-R.ttf") format('truetype'),
+    	url("/static/font/GentiumPlus-R.svg") format('svg');
     font-weight: normal;
 }
 
@@ -14,7 +14,7 @@ body{
 }
 
 #current{
-	font-family: "Arabic Typesetting";
+	font-family: "Gentium";
 	font-size: 6em;
 	font-weight: 600;
 	color: #ddddcc;
@@ -34,7 +34,7 @@ body{
 }
 
 .season h2{
-	font-family: "Arabic Typesetting";
+	font-family: "Gentium";
 	font-size: 2em;
 	font-weight: 600;
 	margin: .25em;
@@ -60,7 +60,7 @@ body{
 
 .month tr th div p{
 	font-size: 2em;
-	font-family: "Arabic Typesetting";
+	font-family: "Gentium";
 	margin: 0em;
 	margin-top: .25em;
 }
