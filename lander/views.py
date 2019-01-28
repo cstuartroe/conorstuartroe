@@ -2,6 +2,7 @@ from django.shortcuts import render
 from django.http import HttpResponse, HttpResponseRedirect
 from .wpfetch import *
 from .RSS_reader import *
+from .randwords import *
 import json
 
 def index(request):
@@ -60,3 +61,7 @@ def boxreset(request):
     with open('lander/boxdata.json','w') as fh:
         fh.write("{}")
     return HttpResponseRedirect('/boxes')
+
+def randwords(request,POSs):
+    wordlist = randwords(POSs)
+    return render(request, 'lander/randwords.html', wordlist)
