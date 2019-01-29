@@ -1,16 +1,41 @@
 from random import randrange
 
-def randwords(POSs):
-    wordlist = []
-    for letter in POSs:
-        if letter == "V":
-            wordlist.append(randword("verb"))
-        elif letter == "A":
-            wordlist.append(randword("adj"))
-        elif letter == "N":
-            wordlist.append(randword("noun"))
+def clearseed():
+    for i in range(100,200):
+        randrange(i)
 
-def randword(POS):
+def genwords(pattern):
+    words = ""
+    for letter in pattern:
+        if letter == "V":
+            words += genword("verb")
+        elif letter == "A":
+            words += genword("adj")
+        elif letter == "N":
+            words += genword("noun")
+        elif letter == "L":
+            words += genword("loc")
+        elif letter == "P":
+            words += genword("person")
+        elif letter == "_":
+            words += " "
+        else:
+            words += letter
+    return words
+
+def genword(POS):
     with open("static/text/%ss.txt" % POS,"r") as fh:
         words = fh.readlines()
     return words[randrange(len(words))].strip()
+
+PATTERNS = ["V_the_N",
+            "the_A_N",
+            "the_A_N",
+            "V_the_A_N",
+            "V_the_N_with_P",
+            "V_the_N_in_L",
+            "V_the_A_N_in_L",
+            "N_N"]
+
+def randpattern():
+    return PATTERNS[randrange(len(PATTERNS))]

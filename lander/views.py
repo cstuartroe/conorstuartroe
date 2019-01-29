@@ -62,6 +62,8 @@ def boxreset(request):
         fh.write("{}")
     return HttpResponseRedirect('/boxes')
 
-def randwords(request,POSs):
-    wordlist = randwords(POSs)
-    return render(request, 'lander/randwords.html', wordlist)
+def randwords(request):
+    clearseed()
+    pattern = request.GET.get("q",randpattern())
+    words = genwords(pattern)
+    return render(request, 'lander/randwords.html', {"words":words})

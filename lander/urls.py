@@ -17,5 +17,6 @@ urlpatterns = [
     path('boxes', views.boxes, name='boxes'),
     path('boxdata', views.boxdata, name='boxdata'),
     path('boxreset', views.boxreset, name='boxreset'),
+    path('randwords', views.randwords, name='randwords'),
     path('', views.index, name='index')
 ]
