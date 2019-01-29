@@ -136,3 +136,42 @@ assets
 bag of 1-yen coins
 bitcoins
 jar of marmite
+yarmulke
+pocket
+sand
+ashes
+almonds
+party
+chocolate
+cadmium
+choreography
+prime number
+secret code
+spaghetti
+waves
+pillow
+death ray
+vintner
+ostler
+horse
+barnacle
+carrot cake
+goalie
+vacuum
+peacock
+astronaut
+corn on the cob
+polar bear
+molecule
+cowry shells
+lasagna
+cummerbund
+cucumber
+sharecropper
+briefcase
+campfire
+piglets
+butter
+egg
+asparagus
+ants
