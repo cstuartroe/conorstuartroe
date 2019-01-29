@@ -35,7 +35,10 @@ PATTERNS = ["V_the_N",
             "V_the_N_with_P",
             "V_the_N_in_L",
             "V_the_A_N_in_L",
-            "N_N"]
+            "N_N",
+            "N,_N,_and_N",
+            "P_and_the_N",
+            "P_and_the_A_N"]
 
 def randpattern():
     return PATTERNS[randrange(len(PATTERNS))]
