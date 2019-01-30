@@ -22,31 +22,50 @@
 					<th><div class="weekday"><p>7</p></div></th>\
 					<th><div class="weekday"><p>8</p></div></th>\
 					<th><div class="weekend"><p>9</p></div></th>\
-					<th><div class="weekend"><p>10</p></div></th>\
 				</tr>\
 				<tr>\
+					<th><div class="weekend"><p>10</p></div></th>\
 					<th><div class="weekend"><p>11</p></div></th>\
-					<th><div class="weekend"><p>12</p></div></th>\
+					<th><div class="weekday"><p>12</p></div></th>\
 					<th><div class="weekday"><p>13</p></div></th>\
 					<th><div class="weekday"><p>14</p></div></th>\
 					<th><div class="weekday"><p>15</p></div></th>\
 					<th><div class="weekday"><p>16</p></div></th>\
 					<th><div class="weekday"><p>17</p></div></th>\
-					<th><div class="weekday"><p>18</p></div></th>\
-					<th><div class="weekend"><p>19</p></div></th>\
-					<th><div class="weekend"><p>20</p></div></th>\
+					<th><div class="weekend"><p>18</p></div></th>\
 				</tr>\
 				<tr>\
-					<th><div class="weekend"><p>21</p></div></th>\
-					<th><div class="weekend"><p>22</p></div></th>\
+					<th><div class="weekend"><p>19</p></div></th>\
+					<th><div class="weekend"><p>20</p></div></th>\
+					<th><div class="weekday"><p>21</p></div></th>\
+					<th><div class="weekday"><p>22</p></div></th>\
 					<th><div class="weekday"><p>23</p></div></th>\
 					<th><div class="weekday"><p>24</p></div></th>\
 					<th><div class="weekday"><p>25</p></div></th>\
 					<th><div class="weekday"><p>26</p></div></th>\
-					<th><div class="weekday"><p>27</p></div></th>\
-					<th><div class="weekday"><p>28</p></div></th>\
+					<th><div class="weekend"><p>27</p></div></th>\
+				</tr>\
+				<tr>\
+					<th><div class="weekend"><p>28</p></div></th>\
 					<th><div class="weekend"><p>29</p></div></th>\
-					<th><div class="weekend"><p>30</p></div></th>\
+					<th><div class="weekday"><p>30</p></div></th>\
+					<th><div class="weekday"><p>31</p></div></th>\
+					<th><div class="weekday"><p>32</p></div></th>\
+					<th><div class="weekday"><p>33</p></div></th>\
+					<th><div class="weekday"><p>34</p></div></th>\
+					<th><div class="weekday"><p>35</p></div></th>\
+					<th><div class="weekend"><p>36</p></div></th>\
+				</tr>\
+				<tr>\
+					<th><div class="weekend"><p>37</p></div></th>\
+					<th><div class="weekend"><p>38</p></div></th>\
+					<th><div class="weekday"><p>39</p></div></th>\
+					<th><div class="weekday"><p>40</p></div></th>\
+					<th><div class="weekday"><p>41</p></div></th>\
+					<th><div class="weekday"><p>42</p></div></th>\
+					<th><div class="weekday"><p>43</p></div></th>\
+					<th><div class="weekday"><p>44</p></div></th>\
+					<th><div class="weekend"><p>45</p></div></th>\
 				</tr>\
 			</table>\
 					')
@@ -76,10 +95,10 @@
 
 				seasons = [$('#winter'),$('#spring'),$('#summer'),$('#autumn')];
 				holidays = ['Winter Solstice','Spring Equinox','Summer Solstice','Autumn Equinox'];
-				monthNames = [['Early Winter','Midwinter','Late Winter'],['Early Spring','Midspring','Late Spring'],
-				['Early Summer','Midsummer','Late Summer'], ['Early Autumn','Midautumn','Late Autumn']];
+				monthNames = [['Early Winter','Late Winter'],['Early Spring','Late Spring'],
+				['Early Summer','Late Summer'], ['Early Autumn','Late Autumn']];
 				alternateMonthNames = ['January','February','March','April','May','June','July','August','September','October','November','December'];
-				dayNames = ['Sunday','Moonday','Marsday','Mercuryday','Jupiterday','Uranusday','Neptuneday','Venusday','Saturnday','Starday']
+				dayNames = ['Sunday','Moonday','Mercuryday','Venusday','Earthday','Marsday','Jupiterday','Saturnday','Starday']
 				
 				var seasonStarts = [0,92,183,274];
 				if(year%4 == 0){
@@ -117,8 +136,8 @@
 					fullDate = holidays[season];
 				}
 				else{
-					fullDate = dayNames[(dayOfSeason - 1) % 10] + ' ' + (((dayOfSeason - 1) % 30) + 1).toString() + ' ' + 
-					monthNames[season][Math.floor((dayOfSeason-1)/30)];
+					fullDate = dayNames[(dayOfSeason - 1) % 9] + ' ' + (((dayOfSeason - 1) % 45) + 1).toString() + ' ' + 
+					monthNames[season][Math.floor((dayOfSeason-1)/45)];
 				}
 				
 				if((month<2) || (month==2 && date<21)){
@@ -150,8 +169,6 @@
 			<table class='month'><tr><th><div class='weekend'><p><i class="fas fa-cloud" aria-hidden="true"></i></p></div></th></tr></table>
 			<h2>Early Spring</h2>
 			<script>Table()</script>
-			<h2>Midspring</h2>
-			<script>Table()</script>
 			<h2>Late Spring</h2>
 			<script>Table()</script>
 		</div></div>
@@ -159,8 +176,6 @@
 			<h2>Summer Solstice</h2>
 			<table class='month'><tr><th><div class='weekend'><p><i class="fas fa-sun" aria-hidden="true"></i></p></div></th></tr></table>
 			<h2>Early Summer</h2>
-			<script>Table()</script>
-			<h2>Midsummer</h2>
 			<script>Table()</script>
 			<h2>Late Summer</h2>
 			<script>Table()</script>
@@ -170,8 +185,6 @@
 			<table class='month'><tr><th><div class='weekday'><p><i class="fas fa-leaf" aria-hidden="true"></i></p></div></th></tr></table>
 			<h2>Early Autumn</h2>
 			<script>Table()</script>
-			<h2>Midautumn</h2>
-			<script>Table()</script>
 			<h2>Late Autumn</h2>
 			<script>Table()</script>
 		</div></div>
@@ -179,8 +192,6 @@
 			<h2>Winter Solstice</h2>
 			<table class='month'><tr><th><div class='weekday'><p><i class="fas fa-snowflake" aria-hidden="true"></i></p></div></th></tr></table>
 			<h2>Early Winter</h2>
-			<script>Table()</script>
-			<h2>Midwinter</h2>
 			<script>Table()</script>
 			<h2>Late Winter</h2>
 			<script>Table()</script>
