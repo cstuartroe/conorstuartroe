@@ -67,3 +67,9 @@ def randwords(request):
     pattern = request.GET.get("q",randpattern())
     words = genwords(pattern)
     return render(request, 'lander/randwords.html', {"words":words})
+
+def ajax(request):
+    return render(request, 'lander/ajax.html')
+
+def ajaxblock(request):
+    return HttpResponse("If you want to understand recursion, you'll have to ask someone smarter than me, who will tell you \"")
