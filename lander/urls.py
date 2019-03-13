@@ -17,5 +17,7 @@ urlpatterns = [
     path('boxdata', views.boxdata, name='boxdata'),
     path('boxreset', views.boxreset, name='boxreset'),
     path('randwords', views.randwords, name='randwords'),
+    path('ajax', views.ajax, name='ajax'),
+    path('ajaxblock', views.ajaxblock, name='ajaxblock'),
     path('', views.index, name='index')
 ]
