@@ -8,9 +8,6 @@ import json
 def index(request):
     return render(request, 'lander/index.html')
 
-def personal(request):
-    return render(request, 'lander/personal.html')
-
 def news(request):
     context = {'feed':get_feed()}
     return render(request, 'lander/news.html', context)
