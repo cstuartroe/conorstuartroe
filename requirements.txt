@@ -2,7 +2,7 @@ beautifulsoup4==4.6.3
 bs4==0.0.1
 certifi==2018.8.24
 chardet==3.0.4
-Django==2.1.5
+Django==2.2
 feedparser==5.2.1
 gunicorn==19.9.0
 idna==2.7
@@ -12,5 +12,6 @@ praw==6.0.0
 prawcore==1.0.0
 pytz==2018.5
 requests==2.21.0
+sqlparse==0.3.0
 update-checker==0.16
 urllib3==1.23

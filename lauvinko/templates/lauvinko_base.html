@@ -32,5 +32,27 @@
 		<div id = "footer">
 			<p style="text-align: center;">All content &copy; Conor Stuart Roe 2018 under a <a href="http://creativecommons.org/licenses/by-nc-nd/3.0/">CC BY-NC-ND 3.0</a> license.</p>
 		</div>
+
+	    <div id="font-toggle">
+			<p><a>Toggle Lauvinko font</a></p>
+		</div>
+
+	    <script>
+	        var toggled = false;
+
+			$("#font-toggle").click(function() {
+			    console.log("yosef");
+			    if (toggled) {
+			        $(".lauvinko").css({"font-family":"Lauvinko Bubble", "margin-top":"auto"});
+			        $("span.lauvinko").css({"font-size":"2vh"});
+			        $("h1.lauvinko").css({"font-size":"4vh"});
+			    } else {
+			        $(".lauvinko").css({"font-family":"Lauvinko Smooth Serif", "margin-top":"-1vh"});
+			        $("span.lauvinko").css({"font-size":"3vh"});
+			        $("h1.lauvinko").css({"font-size":"6vh"});
+			    }
+			    toggled = !toggled;
+			});
+		</script>
 	</body>
 </html>

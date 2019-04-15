@@ -19,9 +19,20 @@
     font-weight: normal;
 }
 
-* {
+/* {
 	transition-duration: .3s;
 	transition-timing-function: ease;
+}*/
+
+p {
+	font-size: 2.25vh;
+	text-align: justify;
+	padding: 1em;
+	margin: 0;
+}
+
+.lauvinko {
+	font-family: "Lauvinko Bubble";
 }
 
 h1, h2, h3, p, li, td, th {
@@ -46,13 +57,6 @@ h3, li, td, th {
 	margin: 10px 0;
 }
 
-p {
-	font-size: 2.25vh;
-	text-align: justify;
-	padding: 1em;
-	margin: 0;
-}
-
 a, a:hover {
 	color: #007f00;
 	text-decoration: none;
@@ -60,11 +64,6 @@ a, a:hover {
 
 a:not([href]) {
     cursor: pointer;
-}
-
-.lauvinko {
-	font-family: "Lauvinko Bubble";
-	font-size: 4vh;
 }
 
 div.scroll {
@@ -107,7 +106,7 @@ ul {
 	text-align: left;
 }
 
-li, td, th {
+li, td, th, hr {
 	margin: 0;
 	padding: 10px;
 	border-radius: 15px;
@@ -152,12 +151,17 @@ img {
 	text-align: left;
 }
 
-th, td {
+th, td , hr {
 	border-color: #f0f0f0;
 }
 
 td {
 	text-align: center;	
+}
+
+hr {
+    padding: 0;
+    margin: 5vh 10vw;
 }
 
 thead {
@@ -184,4 +188,10 @@ table.gloss td {
 	border: none;
 	padding: 5px;
 	text-align: left;
+}
+
+#font-toggle {
+    position: fixed;
+    top: 90vh;
+    right: 0;
 }
