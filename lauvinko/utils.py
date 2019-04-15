@@ -41,8 +41,10 @@ class PKForm:
     vows = PK_VOWS
     tail_letter = 'q'
     tail_cons = ['t','k','s','h']
+    wide_cons = ['m', 'G',  't', 'k', 's', 'h', 'r', 'y']
     tail_vows = ['ā','i']
     tail_blocking_vows = ['ā','u','o']
+    wide_vows = {'i':'X', 'u':'Z'}
     prefix_re = option_re(PK_PRES)
     onset_re = option_re(PK_ONSS)
     vowel_re = option_re(PK_VOWS)
@@ -120,6 +122,8 @@ class PKForm:
             elif syll[2] in ['Y','W']:
                 out = out + tail + syll[2]
                 tail = ''
+            elif syll[2] in PKForm.wide_vows and syll[1] in PKForm.wide_cons:
+                out = out + PKForm.wide_vows[syll[2]]
             else:
                 out = out + syll[2]
             out = prefix + out + tail
