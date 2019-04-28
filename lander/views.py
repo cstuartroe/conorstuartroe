@@ -70,3 +70,6 @@ def ajax(request):
 
 def ajaxblock(request):
     return HttpResponse("If you want to understand recursion, you'll have to ask someone smarter than me, who will tell you \"")
+
+def tekotypes(request):
+    return render(request, 'lander/teko-types.html')

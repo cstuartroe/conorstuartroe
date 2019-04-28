@@ -19,5 +19,6 @@ urlpatterns = [
     path('randwords', views.randwords, name='randwords'),
     path('ajax', views.ajax, name='ajax'),
     path('ajaxblock', views.ajaxblock, name='ajaxblock'),
+    path('tekotypes', views.tekotypes, name="tekotypes"),
     path('', views.index, name='index')
 ]
