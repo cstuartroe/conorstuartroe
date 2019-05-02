@@ -120,12 +120,16 @@ class LauvinkoPage:
 
         for gloss in soup.find_all("gloss"):
             outline = gloss["outline"]
-            gloss_obj = Gloss(outline,info['dictionary'])
+            translation = gloss["translation"]
+            gloss_obj = Gloss(outline, info['dictionary'])
             
-            gloss.name = "table"
-            gloss.attrs = {"class":"gloss"}
+            gloss.name = "div"
+            gloss.attrs = {"class": "gloss-wrapper"}
+            gloss_table = soup.new_tag("table")
+            gloss.append(gloss_table)
+            gloss_table.attrs = {"class":"gloss"}
             tbody = soup.new_tag("tbody")
-            gloss.append(tbody)
+            gloss_table.append(tbody)
 
             text_row = soup.new_tag("tr")
             tbody.append(text_row)
@@ -147,6 +151,12 @@ class LauvinkoPage:
                 analysis_td = soup.new_tag("td")
                 analysis_td.string = gloss_obj.fields['analysis'][i]
                 analysis_row.append(analysis_td)
+
+            translation_row = soup.new_tag("tr")
+            tbody.append(translation_row)
+            translation_td = soup.new_tag("td", attrs={"colspan": gloss_obj.length})
+            translation_td.string = '“' + translation + '”'
+            translation_row.append(translation_td)
         
         return soup.prettify()[14:-16]
 

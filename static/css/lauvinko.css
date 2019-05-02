@@ -106,7 +106,7 @@ ul {
 	text-align: left;
 }
 
-li, td, th, hr {
+li, td, th, hr, div.gloss-wrapper {
 	margin: 0;
 	padding: 10px;
 	border-radius: 15px;
@@ -151,7 +151,7 @@ img {
 	text-align: left;
 }
 
-th, td , hr {
+th, td , hr, div.gloss-wrapper {
 	border-color: #f0f0f0;
 }
 
@@ -177,11 +177,12 @@ table.boldfirst td:first-child {
 }
 
 table.inline {
-	margin: 1em 2em;
+	margin: 1em 0;
 }
 
-table.gloss {
-	margin: 0 2em;
+div.gloss-wrapper {
+  max-width: 100%;
+  overflow-x: scroll;
 }
 
 table.gloss td {

@@ -1,23 +1,26 @@
 import re
-import logging
 import copy
 import os
 from lxml import etree
+
 
 def replacement_suite(replacements,word):
     for item, replacement in replacements:
         word = re.sub(item, replacement, word)
     return word
 
+
 def option_re(l):
     return '[' + ''.join(l) + ']'
 
-def find(regex,s):
-    result = re.findall(regex,s)
+
+def find(regex, s):
+    result = re.findall(regex, s)
     if result == []:
         return ''
     else:
         return result[0]
+
 
 def inner_markup(tag):
     whole = etree.tostring(tag).decode('utf-8')
@@ -25,36 +28,74 @@ def inner_markup(tag):
     inner = whole.strip()[chop:-chop-1]
     return inner
 
+
 flatten = lambda l: [item for sublist in l for item in sublist]
 
-PK_PRES = ['H','M']
-PK_ONSS = ['m','n','ñ','ṅ','G','p','t','c','k','K','v','r','s','y','h']
-PK_VOWS = ['ā','a','i','u','e','o','Y','W']
+PK_PRES = ['H', 'M']
+PK_ONSS = ['m', 'n', 'ñ', 'ṅ', 'G', 'p', 't', 'c', 'k', 'K', 'v', 'r', 's', 'y', 'h']
+PK_VOWS = ['ā', 'a', 'i', 'u', 'e', 'o', 'Y', 'W']
+
 
 class LauvinkoError(ValueError):
-    def __init__(self,*args,**kwargs):
-        super(LauvinkoError,self).__init__(*args,**kwargs)
+    def __init__(self, *args, **kwargs):
+        super(LauvinkoError, self).__init__(*args, **kwargs)
+
 
 class PKForm:
     prefixes = PK_PRES
     onsets = PK_ONSS
     vows = PK_VOWS
     tail_letter = 'q'
-    tail_cons = ['t','k','s','h']
+    tail_cons = ['t', 'k', 's', 'h']
     wide_cons = ['m', 'G',  't', 'k', 's', 'h', 'r', 'y']
-    tail_vows = ['ā','i']
-    tail_blocking_vows = ['ā','u','o']
-    wide_vows = {'i':'X', 'u':'Z'}
+    tail_vows = ['ā', 'i']
+    tail_blocking_vows = ['ā', 'u', 'o']
+    wide_vows = {'i': 'X', 'u': 'Z'}
     prefix_re = option_re(PK_PRES)
     onset_re = option_re(PK_ONSS)
     vowel_re = option_re(PK_VOWS)
     accent_re = '!'
     syll_re = prefix_re + '?' + onset_re + '?' + vowel_re + accent_re + '?|&'
 
-    def __init__(self,s,prefix=None):
-        self.structure = PKForm.parse(s,prefix)
+    modal_prefixes = {"if": "HtiL", "in.order": "kiL", 'thus': 'ivoF', 'after': 'gigi', '$swrf$': 'oN',
+                      "not": "hāra", "again": "tere", "want": "eva", "like": "mik", "can": "soN", "must": "nosaL",
+                      "very": "kora", "but": "cā"}
+    tertiary_aspect_prefixes = {"$pro$": "Mpi", "$exp$": "rāF"}
+    topic_agreement_prefixes = {"1.$sg$": "na", "1.$pl$": "ta", "2.$sg$": "iF", "2.$pl$": "eF",
+                                "3.$anm$.$sg": "", "3.$anm$.$pl$": "ā", "3.$inm$.$sg$": "sa", "3.$inm$.$pl$": "āsa"}
+    topic_case_prefixes = {"$vol$": "", "$dat$": "paN", "$loc$": "posa", "$nltpc$": "eta"}
+    secondary_aspect_prefixes = {"in": "iN", "fqnp": "&", "fqpt": "&", "ex": "rāF"}
+
+    all_glossing_prefixes = list(modal_prefixes.keys()) + list(tertiary_aspect_prefixes.keys()) + \
+                            list(topic_agreement_prefixes.keys()) + list(topic_case_prefixes.keys())
+
+    def __init__(self, s, secondary_aspect_prefix, other_prefixes = []):
+        self.s = s
+        self.secondary_aspect_prefix = secondary_aspect_prefix
+        self.set_prefixes(other_prefixes)
+
+    def set_prefixes(self, prefixes):
+        self.prefixes = []
+        i = 0
+        while (i < len(prefixes)) and (prefixes[i] in PKForm.modal_prefixes):
+            self.prefixes.append(PKForm.modal_prefixes[prefixes[i]])
+            i += 1
+        if (i < len(prefixes)) and (prefixes[i] in PKForm.tertiary_aspect_prefixes):
+            self.prefixes.append(PKForm.tertiary_aspect_prefixes[prefixes[i]])
+            i += 1
+        if (i < len(prefixes)) and (prefixes[i] in PKForm.topic_agreement_prefixes):
+            self.prefixes.append(PKForm.topic_agreement_prefixes[prefixes[i]])
+            i += 1
+        if (i < len(prefixes)) and (prefixes[i] in PKForm.topic_case_prefixes):
+            self.prefixes.append(PKForm.topic_case_prefixes[prefixes[i]])
+            i += 1
+        if i != len(prefixes):
+            raise ValueError("Invalid or out of order prefix: " + self.prefixes[i])
+
+        self.prefixes.append(self.secondary_aspect_prefix)
+        self.build_structure()
         self.check_accent()
-        
+
         if 'əi' in self.transcribe() or 'əu' in self.transcribe():
             print("Warning: potentially incorrect root: " + self.transcribe())
 
@@ -65,50 +106,49 @@ class PKForm:
                         ('aai','Y'),('aau','W'),('aa','ā'),('ngv','G'),('kv','K'),('ny','ñ'),('ng','ṅ'),('l','r'),
                         #stress resolution
                         ('^(%s?%s?%s)' % (PKForm.prefix_re,PKForm.onset_re,PKForm.vowel_re),r'\1!')]
-        word = replacement_suite(replacements,word)
+        word = replacement_suite(replacements, word)
         return word
 
-    def resolve_prefix(prefix,word):
-        s = prefix + word
+    def resolve_prefixes(prefixes, word):
+        s = ''.join(prefixes) + word
         replacements = [('&(%s?%s%s)' % (PKForm.prefix_re,PKForm.onset_re,PKForm.vowel_re),r'\1\1'),
                         ('&(%s)(!?)(%s?%s)' % (PKForm.vowel_re,PKForm.prefix_re,PKForm.onset_re),r'\1\3\1\2\3'),
-                        ('N([ptckK])',r'M\1'),('Nv','m'),('Nr','n'),('Ny','ñ'),('N(%s)' % PKForm.vowel_re,r'n\1'),('N',''),
-                        ('F([ptckK])',r'H\1'),('Fs','c'),('F','')]
-        return replacement_suite(replacements,s)
+                        ('N([ptckK])', r'M\1'), ('Nv', 'm'), ('Nr', 'n'),('Ny','ñ'),('N(%s)' % PKForm.vowel_re,r'n\1'),('N',''),
+                        ('F([ptckK])', r'H\1'), ('Fs', 'c'), ('F', ''),
+                        ('LMp', 'm'), ('LMt', 'n'), ('LMc', 's'), ('LMk', 'g'), ('LMK', 'G'),
+                        ('Lp', 'v'), ('Lt', 'r'), ('Lc', 's'), ('Lk', 'h'), ('LK', 'v'), ('L', '')]
+        return replacement_suite(replacements, s)
 
-    def parse(s,prefix=None):
-        prelim = PKForm.special_chars(s)
-        if prefix:
-            prelim = PKForm.resolve_prefix(prefix,prelim)
-        sylls = re.findall(PKForm.syll_re,prelim)
+    def build_structure(self):
+        prelim = PKForm.special_chars(self.s)
+        prelim = PKForm.resolve_prefixes(self.prefixes, prelim)
+        sylls = re.findall(PKForm.syll_re, prelim)
         if ''.join(sylls) != prelim:
             print(sylls)
             print(prelim)
             raise ValueError("Invalid Proto-Kasanic root: " + s)
-        return [PKForm.parsesyll(syll) for syll in sylls]
+        self.structure = [PKForm.parsesyll(syll) for syll in sylls]
 
     def parsesyll(syll):
-        prefix = find(PKForm.prefix_re,syll)
-        onset = find(PKForm.onset_re,syll)
-        vowel = find(PKForm.vowel_re,syll)
-        accent = find(PKForm.accent_re,syll)
-        return [prefix,onset,vowel,accent]
+        prefix = find(PKForm.prefix_re, syll)
+        onset = find(PKForm.onset_re, syll)
+        vowel = find(PKForm.vowel_re, syll)
+        accent = find(PKForm.accent_re, syll)
+        return [prefix, onset, vowel, accent]
 
     def check_accent(self):
         if all(syll[3] != '!' for syll in self.structure):
-            raise ValueError() #self.structure[0][3] = '!'
+            raise ValueError()  # self.structure[0][3] = '!'
         
         for i in range(len(self.structure)):
             if self.structure[i][3] == '!':
                 self.accentLocation = copy.copy(i)
 
-    def falavay(self,augment=False):       
-        i = 0
-        out = ''
-        falavay_sylls = [PKForm.falavay_syll(syll,augment=augment) for syll in self.structure]
+    def falavay(self,augment=False):
+        falavay_sylls = [PKForm.falavay_syll(syll, augment=augment) for syll in self.structure]
         return ''.join(falavay_sylls)
 
-    def falavay_syll(syll,augment=False):        
+    def falavay_syll(syll, augment=False):
         if syll[1] != '':
             prefix = syll[0]
             out = syll[1]
@@ -142,25 +182,23 @@ class PKForm:
 
     def transcribe(self):
         flattened = ''.join(flatten(self.structure))
-        replacements = [('Y','āi'),('W','āu'),('H','\''),('K','kv'),('G','ṅv'),('Mp','mp'),('Mt','nt'),('Mc','ñc'),('Mk','ṅk'),('!',''),
-                        ('a','ə'),('ā','a')]
+        replacements = [('Y', 'āi'), ('W', 'āu'), ('H', '\''), ('K', 'kv'), ('G', 'ṅv'), ('Mp', 'mp'), ('Mt', 'nt'),
+                        ('Mc', 'ñc'), ('Mk', 'ṅk'), ('!', ''), ('a', 'ə'), ('ā', 'a')]
         return replacement_suite(replacements,flattened)
 
     def alphabetical(self):
         classical = self.transcribe()
-        # I'm just using "z" to send digraphs and accented letters to after the related letter, i.e. to send "ā" after "a"
-        replacements = [("āi","azy"),("āu","azz"),("ā","azx"),("'p","pz"),("'t","tz"),("'c","cz"),("'k","kz"),
-                        ("mp","mz"),("nt","nv"),("ñc","nx"),("ṅk","nz"),("ñ","nw"),("ṅ","ny")]
-        return replacement_suite(replacements,classical)
+        # I'm using "z" to send digraphs and accented letters to after the related letter, e.g. to send "ā" after "a"
+        replacements = [("āi", "azy"), ("āu", "azz"), ("ā", "azx"), ("'p", "pz"), ("'t", "tz"), ("'c", "cz"),
+                        ("'k", "kz"), ("mp", "mz"), ("nt", "nv"), ("ñc", "nx"), ("ṅk", "nz"), ("ñ","nw"), ("ṅ", "ny")]
+        return replacement_suite(replacements, classical)
 
     def generate_lauvinko(self):
         self.lauvinko_form = LauvinkoForm.from_pk(self)
 
     def to_json(self):
-        return {"falavay":self.falavay(),"transcription":self.transcribe()}
+        return {"falavay": self.falavay(), "transcription": self.transcribe()}
 
-##    def __str__(self):
-##        return ''.join(s[0]+s[1]+s[2] + ('!' if s[3] == 'high' else '') for s in self.l)
 
 class PKWord:
     categories = {"fientive":["imnp","impt","pf","in","fqnp","fqpt","ex"],"punctual":["np","pt","fqnp","fqpt","ex"],
@@ -168,13 +206,13 @@ class PKWord:
     citation_forms = {"fientive":"imnp","punctual":"np","stative":"gn","uninflected":"gn"}
     low_ablauts = {"np":"e","pt":"o","imnp":"aa","impt":"o","pf":"e","in":"aa","fqnp":"e","fqpt":"o","ex":"o"}
     high_ablauts = {"np":"i","pt":"u","imnp":"a","impt":"u","pf":"i","in":"a","fqnp":"i","fqpt":"u","ex":"u"}
-    prefixes = {"in":"iN","fqnp":"&","fqpt":"&","ex":"rāF"}
 
-    def __init__(self, category):
+    def __init__(self, category, prefixes=[]):
         if category in PKWord.categories:
             self.category = category
         else:
             raise ValueError("Invalid word category: " + category)
+        self.prefixes = prefixes
         self.forms = {}
         self.citation_form = PKWord.citation_forms[self.category]
         self.defn = 'Not defined.'
@@ -192,24 +230,24 @@ class PKWord:
         for form_name in PKWord.categories[self.category]:
             if form_name in self.forms:
                 raise ValueError("Please declare general forms first.")
-            self.put_form(form_name,word)
+            self.put_form(form_name, word)
 
-    def put_form(self,form_name,word):
-        if form_name == "gn":
-            word_form = re.sub("[@~]","",word)
+    def put_form(self, form_name, word):
+        if self.category in ["stative", "uninflected"] and form_name in ["gn", "in"]:
+            word_form = re.sub("[@~]", "", word)
         else:
-            if re.search("@[aeiuo]{1,3}",word):
-                word_form = re.sub("@[aeiuo]{1,3}",PKWord.low_ablauts[form_name],word)
+            if re.search("@[aeiuo]{1,3}", word):
+                word_form = re.sub("@[aeiuo]{1,3}", PKWord.low_ablauts[form_name], word)
             elif re.search("~[aeiuo]{1,3}",word):
-                word_form = re.sub("~[aeiuo]{1,3}",PKWord.high_ablauts[form_name],word)
+                word_form = re.sub("~[aeiuo]{1,3}", PKWord.high_ablauts[form_name], word)
             elif "@" in word:
-                word_form = word.replace("@",PKWord.low_ablauts[form_name])
+                word_form = word.replace("@", PKWord.low_ablauts[form_name])
             elif "~" in word:
-                word_form = word.replace("~",PKWord.high_ablauts[form_name])
+                word_form = word.replace("~", PKWord.high_ablauts[form_name])
             else:
                 raise ValueError(form_name + " form must have archiphoneme but doesn't: " + word)
-        prefix = PKWord.prefixes.get(form_name,"")
-        form_obj = PKForm(word_form,prefix=prefix)
+        secondary_aspect_prefix = PKForm.secondary_aspect_prefixes.get(form_name, "")
+        form_obj = PKForm(word_form, secondary_aspect_prefix=secondary_aspect_prefix, other_prefixes=self.prefixes)
         self.forms[form_name] = form_obj
 
     def get_citation_form(self):
@@ -224,7 +262,7 @@ class PKWord:
                 if form_name == "gn":
                     lemma.set_general(word)
                 else:
-                    lemma.put_form(form_name,word)
+                    lemma.put_form(form_name, word)
             elif subtag.tag == "defn":
                 lemma.set_defn(inner_markup(subtag))
             else:
@@ -239,9 +277,11 @@ class PKWord:
             output["forms"][name] = form.to_json()
         return output
 
-LF_ONSS = ['m','n','ñ','ṅ','B','D','G','p','t','c','k','P','T','C','K','v','l','s','y','h']
-LF_VOWS = ['a','ə','i','u','e','o']
-LF_CODS = ['Y','U','A','R','M','S','H']
+
+LF_ONSS = ['m', 'n', 'ñ', 'ṅ', 'B', 'D', 'G', 'p', 't', 'c', 'k', 'P', 'T', 'C', 'K', 'v', 'l', 's', 'y', 'h']
+LF_VOWS = ['a', 'ə', 'i', 'u', 'e', 'o']
+LF_CODS = ['Y', 'U', 'A', 'R', 'M', 'S', 'H']
+
 
 class LauvinkoForm:
     onsets = LF_ONSS
@@ -298,7 +338,7 @@ class LauvinkoForm:
                         ('M([pmv])',r'm\1'),('M$','ng'),('M','n')]
         return replacement_suite(replacements,word)
     
-    def from_pk(pkform,showprogress=False):
+    def from_pk(pkform, showprogress=False):
         word = ''.join(flatten(pkform.structure))        
         replacements_pre = [('Y!','ā!i'),('W!','ā!u'),('Y','āi'),('W','āu'),('a','ə'),('ā','a'),('r','l')]
         word = replacement_suite(replacements_pre, word)
@@ -306,7 +346,8 @@ class LauvinkoForm:
         if showprogress:
             print(word)
         
-        replacements_800s = [('([aəeiou]!?)h',r'\1'),('K','p'),('G','m')] #maybe readd ('([ei]!?)h([aəeiou])',r'\1y\2'),('([ou]!?)h([aəeiou])',r'\1v\2'),
+        replacements_800s = [('([ei])h([aəeiou])', r'\1y\2'), ('([ou])h([aəeiou])', r'\1v\2'),
+                             ('([aəeiou]!?)h', r'\1'), ('K', 'p'), ('G', 'm')]
         word = replacement_suite(replacements_800s, word)
         
         replacements_900s_non = [('!(%s?%s)a' % (PKForm.prefix_re,LauvinkoForm.onset_re),r'!\1ə'),
@@ -612,9 +653,9 @@ class BotharuWord:
         return output
 
 class DictEntry:
-    origins = ["kasanic","sanskrit","malay","tamil","hokkien","arabic","portuguese","dutch","english"]
+    origins = ["kasanic", "sanskrit", "malay", "tamil", "hokkien", "arabic", "portuguese", "dutch", "english"]
     
-    def __init__(self,category,ident,origin):
+    def __init__(self, category, ident, origin):
         self.languages = {}
         self.ident = ident
         
@@ -628,7 +669,7 @@ class DictEntry:
         else:
             raise ValueError("Invalid word origin: " + origin)
 
-    def new_language(self,language_tag):
+    def new_language(self, language_tag):
         if language_tag.tag == "pk":
             assert(self.origin == "kasanic")
             self.languages["pk"] = PKWord.from_tag(language_tag, self.category)
@@ -645,9 +686,9 @@ class DictEntry:
         ident = entry.get("id")
         origin = entry.get("origin")
         try:
-            de = DictEntry(category,ident,origin)
+            de = DictEntry(category, ident, origin)
         except ValueError:
-            raise ValueError("Fucked up dictionary entry:\n" + etree.tostring(entry,pretty_print=True).decode('utf-8'))
+            raise ValueError("Fucked up dictionary entry:\n" + etree.tostring(entry, pretty_print=True).decode('utf-8'))
         for language_tag in entry:
             de.new_language(language_tag)
         return de
@@ -676,57 +717,67 @@ class KasanicDictionary:
             raise LauvinkoError("No stem called " + stem_id)
 
 class Gloss:
-    def __init__(self,_outline,dictionary,_language="lv"):
+    def __init__(self, _outline, dictionary, _language="lv"):
         self.outline = _outline
         self.language = _language
 
         if self.language == "lv":
             self.gloss_lv(dictionary)
 
-    def gloss_lv(self,dictionary):
-        self.fields = {"falavay":[],"transcription":[],"morphemes":[],"analysis":[]}
+    def gloss_lv(self, dictionary):
+        self.fields = {"falavay":[], "transcription":[], "morphemes":[], "analysis":[]}
         self.fields["analysis"] = self.outline.split(" ")
         self.length = len(self.fields["analysis"])
         
         for word in self.fields["analysis"]:
             word_falavay = ""
             word_transcription = ""
-            for morpheme in word.split("-"):
-                parts = morpheme.split(".")
-                if len(parts) == 2:
-                    stem_id, augment = parts
-                    form = None
-                elif len(parts) == 3:
-                    stem_id, form, augment = parts
-                    if form[-1] != '$' or form[0] != '$':
-                        raise LauvinkoError("Invalid form: " + form)
-                    else:
-                        form = form[1:-1]
+
+            morphemes = word.split("-")
+            prefixes = []
+            i = 0
+            while (i < len(morphemes)) and (morphemes[i] in PKForm.all_glossing_prefixes):
+                prefixes.append(morphemes[i])
+                i += 1
+
+            stem = morphemes[i]
+            stem_parts = stem.split(".")
+            if len(stem_parts) == 2:
+                stem_id, augment = stem_parts
+                form = None
+            elif len(stem_parts) == 3:
+                stem_id, form, augment = stem_parts
+                if form[-1] != '$' or form[0] != '$':
+                    raise LauvinkoError("Invalid form: " + form)
                 else:
-                    raise LauvinkoError("Invalid morpheme: " + morpheme)
+                    form = form[1:-1]
+            else:
+                raise LauvinkoError("Invalid stem: " + stem)
 
-                lv_stem = dictionary.lookup_stem(stem_id).languages['lv']
+            pk_word = dictionary.lookup_stem(stem_id).languages['pk']
 
-                if augment == "$au$":
-                    augment = "augmented"
-                elif augment == "$na$":
-                    augment = "nonaugmented"
+            if augment == "$au$":
+                augment = "augmented"
+            elif augment == "$na$":
+                augment = "nonaugmented"
+            else:
+                raise LauvinkoError("Invalid augment: " + augment)
+
+            if form is None:
+                if pk_word.category == "uninflected":
+                    form = "gn"
                 else:
-                    raise LauvinkoError("Invalid augment: " + augment)
+                    raise LauvinkoError(stem_id + " is an inflected stem - please provide stem form.")
+            else:
+                if form not in pk_word.forms:
+                    raise LauvinkoError("Stem " + stem_id + " has forms " + ",".join(pk_word.forms.keys()))
 
-                if form is None:
-                    if lv_stem.category == "uninflected":
-                        lv_word = lv_stem.forms["gn"]
-                    else:
-                        raise LauvinkoError(stem_id + " is an inflected stem - please provide stem form.")
-                else:
-                    if form in lv_stem.forms:
-                        lv_word = lv_stem.forms[form]
-                    else:
-                        raise LauvinkoError("Stem " + stem_id + " has forms " + ",".join(lv_stem.forms.keys()))
+            pk_form = pk_word.forms[form]
+            pk_form.set_prefixes(prefixes)
+            lv_form = LauvinkoForm.from_pk(pk_form)
 
-                word_transcription += lv_word.transcribe(augment)
-                word_falavay += lv_word.falavay(augment)
+            word_transcription += lv_form.transcribe(augment)
+            word_falavay += lv_form.falavay(augment)
                 
             self.fields['transcription'].append(word_transcription)
             self.fields['falavay'].append(word_falavay)

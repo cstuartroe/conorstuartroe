@@ -41,14 +41,15 @@
 	        var toggled = false;
 
 			$("#font-toggle").click(function() {
-			    console.log("yosef");
 			    if (toggled) {
 			        $(".lauvinko").css({"font-family":"Lauvinko Bubble", "margin-top":"auto"});
 			        $("span.lauvinko").css({"font-size":"2vh"});
+			        $("td.lauvinko").css({"font-size":"2.5vh"});
 			        $("h1.lauvinko").css({"font-size":"4vh"});
 			    } else {
 			        $(".lauvinko").css({"font-family":"Lauvinko Smooth Serif", "margin-top":"-1vh"});
 			        $("span.lauvinko").css({"font-size":"3vh"});
+			        $("td.lauvinko").css({"font-size":"3.5vh"});
 			        $("h1.lauvinko").css({"font-size":"6vh"});
 			    }
 			    toggled = !toggled;
