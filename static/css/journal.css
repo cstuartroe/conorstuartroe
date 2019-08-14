@@ -12,11 +12,15 @@
     font-weight: normal;
 }
 
+* {
+  transition: .5s ease;
+}
+
 body {
   background-color: #222;
 }
 
-h1, h2, p, textarea {
+h1, h2, h3, h4, p, textarea {
   color: white;
 }
 
@@ -24,19 +28,21 @@ h1, h2, p, textarea {
     display: none;
 }
 
-#header {
+#header, #header a {
     text-align: center;
     line-height: 10vh;
     font-family: "Lauvinko Bubble";
     color: #a9f;
 }
 
-#mdin, #mdfill {
+#mdin, #mdfill, .entrylink {
   border: solid 5px white;
   border-radius: 10px;
-  height: 80vh;
   padding: 15px;
-  transition: .5s ease;
+}
+
+#mdin, #mdfill {
+  height: 80vh;
 }
 
 #mdin {
@@ -46,18 +52,47 @@ h1, h2, p, textarea {
   font-size: 1.5em;
 }
 
-#mdfill {
+#mdfill, .entrylink {
   font-family: "Lauvinko Bubble";
   overflow-wrap: break-word;
   overflow-y: scroll;
 }
 
-#mdin:focus, #mdfill:hover {
+#mdin:focus, #mdfill:hover, .entrylink:hover {
   outline: none;
   border: solid 5px #a9f;
+  transition: 0s;
+}
+
+#mdin:focus, #mdfill:hover > *, .entrylink:hover > * {
   color: #a9f;
+  transition: 0s;
+}
+
+#mdfill:hover hr {
+  border-color: #a9f;
+  transition: 0s;
 }
 
 .invisible {
   display: none;
+}
+
+.entrylink {
+  text-align: center;
+  font-size: 1.5em;
+  margin: .5em;
+}
+
+#mdfill h2 {
+  text-decoration: underline;
+}
+
+#mdfill h4 {
+  font-style: italic;
+}
+
+#mdfill h2, #mdfill h3, #mdfill h4 {
+  text-align: center;
+  padding-bottom: .25em;
 }

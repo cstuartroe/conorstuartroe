@@ -5,6 +5,7 @@ from .RSS_reader import *
 from .randwords import *
 import json
 import datetime
+import os
 
 
 def index(request):
@@ -95,7 +96,22 @@ def tekotypes(request):
 
 
 def journalhome(request):
-    return render(request, 'lander/journal-home.html')
+    dates = [(datetime.date.today().strftime("%Y%m%d"), "ejesoM")]
+
+    for filename in os.listdir("static/md"):
+        try:
+            d = datetime.datetime.strptime(filename, "%Y%m%d.md")
+            if d.date() != datetime.date.today():
+                link = filename[:8]
+                title = f"{filename[:4]}.{filename[4:6]}.{filename[6:8]}"
+                dates.append((link, title))
+
+        except ValueError:
+            pass
+
+    dates.sort(key=lambda x: x[0], reverse=True)
+
+    return render(request, 'lander/journal-home.html', {"dates": dates})
 
 
 def journalentry(request, date_string):

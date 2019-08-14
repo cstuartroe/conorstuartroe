@@ -9,7 +9,7 @@
     <link rel="shortcut icon" href="{% static 'img/favicon.ico' %}">
 </head>
 <body>
-    <h2 id="header">{{year}}.{{month}}.{{day}}</h2>
+    <h2 id="header">{{year}}.{{month}}.{{day}} | <a href="/journal">bu</a></h2>
     <div class="container">
         <div class="row">
             <div id="mdin-parent" class="col-xs-6 {% if not today %}invisible{% endif %}">
@@ -23,7 +23,7 @@
     <script>
         var inits = ['m', 'n', 'p', 't', 'c', 'k', 'b', 'd', 'j', 'g', 's', 'x', 'h', 'w', 'l', 'y', "'"];
         var vowels = ["a", "e", "i", "o", "u"];
-        var finals = ["n", "k", "s", "i", "u"];
+        var finals = ["n", "k", "s", "i", "o"];
 
         function update_mdfill() {
             $("#mdfill").empty();
@@ -31,10 +31,39 @@
             var curr_elem = null, curr_ul = null;
 
             lines.forEach(function(line) {
-                console.log(line);
-                var p = $(document.createElement('p'))
-                p.text(to_palawai_line(line));
-                $("#mdfill").append(p)
+                if (line == "") {
+                    curr_elem = null;
+                } else if (line == "---") {
+                    curr_elem = null;
+                    $("#mdfill").append($(document.createElement('hr')));
+                } else {
+                    if (line.startsWith("# ")) {
+                        curr_elem = $(document.createElement('h2'));
+                        $("#mdfill").append(curr_elem);
+                        line = line.substring(2);
+                    }
+
+                    else if (line.startsWith("## ")) {
+                        curr_elem = $(document.createElement('h3'));
+                        $("#mdfill").append(curr_elem);
+                        line = line.substring(3);
+                    }
+
+                    else if (line.startsWith("### ")) {
+                        curr_elem = $(document.createElement('h4'));
+                        $("#mdfill").append(curr_elem);
+                        line = line.substring(4);
+                    }
+
+                    else if (curr_elem == null) {
+                        curr_elem = $(document.createElement('p'));
+                        $("#mdfill").append(curr_elem);
+                    }
+
+                    curr_elem.text(
+                        curr_elem.text() + to_palawai_line(line)
+                    );
+                }
             });
         }
 
@@ -89,7 +118,7 @@
                     }
                 }
 
-                else if (syll[2] == 'u') {
+                else if (syll[2] == 'o') {
                     if (syll[1] == 'a') {
                         return 'W';
                     } else {
@@ -111,7 +140,7 @@
                     }
                 }
 
-                else if (syll[2] == 'u') {
+                else if (syll[2] == 'o') {
                     if (syll[1] == 'a') {
                         return 'e' + syll[0] + 'io';
                     } else {
