@@ -192,6 +192,7 @@ table.gloss td {
 
 #font-toggle {
     position: fixed;
-    top: 90vh;
+    top: 0;
     right: 0;
+    text-align: right;
 }
