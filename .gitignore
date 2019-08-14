@@ -4,3 +4,4 @@ settings_secret.py
 lauvinko/templates/lauvinko
 boxdata.json
 .idea
+static/md

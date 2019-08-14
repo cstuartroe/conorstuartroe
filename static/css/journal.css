@@ -1,0 +1,63 @@
+@font-face {
+    font-family: "Lauvinko Bubble";
+    src: url("/static/font/lauvinko-bubble.ttf") format('truetype'),
+    	url("/static/font/lauvinko-bubble.svg") format('svg');
+    font-weight: normal;
+}
+
+@font-face {
+    font-family: "Josephin Sans";
+    src: url("/static/font/JosefinSans-Regular.ttf") format('truetype'),
+    	url("/static/font/JosefinSans-Regular.svg") format('svg');
+    font-weight: normal;
+}
+
+body {
+  background-color: #222;
+}
+
+h1, h2, p, textarea {
+  color: white;
+}
+
+::-webkit-scrollbar {
+    display: none;
+}
+
+#header {
+    text-align: center;
+    line-height: 10vh;
+    font-family: "Lauvinko Bubble";
+    color: #a9f;
+}
+
+#mdin, #mdfill {
+  border: solid 5px white;
+  border-radius: 10px;
+  height: 80vh;
+  padding: 15px;
+  transition: .5s ease;
+}
+
+#mdin {
+  background-color: transparent;
+  width: 100%;
+  font-family: "Josephin Sans";
+  font-size: 1.5em;
+}
+
+#mdfill {
+  font-family: "Lauvinko Bubble";
+  overflow-wrap: break-word;
+  overflow-y: scroll;
+}
+
+#mdin:focus, #mdfill:hover {
+  outline: none;
+  border: solid 5px #a9f;
+  color: #a9f;
+}
+
+.invisible {
+  display: none;
+}

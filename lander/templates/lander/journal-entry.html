@@ -1,0 +1,170 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <title>{{year}}-{{month}}-{{day}}</title>
+    <meta charset="UTF-8">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u" crossorigin="anonymous">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+    <link rel="stylesheet" href="{% static 'css/journal.css' %}">
+    <link rel="shortcut icon" href="{% static 'img/favicon.ico' %}">
+</head>
+<body>
+    <h2 id="header">{{year}}.{{month}}.{{day}}</h2>
+    <div class="container">
+        <div class="row">
+            <div id="mdin-parent" class="col-xs-6 {% if not today %}invisible{% endif %}">
+                <textarea id="mdin" wrap="hard" autocomplete="off" autocapitalize="off" spellcheck="false"></textarea>
+            </div>
+
+            <div id="mdfill" class="{% if today %}col-xs-6{% else %}col-xs-12{% endif %}">
+            </div>
+        </div>
+    </div>
+    <script>
+        var inits = ['m', 'n', 'p', 't', 'c', 'k', 'b', 'd', 'j', 'g', 's', 'x', 'h', 'w', 'l', 'y', "'"];
+        var vowels = ["a", "e", "i", "o", "u"];
+        var finals = ["n", "k", "s", "i", "u"];
+
+        function update_mdfill() {
+            $("#mdfill").empty();
+            var lines = $("#mdin").val().split("\n");
+            var curr_elem = null, curr_ul = null;
+
+            lines.forEach(function(line) {
+                console.log(line);
+                var p = $(document.createElement('p'))
+                p.text(to_palawai_line(line));
+                $("#mdfill").append(p)
+            });
+        }
+
+        function to_palawai_line(text) {
+            var out = "", i = 0, syll;
+
+            while (i < text.length) {
+                syll = ['', '', ''];
+
+                if (inits.includes(text.charAt(i))) {
+                    syll[0] = text.charAt(i);
+                    i++;
+                }
+
+                if (vowels.includes(text.charAt(i))) {
+                    syll[1] = text.charAt(i);
+                    i++;
+                } else {
+                    out += syll[0];
+                    if (text.charAt(i) != " ") {
+                        out += text.charAt(i);
+                    }
+                    i++;
+                    continue;
+                }
+
+                if (finals.includes(text.charAt(i)) &&
+                    !vowels.includes(text.charAt(i+1))) {
+                    syll[2] = text.charAt(i);
+                    i++;
+                }
+
+                out += to_palawai_syll(syll);
+            }
+            return out;
+        }
+
+        var final_chars = {
+            '': '',
+            'n': 'M',
+            'k': 'K',
+            's': 'S'
+        }
+
+        function to_palawai_syll(syll) {
+            if (['', "'"].includes(syll[0])) {
+                if (syll[2] == 'i') {
+                    if (syll[1] == 'a') {
+                        return 'Y';
+                    } else {
+                        return syll.join('');
+                    }
+                }
+
+                else if (syll[2] == 'u') {
+                    if (syll[1] == 'a') {
+                        return 'W';
+                    } else {
+                        return syll.join('');
+                    }
+                }
+
+                else {
+                    return syll[1].toUpperCase() + final_chars[syll[2]];
+                }
+            }
+
+            else {
+                if (syll[2] == 'i') {
+                    if (syll[1] == 'a') {
+                        return 'e' + syll[0] + 'i';
+                    } else {
+                        return syll.join('');
+                    }
+                }
+
+                else if (syll[2] == 'u') {
+                    if (syll[1] == 'a') {
+                        return 'e' + syll[0] + 'io';
+                    } else {
+                        return syll.join('');
+                    }
+                }
+
+                else {
+                    if (syll[1] == 'e') {
+                        return 'e' + syll[0] + final_chars[syll[2]];
+                    }
+
+                    else if (syll[1] == 'o') {
+                        return 'e' + syll[0] + 'o' + final_chars[syll[2]];
+                    }
+
+                    else {
+                        return syll[0] + syll[1] + final_chars[syll[2]];
+                    }
+                }
+            }
+        }
+
+        function mdin_changed() {
+            update_mdfill();
+            var xhttp = new XMLHttpRequest(), data = new FormData();
+            xhttp.open("POST", "/journal/md/{{year}}{{month}}{{day}}", true);
+            data.append("md", $("#mdin").val());
+            data.append('csrfmiddlewaretoken', '{{ csrf_token }}');
+            xhttp.send(data);
+        }
+
+        $("#mdin").on('input propertychange paste', mdin_changed);
+
+        {% if today %}
+        function toggleview() {
+            $("#mdfill").toggleClass("col-xs-6");
+            $("#mdfill").toggleClass("col-xs-12");
+            $("#mdin-parent").toggleClass("invisible");
+        }
+
+        $("#mdfill").on('click', toggleview);
+        {% endif %}
+
+        $(document).ready(function() {
+            var xhttp = new XMLHttpRequest(), data = new FormData();
+            xhttp.open("GET", "/journal/md/{{year}}{{month}}{{day}}", true);
+            xhttp.onreadystatechange = function() {
+                $("#mdin").text(this.responseText);
+                update_mdfill();
+            };
+            xhttp.send();
+        });
+    </script>
+</body>
+</html>
