@@ -20,5 +20,8 @@ urlpatterns = [
     path('ajax', views.ajax, name='ajax'),
     path('ajaxblock', views.ajaxblock, name='ajaxblock'),
     path('tekotypes', views.tekotypes, name="tekotypes"),
+    path('journal', views.journalhome, name="journalhome"),
+    path('journal/<str:date_string>', views.journalentry, name="journalentry"),
+    path('journal/md/<str:date_string>', views.journalmd, name="journalmd"),
     path('', views.index, name='index')
 ]

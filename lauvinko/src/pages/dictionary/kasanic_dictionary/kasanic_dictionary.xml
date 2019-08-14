@@ -302,7 +302,7 @@ function toggleshown(table_toggler) {
 <h1 class="lauvinko">IqerohXq</h1>
 <h2>Classical Kasanic</h2><h3><span style="font-style:italic;">irohi</span></h3>
 <p>Father's daughter. (uninflected)</p>
-<h2>Lauvìnko</h2><h3><span style="font-style:italic;">íloy, ìlay</span></h3>
+<h2>Lauvìnko</h2><h3><span style="font-style:italic;">ílovi, ìrvi</span></h3>
 <p>Father&#8217;s daughter. ** (literary) Treasure, precious, darling.</p>
 <h2>Botharu</h2><h3><span style="font-style:italic;">yiswee</span></h3><p>Father's daughter.</p>
 </div>
@@ -422,7 +422,7 @@ function toggleshown(table_toggler) {
 <thead><tr><th colspan="3">Classical Kasanic Inflection - <a onclick="toggleshown(this)">Show</a></th></tr></thead><tbody>
 <tr><th></th><th>Nonpast</th><th>Past</th></tr>
 <tr><td>Imperfective</td><td><span class="lauvinko">ekoMeco</span><br/><span style="font-style:italic;">koñco</span></td><td><span class="lauvinko">ekoMeco</span><br/><span style="font-style:italic;">koñco</span></td></tr>
-<tr><td>Inceptive</td><td colspan="2"><span class="lauvinko">IqMkaMeco</span><br/><span style="font-style:italic;">iṅkañco</span></td></tr>
+<tr><td>Inceptive</td><td colspan="2"><span class="lauvinko">IqMekoMeco</span><br/><span style="font-style:italic;">iṅkoñco</span></td></tr>
 <tr><td>Experiential</td><td colspan="2"><span class="lauvinko">raHekoMeco</span><br/><span style="font-style:italic;">ra'koñco</span></td></tr>
 </tbody></table>
 <h2>Lauvìnko</h2><h3><span style="font-style:italic;">kónca, kónsa</span></h3>
@@ -431,7 +431,7 @@ function toggleshown(table_toggler) {
 <thead><tr><th colspan="3">Lauvinko Inflection - <a onclick="toggleshown(this)">Show</a></th></tr></thead><tbody>
 <tr><th></th><th>Nonpast</th><th>Past</th></tr>
 <tr><td>Imperfective</td><td><span class="lauvinko">ekoMeco</span><br/><span style="font-style:italic;">kónca, kónsa</span></td><td><span class="lauvinko">ekoMeco</span><br/><span style="font-style:italic;">kónca, kónsa</span></td></tr>
-<tr><td>Inceptive</td><td colspan="2"><span class="lauvinko">IqMkaMeco</span><br/><span style="font-style:italic;">inkánca, inkánsa</span></td></tr>
+<tr><td>Inceptive</td><td colspan="2"><span class="lauvinko">IqMekoMeco</span><br/><span style="font-style:italic;">inkónca, inkónsa</span></td></tr>
 <tr><td>Experiential</td><td colspan="2"><span class="lauvinko">raHekoMeco</span><br/><span style="font-style:italic;">lakkónca, lakkónsa</span></td></tr>
 </tbody></table>
 <h2>Botharu</h2><h3><span style="font-style:italic;">kǫtlo</span></h3><p>To lie, to be (with prepositional phrase)</p>
@@ -625,7 +625,7 @@ function toggleshown(table_toggler) {
 <thead><tr><th colspan="3">Classical Kasanic Inflection - <a onclick="toggleshown(this)">Show</a></th></tr></thead><tbody>
 <tr><th></th><th>Nonpast</th><th>Past</th></tr>
 <tr><td>Imperfective</td><td><span class="lauvinko">emMtqvW</span><br/><span style="font-style:italic;">mentəvau</span></td><td><span class="lauvinko">emoMtqvW</span><br/><span style="font-style:italic;">montəvau</span></td></tr>
-<tr><td>Inceptive</td><td colspan="2"><span class="lauvinko">IqmaMtqvW</span><br/><span style="font-style:italic;">imantəvau</span></td></tr>
+<tr><td>Inceptive</td><td colspan="2"><span class="lauvinko">IqemMtqvW</span><br/><span style="font-style:italic;">imentəvau</span></td></tr>
 <tr><td>Experiential</td><td colspan="2"><span class="lauvinko">raemoMtqvW</span><br/><span style="font-style:italic;">ramontəvau</span></td></tr>
 </tbody></table>
 <h2>Lauvìnko</h2><h3><span style="font-style:italic;">méntavau, mémvau</span></h3>
@@ -634,7 +634,7 @@ function toggleshown(table_toggler) {
 <thead><tr><th colspan="3">Lauvinko Inflection - <a onclick="toggleshown(this)">Show</a></th></tr></thead><tbody>
 <tr><th></th><th>Nonpast</th><th>Past</th></tr>
 <tr><td>Imperfective</td><td><span class="lauvinko">emMtqvW</span><br/><span style="font-style:italic;">méntavau, mémvau</span></td><td><span class="lauvinko">emoMtqvW</span><br/><span style="font-style:italic;">móntavau, mómvau</span></td></tr>
-<tr><td>Inceptive</td><td colspan="2"><span class="lauvinko">IqmaMtqvW</span><br/><span style="font-style:italic;">imántavau, imámvau</span></td></tr>
+<tr><td>Inceptive</td><td colspan="2"><span class="lauvinko">IqemMtqvW</span><br/><span style="font-style:italic;">iméntavau, imémvau</span></td></tr>
 <tr><td>Experiential</td><td colspan="2"><span class="lauvinko">raemoMtqvW</span><br/><span style="font-style:italic;">lamóntavau, lamómvau</span></td></tr>
 </tbody></table>
 <h2>Botharu</h2><h3><span style="font-style:italic;">mętiwoo</span></h3><p>Mild, easy.</p>
@@ -689,7 +689,7 @@ function toggleshown(table_toggler) {
 <thead><tr><th colspan="3">Classical Kasanic Inflection - <a onclick="toggleshown(this)">Show</a></th></tr></thead><tbody>
 <tr><th></th><th>Nonpast</th><th>Past</th></tr>
 <tr><td>Imperfective</td><td><span class="lauvinko">MtXqHetokq</span><br/><span style="font-style:italic;">nti'tokə</span></td><td><span class="lauvinko">MtZHetokq</span><br/><span style="font-style:italic;">ntu'tokə</span></td></tr>
-<tr><td>Inceptive</td><td colspan="2"><span class="lauvinko">IqMtqHetokq</span><br/><span style="font-style:italic;">intə'tokə</span></td></tr>
+<tr><td>Inceptive</td><td colspan="2"><span class="lauvinko">IqMtXqHetokq</span><br/><span style="font-style:italic;">inti'tokə</span></td></tr>
 <tr><td>Experiential</td><td colspan="2"><span class="lauvinko">raMtZHetokq</span><br/><span style="font-style:italic;">rantu'tokə</span></td></tr>
 </tbody></table>
 <h2>Lauvìnko</h2><h3><span style="font-style:italic;">níttoh, nítah</span></h3>
@@ -698,7 +698,7 @@ function toggleshown(table_toggler) {
 <thead><tr><th colspan="3">Lauvinko Inflection - <a onclick="toggleshown(this)">Show</a></th></tr></thead><tbody>
 <tr><th></th><th>Nonpast</th><th>Past</th></tr>
 <tr><td>Imperfective</td><td><span class="lauvinko">MtXqHetokq</span><br/><span style="font-style:italic;">níttoh, nítah</span></td><td><span class="lauvinko">MtZHetokq</span><br/><span style="font-style:italic;">nóttoh, nótah</span></td></tr>
-<tr><td>Inceptive</td><td colspan="2"><span class="lauvinko">IqMtqHetokq</span><br/><span style="font-style:italic;">intéttoh, intétah</span></td></tr>
+<tr><td>Inceptive</td><td colspan="2"><span class="lauvinko">IqMtXqHetokq</span><br/><span style="font-style:italic;">intíttoh, intítah</span></td></tr>
 <tr><td>Experiential</td><td colspan="2"><span class="lauvinko">raMtZHetokq</span><br/><span style="font-style:italic;">lantóttoh, lantótah</span></td></tr>
 </tbody></table>
 <h2>Botharu</h2><h3><span style="font-style:italic;">chídoki</span></h3><p>To stand.</p>
@@ -726,7 +726,7 @@ function toggleshown(table_toggler) {
 <thead><tr><th colspan="3">Classical Kasanic Inflection - <a onclick="toggleshown(this)">Show</a></th></tr></thead><tbody>
 <tr><th></th><th>Nonpast</th><th>Past</th></tr>
 <tr><td>Imperfective</td><td><span class="lauvinko">eNovipi</span><br/><span style="font-style:italic;">ñovipi</span></td><td><span class="lauvinko">eNovipi</span><br/><span style="font-style:italic;">ñovipi</span></td></tr>
-<tr><td>Inceptive</td><td colspan="2"><span class="lauvinko">IqNavipi</span><br/><span style="font-style:italic;">iñavipi</span></td></tr>
+<tr><td>Inceptive</td><td colspan="2"><span class="lauvinko">IqeNovipi</span><br/><span style="font-style:italic;">iñovipi</span></td></tr>
 <tr><td>Experiential</td><td colspan="2"><span class="lauvinko">raeNovipi</span><br/><span style="font-style:italic;">rañovipi</span></td></tr>
 </tbody></table>
 <h2>Lauvìnko</h2><h3><span style="font-style:italic;">nóvipi, nòvipi</span></h3>
@@ -735,7 +735,7 @@ function toggleshown(table_toggler) {
 <thead><tr><th colspan="3">Lauvinko Inflection - <a onclick="toggleshown(this)">Show</a></th></tr></thead><tbody>
 <tr><th></th><th>Nonpast</th><th>Past</th></tr>
 <tr><td>Imperfective</td><td><span class="lauvinko">eNovipi</span><br/><span style="font-style:italic;">nóvipi, nòvipi</span></td><td><span class="lauvinko">eNovipi</span><br/><span style="font-style:italic;">nóvipi, nòvipi</span></td></tr>
-<tr><td>Inceptive</td><td colspan="2"><span class="lauvinko">IqNavipi</span><br/><span style="font-style:italic;">inávipi, inàvipi</span></td></tr>
+<tr><td>Inceptive</td><td colspan="2"><span class="lauvinko">IqeNovipi</span><br/><span style="font-style:italic;">inóvipi, inòvipi</span></td></tr>
 <tr><td>Experiential</td><td colspan="2"><span class="lauvinko">raeNovipi</span><br/><span style="font-style:italic;">lanóvipi, lanòvipi</span></td></tr>
 </tbody></table>
 <h2>Botharu</h2><h3><span style="font-style:italic;">lovii</span></h3><p>To need.</p>
@@ -847,7 +847,7 @@ function toggleshown(table_toggler) {
 <thead><tr><th colspan="3">Classical Kasanic Inflection - <a onclick="toggleshown(this)">Show</a></th></tr></thead><tbody>
 <tr><th></th><th>Nonpast</th><th>Past</th></tr>
 <tr><td>Imperfective</td><td><span class="lauvinko">MkXqma</span><br/><span style="font-style:italic;">ṅkima</span></td><td><span class="lauvinko">MkZma</span><br/><span style="font-style:italic;">ṅkuma</span></td></tr>
-<tr><td>Inceptive</td><td colspan="2"><span class="lauvinko">IqMkqma</span><br/><span style="font-style:italic;">iṅkəma</span></td></tr>
+<tr><td>Inceptive</td><td colspan="2"><span class="lauvinko">IqMkXqma</span><br/><span style="font-style:italic;">iṅkima</span></td></tr>
 <tr><td>Experiential</td><td colspan="2"><span class="lauvinko">raMkZma</span><br/><span style="font-style:italic;">raṅkuma</span></td></tr>
 </tbody></table>
 <h2>Lauvìnko</h2><h3><span style="font-style:italic;">ngíng, ngìng</span></h3>
@@ -856,7 +856,7 @@ function toggleshown(table_toggler) {
 <thead><tr><th colspan="3">Lauvinko Inflection - <a onclick="toggleshown(this)">Show</a></th></tr></thead><tbody>
 <tr><th></th><th>Nonpast</th><th>Past</th></tr>
 <tr><td>Imperfective</td><td><span class="lauvinko">MkXqma</span><br/><span style="font-style:italic;">ngíng, ngìng</span></td><td><span class="lauvinko">MkZma</span><br/><span style="font-style:italic;">ngóng, ngòng</span></td></tr>
-<tr><td>Inceptive</td><td colspan="2"><span class="lauvinko">IqMkqma</span><br/><span style="font-style:italic;">inkéng, inkèng</span></td></tr>
+<tr><td>Inceptive</td><td colspan="2"><span class="lauvinko">IqMkXqma</span><br/><span style="font-style:italic;">inkíng, inkìng</span></td></tr>
 <tr><td>Experiential</td><td colspan="2"><span class="lauvinko">raMkZma</span><br/><span style="font-style:italic;">lankóng, lankòng</span></td></tr>
 </tbody></table>
 <h2>Botharu</h2><h3><span style="font-style:italic;">chimą</span></h3><p>Yellow.</p>
@@ -950,7 +950,7 @@ function toggleshown(table_toggler) {
 <thead><tr><th colspan="3">Classical Kasanic Inflection - <a onclick="toggleshown(this)">Show</a></th></tr></thead><tbody>
 <tr><th></th><th>Nonpast</th><th>Past</th></tr>
 <tr><td>Imperfective</td><td><span class="lauvinko">epsqvY</span><br/><span style="font-style:italic;">pesəvai</span></td><td><span class="lauvinko">eposqvY</span><br/><span style="font-style:italic;">posəvai</span></td></tr>
-<tr><td>Inceptive</td><td colspan="2"><span class="lauvinko">IqMpasqvY</span><br/><span style="font-style:italic;">impasəvai</span></td></tr>
+<tr><td>Inceptive</td><td colspan="2"><span class="lauvinko">IqMepsqvY</span><br/><span style="font-style:italic;">impesəvai</span></td></tr>
 <tr><td>Experiential</td><td colspan="2"><span class="lauvinko">raHeposqvY</span><br/><span style="font-style:italic;">ra'posəvai</span></td></tr>
 </tbody></table>
 <h2>Lauvìnko</h2><h3><span style="font-style:italic;">pésvay, pèsvay</span></h3>
@@ -959,7 +959,7 @@ function toggleshown(table_toggler) {
 <thead><tr><th colspan="3">Lauvinko Inflection - <a onclick="toggleshown(this)">Show</a></th></tr></thead><tbody>
 <tr><th></th><th>Nonpast</th><th>Past</th></tr>
 <tr><td>Imperfective</td><td><span class="lauvinko">epsqvY</span><br/><span style="font-style:italic;">pésvay, pèsvay</span></td><td><span class="lauvinko">eposqvY</span><br/><span style="font-style:italic;">pósvay, pòsvay</span></td></tr>
-<tr><td>Inceptive</td><td colspan="2"><span class="lauvinko">IqMpasqvY</span><br/><span style="font-style:italic;">impásvay, impàsvay</span></td></tr>
+<tr><td>Inceptive</td><td colspan="2"><span class="lauvinko">IqMepsqvY</span><br/><span style="font-style:italic;">impésvay, impèsvay</span></td></tr>
 <tr><td>Experiential</td><td colspan="2"><span class="lauvinko">raHeposqvY</span><br/><span style="font-style:italic;">lappósvay, lappòsvay</span></td></tr>
 </tbody></table>
 <h2>Botharu</h2><h3><span style="font-style:italic;">shaawee</span></h3><p>To reach, to stretch</p>
@@ -1108,7 +1108,7 @@ function toggleshown(table_toggler) {
 <thead><tr><th colspan="3">Classical Kasanic Inflection - <a onclick="toggleshown(this)">Show</a></th></tr></thead><tbody>
 <tr><th></th><th>Nonpast</th><th>Past</th></tr>
 <tr><td>Imperfective</td><td><span class="lauvinko">sqYev</span><br/><span style="font-style:italic;">saive</span></td><td><span class="lauvinko">esoev</span><br/><span style="font-style:italic;">sove</span></td></tr>
-<tr><td>Inceptive</td><td colspan="2"><span class="lauvinko">Iqsaev</span><br/><span style="font-style:italic;">isave</span></td></tr>
+<tr><td>Inceptive</td><td colspan="2"><span class="lauvinko">IqsqYev</span><br/><span style="font-style:italic;">isaive</span></td></tr>
 <tr><td>Experiential</td><td colspan="2"><span class="lauvinko">raecoev</span><br/><span style="font-style:italic;">racove</span></td></tr>
 </tbody></table>
 <h2>Lauvìnko</h2><h3><span style="font-style:italic;">sáyvi, sàyvi</span></h3>
@@ -1117,7 +1117,7 @@ function toggleshown(table_toggler) {
 <thead><tr><th colspan="3">Lauvinko Inflection - <a onclick="toggleshown(this)">Show</a></th></tr></thead><tbody>
 <tr><th></th><th>Nonpast</th><th>Past</th></tr>
 <tr><td>Imperfective</td><td><span class="lauvinko">sqYev</span><br/><span style="font-style:italic;">sáyvi, sàyvi</span></td><td><span class="lauvinko">esoev</span><br/><span style="font-style:italic;">sóvi, sòvi</span></td></tr>
-<tr><td>Inceptive</td><td colspan="2"><span class="lauvinko">Iqsaev</span><br/><span style="font-style:italic;">isávi, isàvi</span></td></tr>
+<tr><td>Inceptive</td><td colspan="2"><span class="lauvinko">IqsqYev</span><br/><span style="font-style:italic;">isáyvi, isàyvi</span></td></tr>
 <tr><td>Experiential</td><td colspan="2"><span class="lauvinko">raecoev</span><br/><span style="font-style:italic;">lacóvi, lacòvi</span></td></tr>
 </tbody></table>
 <h2>Botharu</h2><h3><span style="font-style:italic;">heeve</span></h3><p>Hot, warm.</p>
@@ -1191,7 +1191,7 @@ function toggleshown(table_toggler) {
 <thead><tr><th colspan="3">Classical Kasanic Inflection - <a onclick="toggleshown(this)">Show</a></th></tr></thead><tbody>
 <tr><th></th><th>Nonpast</th><th>Past</th></tr>
 <tr><td>Imperfective</td><td><span class="lauvinko">esqHetomX</span><br/><span style="font-style:italic;">se'toṅvi</span></td><td><span class="lauvinko">esoHetomX</span><br/><span style="font-style:italic;">so'toṅvi</span></td></tr>
-<tr><td>Inceptive</td><td colspan="2"><span class="lauvinko">IqsaHetomX</span><br/><span style="font-style:italic;">isa'toṅvi</span></td></tr>
+<tr><td>Inceptive</td><td colspan="2"><span class="lauvinko">IqesqHetomX</span><br/><span style="font-style:italic;">ise'toṅvi</span></td></tr>
 <tr><td>Experiential</td><td colspan="2"><span class="lauvinko">raecoHetomX</span><br/><span style="font-style:italic;">raco'toṅvi</span></td></tr>
 </tbody></table>
 <h2>Lauvìnko</h2><h3><span style="font-style:italic;">séttomi, séhmi</span></h3>
@@ -1200,7 +1200,7 @@ function toggleshown(table_toggler) {
 <thead><tr><th colspan="3">Lauvinko Inflection - <a onclick="toggleshown(this)">Show</a></th></tr></thead><tbody>
 <tr><th></th><th>Nonpast</th><th>Past</th></tr>
 <tr><td>Imperfective</td><td><span class="lauvinko">esqHetomX</span><br/><span style="font-style:italic;">séttomi, séhmi</span></td><td><span class="lauvinko">esoHetomX</span><br/><span style="font-style:italic;">sóttomi, sóhmi</span></td></tr>
-<tr><td>Inceptive</td><td colspan="2"><span class="lauvinko">IqsaHetomX</span><br/><span style="font-style:italic;">isáttomi, isáhmi</span></td></tr>
+<tr><td>Inceptive</td><td colspan="2"><span class="lauvinko">IqesqHetomX</span><br/><span style="font-style:italic;">iséttomi, iséhmi</span></td></tr>
 <tr><td>Experiential</td><td colspan="2"><span class="lauvinko">raecoHetomX</span><br/><span style="font-style:italic;">lacóttomi, lacóhmi</span></td></tr>
 </tbody></table>
 <h2>Botharu</h2><h3><span style="font-style:italic;">shédǫvę</span></h3><p>Red.</p>
@@ -1252,7 +1252,7 @@ function toggleshown(table_toggler) {
 <thead><tr><th colspan="3">Classical Kasanic Inflection - <a onclick="toggleshown(this)">Show</a></th></tr></thead><tbody>
 <tr><th></th><th>Nonpast</th><th>Past</th></tr>
 <tr><td>Imperfective</td><td><span class="lauvinko">tqYci</span><br/><span style="font-style:italic;">taici</span></td><td><span class="lauvinko">etoci</span><br/><span style="font-style:italic;">toci</span></td></tr>
-<tr><td>Inceptive</td><td colspan="2"><span class="lauvinko">IqMtaci</span><br/><span style="font-style:italic;">intaci</span></td></tr>
+<tr><td>Inceptive</td><td colspan="2"><span class="lauvinko">IqMtqYci</span><br/><span style="font-style:italic;">intaici</span></td></tr>
 <tr><td>Experiential</td><td colspan="2"><span class="lauvinko">raHetoci</span><br/><span style="font-style:italic;">ra'toci</span></td></tr>
 </tbody></table>
 <h2>Lauvìnko</h2><h3><span style="font-style:italic;">táyci, tàyci</span></h3>
@@ -1261,7 +1261,7 @@ function toggleshown(table_toggler) {
 <thead><tr><th colspan="3">Lauvinko Inflection - <a onclick="toggleshown(this)">Show</a></th></tr></thead><tbody>
 <tr><th></th><th>Nonpast</th><th>Past</th></tr>
 <tr><td>Imperfective</td><td><span class="lauvinko">tqYci</span><br/><span style="font-style:italic;">táyci, tàyci</span></td><td><span class="lauvinko">etoci</span><br/><span style="font-style:italic;">tóci, tósi</span></td></tr>
-<tr><td>Inceptive</td><td colspan="2"><span class="lauvinko">IqMtaci</span><br/><span style="font-style:italic;">intáci, intási</span></td></tr>
+<tr><td>Inceptive</td><td colspan="2"><span class="lauvinko">IqMtqYci</span><br/><span style="font-style:italic;">intáyci, intàyci</span></td></tr>
 <tr><td>Experiential</td><td colspan="2"><span class="lauvinko">raHetoci</span><br/><span style="font-style:italic;">lattóci, lattósi</span></td></tr>
 </tbody></table>
 <h2>Botharu</h2><h3><span style="font-style:italic;">teechi</span></h3><p>To cover, to hang, to drape.</p>
@@ -1298,7 +1298,7 @@ function toggleshown(table_toggler) {
 <thead><tr><th colspan="3">Classical Kasanic Inflection - <a onclick="toggleshown(this)">Show</a></th></tr></thead><tbody>
 <tr><th></th><th>Nonpast</th><th>Past</th></tr>
 <tr><td>Imperfective</td><td><span class="lauvinko">tZhXqsq</span><br/><span style="font-style:italic;">tuhisə</span></td><td><span class="lauvinko">tZhXqsq</span><br/><span style="font-style:italic;">tuhisə</span></td></tr>
-<tr><td>Inceptive</td><td colspan="2"><span class="lauvinko">IqMtqhXqsq</span><br/><span style="font-style:italic;">intəhisə</span></td></tr>
+<tr><td>Inceptive</td><td colspan="2"><span class="lauvinko">IqMtZhXqsq</span><br/><span style="font-style:italic;">intuhisə</span></td></tr>
 <tr><td>Experiential</td><td colspan="2"><span class="lauvinko">raHtZhXqsq</span><br/><span style="font-style:italic;">ra'tuhisə</span></td></tr>
 </tbody></table>
 <h2>Lauvìnko</h2><h3><span style="font-style:italic;">tóysa, tòysa</span></h3>
@@ -1307,7 +1307,7 @@ function toggleshown(table_toggler) {
 <thead><tr><th colspan="3">Lauvinko Inflection - <a onclick="toggleshown(this)">Show</a></th></tr></thead><tbody>
 <tr><th></th><th>Nonpast</th><th>Past</th></tr>
 <tr><td>Imperfective</td><td><span class="lauvinko">tZhXqsq</span><br/><span style="font-style:italic;">tóysa, tòysa</span></td><td><span class="lauvinko">tZhXqsq</span><br/><span style="font-style:italic;">tóysa, tòysa</span></td></tr>
-<tr><td>Inceptive</td><td colspan="2"><span class="lauvinko">IqMtqhXqsq</span><br/><span style="font-style:italic;">intés, intès</span></td></tr>
+<tr><td>Inceptive</td><td colspan="2"><span class="lauvinko">IqMtZhXqsq</span><br/><span style="font-style:italic;">intóysa, intòysa</span></td></tr>
 <tr><td>Experiential</td><td colspan="2"><span class="lauvinko">raHtZhXqsq</span><br/><span style="font-style:italic;">lattóysa, lattòysa</span></td></tr>
 </tbody></table>
 <h2>Botharu</h2><h3><span style="font-style:italic;">thwii</span></h3><p>Sun.</p>
