@@ -12,11 +12,11 @@
     <h2 id="header">{{year}}.{{month}}.{{day}} | <a href="/journal">bu</a></h2>
     <div class="container">
         <div class="row">
-            <div id="mdin-parent" class="col-xs-6 {% if not today %}invisible{% endif %}">
-                <textarea id="mdin" wrap="hard" autocomplete="off" autocapitalize="off" spellcheck="false"></textarea>
+            <div id="mdfill" class="col-xs-12 {% if today %}col-md-6{% endif %}">
             </div>
 
-            <div id="mdfill" class="{% if today %}col-xs-6{% else %}col-xs-12{% endif %}">
+            <div id="mdin-parent" class="col-xs-12 col-md-6 {% if not today %}invisible{% endif %}">
+                <textarea id="mdin" wrap="hard" autocomplete="off" autocapitalize="off" spellcheck="false"></textarea>
             </div>
         </div>
     </div>
@@ -33,10 +33,15 @@
             lines.forEach(function(line) {
                 if (line == "") {
                     curr_elem = null;
-                } else if (line == "---") {
+                    curr_ul = null;
+                }
+
+                else if (line == "---") {
                     curr_elem = null;
                     $("#mdfill").append($(document.createElement('hr')));
-                } else {
+                }
+
+                else {
                     if (line.startsWith("# ")) {
                         curr_elem = $(document.createElement('h2'));
                         $("#mdfill").append(curr_elem);
@@ -55,6 +60,16 @@
                         line = line.substring(4);
                     }
 
+                    else if (line.startsWith("* ")) {
+                        if (curr_ul == null) {
+                            curr_ul = $(document.createElement('ul'));
+                            $("#mdfill").append(curr_ul);
+                        }
+                        curr_elem = $(document.createElement('li'));
+                        curr_ul.append(curr_elem);
+                        line = line.substring(2);
+                    }
+
                     else if (curr_elem == null) {
                         curr_elem = $(document.createElement('p'));
                         $("#mdfill").append(curr_elem);
@@ -68,10 +83,24 @@
         }
 
         function to_palawai_line(text) {
-            var out = "", i = 0, syll;
+            var out = "", i = 0, new_word = true, pnoun = false, syll;
 
             while (i < text.length) {
                 syll = ['', '', ''];
+
+                if (new_word) {
+                    new_word = false;
+                    if (text.charAt(i) != text.charAt(i).toLowerCase()) {
+                        if (!pnoun) {
+                            pnoun = true;
+                            out += '" ';
+                            text = text.substr(0, i) + text.charAt(i).toLowerCase() + text.substr(i+1);
+                        }
+                    } else if (pnoun) {
+                        pnoun = false;
+                        out += "' ";
+                    }
+                }
 
                 if (inits.includes(text.charAt(i))) {
                     syll[0] = text.charAt(i);
@@ -81,10 +110,14 @@
                 if (vowels.includes(text.charAt(i))) {
                     syll[1] = text.charAt(i);
                     i++;
-                } else {
+                }
+
+                else {
                     out += syll[0];
-                    if (text.charAt(i) != " ") {
-                        out += text.charAt(i);
+                    if (text.charAt(i) == " ") {
+                        new_word = true;
+                    } else {
+                        out += text.charAt(i) + " ";
                     }
                     i++;
                     continue;
@@ -92,12 +125,19 @@
 
                 if (finals.includes(text.charAt(i)) &&
                     !vowels.includes(text.charAt(i+1))) {
-                    syll[2] = text.charAt(i);
-                    i++;
+                    if (!"io".includes(text.charAt(i)) || syll[1] == "a") {
+                        syll[2] = text.charAt(i);
+                        i++;
+                    }
                 }
 
                 out += to_palawai_syll(syll);
             }
+
+            if (pnoun) {
+                out += "'";
+            }
+
             return out;
         }
 
@@ -109,59 +149,67 @@
         }
 
         function to_palawai_syll(syll) {
+            var out;
+
             if (['', "'"].includes(syll[0])) {
                 if (syll[2] == 'i') {
                     if (syll[1] == 'a') {
-                        return 'Y';
+                        out = 'Y';
                     } else {
-                        return syll.join('');
+                        out = syll.join('');
                     }
                 }
 
                 else if (syll[2] == 'o') {
                     if (syll[1] == 'a') {
-                        return 'W';
+                        out = 'W';
                     } else {
-                        return syll.join('');
+                        out = syll.join('');
                     }
                 }
 
                 else {
-                    return syll[1].toUpperCase() + final_chars[syll[2]];
+                    out = syll[1].toUpperCase() + final_chars[syll[2]];
                 }
             }
 
             else {
                 if (syll[2] == 'i') {
                     if (syll[1] == 'a') {
-                        return 'e' + syll[0] + 'i';
+                        out = 'e' + syll[0] + 'i';
                     } else {
-                        return syll.join('');
+                        out = syll.join('');
                     }
                 }
 
                 else if (syll[2] == 'o') {
                     if (syll[1] == 'a') {
-                        return 'e' + syll[0] + 'io';
+                        out = 'e' + syll[0] + 'io';
                     } else {
-                        return syll.join('');
+                        out = syll.join('');
                     }
                 }
 
                 else {
                     if (syll[1] == 'e') {
-                        return 'e' + syll[0] + final_chars[syll[2]];
+                        out = 'e' + syll[0] + final_chars[syll[2]];
                     }
 
                     else if (syll[1] == 'o') {
-                        return 'e' + syll[0] + 'o' + final_chars[syll[2]];
+                        out = 'e' + syll[0] + 'o' + final_chars[syll[2]];
                     }
 
                     else {
-                        return syll[0] + syll[1] + final_chars[syll[2]];
+                        out = syll[0] + syll[1] + final_chars[syll[2]];
                     }
                 }
+
+                if ("mtkxhly".includes(syll[0])) {
+                    out = out.replace("i", "X").replace("u", "Z");
+                }
             }
+
+            return out + " ";
         }
 
         function mdin_changed() {
@@ -177,8 +225,7 @@
 
         {% if today %}
         function toggleview() {
-            $("#mdfill").toggleClass("col-xs-6");
-            $("#mdfill").toggleClass("col-xs-12");
+            $("#mdfill").toggleClass("col-md-6");
             $("#mdin-parent").toggleClass("invisible");
         }
 

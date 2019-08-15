@@ -20,7 +20,7 @@ body {
   background-color: #222;
 }
 
-h1, h2, h3, h4, p, textarea {
+h1, h2, h3, h4, p, textarea, li {
   color: white;
 }
 
@@ -33,6 +33,7 @@ h1, h2, h3, h4, p, textarea {
     line-height: 10vh;
     font-family: "Lauvinko Bubble";
     color: #a9f;
+    font-size: 4vh;
 }
 
 #mdin, #mdfill, .entrylink {
@@ -41,21 +42,42 @@ h1, h2, h3, h4, p, textarea {
   padding: 15px;
 }
 
-#mdin, #mdfill {
-  height: 80vh;
+@media (max-width: 992px) {
+  #mdfill {
+    height: 80vh;
+  }
+
+  #mdin, #mdfill.col-md-6 {
+    height: 40vh;
+  }
+
+  #mdin-parent {
+    padding: 1vh 0;
+  }
+}
+
+@media (min-width: 992px) {
+  #mdin, #mdfill {
+    height: 80vh;
+  }
+}
+
+#mdin-parent, #mdfill {
+  float: right;
 }
 
 #mdin {
   background-color: transparent;
   width: 100%;
   font-family: "Josephin Sans";
-  font-size: 1.5em;
+  font-size: 2.5vh;
 }
 
 #mdfill, .entrylink {
   font-family: "Lauvinko Bubble";
   overflow-wrap: break-word;
   overflow-y: scroll;
+  line-height: 2.5;
 }
 
 #mdin:focus, #mdfill:hover, .entrylink:hover {
@@ -64,7 +86,11 @@ h1, h2, h3, h4, p, textarea {
   transition: 0s;
 }
 
-#mdin:focus, #mdfill:hover > *, .entrylink:hover > * {
+.entrylink:hover {
+  background-image: url('/static/img/space.jpg');
+}
+
+#mdin:focus, #mdfill:hover *, .entrylink:hover > * {
   color: #a9f;
   transition: 0s;
 }
@@ -80,16 +106,30 @@ h1, h2, h3, h4, p, textarea {
 
 .entrylink {
   text-align: center;
-  font-size: 1.5em;
-  margin: .5em;
+  font-size: 2.5vh;
+  margin: .5em 0;
+}
+
+.entrylink p {
+  margin: 0;
+}
+
+#mdfill p, #mdfill ul li {
+  font-size: 1.75vh;
 }
 
 #mdfill h2 {
   text-decoration: underline;
+  font-size: 4vh;
+}
+
+#mdfill h3 {
+  font-size: 3.25vh;
 }
 
 #mdfill h4 {
   font-style: italic;
+  font-size: 2.5vh;
 }
 
 #mdfill h2, #mdfill h3, #mdfill h4 {
