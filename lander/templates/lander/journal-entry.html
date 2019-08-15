@@ -232,7 +232,7 @@
         $("#mdfill").on('click', toggleview);
         {% endif %}
 
-        $(document).ready(function() {
+        function get_md() {
             var xhttp = new XMLHttpRequest(), data = new FormData();
             xhttp.open("GET", "/journal/md/{{year}}{{month}}{{day}}", true);
             xhttp.onreadystatechange = function() {
@@ -240,6 +240,10 @@
                 update_mdfill();
             };
             xhttp.send();
+        }
+
+        $(document).ready(function() {
+            setInterval(get_md, 200);
         });
     </script>
 </body>
