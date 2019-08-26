@@ -95,13 +95,17 @@ def tekotypes(request):
     return render(request, 'lander/teko-types.html')
 
 
+def shifted_today(offset=-5):
+    return (datetime.datetime.now(tz=datetime.timezone(datetime.timedelta(hours=offset)))).date()
+
+
 def journalhome(request):
-    dates = [(datetime.date.today().strftime("%Y%m%d"), "ejesoM")]
+    dates = [(shifted_today().strftime("%Y%m%d"), "ejesoM")]
 
     for filename in os.listdir("static/md"):
         try:
             d = datetime.datetime.strptime(filename, "%Y%m%d.md")
-            if d.date() != datetime.date.today():
+            if d.date() != shifted_today():
                 link = filename[:8]
                 title = f"{filename[:4]}.{filename[4:6]}.{filename[6:8]}"
                 dates.append((link, title))
@@ -124,7 +128,7 @@ def journalentry(request, date_string):
         "year": date_string[:4],
         "month": date_string[4:6],
         "day": date_string[6:],
-        "today": d.date() == datetime.date.today()
+        "today": d.date() == shifted_today()
     }
     return render(request, 'lander/journal-entry.html', context)
 

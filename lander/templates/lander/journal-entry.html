@@ -94,8 +94,8 @@
                         if (!pnoun) {
                             pnoun = true;
                             out += '" ';
-                            text = text.substr(0, i) + text.charAt(i).toLowerCase() + text.substr(i+1);
                         }
+                        text = text.substr(0, i) + text.charAt(i).toLowerCase() + text.substr(i+1);
                     } else if (pnoun) {
                         pnoun = false;
                         out += "' ";
@@ -117,6 +117,10 @@
                     if (text.charAt(i) == " ") {
                         new_word = true;
                     } else {
+                        if (pnoun) {
+                            pnoun = false;
+                            out += "' ";
+                        }
                         out += text.charAt(i) + " ";
                     }
                     i++;
@@ -162,18 +166,20 @@
 
                 else if (syll[2] == 'o') {
                     if (syll[1] == 'a') {
-                        out = 'W';
+                        out = 'V';
                     } else {
                         out = syll.join('');
                     }
                 }
 
                 else {
-                    out = syll[1].toUpperCase() + final_chars[syll[2]];
+                    out = syll[1].toUpperCase() + ("ai".includes(syll[1]) ? 'q' : '') + final_chars[syll[2]];
                 }
             }
 
             else {
+                var end = '';
+
                 if (syll[2] == 'i') {
                     if (syll[1] == 'a') {
                         out = 'e' + syll[0] + 'i';
@@ -192,21 +198,29 @@
 
                 else {
                     if (syll[1] == 'e') {
-                        out = 'e' + syll[0] + final_chars[syll[2]];
+                        out = 'e' + syll[0];
                     }
 
                     else if (syll[1] == 'o') {
-                        out = 'e' + syll[0] + 'o' + final_chars[syll[2]];
+                        out = 'e' + syll[0] + 'o';
                     }
 
                     else {
-                        out = syll[0] + syll[1] + final_chars[syll[2]];
+                        out = syll[0] + syll[1];
                     }
+                    
+                    end = final_chars[syll[2]];
                 }
 
                 if ("mtkxhly".includes(syll[0])) {
                     out = out.replace("i", "X").replace("u", "Z");
                 }
+
+                if ("tkbgxh".includes(syll[0]) && (!"aou".includes(syll[1]) || syll[2] == 'i')) {
+                    out += "q";
+                }
+
+                out += end;
             }
 
             return out + " ";
@@ -232,18 +246,31 @@
         $("#mdfill").on('click', toggleview);
         {% endif %}
 
+        var mdtext = "";
+
         function get_md() {
             var xhttp = new XMLHttpRequest(), data = new FormData();
             xhttp.open("GET", "/journal/md/{{year}}{{month}}{{day}}", true);
             xhttp.onreadystatechange = function() {
-                $("#mdin").text(this.responseText);
-                update_mdfill();
+                var newtext = this.responseText
+                if (newtext != mdtext && newtext != "") {
+                    mdtext = newtext;
+                }
+
+                if (mdtext != $("#mdin").text()) {
+                    $("#mdin").text(mdtext);
+                    update_mdfill();
+                }
             };
             xhttp.send();
         }
 
         $(document).ready(function() {
-            setInterval(get_md, 200);
+            {% if today %}
+            setInterval(get_md, 500);
+            {% else %}
+            get_md();
+            {% endif %}
         });
     </script>
 </body>
