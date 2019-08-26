@@ -1,13 +1,3 @@
-/*Color Scheme:
-background #E1E6D4
-plain text #303438
-links and header #6E9548
-highlight #9B768D
-other #B8D29F
-other2 #834B80
-placeholderB8D29F
-*/
-
 @font-face {
     font-family: "Gentium";
     src: url("/static/font/GentiumPlus-R.ttf") format('truetype'),
@@ -15,8 +5,21 @@ placeholderB8D29F
     font-weight: normal;
 }
 
+::-webkit-scrollbar {
+    width: 10px;
+}
+
+::-webkit-scrollbar-track {
+    background: #fff;
+}
+
+::-webkit-scrollbar-thumb {
+    background: #f0f0f0;
+    border-radius: 5px;
+}
+
 body {
-	background-color: #E1E6D4;
+	background-color: white;
 	text-align: center;
 }
 
@@ -25,9 +28,7 @@ h1 {
 	font-family: "Gentium";
 	color: #6E9548;
 	padding: 0em 3em;
-	font-weight: normal;
-	font-size:6vh;
-	font-weight: 900;
+	font-size: 5vh;
 	color: #9B768D;
 	font-variant: small-caps;
 }
@@ -41,13 +42,8 @@ h2 {
 	font-family: "Gentium";
 	color: #6E9548;
 	padding: 0;
-	font-size: 4.5vh;
-	font-weight: 900;
+	font-size: 3.5vh;
 	margin: .5em;
-}
-
-h2.chinese {
-	font-size: 2.5vh;
 }
 
 button:focus {outline:0;}
@@ -55,14 +51,14 @@ button:focus {outline:0;}
 p, td, th, textarea, button {
 	font-family: "Gentium";
 	line-height: 1.5;
-	font-size: 2.5vh;
-	text-align: center;
+	font-size: 2.3vh;
+	text-align: justify;
 }
 
 p, td, th, button {
 	color: #303438;
 	padding: 0;
-	font-weight: 600;
+	padding-bottom: 2vh;
 	margin: 1em;	
 }
 
@@ -87,10 +83,6 @@ th {
 	color: #6E9548;
 }
 
-p.chinese {
-	font-size: 2.5vh;
-}
-
 .fa, .fas, .fab, .svg-inline--fa {
 	font-size: 100% !important;
 	margin: 0em .5em;
@@ -101,7 +93,7 @@ pre {
 	text-align: left;
 	color: #E1E6D4;
 	padding: 10px;
-	font-size: 2.5vh;
+	font-size: 2vh;
 	line-height: 1;
 	background-color: #303438;
 	width: auto;
@@ -115,7 +107,7 @@ code {
 	font-weight: 400;
 	color: #E1E6D4;
 	padding: 5px;
-	font-size: 2.5vh;
+	font-size: 2vh;
 	line-height: 1;
 	background-color: #303438;
 	margin: 0;
@@ -143,16 +135,23 @@ hr {
 	background: #E1E6D4;
 	border-radius: 50%;
 	color: #303438;
-	top: -2em;
+	top: -2.1em;
 }
 
 p a {
-	font-weight: 600;
 	color: #9B768D;
+	border: 1px solid white;
+	border-radius: 5px;
+}
+
+p a:hover {
+	background-color: #8fc78f;
+	border-color: black;
+    color: white;
+    text-decoration: none;
 }
 
 b {
-	font-weight: 900;
 	color: #6E9548;
 }
 
@@ -162,11 +161,12 @@ table {
 
 #navbar {
 	position: fixed;
-	width: 100%;
+	width: 100vw;
 	top: 0;
 	left: 0;
-	background-color: #6E9548;
+	background-color: white;
 	z-index: 1;
+	padding-right: 10px;
 }
 
 .container {
@@ -182,60 +182,29 @@ table {
 	display: block;
 	font-family: "Gentium";
     font-size: calc(1vh + 1.5vw);
-	color: #E1E6D4;
-	font-weight: 600;
-	text-decoration:none;
-	padding: .25em .5em;
+	color: #6E9548;
+	text-decoration: none;
+	padding: .25em;
+	border: 2px solid white;
+	border-top: none;
+	border-radius: 0 0 5px 5px;
 }
 
 .pagelinks a:hover {
-	color: #9B768D;
-	background-color: #E1E6D4;
-}
-
-#name {
-	overflow: hidden;
-    float:none;
-	background-color: #6E9548;
-}
-
-#name a {
-	float: left;
-	display: block;
-	font-family: "Gentium";
-	font-size: 2.5vh;
-	color: #E1E6D4;
-	padding: .25em 1em;
+	background-color: #8fc78f;
+	border-color: black;
+    color: white;
 }
 
 #mainframe {
-	margin: 4em auto;
-	padding: 1em 0em;
-	max-width: 60em;
-	background-color: #E1E6D4;
-	border-radius: 2em;
 	text-align: center;
-}
-
-#mainframex {
-	padding: 3em;
-	margin-left: 15%;
-	margin-right: 15%;
-}
-
-#titanic {
-	float: none;
+	padding: 10vh 0;
 }
 
 .circle {
     border-radius: 40%;
     margin: 1em auto;
     display:block;
-}
-
-.talen {
-	position: fixed;
-	bottom: 0px;
 }
 
 #grid td {

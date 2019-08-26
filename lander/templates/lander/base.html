@@ -17,35 +17,28 @@
 
 		<header id = "navbar"> 
 			<div class = "pagelinks" style="float:left;">
-				<a href = "/"><i class="fas fa-home" aria-hidden="true"></i>Home</a>
-				<a href="/static/pdf/resume.pdf"><i class="fas fa-briefcase" aria-hidden="true"></i>My Resume</a>
+				<a href = "/"> <i class="fas fa-home" aria-hidden="true"></i>About me</a>
+				<a href="/static/pdf/resume.pdf"><i class="fas fa-briefcase" aria-hidden="true"></i>Resume</a>
 				<a href = "/projects"><i class="fas fa-rocket" aria-hidden="true"></i>Projects</a>
 			</div>
 			<div class = "pagelinks" style="float:right;">
 				<a href="http://www.linkedin.com/in/conorstuartroe/">&nbsp;<i class="fab fa-linkedin" aria-hidden="true"></i>&nbsp;</a>
 				<a href="http://www.github.com/cstuartroe">&nbsp;<i class="fab fa-github" aria-hidden="true"></i>&nbsp;</a>
-				<a href="mailto:conorstuartroe@yahoo.com">&nbsp;<i class="fas fa-envelope" aria-hidden="true" title="Yes, I still use Yahoo mail."></i>&nbsp;</a>
+				<a href="mailto:conorstuartroe@gmail.com">&nbsp;<i class="fas fa-envelope" aria-hidden="true"></i>&nbsp;</a>
 			</div>
 		</header>
 
-		<div id = "mainframe">
-			{% block content %}
-			{% endblock %}
-		</div>
-
-		<hr/>
-
-		<div id = "footer">
-			<p style="text-align: center;">All content &copy; Conor Stuart Roe 2018 under a <a href="http://creativecommons.org/licenses/by-nc-nd/3.0/">CC BY-NC-ND 3.0</a> license.</p>
-		</div>
+		<div class="container"><div class="row">
+			<div class="col-xs-2"></div>
+			<div id="mainframe" class="col-xs-12 col-md-8">
+				{% block content %}
+				{% endblock %}
+			</div>
+		</div></div>
 
 		<script>
 			$("<i class=\"fas fa-cog\" aria-hidden=\"true\"></i>").insertAfter("hr")
 		</script>
-
-		<!-- <div class="talen">
-			<p><a href = "/nl">nl</a></p>
-		</div> -->
 
 	</body>
 </html>
