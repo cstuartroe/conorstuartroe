@@ -154,3 +154,7 @@ def journalmd(request, date_string):
         with open(filename, "w") as fh:
             fh.write(request.POST["md"])
         return HttpResponse()
+
+
+def situations(request):
+    return render(request, "lander/situations.html")

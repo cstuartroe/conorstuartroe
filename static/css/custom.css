@@ -23,10 +23,14 @@ body {
 	text-align: center;
 }
 
-h1 {
+h1, h2, h3 {
 	text-align: center;
 	font-family: "Gentium";
 	color: #6E9548;
+	padding: 0;
+}
+
+h1 {
 	padding: 0em 3em;
 	font-size: 5vh;
 	color: #9B768D;
@@ -38,11 +42,12 @@ h1.chinese {
 }
 
 h2 {
-	text-align: center;
-	font-family: "Gentium";
-	color: #6E9548;
-	padding: 0;
 	font-size: 3.5vh;
+	margin: .5em;
+}
+
+h3 {
+	font-size: 2.75vh;
 	margin: .5em;
 }
 
