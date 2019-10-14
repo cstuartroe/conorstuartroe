@@ -4,8 +4,8 @@
   "description": "",
   "main": "index.js",
   "scripts": {
-    "dev": "webpack --mode development ./games/src/index.js --output ./games/static/games/main.js",
-    "build": "webpack --mode production ./games/src/index.js --output ./games/static/games/main.js"
+    "dev": "webpack --mode development ./games/src/App.js --output ./games/static/games/main.js",
+    "build": "webpack --mode production ./games/src/App.js --output ./games/static/games/main.js"
   },
   "repository": {
     "type": "git",

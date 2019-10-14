@@ -1,0 +1,43 @@
+@font-face {
+    font-family: "Gentium";
+    src: url("/static/font/GentiumPlus-R.ttf") format('truetype'),
+    	url("/static/font/GentiumPlus-R.svg") format('svg');
+    font-weight: normal;
+}
+
+body {
+  background-color: #222;
+  min-height: 100vh;
+}
+
+h1, h2, h3, p {
+  text-align: center;
+  font-family: "Gentium";
+}
+
+h2 {
+  color: #c70000;
+  font-size: 3.5vh;
+}
+
+p {
+  color: white;
+  font-size: 1.5vh;
+}
+
+#top-menu a {
+  color: white;
+  font-family: "Gentium";
+}
+
+.goto-game {
+  padding: 3vh 0;
+  border-radius: 2vh;
+  border: 2px solid #7800bd;
+}
+
+.goto-game:hover {
+  background-color: white;
+  border-color: white;
+  cursor: pointer;
+}
