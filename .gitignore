@@ -5,3 +5,5 @@ lauvinko/templates/lauvinko
 boxdata.json
 .idea
 static/md
+node_modules
+games/static/games
