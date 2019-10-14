@@ -27,7 +27,7 @@ class GamePicker extends Component {
 
         {this.state.games.map((game) =>
           <div className="col-6 col-md-4" key={game.slug}>
-            <button className="big-select" onClick={() => this.props.setGame(game.slug)}>{game.title}</button>
+            <button className="big-select" onClick={() => this.props.setGame(game.slug, game.title)}>{game.title}</button>
           </div>
         )}
       </div>

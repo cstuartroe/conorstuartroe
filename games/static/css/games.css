@@ -63,3 +63,25 @@ p {
   border-color: white;
   cursor: pointer;
 }
+
+.big-select:focus, input:focus {
+  outline: none;
+}
+
+img.candidate {
+  max-width: 75%;
+  border: solid 1vh #ddddff;
+  border-radius: 1vh;
+  margin: 5vh;
+}
+
+img.candidate:hover {
+  border-color: #bb9999;
+}
+
+input[type="text"] {
+  font-size: 3vh;
+  text-align: center;
+  border-radius: 1vh;
+  border: none;
+}

@@ -27,7 +27,7 @@ class GamePicker extends Component {
 
         {this.state.users.map((user) =>
           <div className="col-4 col-md-3" key={user.username}>
-            <button className="big-select" onClick={() => this.props.setUser(user.username)}>{user.screen_name}</button>
+            <button className="big-select" onClick={() => this.props.setUser(user.username, user.screen_name)}>{user.screen_name}</button>
           </div>
         )}
       </div>

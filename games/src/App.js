@@ -4,24 +4,30 @@ import ReactDOM from "react-dom";
 import TopMenu from "./components/TopMenu";
 import UserLogin from "./components/UserLogin";
 import GamePicker from "./components/GamePicker";
+import GameRoomPicker from "./components/GameRoomPicker";
+
 import FeelinLucky from "./components/feelin-lucky/FeelinLucky"
 
 class App extends Component {
   state = {
-    user: null,
+    username: null,
+    screen_name: null,
     game: null,
+    gameTitle: null,
     gameInstance: null
   };
 
-  setUser(username) {
+  setUser(username, screen_name) {
     this.setState({
-      user: username
+      username: username,
+      screen_name: screen_name
     });
   }
 
-  setGame(gameSlug) {
+  setGame(gameSlug, gameTitle) {
     this.setState({
-      game: gameSlug
+      game: gameSlug,
+      gameTitle: gameTitle
     });
   }
 
@@ -32,22 +38,24 @@ class App extends Component {
   }
 
   render() {
-    const { user, game, gameInstance } = this.state;
+    const { username, screen_name, game, gameTitle, gameInstance } = this.state;
 
     var bodyElem;
-    if (user == null) {
-      bodyElem = <UserLogin setUser = {this.setUser.bind(this)} />;
+    if (username == null) {
+      bodyElem = <UserLogin setUser={this.setUser.bind(this)} />;
     } else if (game == null) {
-      bodyElem = <GamePicker setGame = {this.setGame.bind(this)} />;
+      bodyElem = <GamePicker setGame={this.setGame.bind(this)} />;
+    } else if (gameInstance == null) {
+      bodyElem = <GameRoomPicker username={username} game={game} setGameInstance={this.setGameInstance.bind(this)} />;
     } else if (game == "feelin-lucky") {
-      bodyElem = <FeelinLucky user={user} gameInstance={gameInstance}/>;
+      bodyElem = <FeelinLucky username={username} gameInstance={gameInstance}/>;
     } else {
       bodyElem = <p>Unknown game.</p>;
     }
 
     return (
       <div className="container">
-        <TopMenu/>
+        <TopMenu screen_name={screen_name} gameTitle={gameTitle} gameInstance={gameInstance}/>
         { bodyElem }
       </div>
     );

@@ -18,5 +18,6 @@ class Game(models.Model):
 
 
 class GameInstance(models.Model):
-    gameInstanceId = models.CharField(max_length=4, unique=True)
+    gameInstanceId = models.CharField(max_length=4, unique=True, primary_key=True)
     game = models.ForeignKey(Game, on_delete=models.CASCADE, default='situations')
+    participants = models.ManyToManyField(User)
