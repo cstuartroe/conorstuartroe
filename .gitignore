@@ -7,3 +7,4 @@ boxdata.json
 static/md
 node_modules
 games/static/games
+*.sqlite3
