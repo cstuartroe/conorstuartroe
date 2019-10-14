@@ -1,38 +1,48 @@
 import React, { Component } from "react";
 import ReactDOM from "react-dom";
 
-import TopMenu from "./components/TopMenu"
-import GamePicker from "./components/GamePicker"
+import TopMenu from "./components/TopMenu";
+import UserLogin from "./components/UserLogin";
+import GamePicker from "./components/GamePicker";
+import FeelinLucky from "./components/feelin-lucky/FeelinLucky"
 
 class App extends Component {
   state = {
-    game: null
+    user: null,
+    game: null,
+    gameInstance: null
   };
 
-  setGame(gameId) {
+  setUser(username) {
     this.setState({
-      game: gameId
-    })
+      user: username
+    });
   }
 
-  componentDidMount() {
-    //fetch(this.props.endpoint)
-    //  .then(response => {
-    //    if (response.status !== 200) {
-    //      return this.setState({ placeholder: "Something went wrong" });
-    //    }
-    //    return response.json();
-    //  })
-    //  .then(data => this.setState({ data: data, loaded: true }));
+  setGame(gameSlug) {
+    this.setState({
+      game: gameSlug
+    });
+  }
+
+  setGameInstance(gameInstanceId) {
+    this.setState({
+      gameInstance: gameInstanceId
+    });
   }
 
   render() {
-    const { game } = this.state;
+    const { user, game, gameInstance } = this.state;
 
     var bodyElem;
-    switch (game) {
-      case null: bodyElem = <GamePicker setGame = {this.setGame.bind(this)} />; break;
-      default: bodyElem = <p>Unknown game.</p>; break;
+    if (user == null) {
+      bodyElem = <UserLogin setUser = {this.setUser.bind(this)} />;
+    } else if (game == null) {
+      bodyElem = <GamePicker setGame = {this.setGame.bind(this)} />;
+    } else if (game == "feelin-lucky") {
+      bodyElem = <FeelinLucky user={user} gameInstance={gameInstance}/>;
+    } else {
+      bodyElem = <p>Unknown game.</p>;
     }
 
     return (

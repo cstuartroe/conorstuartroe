@@ -10,14 +10,26 @@ body {
   min-height: 100vh;
 }
 
-h1, h2, h3, p {
+div {
+  text-align: center;
+}
+
+h1, h2, h3, p, button {
   text-align: center;
   font-family: "Gentium";
+}
+
+h1 {
+  color: #7800bd;
+  font-size: 4.5vh;
+  padding-bottom: 4vh;
+  font-variant: small-caps;
 }
 
 h2 {
   color: #c70000;
   font-size: 3.5vh;
+  padding-bottom: 3vh;
 }
 
 p {
@@ -25,18 +37,28 @@ p {
   font-size: 1.5vh;
 }
 
+#top-menu {
+  margin-bottom: 10vh;
+}
+
 #top-menu a {
   color: white;
   font-family: "Gentium";
 }
 
-.goto-game {
+.big-select {
   padding: 3vh 0;
+  width: 100%;
+  background-color: transparent;
+  color: #c70000;
+  font-size: 3.5vh;
+  font-variant: small-caps;
   border-radius: 2vh;
   border: 2px solid #7800bd;
+  display: inline-block;
 }
 
-.goto-game:hover {
+.big-select:hover {
   background-color: white;
   border-color: white;
   cursor: pointer;
