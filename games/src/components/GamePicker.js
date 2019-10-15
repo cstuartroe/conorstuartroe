@@ -2,20 +2,9 @@ import React, { Component } from "react";
 
 class GamePicker extends Component {
   state = {
-    games: [],
+    games: [{"slug": "feelin-lucky", "title": "Feelin' Lucky?"}],
     message: ""
   };
-
-  componentDidMount() {
-    fetch('games')
-      .then(response => {
-        if (response.status !== 200) {
-          return this.setState({ games: [], message: "Network error" });
-        }
-        return response.json();
-      })
-      .then(data => this.setState({ games: data, message: "" }));
-  }
 
   render() {
     return (
