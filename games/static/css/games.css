@@ -86,3 +86,8 @@ input[type="text"] {
   border-radius: 1vh;
   border: none;
 }
+
+input[type="radio"] {
+  width: 3vh;
+  height: 3vh;
+}

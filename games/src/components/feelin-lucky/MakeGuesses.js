@@ -56,8 +56,14 @@ class MakeGuesses extends Component {
   }
 
   render() {
-    if (this.state.index == this.props.submissions.length) {
-      return <Awaiting update={this.props.fetchGuesses} />;
+    if (this.state.index > 0) {
+      var prev_submission_id = this.props.submissions[this.state.index-1].id;
+      var guesses_for_prev_submission = this.props.guesses.filter(guess => guess.submission == prev_submission_id);
+
+      if (guesses_for_prev_submission.length != this.props.authors.length) {
+        return <Awaiting update={this.props.fetchGuesses} authors={this.props.authors}
+                 submitted={guesses_for_prev_submission.map(sub => sub.author)} screenNames={this.props.screenNames} />;
+      }
     }
 
     var sub = this.props.submissions[this.state.index];

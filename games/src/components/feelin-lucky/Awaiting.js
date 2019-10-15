@@ -17,7 +17,8 @@ class Awaiting extends Component {
   render() {
     return <div className="row">
       <div className = "col-12">
-        <p>Awaiting all submissions...</p>
+        <p>Waiting for {this.props.authors.filter(author => !this.props.submitted.includes(author))
+                          .map(author => this.props.screenNames[author]).join(", ")}...</p>
         <img src="/static/img/loading.gif"/>
       </div>
     </div>;

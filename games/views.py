@@ -61,6 +61,18 @@ def join_game(request):
 
 
 @csrf_exempt
+def participants(request):
+    if request.method == "GET":
+        try:
+            gameInstance = GameInstance.objects.get(gameInstanceId=request.GET.get("gameInstance").upper())
+        except GameInstance.DoesNotExist:
+            return JsonResponse({"accepted": False, "message": "No such game room."})
+
+        usernames = [user.username for user in gameInstance.participants.all()]
+        return JsonResponse({"accepted": True, "participants": usernames})
+
+
+@csrf_exempt
 def feelin_lucky_search(request):
     if request.method == "POST":
         gis = GoogleImagesSearch(GOOGLE_SEARCH_API, SEARCH_ENGINE_ID)

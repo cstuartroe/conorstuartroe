@@ -5,7 +5,7 @@ import ImageSearch from "./ImageSearch";
 import ImageSelect from "./ImageSelect";
 import Awaiting from "./Awaiting";
 import MakeGuesses from "./MakeGuesses";
-import Scoreboard from "../Scoreboard";
+import Scoreboard from "./Scoreboard";
 
 class FeelinLucky extends Component {
   static propTypes = {
@@ -32,17 +32,38 @@ class FeelinLucky extends Component {
     }).then(data => {
       var had_all_submissions = this.state.all_submissions;
       this.setState(data);
-      if (data.all_submissions && !had_all_submissions) {
-        this.settleSubmissions();
+      this.setState({
+        searchQueries: data.submissions.map(sub => sub.search_query)
+      });
+    });
+
+    fetch("participants?gameInstance=" + this.props.gameInstance)
+    .then(response => {
+      if (response.status !== 200) {
+        return this.setState({ message: "Network error" });
       }
+      return response.json();
+    }).then(data => {
+      this.setState({
+        authors: data.participants
+      });
     });
   }
 
-  settleSubmissions() {
-    this.setState({
-      authors: this.state.submissions.map(sub => sub.author),
-      searchQueries: this.state.submissions.map(sub => sub.search_query)
-    });
+  fetchGuesses(guesses) {
+    fetch("feelin_lucky/guess?gameInstance=" + this.props.gameInstance)
+    .then(response => {
+      if (response.status !== 200) {
+        return this.setState({ message: "Network error" });
+      }
+      return response.json();
+    })
+    .then(guesses => this.setState({guesses: guesses}));
+  }
+
+  componentDidMount() {
+    this.fetchSubmissions();
+    this.fetchGuesses();
 
     fetch("users")
     .then(response => {
@@ -61,22 +82,6 @@ class FeelinLucky extends Component {
     });
   }
 
-  fetchGuesses(guesses) {
-    fetch("feelin_lucky/guess?gameInstance=" + this.props.gameInstance)
-    .then(response => {
-      if (response.status !== 200) {
-        return this.setState({ message: "Network error" });
-      }
-      return response.json();
-    })
-    .then(guesses => this.setState({guesses: guesses}));
-  }
-
-  componentDidMount() {
-    this.fetchSubmissions();
-    this.fetchGuesses();
-  }
-
   render() {
     var gameElem;
 
@@ -88,7 +93,9 @@ class FeelinLucky extends Component {
         gameElem = <ImageSelect username={this.props.username} gameInstance={this.props.gameInstance}
                      submissions={this.state.submissions} fetchSubmissions={this.fetchSubmissions.bind(this)} />;
       } else {
-        gameElem = <Awaiting update={this.fetchSubmissions.bind(this)} />;
+        gameElem = <Awaiting update={this.fetchSubmissions.bind(this)} authors={this.state.authors}
+                     submitted={this.state.authors.filter(author => this.state.submissions.some(sub => (sub.author == author) && (sub.filename != "")))}
+                     screenNames={this.state.screenNames} />;
       }
     } else {
       if ((this.state.submissions.length != this.state.authors.length) || (this.state.submissions.length != this.state.searchQueries.length)) {
@@ -100,7 +107,8 @@ class FeelinLucky extends Component {
                      searchQueries={this.state.searchQueries} guesses={this.state.guesses} />;
 
       } else {
-        gameElem = <Scoreboard />;
+        gameElem = <Scoreboard submissions={this.state.submissions} guesses={this.state.guesses}
+                     screenNames={this.state.screenNames} />;
       }
     }
 
