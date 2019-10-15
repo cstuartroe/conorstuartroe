@@ -78,7 +78,7 @@ class MakeGuesses extends Component {
       <div className = "col-0 col-sm-1 col-md-2 col-lg-3"/>
 
       <div className = "col-6">
-        {this.props.authors.map((author) =>
+        {this.props.authors.sort().map((author) =>
           <div key={author}>
             <input type="radio" name="author" onClick={() => this.setStateAndSubmit({currentAuthor: author})} />
             <p>{this.props.screenNames[author]}</p>
@@ -87,7 +87,7 @@ class MakeGuesses extends Component {
       </div>
 
       <div className = "col-6">
-        {this.props.searchQueries.map((searchQuery) =>
+        {this.props.searchQueries.sort().map((searchQuery) =>
           <div key={searchQuery}>
             <input type="radio" name="search_query"  onClick={() => this.setStateAndSubmit({currentSearchQuery: searchQuery})}/>
             <p>{searchQuery}</p>

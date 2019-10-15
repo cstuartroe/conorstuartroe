@@ -4,8 +4,9 @@ from django.http import HttpResponse, JsonResponse
 from django.views.decorators.csrf import csrf_exempt
 
 from google_images_search import GoogleImagesSearch
-from conorstuartroe.settings_secret import GOOGLE_SEARCH_API, SEARCH_ENGINE_ID
+from conorstuartroe.settings_secret import GOOGLE_SEARCH_API, SEARCH_ENGINE_ID, STATIC_ROOT
 
+import os
 from random import randrange
 
 from .models import User, GameInstance, Score, FeelinLuckySubmission, FeelinLuckyGuess
@@ -84,7 +85,8 @@ def feelin_lucky_search(request):
 
         imagelist = []
         for image in gis.results():
-            image.download('games/static/img/feelin_lucky_downloads/')
+            print(os.path.join(STATIC_ROOT, 'img/feelin_lucky_downloads/'))
+            image.download(os.path.join(STATIC_ROOT, 'img/feelin_lucky_downloads/'))
             filename = image.path.split("/")[-1]
             imagelist.append(filename)
 
