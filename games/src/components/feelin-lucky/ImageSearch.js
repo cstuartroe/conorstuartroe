@@ -11,9 +11,9 @@ class ImageSearch extends Component {
   sendSearch(query) {
     this.setState({loading: true});
 
-    fetch('feelin_lucky_search', {
+    fetch('feelin_lucky/search', {
       method: "POST",
-      body: qs.stringify({query: query}),
+      body: qs.stringify({username: this.props.username, gameInstance: this.props.gameInstance, query: query}),
       headers: { "Content-Type": "application/x-www-form-urlencoded" }
     }).then(response => {
       if (response.status !== 200) {

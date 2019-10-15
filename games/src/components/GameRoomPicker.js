@@ -23,7 +23,7 @@ class GamePicker extends Component {
     } else {
       fetch('join_game', {
         method: "POST",
-        body: qs.stringify({username: this.props.username, gameInstance: this.state.currentInstanceId}),
+        body: qs.stringify({username: this.props.username, game: this.props.game, gameInstance: this.state.currentInstanceId}),
         headers: { "Content-Type": "application/x-www-form-urlencoded" }
       }).then(response => {
         if (response.status !== 200) {
@@ -34,7 +34,7 @@ class GamePicker extends Component {
         if (data.accepted) {
           this.props.setGameInstance(this.state.currentInstanceId.toUpperCase());
         } else {
-          this.setState({ message: "Invalid game room" });
+          this.setState({ message: data.message });
         }
       });
     }
@@ -52,7 +52,7 @@ class GamePicker extends Component {
 
         <div className="col-12">
           <button className="big-select" onClick={() => this.setGameInstance()}>
-            {this.state.currentInstanceId == "" ? "Create a new game" : "Submit"}
+            {this.state.currentInstanceId == "" ? "Create a new game" : "Join"}
           </button>
         </div>
       </div>

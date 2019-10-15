@@ -1,12 +1,14 @@
 import React, { Component } from "react";
+const qs = require('querystring');
 
 class ImageSelect extends Component {
   state = {};
 
   sendSelection(filename) {
-    fetch('feelin_lucky_select', {
+    fetch('feelin_lucky/select', {
       method: "POST",
-      body: JSON.stringify({selection: filename})
+      body: qs.stringify({username: this.props.username, gameInstance: this.props.gameInstance, selection: filename}),
+      headers: { "Content-Type": "application/x-www-form-urlencoded" }
     }).then(response => {
         if (response.status !== 200) {
           return this.setState({ message: "Network error" });
