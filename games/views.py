@@ -8,7 +8,7 @@ from conorstuartroe.settings_secret import GOOGLE_SEARCH_API, SEARCH_ENGINE_ID
 
 from random import randrange
 
-from .models import User, Game, GameInstance, Score, FeelinLuckySubmission, FeelinLuckyGuess
+from .models import User, GameInstance, Score, FeelinLuckySubmission, FeelinLuckyGuess
 
 
 def index(request):
@@ -22,13 +22,6 @@ def users(request):
         return JsonResponse(userlist, safe=False)
 
 
-def games(request):
-    if request.method == "GET":
-        gamelist = [model_to_dict(u) for u in Game.objects.all()]
-        gamelist.sort(key=lambda x: x["title"])
-        return JsonResponse(gamelist, safe=False)
-
-
 @csrf_exempt
 def new_game(request):
     if request.method == "POST":
@@ -36,7 +29,7 @@ def new_game(request):
         for i in range(4):
             gameInstanceId += "ABCDEFGHIJKLMNOPQRSTUVWXYZ"[randrange(26)]
 
-        game = Game.objects.get(slug=request.POST.get("game"))
+        game = request.POST.get("game")
         gi = GameInstance(gameInstanceId=gameInstanceId, game=game, accepting_joins=True)
         gi.save()
 
@@ -50,7 +43,7 @@ def new_game(request):
 @csrf_exempt
 def join_game(request):
     if request.method == "POST":
-        game = Game(slug=request.POST.get("game"))
+        game = request.POST.get("game")
         try:
             gameInstance = GameInstance.objects.get(game=game, gameInstanceId=request.POST.get("gameInstance").upper())
         except GameInstance.DoesNotExist:
@@ -113,7 +106,7 @@ def feelin_lucky_submissions(request):
         sublist = [model_to_dict(s) for s in FeelinLuckySubmission.objects.filter(gameInstance=gameInstance)]
         sublist.sort(key=lambda x: x["id"])
 
-        all_submissions = (len(sublist) == len(gameInstance.participants.all()))
+        all_submissions = (len(sublist) == len(gameInstance.participants.all())) and all(sub["filename"] != "" for sub in sublist)
 
         response = {
             "submissions": sublist,
