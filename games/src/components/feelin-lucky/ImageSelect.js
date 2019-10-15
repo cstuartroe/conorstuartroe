@@ -31,7 +31,7 @@ class ImageSelect extends Component {
         <p>{this.state.message}</p>
       </div>
       {candidateImages.map(cand =>
-        <div className="col-6" key={cand}>
+        <div className="col-12 col-md-6" key={cand}>
           <img src={"/static/img/feelin_lucky_downloads/" + cand} className="candidate" onClick={() => this.sendSelection(cand)} />
         </div>
       )}

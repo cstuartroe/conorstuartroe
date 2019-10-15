@@ -33,12 +33,12 @@ class FeelinLucky extends Component {
       var had_all_submissions = this.state.all_submissions;
       this.setState(data);
       if (data.all_submissions && !had_all_submissions) {
-        this.settleSubmisions();
+        this.settleSubmissions();
       }
     });
   }
 
-  settleSubmisions() {
+  settleSubmissions() {
     this.setState({
       authors: this.state.submissions.map(sub => sub.author),
       searchQueries: this.state.submissions.map(sub => sub.search_query)
@@ -88,13 +88,20 @@ class FeelinLucky extends Component {
         gameElem = <ImageSelect username={this.props.username} gameInstance={this.props.gameInstance}
                      submissions={this.state.submissions} fetchSubmissions={this.fetchSubmissions.bind(this)} />;
       } else {
-        gameElem = <Awaiting fetchSubmissions={this.fetchSubmissions.bind(this)} />;
+        gameElem = <Awaiting update={this.fetchSubmissions.bind(this)} />;
       }
     } else {
-      gameElem = <MakeGuesses username={this.props.username} gameInstance={this.props.gameInstance}
-                   submissions={this.state.submissions} fetchSubmissions={this.fetchSubmissions.bind(this)}
-                   authors={this.state.authors} screenNames={this.state.screenNames}
-                   searchQueries={this.state.searchQueries} guesses={this.state.guesses} />;
+      if ((this.state.submissions.length != this.state.authors.length) || (this.state.submissions.length != this.state.searchQueries.length)) {
+        gameElem = <p>An error was encountered.</p>;
+      } else if (this.state.guesses.length != Math.pow(this.state.submissions.length, 2)) {
+        gameElem = <MakeGuesses username={this.props.username} gameInstance={this.props.gameInstance}
+                     submissions={this.state.submissions} fetchGuesses={this.fetchGuesses.bind(this)}
+                     authors={this.state.authors} screenNames={this.state.screenNames}
+                     searchQueries={this.state.searchQueries} guesses={this.state.guesses} />;
+
+      } else {
+        gameElem = <Scoreboard />;
+      }
     }
 
     return gameElem;

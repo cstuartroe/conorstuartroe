@@ -6,8 +6,8 @@ class Awaiting extends Component {
   };
 
   componentDidMount() {
-    this.props.fetchSubmissions();
-    this.state.loop = setInterval(this.props.fetchSubmissions, 5000);
+    this.props.update();
+    this.state.loop = setInterval(this.props.update, 5000);
   }
 
   componentWillUnmount() {

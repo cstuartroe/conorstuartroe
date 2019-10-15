@@ -1,6 +1,8 @@
 import React, { Component } from "react";
 const qs = require('querystring');
 
+import Awaiting from "./Awaiting";
+
 class MakeGuesses extends Component {
   state = {
     message: "",
@@ -54,15 +56,20 @@ class MakeGuesses extends Component {
   }
 
   render() {
+    if (this.state.index == this.props.submissions.length) {
+      return <Awaiting update={this.props.fetchGuesses} />;
+    }
+
     var sub = this.props.submissions[this.state.index];
 
     return <div className="row">
-      <div className = "col-3"/>
-      <div className = "col-6">
-        <img src={"/static/img/feelin_lucky_downloads/" + sub.filename} className="candidate" />
+      <div className = "col-0 col-sm-1 col-md-2 col-lg-3"/>
+      <div className = "col-12 col-sm-10 col-md-8 col-lg-6">
+        <img src={"/static/img/feelin_lucky_downloads/" + sub.filename} className="candidate"
+          style={{margin: 0}}/>
         <p>{this.state.message}</p>
       </div>
-      <div className = "col-3"/>
+      <div className = "col-0 col-sm-1 col-md-2 col-lg-3"/>
 
       <div className = "col-6">
         {this.props.authors.map((author) =>

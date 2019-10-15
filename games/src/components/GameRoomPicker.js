@@ -46,7 +46,7 @@ class GamePicker extends Component {
         <div className="col-12">
           <h1>Enter your game room, or create a new one:</h1>
           <input type="text" style={{fontSize: "5vh", width: "20vh", fontVariant: "all-small-caps"}}
-            onChange={event => {this.setState({currentInstanceId: event.target.value})}}></input>
+            onChange={event => {this.setState({currentInstanceId: event.target.value, message: ""})}}></input>
           <p>{this.state.message}</p>
         </div>
 

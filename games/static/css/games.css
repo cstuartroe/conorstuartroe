@@ -73,7 +73,7 @@ img.candidate {
   max-width: 75%;
   border: solid 1vh #ddddff;
   border-radius: 1vh;
-  margin: 5vh;
+  margin: 5vh 0;
 }
 
 img.candidate:hover {
