@@ -13,18 +13,24 @@ class ImageSelect extends Component {
         if (response.status !== 200) {
           return this.setState({ message: "Network error" });
         } else {
-          this.props.finishSelecting();
+          this.props.fetchSubmissions();
         }
       })
   }
 
   render() {
+    var candidateImages = []
+
+    this.props.submissions.map(sub => {
+      if (sub.author == this.props.username) { candidateImages = sub.candidates.split(','); }
+    });
+
     return <div className="row">
       <div className = "col-12">
         <h2>Please select an image:</h2>
         <p>{this.state.message}</p>
       </div>
-      {this.props.candidateImages.map(cand =>
+      {candidateImages.map(cand =>
         <div className="col-6" key={cand}>
           <img src={"/static/img/feelin_lucky_downloads/" + cand} className="candidate" onClick={() => this.sendSelection(cand)} />
         </div>

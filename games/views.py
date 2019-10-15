@@ -78,10 +78,11 @@ def feelin_lucky_search(request):
 
         user = User.objects.get(username=request.POST.get("username"))
         gameInstance = GameInstance.objects.get(gameInstanceId=request.POST.get("gameInstance"))
-        sub = FeelinLuckySubmission(author=user, gameInstance=gameInstance, search_query=request.POST.get("query", ""))
+        sub = FeelinLuckySubmission(author=user, gameInstance=gameInstance, search_query=request.POST.get("query", ""),
+                                    candidates=','.join(imagelist))
         sub.save()
 
-        return JsonResponse(imagelist, safe=False)
+        return HttpResponse()
 
 
 @csrf_exempt
@@ -129,7 +130,7 @@ def feelin_lucky_guess(request):
         guesser = User.objects.get(username=request.POST.get("guesser"))
         submission = FeelinLuckySubmission.objects.get(id=request.POST.get("submissionId"))
         author = User.objects.get(username=request.POST.get("author"))
-        search_query = request.POST.get("search_query")
+        search_query = request.POST.get("searchQuery")
 
         guess = FeelinLuckyGuess(guesser=guesser, submission=submission, author=author, search_query=search_query)
         guess.save()

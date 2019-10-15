@@ -19,9 +19,8 @@ class ImageSearch extends Component {
       if (response.status !== 200) {
         return this.setState({ message: "Network error", loading: false });
       }
-      return response.json();
-    }).then(data => {
-      this.props.setCandidates(data);
+    }).then(e => {
+      this.props.fetchSubmissions();
       this.setState({loading: false});
     });
   }

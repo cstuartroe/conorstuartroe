@@ -26,6 +26,7 @@ class FeelinLuckySubmission(models.Model):
     author = models.ForeignKey(User, on_delete=models.CASCADE, default='')
     gameInstance = models.ForeignKey(GameInstance, on_delete=models.CASCADE, default='')
     search_query = models.CharField(max_length=30)
+    candidates = models.CharField(max_length=200, default="")
     filename = models.CharField(max_length=50)
 
 
