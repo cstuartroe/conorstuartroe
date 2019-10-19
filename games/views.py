@@ -94,7 +94,9 @@ def feelin_lucky_search(request):
         gameInstance = GameInstance.objects.get(gameInstanceId=request.POST.get("gameInstance"))
         sub = FeelinLuckySubmission(author=user, gameInstance=gameInstance, search_query=request.POST.get("query", ""),
                                     candidates=','.join(imagelist))
+
         sub.save()
+
 
         return HttpResponse()
 
@@ -137,7 +139,6 @@ def feelin_lucky_guess(request):
         gameInstance = GameInstance.objects.get(gameInstanceId=request.GET.get("gameInstance"))
         guesslist = [model_to_dict(g) for g in FeelinLuckyGuess.objects.all()
                      if g.submission.gameInstance == gameInstance]
-
         return JsonResponse(guesslist, safe=False)
 
     elif request.method == "POST":
@@ -148,5 +149,36 @@ def feelin_lucky_guess(request):
 
         guess = FeelinLuckyGuess(guesser=guesser, submission=submission, author=author, search_query=search_query)
         guess.save()
+
+        if (guesser != submission.author) and (author == submission.author):
+            try:
+                # gets the score for the guesser
+                score_author = Score.objects.get(player=submission.author, gameInstance=submission.gameInstance)
+                score_author.value = score_author.value - 1
+                score_author.save()
+            except Score.DoesNotExist:
+                score_author = Score(player=submission.author, gameInstance=submission.gameInstance, value=-1)
+                score_author.save()
+        list_submissions= FeelinLuckySubmission.objects.filter(gameInstance=submission.gameInstance)
+        list_guesses=FeelinLuckyGuess.objects.filter(submission=submission)
+
+        if(len(list_guesses)==len(list_submissions)):
+            n=0
+            for g in  list_guesses:
+                if ((g.search_query== submission.search_query) and g.guesser!=submission.author):
+                    n=n+1
+            print("this is the number of submissions the group got right ")
+            print(n)
+            if(n>(len(list_submissions)-n)):
+                for g in list_guesses:
+                    if(g.guesser!=submission.author):
+                        try:
+                            # gets the score for the guesser
+                            score_guesser = Score.objects.get(player=g.guesser,gameInstance=submission.gameInstance)
+                            score_guesser.value = score_guesser.value + 1
+                            score_guesser.save()
+                        except Score.DoesNotExist:
+                            score_guesser = Score(player=g.guesser, gameInstance=submission.gameInstance,value=1)
+                            score_guesser.save()
 
         return HttpResponse()
