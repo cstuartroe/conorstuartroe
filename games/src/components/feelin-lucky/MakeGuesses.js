@@ -81,7 +81,7 @@ class MakeGuesses extends Component {
     return <div className="row">
       <div className = "col-0 col-sm-1 col-md-2 col-lg-3"/>
       <div className = "col-12 col-sm-10 col-md-8 col-lg-6">
-        <img src={"/static/img/feelin_lucky_downloads/" + sub.filename} className="candidate"
+        <img src={sub.filename} className="candidate"
           style={{margin: 0}}/>
         <p>{this.state.message}</p>
       </div>
