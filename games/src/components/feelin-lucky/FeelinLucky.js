@@ -107,8 +107,8 @@ class FeelinLucky extends Component {
                      searchQueries={this.state.searchQueries} guesses={this.state.guesses} />;
 
       } else {
-        gameElem = <Scoreboard submissions={this.state.submissions} guesses={this.state.guesses}
-                     screenNames={this.state.screenNames} />;
+        gameElem = <Scoreboard submissions={this.state.submissions} gameInstance={this.props.gameInstance}
+                     guesses={this.state.guesses} screenNames={this.state.screenNames} />;
       }
     }
 

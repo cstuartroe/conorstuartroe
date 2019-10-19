@@ -8,4 +8,3 @@ static/md
 node_modules
 games/static/games
 *.sqlite3
-games/static/img/feelin_lucky_downloads

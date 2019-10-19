@@ -7,10 +7,10 @@ Click==7.0
 colorama==0.4.1
 Django==2.2.6
 feedparser==5.2.1
+giphy-client==1.0.0
 google-api-python-client==1.7.11
 google-auth==1.6.3
 google-auth-httplib2==0.0.3
-Google-Images-Search==1.0.1
 gunicorn==19.9.0
 httplib2==0.14.0
 idna==2.8
@@ -21,10 +21,12 @@ prawcore==1.0.1
 pyasn1==0.4.7
 pyasn1-modules==0.2.7
 pyfiglet==0.8.post1
+python-dateutil==2.8.0
 python-resize-image==1.1.19
 pytz==2019.3
 requests==2.22.0
 rsa==4.0
+selenium==3.141.0
 six==1.12.0
 soupsieve==1.9.4
 sqlparse==0.3.0
