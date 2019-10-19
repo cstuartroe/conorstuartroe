@@ -3,8 +3,15 @@ from django.forms.models import model_to_dict
 from django.http import HttpResponse, JsonResponse
 from django.views.decorators.csrf import csrf_exempt
 
+import time
+import giphy_client
+from giphy_client.rest import ApiException
+import json
+import pprint
+
+
 from google_images_search import GoogleImagesSearch
-from conorstuartroe.settings_secret import GOOGLE_SEARCH_API, SEARCH_ENGINE_ID, STATIC_ROOT
+from conorstuartroe.settings_secret import GOOGLE_SEARCH_API, SEARCH_ENGINE_ID, STATIC_ROOT, Giphy_Search_API
 
 import os
 from random import randrange
@@ -73,32 +80,41 @@ def participants(request):
         return JsonResponse({"accepted": True, "participants": usernames})
 
 
+
+
 @csrf_exempt
 def feelin_lucky_search(request):
     if request.method == "POST":
-        gis = GoogleImagesSearch(GOOGLE_SEARCH_API, SEARCH_ENGINE_ID)
-        gis.search(search_params={
-            'q': request.POST.get("query", ""),
-            'num': 4,
-            'safe': 'off'
-        })
-
-        imagelist = []
-        for image in gis.results():
-            print(os.path.join(STATIC_ROOT, 'img/feelin_lucky_downloads/'))
-            image.download(os.path.join(STATIC_ROOT, 'img/feelin_lucky_downloads/'))
-            filename = image.path.split("/")[-1]
-            imagelist.append(filename)
-
         user = User.objects.get(username=request.POST.get("username"))
         gameInstance = GameInstance.objects.get(gameInstanceId=request.POST.get("gameInstance"))
+
+
+
+        api_instance = giphy_client.DefaultApi()
+        api_key =Giphy_Search_API
+        q= request.POST.get("query", "")
+        limit = 4
+        rating = 'g'
+        lang = 'en'
+        fmt = 'json'
+        try:
+            # Search Endpoint
+            api_response = api_instance.gifs_search_get(api_key, q, limit=limit, rating=rating,
+                                                        lang=lang, fmt=fmt)
+            x = api_response.data
+
+            gif_list=[]
+            for giph in x:
+                print(giph)
+                gif_list.append(giph.images.downsized.url)
+        except ApiException as e:
+            print("Exception when calling DefaultApi->gifs_search_get: %s\n" % e)
         sub = FeelinLuckySubmission(author=user, gameInstance=gameInstance, search_query=request.POST.get("query", ""),
-                                    candidates=','.join(imagelist))
+                                    candidates=','.join(gif_list))
 
         sub.save()
-
-
         return HttpResponse()
+
 
 
 @csrf_exempt
