@@ -11,14 +11,16 @@ class MakeGuesses extends Component {
     currentSearchQuery: ""
   };
 
-  componentDidMount() {
-    this.props.guesses.map((guess) => {
-      if (this.props.submissions.some((sub) => (guess.guesser == this.props.username) && (guess.submission = sub.id))) {
-        this.setState({
-          index: this.state.index+1
-        });
+  static getDerivedStateFromProps(props, state) {
+    var index = 0;
+    props.guesses.map((guess) => {
+      if (guess.guesser == props.username) {
+        index ++;
       }
     });
+
+    state.index = index;
+    return state;
   }
 
   setStateAndSubmit(o) {
@@ -49,24 +51,32 @@ class MakeGuesses extends Component {
       headers: { "Content-Type": "application/x-www-form-urlencoded" }
     }).then(response => {
       if (response.status !== 200) {
-        return this.setState({ message: "Network error" });
+        this.setState({ message: "Network error" });
       }
-      return this.setState({index: this.state.index+1});
+      this.props.fetchGuesses();
     });
   }
 
   render() {
+    if (this.props.submissions.length == 0) {
+      return <p>Loading...</p>;
+    }
+
     if (this.state.index > 0) {
       var prev_submission_id = this.props.submissions[this.state.index-1].id;
       var guesses_for_prev_submission = this.props.guesses.filter(guess => guess.submission == prev_submission_id);
 
       if (guesses_for_prev_submission.length != this.props.authors.length) {
         return <Awaiting update={this.props.fetchGuesses} authors={this.props.authors}
-                 submitted={guesses_for_prev_submission.map(sub => sub.author)} screenNames={this.props.screenNames} />;
+                 submitted={guesses_for_prev_submission.map(sub => sub.guesser)} screenNames={this.props.screenNames} />;
       }
     }
 
     var sub = this.props.submissions[this.state.index];
+
+    var my_guesses = this.props.guesses.filter(guess => guess.guesser == this.props.username),
+        authors_already_guessed = my_guesses.map(guess => guess.author),
+        queries_already_guessed = my_guesses.map(guess => guess.search_query);
 
     return <div className="row">
       <div className = "col-0 col-sm-1 col-md-2 col-lg-3"/>
@@ -78,7 +88,7 @@ class MakeGuesses extends Component {
       <div className = "col-0 col-sm-1 col-md-2 col-lg-3"/>
 
       <div className = "col-6">
-        {this.props.authors.sort().map((author) =>
+        {this.props.authors.filter(author => !authors_already_guessed.includes(author)).sort().map((author) =>
           <div key={author}>
             <input type="radio" name="author" onClick={() => this.setStateAndSubmit({currentAuthor: author})} />
             <p>{this.props.screenNames[author]}</p>
@@ -87,7 +97,7 @@ class MakeGuesses extends Component {
       </div>
 
       <div className = "col-6">
-        {this.props.searchQueries.sort().map((searchQuery) =>
+        {this.props.searchQueries.filter(query => !queries_already_guessed.includes(query)).sort().map((searchQuery) =>
           <div key={searchQuery}>
             <input type="radio" name="search_query"  onClick={() => this.setStateAndSubmit({currentSearchQuery: searchQuery})}/>
             <p>{searchQuery}</p>
