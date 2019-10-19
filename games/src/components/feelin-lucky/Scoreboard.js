@@ -11,7 +11,7 @@ class Scoreboard extends Component {
     return <div className="row">
     {this.props.submissions.map(sub =>
       <div className="col-12" key={sub.id}>
-        <img src={"/static/img/feelin_lucky_downloads/" + sub.filename} className="candidate" />
+        <img src={sub.filename} className="candidate" />
         <p>This picture was submitted by <span style={boldStyle}>{this.props.screenNames[sub.author]}</span> with
         the search term <span style={boldStyle}>{sub.search_query}</span>.</p>
         {this.props.guesses.filter(guess => (guess.submission == sub.id) && (guess.guesser != sub.author))

@@ -3,17 +3,11 @@ from django.forms.models import model_to_dict
 from django.http import HttpResponse, JsonResponse
 from django.views.decorators.csrf import csrf_exempt
 
-import time
 import giphy_client
 from giphy_client.rest import ApiException
-import json
-import pprint
 
+from conorstuartroe.settings_secret import GIPHY_SEARCH_API
 
-from google_images_search import GoogleImagesSearch
-from conorstuartroe.settings_secret import GOOGLE_SEARCH_API, SEARCH_ENGINE_ID, STATIC_ROOT, Giphy_Search_API
-
-import os
 from random import randrange
 
 from .models import User, GameInstance, Score, FeelinLuckySubmission, FeelinLuckyGuess
@@ -80,41 +74,24 @@ def participants(request):
         return JsonResponse({"accepted": True, "participants": usernames})
 
 
-
-
 @csrf_exempt
 def feelin_lucky_search(request):
     if request.method == "POST":
         user = User.objects.get(username=request.POST.get("username"))
         gameInstance = GameInstance.objects.get(gameInstanceId=request.POST.get("gameInstance"))
 
-
-
         api_instance = giphy_client.DefaultApi()
-        api_key =Giphy_Search_API
-        q= request.POST.get("query", "")
-        limit = 4
-        rating = 'g'
-        lang = 'en'
-        fmt = 'json'
-        try:
-            # Search Endpoint
-            api_response = api_instance.gifs_search_get(api_key, q, limit=limit, rating=rating,
-                                                        lang=lang, fmt=fmt)
-            x = api_response.data
+        query = request.POST.get("query", "")
+        response = api_instance.gifs_search_get(GIPHY_SEARCH_API, query, limit=4, rating='g',
+                                                    lang='en', fmt='json')
 
-            gif_list=[]
-            for giph in x:
-                print(giph)
-                gif_list.append(giph.images.downsized.url)
-        except ApiException as e:
-            print("Exception when calling DefaultApi->gifs_search_get: %s\n" % e)
+        gif_url_list = [gif.images.downsized.url for gif in response.data]
+
         sub = FeelinLuckySubmission(author=user, gameInstance=gameInstance, search_query=request.POST.get("query", ""),
-                                    candidates=','.join(gif_list))
-
+                                    candidates=','.join(gif_url_list))
         sub.save()
-        return HttpResponse()
 
+        return HttpResponse()
 
 
 @csrf_exempt
@@ -149,6 +126,16 @@ def feelin_lucky_submissions(request):
         return JsonResponse(response)
 
 
+def add_score(user, gameInstance, points):
+    try:
+        score = Score.objects.get(player=user, gameInstance=gameInstance)
+    except Score.DoesNotExist:
+        score = Score(player=user, gameInstance=gameInstance, value=0)
+
+    score.value += points
+    score.save()
+
+
 @csrf_exempt
 def feelin_lucky_guess(request):
     if request.method == "GET":
@@ -167,34 +154,30 @@ def feelin_lucky_guess(request):
         guess.save()
 
         if (guesser != submission.author) and (author == submission.author):
-            try:
-                # gets the score for the guesser
-                score_author = Score.objects.get(player=submission.author, gameInstance=submission.gameInstance)
-                score_author.value = score_author.value - 1
-                score_author.save()
-            except Score.DoesNotExist:
-                score_author = Score(player=submission.author, gameInstance=submission.gameInstance, value=-1)
-                score_author.save()
-        list_submissions= FeelinLuckySubmission.objects.filter(gameInstance=submission.gameInstance)
-        list_guesses=FeelinLuckyGuess.objects.filter(submission=submission)
+            add_score(submission.author, submission.gameInstance, -1)
 
-        if(len(list_guesses)==len(list_submissions)):
-            n=0
-            for g in  list_guesses:
-                if ((g.search_query== submission.search_query) and g.guesser!=submission.author):
-                    n=n+1
-            print("this is the number of submissions the group got right ")
-            print(n)
-            if(n>(len(list_submissions)-n)):
-                for g in list_guesses:
-                    if(g.guesser!=submission.author):
-                        try:
-                            # gets the score for the guesser
-                            score_guesser = Score.objects.get(player=g.guesser,gameInstance=submission.gameInstance)
-                            score_guesser.value = score_guesser.value + 1
-                            score_guesser.save()
-                        except Score.DoesNotExist:
-                            score_guesser = Score(player=g.guesser, gameInstance=submission.gameInstance,value=1)
-                            score_guesser.save()
+        guesses = FeelinLuckyGuess.objects.filter(submission=submission)
+        participants = submission.gameInstance.participants.all()
+
+        if len(guesses) == len(participants):
+            correct_query_guesses = 0
+            for g in guesses:
+                if g.search_query == submission.search_query and g.guesser != submission.author:
+                    correct_query_guesses += 1
+
+            if correct_query_guesses >= (len(participants)/2):
+                for user in participants:
+                    if user != submission.author:
+                        add_score(user, submission.gameInstance, 1)
+            else:
+                add_score(submission.author, submission.gameInstance, len(participants) - 1)
 
         return HttpResponse()
+
+
+@csrf_exempt
+def scores(request):
+    if request.method == "GET":
+        gameInstance = request.GET.get("gameInstance")
+        scores = [model_to_dict(s) for s in Score.objects.filter(gameInstance=gameInstance)]
+        return JsonResponse(scores, safe=False)
