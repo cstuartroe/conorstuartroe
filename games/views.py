@@ -82,14 +82,15 @@ def feelin_lucky_search(request):
 
         api_instance = giphy_client.DefaultApi()
         query = request.POST.get("query", "")
-        response = api_instance.gifs_search_get(GIPHY_SEARCH_API, query, limit=4, rating='g',
+        response = api_instance.gifs_search_get(GIPHY_SEARCH_API, query, limit=10, rating='g',
                                                     lang='en', fmt='json')
 
         gif_url_list = [gif.images.downsized.url for gif in response.data]
 
-        sub = FeelinLuckySubmission(author=user, gameInstance=gameInstance, search_query=request.POST.get("query", ""),
+        if len(gif_url_list) > 2:
+            sub = FeelinLuckySubmission(author=user, gameInstance=gameInstance, search_query=request.POST.get("query", ""),
                                     candidates=','.join(gif_url_list))
-        sub.save()
+            sub.save()
 
         return HttpResponse()
 
@@ -103,8 +104,8 @@ def feelin_lucky_select(request):
         sub.filename = request.POST.get("selection")
         sub.save()
 
-        gameInstance.accepting_joins = False
-        gameInstance.save()
+        # gameInstance.accepting_joins = False
+        # gameInstance.save()
 
         return HttpResponse()
 
