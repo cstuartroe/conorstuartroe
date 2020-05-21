@@ -1,7 +1,7 @@
 from django.http import HttpResponse, HttpResponseRedirect
 from django.shortcuts import render
 import django.template
-from .utils import *
+from lauvinko.lang.utils import *
 
 import json
 
