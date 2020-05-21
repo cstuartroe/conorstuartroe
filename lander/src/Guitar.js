@@ -97,7 +97,7 @@ class Guitar extends Component {
 
 
           {positions.map((pos, index) => {
-            var note = (guitar_strings[pos.string_index]+ pos.fret - this.state.key) % 12;
+            var note = (12 + guitar_strings[pos.string_index]+ pos.fret - this.state.key) % 12;
             if (note in scales[this.state.mode]) {
                 var scale_position = scales[this.state.mode][note];
                 return <div className="finger-dot" key={index}
