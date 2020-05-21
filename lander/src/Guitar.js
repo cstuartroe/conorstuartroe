@@ -17,10 +17,11 @@ var scales = {
 const scale_list = major_modes.concat([...Object.keys(scales)]);
 
 for (var i in major_modes) {
+  console.log(major_modes[i]);
   var scale = {"0": "1"};
   var current_note = 0;
   for (var j in ionian_intervals) {
-    var interval = ionian_intervals[(i + j) % 7];
+    var interval = ionian_intervals[(parseInt(i) + parseInt(j)) % 7];
     current_note += interval;
     scale[current_note] = parseInt(j) + 2;
   }
