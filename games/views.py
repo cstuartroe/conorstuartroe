@@ -14,7 +14,7 @@ from .models import User, GameInstance, Score, FeelinLuckySubmission, FeelinLuck
 
 
 def index(request):
-    return render(request, 'games/index.html')
+    return render(request, 'react_index.html', {"app": "games"})
 
 
 def users(request):

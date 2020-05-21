@@ -7,8 +7,8 @@
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css"
         integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
-  <link rel="stylesheet" href="{% static 'css/games.css' %}">
-  <link rel="shortcut icon" href="{% static 'img/die.ico' %}">
+  <link rel="stylesheet" href=/static/{{app}}/css/{{app}}.css>
+  <link rel="shortcut icon" href="/static/{{app}}/img/favicon.ico">
   <title>Games at 800!</title>
 </head>
 <body>
@@ -24,5 +24,5 @@
         integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1" crossorigin="anonymous"></script>
 <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js"
         integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM" crossorigin="anonymous"></script>
-<script src="{% static 'games/main.js' %}"></script>
+<script src="/static/{{app}}/main.js"></script>
 </html>

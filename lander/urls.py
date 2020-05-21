@@ -1,4 +1,4 @@
-from django.urls import path
+from django.urls import path, re_path
 
 from . import views
 
@@ -24,5 +24,6 @@ urlpatterns = [
     path('journal/<str:date_string>', views.journalentry, name="journalentry"),
     path('journal/md/<str:date_string>', views.journalmd, name="journalmd"),
     path('situations', views.situations, name="situations"),
-    path('', views.index, name='index')
+    path('', views.index, name='index'),
+    re_path(r'^.*/$', views.react_index, name="react_index")
 ]

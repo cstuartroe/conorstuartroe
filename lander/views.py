@@ -8,17 +8,21 @@ import datetime
 import os
 
 
+def react_index(request):
+    return render(request, 'react_index.html', {"app": "lander"})
+
+
 def index(request):
     return render(request, 'lander/index.html')
 
 
 def news(request):
-    context = {'feed':get_feed()}
+    context = {'feed': get_feed()}
     return render(request, 'lander/news.html', context)
 
 
 def wp(request):
-    context = {'posts':get_worthwhile_posts()}
+    context = {'posts': get_worthwhile_posts()}
     return render(request, 'lander/wp.html', context)
 
 
