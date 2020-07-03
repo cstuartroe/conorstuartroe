@@ -1,45 +1,49 @@
-from .utils import replacement_suite, option_re, find, inner_markup, flatten, LauvinkoError
-from .kasanic import PKForm, PKWord
-from .lauvinko import LauvinkoForm, LauvinkoWord
-from .botharu import BotharuForm, BotharuWord
+import unittest
+
+# from .utils import replacement_suite, option_re, find, inner_markup, flatten, LauvinkoError
+from .kasanic import PKLemma, PKForm
+from .lauvinko import LauvinkoLemma
+# from .botharu import BotharuForm, BotharuWord
 from .dict import DictEntry, KasanicDictionary, Gloss
 
+falavay_tests = {
+    'maakina': ('makinə', 'maGqkXqn', 'makXqn'),
+    'oi': ('oi', 'OGqIq', 'OIq'),
+    'aai': ('ai', 'YGq', 'Y'),
+    'naatami': ('natəmi', 'naGqtqmX', 'natqmX'),
+    "ku'kuta": ("ku'kutə", 'kZGqHkZtq', 'kZHkZtq'),
+    'kanka': ('kəṅkə', 'kqGqMkq', 'kqMkq'),
+    "e'kungi": ("e'kuṅi", 'EGqHkZgi', 'EHkZgi'),
+    'aakaaye': ('akaye', 'AqGqkaey', 'Aqkaey'),
+    'kvaau': ('kvau', 'pWGq', 'pW')
+}
 
-def run_tests(suite, function, name='Test Suite'):
-    errors = 0
-    suite_size = len(suite.keys())
-    print(name + ':')
-    for test in suite:
-        desired = suite[test]
-        actual = function(test)
-        print(test, actual)
-        if desired != actual:
-            print('Failure!')
-            errors += 1
-    passed = suite_size - errors
-    print('%d of %d tests passed.' % (passed, suite_size))
-    print()
-
-
-falavay_tests = {'maakina': ('makinə', 'maKqkiqn', 'makiqn'),
-                 'oi': ('oi', 'OKqIq', 'OIq'),
-                 'aai': ('ai', 'YKq', 'Y'),
-                 'naatami': ('natəmi', 'naKqtqmi', 'natqmi'),
-                 "ku'kuta": ("ku'kutə", 'kuKqHkutq', 'kuHkutq'),
-                 'kanka': ('kəṅkə', 'kqKqMkq', 'kqMkq'),
-                 "e'kungi": ("e'kuṅi", 'EKqHkugi', 'EHkugi'),
-                 'aakaaye':('akaye','AqKqkaey','Aqkaey'),
-                 'kvaau':('kvau','pWKq','pW')}
-
-botharu_tests = {'ekaaye':'yekaye','sehaanaa':'shaala','roapinku':'swęęku',"co'kvine":'tlóchile','kunkaai':'kǫkee',"maato'ce":'mątóche',
-                 'raseki':'seechi','haavingaa':'havąą','Mpaainta':'pęęti','kasaavi':'khaavi','mohettu':'mhwę́ę́du','saampa':'hąpi'}
+botharu_tests = {
+    'ekaaye': 'yekaye',
+    'sehaanaa': 'shaala',
+    'roapinku': 'swęęku',
+    "co'kvine": 'tlóchile',
+    'kunkaai': 'kǫkee',
+    "maato'ce": 'mątóche',
+    'raseki': 'seechi',
+    'haavingaa': 'havąą',
+    'Mpaainta': 'pęęti',
+    'kasaavi': 'khaavi',
+    'mohettu': 'mhwę́ę́du',
+    'saampa': 'hąpi'
+}
 
 
-def alltests(word):
-    pk = PKForm(word)
-   # return pk.transcribe(), pk.falavay(True), pk.falavay(False)
-    return BotharuForm.from_pk(pk).transcribe()
+class KasanicTests(unittest.TestCase):
+    def test_lv(self):
+        for pk_stem, forms in falavay_tests.items():
+            pk_lemma = PKLemma("uninflected", pk_stem, "")
+            pk_form = PKForm(pk_lemma, "gn")
+            self.assertEqual(forms, (pk_form.transcribe(), pk_form.get_falavay(True), pk_form.get_falavay(False)))
 
 
-if __name__ == "__main__":
-    run_tests(botharu_tests, alltests, 'Botharu Tests')
+def main():
+    suite = unittest.TestLoader().loadTestsFromTestCase(KasanicTests)
+    unittest.TextTestRunner().run(suite)
+
+    print(Gloss("not-pandan.$au$ if-parent.$pt$.$au$=$2hon$.$au$", "lv").to_json())

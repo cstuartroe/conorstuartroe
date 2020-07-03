@@ -5,8 +5,10 @@
   "scripts": {
     "dev": "webpack --mode development ./lander/src/App.js --output ./lander/static/lander/main.js",
     "dev_games": "webpack --mode development ./games/src/App.js --output ./games/static/games/main.js",
+    "dev_lv": "webpack --mode development ./lauvinko/src/App.js --output ./lauvinko/static/lauvinko/main.js",
     "build": "webpack --mode production ./lander/src/App.js --output ./lander/static/lander/main.js",
-    "build_games": "webpack --mode production ./games/src/App.js --output ./games/static/games/main.js"
+    "build_games": "webpack --mode production ./games/src/App.js --output ./games/static/games/main.js",
+    "build_lv": "webpack --mode production ./lauvinko/src/App.js --output ./lauvinko/static/lauvinko/main.js"
   },
   "repository": {
     "type": "git",
@@ -33,6 +35,7 @@
     "webpack-cli": "^3.3.11"
   },
   "dependencies": {
+    "query-string": "^6.13.1",
     "react-router-dom": "^5.2.0"
   },
   "description": ""

@@ -4,7 +4,7 @@ import os
 from lxml import etree
 
 
-def replacement_suite(replacements,word):
+def replacement_suite(replacements, word):
     for item, replacement in replacements:
         word = re.sub(item, replacement, word)
     return word
@@ -29,8 +29,13 @@ def inner_markup(tag):
     return inner
 
 
-flatten = lambda l: [item for sublist in l for item in sublist]
+def flatten(l):
+    out = []
+    for sublist in l:
+        out += sublist
+    return out
+
 
 class LauvinkoError(ValueError):
-    def __init__(self, *args, **kwargs):
-        super(LauvinkoError, self).__init__(*args, **kwargs)
+    def __init__(self, *args):
+        super(LauvinkoError, self).__init__(*args)

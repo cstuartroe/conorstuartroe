@@ -1,5 +1,8 @@
+import re
+
 from .utils import replacement_suite, option_re, find, inner_markup, flatten, LauvinkoError
-from .kasanic import PKForm, PKWord
+from .kasanic import PKLemma, PKForm, stem_categories
+from .kasanic_descendant import KasanicDescendantForm, KasanicDescendantLemma
 
 BT_ONSS = ['m', 'p', 't', 'z', 'c', 'k',
            'M', 'P', 'T', 'Z', 'C', 'K',
@@ -10,21 +13,16 @@ BT_GLDS = ['Y', 'W']
 BT_VOWS = ['a', 'i', 'u', 'e', 'o']
 
 
-class BotharuForm:
-    def __init__(self, s):
-        self.structure = BotharuForm.syllabify(s)
-
+class BotharuForm(KasanicDescendantForm):
     def syllabify(s):
         sylls = re.findall('[mptzqckMPTZQCKbdwvlrysLSh]?[YW]?[aeiou]~?´?\-?', s)
         structure = [BotharuForm.parsesyll(syll) for syll in sylls]
         if ''.join(flatten(structure)) != s:
-            print(structure)
-            print(s)
-            raise ValueError("Invalid Botharu root: " + s)
+            raise ValueError(f"Not al letters captured: {s} {sylls}")
         return structure
 
     def parsesyll(syll):
-        onset = find('[mptzqckMPTZQCKbdwvlrysSLh]', syll)
+        onset = find('^[mptzqckMPTZQCKbdwvlrysSLh]', syll)
         glide = find('[YW]', syll)
         vowel = find('[aeiou]', syll)
         nasalization = find('~', syll)
@@ -35,6 +33,7 @@ class BotharuForm:
     def transcribe(self):
         return ''.join(BotharuForm.transcribe_syll(syll) for syll in self.structure)
 
+    @staticmethod
     def transcribe_syll(syll):
         out = ''
 
@@ -59,9 +58,7 @@ class BotharuForm:
 
         return out
 
-    def falavay(self):
-        return self.falavay_form
-
+    @staticmethod
     def from_pk(pkform, showprogress=False):
         word = ''.join(flatten(pkform.structure))
         replacements_pre = [('Y', 'āi'), ('W', 'āu'), ('a', 'ə'), ('ā', 'a'), ('v', 'w'), ('c', 'z'), ('!', '')]
@@ -135,61 +132,23 @@ class BotharuForm:
         if showprogress:
             print(word)
 
-        try:
-            btform = BotharuForm(word)
-        except ValueError:
-            print(pkform.transcribe())
-            raise ValueError("fuck.")
-        btform.falavay_form = pkform.falavay(False)
-        return btform
+        return BotharuForm.syllabify(word)
+
+
+class BotharuLemma(KasanicDescendantLemma):
+    FORM_CLASS = BotharuForm
+
+    def update_form(self, primary_aspect, stem):
+        if primary_aspect not in stem_categories[self.category]:
+            raise ValueError
+
+        form = self.get_form(primary_aspect, [])
+        form.structure = BotharuForm.syllabify(stem["phonemic"])
+        form.falavay = stem["falavay"]
+        self.forms[(primary_aspect, '')] = form
 
     def to_json(self):
-        return {"falavay": self.falavay(), "transcription": self.transcribe()}
-
-
-class BotharuWord:
-    def __init__(self):
-        self.category = None
-        self.forms = {}
-        self.defn = 'Not defined.'
-
-    def set_defn(self, s):
-        self.defn = s
-
-    def put_form(self, form_name, btform):
-        self.forms[form_name] = btform
-
-    def get_citation_form(self):
-        return self.forms[self.citation_form]
-
-    def update_from_tag(self, language_tag):
-        for subtag in language_tag:
-            ##            if subtag.tag == "form":
-            ##                word = subtag.text
-            ##                form_name = subtag.get("type")
-            ##                if form_name == "gn":
-            ##                    lemma.set_general(word)
-            ##                else:
-            ##                    lemma.put_form(form_name,word)
-            if subtag.tag == "defn":
-                self.set_defn(inner_markup(subtag))
-            else:
-                raise ValueError("Invalid tag: " + subtag.tag)
-        if self.defn == 'Not defined.':
-            raise ValueError("AAAAAHHH")
-
-    def from_pk(pkword):
-        btword = BotharuWord()
-        btword.category = pkword.category
-        for form_name, word_form in pkword.forms.items():
-            if form_name in ['imnp', 'impt', 'np', 'pt', 'pf', 'gn']:
-                btword.forms[form_name] = BotharuForm.from_pk(word_form)
-        btword.citation_form = PKWord.citation_forms[btword.category]
-        btword.set_defn(pkword.defn)
-        return btword
-
-    def to_json(self):
-        output = {"definition": self.defn, "forms": {}}
-        for name, form in self.forms.items():
-            output["forms"][name] = form.to_json()
-        return output
+        out = {"definition": self.definition, "forms": {}}
+        for primary_aspect in stem_categories[self.category]:
+            out["forms"][f"${primary_aspect}$"] = self.get_form(primary_aspect, []).to_json()
+        return out
