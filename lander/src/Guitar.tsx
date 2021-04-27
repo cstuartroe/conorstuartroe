@@ -1,5 +1,7 @@
 import React, { Component } from "react";
-import ReactDOM from "react-dom";
+
+let range = (n: number) => Array.from(Array(n).keys())
+
 
 const key_names = ["C", "C#/Db", "D", "D#/Eb", "E", "F", "F#/Gb", "G", "G#/Ab", "A", "A#/Bb", "B"];
 const guitar_strings = [4, 9, 2, 7, 11, 4];
@@ -7,7 +9,9 @@ const guitar_strings = [4, 9, 2, 7, 11, 4];
 const ionian_intervals = [2, 2, 1, 2, 2, 2, 1];
 const major_modes = ["Ionian (Major)", "Dorian", "Phrygian", "Lydian", "Mixolydian", "Aeolian (Minor)", "Locrian"];
 
-var scales = {
+type Scale = {[degree: string]: string};
+
+var scales: {[name: string]: Scale} = {
   "Harmonic Minor": {"0": "1", "2": "2", "3": "3", "5": "4", "7": "5", "8": "6", "11": "7"},
   "Pentatonic Major": {"0": "1", "2": "2", "4": "3", "7": "5", "9": "6"},
   "Pentatonic Minor": {"0": "1", "3": "3", "5": "4", "7": "5", "10": "7"},
@@ -18,23 +22,35 @@ const scale_list = major_modes.concat([...Object.keys(scales)]);
 
 for (var i in major_modes) {
   console.log(major_modes[i]);
-  var scale = {"0": "1"};
+  var scale: Scale = {"0": "1"};
   var current_note = 0;
   for (var j in ionian_intervals) {
     var interval = ionian_intervals[(parseInt(i) + parseInt(j)) % 7];
     current_note += interval;
-    scale[current_note] = parseInt(j) + 2;
+    scale[current_note] = String(parseInt(j) + 2);
   }
 
   scales[major_modes[i]] = scale;
 }
 
-const scale_position_colors = [null, "#ff0000", "#0000ff", "#ff00ff", "#007700", "#ff7700", "#9900ff", "#bb7700"];
-scale_position_colors["#"] = "#777777";
+const scale_position_colors : {[degree: string]: string} = {
+  1: "#ff0000",
+  2: "#0000ff",
+  3: "#ff00ff",
+  4: "#007700",
+  5: "#ff7700",
+  6: "#9900ff",
+  7: "#bb7700",
+  '#': "#777777",
+};
 
-var positions = [];
-for (var string_index in guitar_strings) {
-  for (var fret of [...Array(13).keys()]) {
+type Position = {string_index: number, fret: number};
+
+const frets = range(13);
+
+var positions: Position[] = [];
+for (const string_index of range(guitar_strings.length)) {
+  for (const fret of frets) {
     positions.push({string_index: string_index, fret: fret});
   }
 }
@@ -45,11 +61,11 @@ class Guitar extends Component {
     mode: major_modes[0]
   }
 
-  keychange(event) {
+  keychange(event: React.ChangeEvent<HTMLSelectElement>) {
     this.setState({key: parseInt(event.target.value)});
   }
 
-  modechange(event) {
+  modechange(event: React.ChangeEvent<HTMLSelectElement>) {
     this.setState({mode: event.target.value});
   }
 
@@ -73,7 +89,7 @@ class Guitar extends Component {
         </div>
 
         <div style={{backgroundColor: "#9c7714", width: "36vh", height: "120vh", position: "absolute", left: "calc(50vw - 18vh)"}}>
-          {[...Array(13).keys()].map((fret) =>
+          {frets.map((fret) =>
             <div className="fret" key={fret}
               style={{backgroundColor: "#999999", width: "100%", height: "1vh", left: "0", top: (241 - Math.pow(.946, fret)*240) + "vh", position: "absolute"}}/>
           )}

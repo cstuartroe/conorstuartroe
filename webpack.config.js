@@ -2,12 +2,16 @@ module.exports = {
   module: {
     rules: [
       {
-        test: /\.js$/,
+        test: /\.tsx?$/,
+        use: 'ts-loader',
         exclude: /node_modules/,
-        use: {
-          loader: "babel-loader"
-        }
-      }
-    ]
-  }
+      },
+    ],
+  },
+  resolve: {
+    extensions: ['.tsx', '.ts', '.js'],
+  },
+  output: {
+    filename: '[name].js',
+  },
 };
