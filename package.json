@@ -6,7 +6,7 @@
     "dev": "webpack --mode development ./lander/src/index.tsx",
     "dev_games": "webpack --mode development ./games/src/App.js --output ./games/static/games/main.js",
     "dev_lv": "webpack --mode development ./lauvinko/src/App.js --output ./lauvinko/static/lauvinko/main.js",
-    "build": "webpack --mode production ./lander/src/index.tsx --output ./lander/static/lander/main.js",
+    "build": "webpack --mode production ./lander/src/index.tsx",
     "build_games": "webpack --mode production ./games/src/App.js --output ./games/static/games/main.js",
     "build_lv": "webpack --mode production ./lauvinko/src/App.js --output ./lauvinko/static/lauvinko/main.js"
   },

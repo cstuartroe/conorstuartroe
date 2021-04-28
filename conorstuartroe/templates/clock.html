@@ -1,0 +1,36 @@
+{% extends 'base.html' %}
+
+{% block content %}
+<p id="seconds">Watch it go to zero.</p>
+<h2 id="clockface"></h2>
+
+<script>
+//var starttime = 1522968214388;
+
+var startdate = new Date();
+startdate.setDate(1);
+startdate.setHours(0);
+startdate.setMinutes(0);
+startdate.setSeconds(0);
+startdate.setMilliseconds(0);
+var starttime = startdate.getTime(); 
+
+const numberWithCommas = (x) => {
+  return x.toString().replace(/\B(?=(\d{3})+(?!\d))/g, ",");
+}
+
+function sleep(ms) {
+  return new Promise(resolve => setTimeout(resolve, ms));
+}
+
+async function update(){
+	while(true) {
+		elapsed = (new Date()).getTime() - starttime;
+		countdown = 1000000000000*Math.pow(Math.E,-.00000001*elapsed)
+		document.getElementById("clockface").innerHTML = numberWithCommas(Math.round(countdown));
+		await sleep(15);
+	}
+}
+update()
+</script>
+{% endblock %}

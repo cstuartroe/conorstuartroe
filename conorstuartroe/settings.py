@@ -29,9 +29,7 @@ INSTALLED_APPS = [
     'django.contrib.sessions',
     'django.contrib.messages',
     'django.contrib.staticfiles',
-    'lander.apps.LanderConfig',
-    'lauvinko.apps.LauvinkoConfig',
-    'games.apps.GamesConfig'
+    'conorstuartroe.apps.ConorstuartroeConfig',
 ]
 
 MIDDLEWARE = [

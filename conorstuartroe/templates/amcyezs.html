@@ -1,0 +1,82 @@
+{% extends 'base.html' %}
+
+{% block content %}
+<div ng-app="amcyezs" ng-controller="myCtrl">
+    <h1 style="padding: 0 0 1em 0;">Amcyezs</h1>
+	<div class="container">
+		<div class="row">
+			<div class="col-xs-12">
+	  			<textarea ng-model="stuff" style="width:100%; height:40vh;"></textarea>
+			</div>
+		</div>
+		<div class="row">
+			<div class="col-xs-12">
+				<button style="width: 100%; height: 15vh;" ng-click="swap()" ng-bind="swapname"></button>
+			</div>
+		</div>
+		<div class="row">
+			<div class="col-xs-12">
+	  			<p id="output" ng-bind="transform(stuff)"></p>
+  			</div>
+		</div>
+	</div></div>
+</div>
+
+<script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.6.9/angular.min.js"></script>
+<script>
+	var app = angular.module('amcyezs', []);
+
+	app.controller('myCtrl', function($scope) {
+		$scope.stuff = "Type your message here";
+		$scope.encoding = true;
+		$scope.swapname = "Switch to decoding";
+
+		$scope.codings = {"i":"e","e":"a","a":"o","o":"u","u":"i","r":"w","w":"l","l":"y","y":"r","c":"p","p":"t","t":"k","k":"d","d":"b","b":"j","j":"g","g":"c","f":"h","h":"s","s":"z","z":"v","v":"f","n":"m","m":"n","x":"q","q":"x"};
+		$scope.decodings = Object.keys($scope.codings).reduce(function(obj,key){
+			obj[ $scope.codings[key] ] = key;
+			return obj;
+		},{});
+
+		$scope.encode = function(plain){
+			plain = plain.normalize('NFD').replace(/[\u0300-\u036f]/g, "");
+			var code = "";
+			for (var i = 0; i < plain.length; i++) {
+				c = plain.charAt(i);
+				if ("abcdefghijklmnopqrstuvwxyz".includes(c)) {
+					code += $scope.codings[c];
+				} else if ("abcdefghijklmnopqrstuvwxyz".includes(c.toLowerCase())) {
+					code += $scope.codings[c.toLowerCase()].toUpperCase();
+				} else { code += c; };
+			}
+			return code;
+		};
+		$scope.decode = function(code){
+			var plain = "";
+			for (var i = 0; i < code.length; i++) {
+				c = code.charAt(i);
+				if ("abcdefghijklmnopqrstuvwxyz".includes(c)) {
+					plain += $scope.decodings[c];
+				} else if ("abcdefghijklmnopqrstuvwxyz".includes(c.toLowerCase())) {
+					plain += $scope.decodings[c.toLowerCase()].toUpperCase();
+				} else { plain += c; };
+			}
+			return plain;
+		};
+
+	    $scope.transform = $scope.encode;
+	    $scope.swap = function() {
+	    	$scope.stuff = $scope.transform($scope.stuff);
+	    	if($scope.encoding){
+	    		$scope.encoding = false;
+	    		$scope.transform = $scope.decode;
+				$scope.swapname = "Switch to encoding";
+	    	}
+	    	else {
+	    		$scope.encoding = true;
+	    		$scope.transform = $scope.encode;
+				$scope.swapname = "Switch to decoding";
+	    	}
+	    };
+	});
+</script>
+{% endblock %}
