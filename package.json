@@ -3,12 +3,8 @@
   "version": "1.0.0",
   "private": true,
   "scripts": {
-    "dev": "webpack --mode development ./lander/src/index.tsx",
-    "dev_games": "webpack --mode development ./games/src/App.js --output ./games/static/games/main.js",
-    "dev_lv": "webpack --mode development ./lauvinko/src/App.js --output ./lauvinko/static/lauvinko/main.js",
-    "build": "webpack --mode production ./lander/src/index.tsx",
-    "build_games": "webpack --mode production ./games/src/App.js --output ./games/static/games/main.js",
-    "build_lv": "webpack --mode production ./lauvinko/src/App.js --output ./lauvinko/static/lauvinko/main.js"
+    "dev": "webpack --mode development ./conorstuartroe/src/index.tsx",
+    "build": "webpack --mode production ./conorstuartroe/src/index.tsx"
   },
   "repository": {
     "type": "git",
@@ -37,5 +33,6 @@
     "ts-loader": "^9.1.1",
     "typescript": "^4.2.4",
     "webpack-cli": "^4.6.0"
-  }
+  },
+  "postinstall": "npm run build"
 }

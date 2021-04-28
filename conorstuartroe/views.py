@@ -9,7 +9,7 @@ import os
 
 
 def react_index(request):
-    return render(request, 'react_index.html', {"app": "lander"})
+    return render(request, 'react_index.html')
 
 
 def index(request):

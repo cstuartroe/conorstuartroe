@@ -13,7 +13,18 @@ https://docs.djangoproject.com/en/2.0/ref/settings/
 import os
 from django.core.management.utils import get_random_secret_key
 
-from .settings_secret import *
+BASE_DIR = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
+
+ALLOWED_HOSTS = ['localhost', '127.0.0.1', 'conorstuartroe.com', 'www.conorstuartroe.com']
+
+DEBUG = bool(os.getenv('DEBUG'))
+
+STATICFILES_DIRS = (
+    os.path.join(BASE_DIR, 'static'),
+    os.path.join(BASE_DIR, 'dist'),
+)
+
+STATIC_ROOT = os.path.join(BASE_DIR, 'staticfiles')
 
 SECRET_KEY = get_random_secret_key()
 
@@ -34,6 +45,7 @@ INSTALLED_APPS = [
 
 MIDDLEWARE = [
     'django.middleware.security.SecurityMiddleware',
+    'whitenoise.middleware.WhiteNoiseMiddleware',
     'django.contrib.sessions.middleware.SessionMiddleware',
     'django.middleware.common.CommonMiddleware',
     'django.middleware.csrf.CsrfViewMiddleware',

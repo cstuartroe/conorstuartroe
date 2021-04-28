@@ -7,3 +7,4 @@ static/md
 node_modules
 *.sqlite3
 main.js
+staticfiles
