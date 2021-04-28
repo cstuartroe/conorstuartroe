@@ -15,7 +15,13 @@ from django.core.management.utils import get_random_secret_key
 
 BASE_DIR = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
 
-ALLOWED_HOSTS = ['localhost', '127.0.0.1', 'conorstuartroe.com', 'www.conorstuartroe.com']
+ALLOWED_HOSTS = [
+    'localhost',
+    '127.0.0.1',
+    'conorstuartroe.com',
+    'www.conorstuartroe.com',
+    'conorstuartroe.herokuapp.com',
+]
 
 DEBUG = bool(os.getenv('DEBUG'))
 
