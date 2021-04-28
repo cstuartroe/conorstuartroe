@@ -1,11 +1,13 @@
 from django.shortcuts import render
-from django.http import HttpResponse, HttpResponseRedirect
-from .wpfetch import *
-from .RSS_reader import *
-from .randwords import *
+from django.http import HttpResponse, HttpResponseRedirect, JsonResponse
 import json
 import datetime
 import os
+
+from .wpfetch import get_worthwhile_posts
+from .RSS_reader import get_feed
+from .randwords import clearseed, randpattern, genwords
+from .twitter import api, tweet_to_json
 
 
 def react_index(request):
@@ -162,3 +164,24 @@ def journalmd(request, date_string):
 
 def situations(request):
     return render(request, "situations.html")
+
+
+HACK_HOUSE_ACCOUNTS = [
+    'cstuartroe',
+    'dkb868',
+    'vvhuang_',
+    'vroomerify',
+    'kayolord',
+    'apagajewski',
+]
+
+
+def tweetlist(request):
+    tweets = []
+    for username in HACK_HOUSE_ACCOUNTS:
+        for status in api.user_timeline(screen_name=username):
+            tweets.append(tweet_to_json(status))
+
+    tweets.sort(key=lambda t: t["created_at"], reverse=True)
+
+    return JsonResponse(tweets[:20], safe=False)

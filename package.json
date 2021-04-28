@@ -3,8 +3,8 @@
   "version": "1.0.0",
   "private": true,
   "scripts": {
-    "dev": "./node_modules/webpack-cli/bin/cli.js --mode development ./conorstuartroe/src/index.tsx",
-    "build": "./node_modules/webpack-cli/bin/cli.js --mode production ./conorstuartroe/src/index.tsx "
+    "dev": "./node_modules/webpack-cli/bin/cli.js --mode development ./src/index.tsx",
+    "build": "./node_modules/webpack-cli/bin/cli.js --mode production ./src/index.tsx "
   },
   "repository": {
     "type": "git",
@@ -27,9 +27,13 @@
     "@types/react": "^17.0.4",
     "@types/react-dom": "^17.0.3",
     "@types/react-router-dom": "^5.1.7",
+    "css-loader": "^5.2.4",
     "react": "^17.0.2",
     "react-dom": "^17.0.2",
     "react-router-dom": "^5.2.0",
+    "sass": "^1.32.11",
+    "sass-loader": "^11.0.1",
+    "style-loader": "^2.0.0",
     "ts-loader": "^9.1.1",
     "typescript": "^4.2.4",
     "webpack": "^5.36.0",

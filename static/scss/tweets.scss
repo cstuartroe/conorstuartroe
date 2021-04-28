@@ -1,0 +1,33 @@
+.tweet-list {
+}
+
+.tweet {
+  border: 1px solid #dddddd;
+  border-radius: 1vh;
+  padding: 2vh;
+  display: flex;
+  margin: 2vh 0;
+}
+
+.tweet-author-info {
+  display: flex;
+  padding: 2vh;
+}
+
+.tweet-author-name {
+  padding-right: 1vh;
+  font-size: 1.2vw;
+  font-weight: bold;
+}
+
+.tweet-author-handle {
+  font-size: 1.2vw;
+}
+
+.tweet-author-handle::before {
+  content: '@';
+}
+
+.tweet-text {
+  text-align: left;
+}
