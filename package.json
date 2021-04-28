@@ -3,8 +3,8 @@
   "version": "1.0.0",
   "private": true,
   "scripts": {
-    "dev": "webpack --mode development ./conorstuartroe/src/index.tsx",
-    "build": "webpack --mode production ./conorstuartroe/src/index.tsx"
+    "dev": "./node_modules/webpack-cli/bin/cli.js --mode development ./conorstuartroe/src/index.tsx",
+    "build": "./node_modules/webpack-cli/bin/cli.js --mode production ./conorstuartroe/src/index.tsx "
   },
   "repository": {
     "type": "git",
