@@ -8,3 +8,5 @@ node_modules
 *.sqlite3
 main.js
 staticfiles
+env.sh
+
