@@ -179,7 +179,7 @@ table {
 
 .pagelinks a {
 	font-family: "Gentium";
-    font-size: calc(1vh + 1vw);
+    font-size: calc(1.5vh + 1vw);
 	color: #6E9548;
 	text-decoration: none;
 	padding: .25em;
