@@ -18,22 +18,8 @@ def index(request):
     return render(request, 'index.html')
 
 
-def news(request):
-    context = {'feed': get_feed()}
-    return render(request, 'news.html', context)
-
-
-def wp(request):
-    context = {'posts': get_worthwhile_posts()}
-    return render(request, 'wp.html', context)
-
-
 def projects(request):
     return render(request, 'projects.html')
-
-
-def webguide(request):
-    return render(request, 'webguide.html')
 
 
 def clock(request):
@@ -56,45 +42,11 @@ def negabinary(request):
     return render(request, 'negabinary.html')
 
 
-def amcyezs(request):
-    return render(request, 'amcyezs.html')
-
-
-def boxes(request):
-    return render(request, 'boxes.html')
-
-
-def boxdata(request):
-    x = request.GET["x"]
-    y = request.GET["y"]
-    user = request.GET["user"]
-    with open("boxdata.json","r") as fh:
-        data = json.load(fh)
-    data[user] = {"x":x, "y":y}
-    with open("boxdata.json","w") as fh:
-        json.dump(data,fh,indent=4)
-    return HttpResponse(json.dumps(data,indent=4),content_type='application/json')
-
-
-def boxreset(request):
-    with open('boxdata.json','w') as fh:
-        fh.write("{}")
-    return HttpResponseRedirect('/boxes')
-
-
 def randwords(request):
     clearseed()
     pattern = request.GET.get("q",randpattern())
     words = genwords(pattern)
     return render(request, 'randwords.html', {"words": words})
-
-
-def ajax(request):
-    return render(request, 'ajax.html')
-
-
-def ajaxblock(request):
-    return HttpResponse("If you want to understand recursion, you'll have to ask someone smarter than me, who will tell you \"")
 
 
 def tekotypes(request):
