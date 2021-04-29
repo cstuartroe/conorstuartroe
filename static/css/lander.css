@@ -171,22 +171,15 @@ table {
 	left: 0;
 	background-color: white;
 	z-index: 1;
-	padding-right: 10px;
 }
 
 .container {
 	width: auto;
 }
 
-.pagelinks {
-	overflow: hidden;
-}
-
 .pagelinks a {
-	float: left;
-	display: block;
 	font-family: "Gentium";
-    font-size: calc(1vh + 1.5vw);
+    font-size: calc(1vh + 1vw);
 	color: #6E9548;
 	text-decoration: none;
 	padding: .25em;
