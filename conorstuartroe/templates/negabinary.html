@@ -5,23 +5,23 @@
     <h1 style="padding: 0 0 1em 0;">The Negabinarator</h1>
 	<div class="container">
 		<div class="row">
-			<div class="col-xs-12">
+			<div class="col-12">
 	  			<textarea ng-model="stuff" style="width:100%; height:40vh;"></textarea>
 			</div>
 		</div>
 		<div class="row-eq-height">
-			<div class="col-xs-4">
+			<div class="col-4">
 				<button style="width: 100%; height: 15vh;" ng-click="bitshift(1)">Bitshift Left</button>
 			</div>
-			<div class="col-xs-4">
+			<div class="col-4">
 				<button style="width: 100%; height: 15vh;" ng-click="swap()" ng-bind="swapname"></button>
 			</div>
-			<div class="col-xs-4">
+			<div class="col-4">
 				<button style="width: 100%; height: 15vh;" ng-click="bitshift(-1)">Bitshift Right</button>
 			</div>
 		</div>
 		<div class="row">
-			<div class="col-xs-12">
+			<div class="col-12">
 	  			<p id="output" ng-bind="transform(stuff)" style="word-break: break-all;"></p>
   			</div>
 		</div>
