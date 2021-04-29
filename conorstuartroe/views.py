@@ -1,11 +1,8 @@
 from django.shortcuts import render
-from django.http import HttpResponse, HttpResponseRedirect, JsonResponse
-import json
+from django.http import HttpResponse, JsonResponse
 import datetime
 import os
 
-from .wpfetch import get_worthwhile_posts
-from .RSS_reader import get_feed
 from .randwords import clearseed, randpattern, genwords
 from .twitter import api, tweet_to_json
 
@@ -112,10 +109,6 @@ def journalmd(request, date_string):
         with open(filename, "w") as fh:
             fh.write(request.POST["md"])
         return HttpResponse()
-
-
-def situations(request):
-    return render(request, "situations.html")
 
 
 HACK_HOUSE_ACCOUNTS = [
