@@ -10,7 +10,7 @@ auth = tweepy.OAuthHandler(
     twitter_api_secret,
 )
 
-print(f"heroku config:set TWITTER_API_KEY={twitter_api_secret} TWITTER_API_SECRET={twitter_api_secret}")
+print(f"heroku config:set TWITTER_API_KEY={twitter_api_key} TWITTER_API_SECRET={twitter_api_secret}")
 print(f"export TWITTER_API_KEY={twitter_api_key} && export TWITTER_API_SECRET={twitter_api_secret}")
 
 redirect_url = auth.get_authorization_url()
