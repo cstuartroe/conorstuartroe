@@ -27,7 +27,6 @@ urlpatterns = [
     path('negaternary', views.negaternary, name='negaternary'),
     path('negabinary', views.negabinary, name='negabinary'),
     path('randwords', views.randwords, name='randwords'),
-    path('tekotypes', views.tekotypes, name="tekotypes"),
     path('journal', views.journalhome, name="journalhome"),
     path('journal/<str:date_string>', views.journalentry, name="journalentry"),
     path('journal/md/<str:date_string>', views.journalmd, name="journalmd"),

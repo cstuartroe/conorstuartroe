@@ -46,10 +46,6 @@ def randwords(request):
     return render(request, 'randwords.html', {"words": words})
 
 
-def tekotypes(request):
-    return render(request, 'teko-types.html')
-
-
 def shifted_today(offset=-5):
     return (datetime.datetime.now(tz=datetime.timezone(datetime.timedelta(hours=offset)))).date()
 
