@@ -2,15 +2,44 @@ body {
 	text-align: center;
 }
 
+.container-fluid .row {
+	padding: 1em;
+	background-color: #222218;
+}
+
 .fa {
 	font-size: 80% !important;
 }
 
-#current {
+#current, .explanation {
 	font-family: "Gentium";
+	color: #ddddcc;
+}
+
+#current {
 	font-size: calc(4vw + 2vh);
 	font-weight: 600;
-	color: #ddddcc;
+}
+
+.explanation h3 {
+	padding-top: 1vh;
+}
+
+.explanation h2 {
+	font-size: calc(3vw + 1.5vh);
+}
+
+p, .explanation h3 {
+	font-size: calc(2vw + 1vh);
+}
+
+.explanation p {
+	font-size: calc(.5vw + 1.5vh);
+	text-align: justify;
+}
+
+td {
+	padding: 0 1vw;
 }
 
 .season-wrapper {

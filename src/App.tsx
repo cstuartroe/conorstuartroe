@@ -4,6 +4,7 @@ import { BrowserRouter as Router, Route, Switch } from "react-router-dom";
 import Guitar from "./Guitar";
 import TwitterMirror from "./TwitterMirror";
 import NewCalendar from "./NewCalendar";
+import NewCalendarExplanation from "./NewCalendar/explanation";
 
 class App extends Component {
   render() {
@@ -18,6 +19,9 @@ class App extends Component {
             )} />
             <Route exact={true} path="/new_calendar" render={() => (
               <NewCalendar/>
+            )}/>
+            <Route exact={true} path="/new_calendar/explanation" render={() => (
+              <NewCalendarExplanation/>
             )}/>
           </Switch>
         </Router>
