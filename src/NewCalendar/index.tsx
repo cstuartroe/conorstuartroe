@@ -102,7 +102,7 @@ function Season(props: SeasonProps) {
 
 function lpad(s: string, width: number, padding: string) {
   while (s.length < width) {
-    s += padding;
+    s = padding + s;
   }
 
   return s;
