@@ -5,28 +5,32 @@ import { range } from "./utils";
 
 import "../static/scss/calendar.scss";
 
-const WEEKDAYS = ['Sunday','Moonday','Mercuryday','Venusday','Earthday','Marsday','Jupiterday','Saturnday','Starday'];
-const HOLIDAYS = ['Spring Equinox','Summer Solstice','Autumn Equinox','Winter Solstice',];
+const WEEKDAYS = ['Sunday','Moonday','Mercuryday','Venusday','Earthday',
+  'Marsday','Jupiterday','Saturnday','Starday', 'Skyday'];
+const HOLIDAYS = ['First Equinox','First Solstice','Second Equinox','Second Solstice',];
 const SEASONS = ["Spring", "Summer", "Autumn", "Winter"];
+const MONTHS = ["Aries", "Taurus", "Gemini", "Cancer", "Leo", "Virgo",
+  "Libra", "Scorpio", "Sagittarius", "Capricorn", "Aquarius", "Pisces"];
+const MONTH_SYMBOLS = ['♈︎', '♉︎', '♊︎', '♋︎', '♌︎', '♍︎', '♎︎', '♏︎', '♐︎', '♑︎', '♒︎', '♓︎'];
 const SEASON_ICONS = [faCloud, faSun, faLeaf, faSnowflake];
-const WEEKEND_DAYS = [0, 1, 7, 8];
+const WEEKEND_DAYS = [0, 1, 8, 9];
 
 const FIRST_NEW_YEARS_DAY = new Date(2016, 2, 21, 0, 0, 0);
 const FIRST_YEAR = 5362; // 21 Mar 2016 thru 30 March 2017
 
 type Day = {
   season: number, // -1 for NYD, 0 for spring, so on (-2 for leap day)
-  half: number,   // -1 for solstice/equinox, 0 for early, 1 for late
+  month: number,   // -1 for solstice/equinox, 0-2 for regular month
   date: number,   // 0-44 inclusive
 }
 
 function dayEq(day1: Day, day2: Day) {
   if (day1.season === -1) {
     return day2.season === -1;
-  } else if (day1.half === -1) {
-    return (day1.season === day2.season) && (day2.half === -1);
+  } else if (day1.month === -1) {
+    return (day1.season === day2.season) && (day2.month === -1);
   } else {
-    return (day1.season === day2.season) && (day1.half === day2.half) && (day1.date === day2.date);
+    return (day1.season === day2.season) && (day1.month === day2.month) && (day1.date === day2.date);
   }
 }
 
@@ -49,7 +53,7 @@ function dayOfYear(days: number, leapYear: boolean): Day {
     if (days === 183) {
       return {
         season: -2,
-        half: -1,
+        month: -1,
         date: -1,
       }
     } else if (days > 183) {
@@ -59,13 +63,13 @@ function dayOfYear(days: number, leapYear: boolean): Day {
 
   let season = Math.floor((days - 1) / 91);
   let dayOfSeason = (days - 1) % 91;
-  let half = Math.floor((dayOfSeason - 1) / 45);
-  let date = (dayOfSeason - 1) % 45;
+  let month = Math.floor((dayOfSeason - 1) / 30);
+  let date = (dayOfSeason - 1) % 30;
 
   return {
     season,
-    half,
-    date,
+    month,
+    date: date + 1,
   }
 }
 
@@ -113,11 +117,11 @@ function dayToString(day: Day) {
     return "New Years' Day";
   } else if (day.season === -2) {
     return "Leap Day";
-  } else if (day.half === -1) {
+  } else if (day.month === -1) {
     return HOLIDAYS[day.season];
   } else {
-    return WEEKDAYS[day.date % 9] + " " + (day.date + 1).toString() + "\xa0"
-      + (day.half === 0 ? "Early\xa0" : "Late\xa0") + SEASONS[day.season];
+    return WEEKDAYS[day.date % 10] + " " + (day.date + 1).toString() + "\xa0"
+      + MONTHS[day.season*3 + day.month];
   }
 }
 
@@ -125,7 +129,7 @@ function DaySquare(props: { day: Day, currentDay: Day }) {
   let { day, currentDay } = props;
 
   let className = "weekday";
-  if (day.season === -1 || day.half === -1 || WEEKEND_DAYS.includes(day.date % 9)) {
+  if (day.season === -1 || day.month === -1 || WEEKEND_DAYS.includes(day.date % 10)) {
     className = "weekend";
   }
 
@@ -138,7 +142,7 @@ function DaySquare(props: { day: Day, currentDay: Day }) {
     content = <FontAwesomeIcon icon={faGlassCheers}/>;
   } else if (day.season === -2) {
     content = <FontAwesomeIcon icon={faFrog}/>;
-  } else if (day.half === -1) {
+  } else if (day.month === -1) {
     content = <FontAwesomeIcon icon={SEASON_ICONS[day.season]}/>;
   }
 
@@ -149,17 +153,17 @@ function DaySquare(props: { day: Day, currentDay: Day }) {
   );
 }
 
-function Month(props: {season: number, half: number, currentDay: Day}) {
-  let { season, half, currentDay } = props;
+function Month(props: {season: number, month: number, currentDay: Day}) {
+  let { season, month, currentDay } = props;
 
   return (
     <table className="month">
       <tbody>
-        {range(5).map(w => (
+        {range(3).map(w => (
           <tr key={w} className="d-flex flex-row">
-            {range(9).map(d => (
+            {range(10).map(d => (
               <th key={d} className="flex-fill">
-                <DaySquare day={{date: w*9 + d, season, half}} currentDay={currentDay}/>
+                <DaySquare day={{date: w*10 + d, season, month}} currentDay={currentDay}/>
               </th>
             ))}
           </tr>
@@ -185,15 +189,17 @@ function Season(props: SeasonProps) {
           <tbody>
             <tr>
               <th>
-                <DaySquare day={{season: index, half: -1, date: -1}} currentDay={currentDay}/>
+                <DaySquare day={{season: index, month: -1, date: -1}} currentDay={currentDay}/>
               </th>
             </tr>
           </tbody>
         </table>
-        <h2>{'Early ' + SEASONS[index]}</h2>
-        <Month season={index} half={0} currentDay={currentDay}/>
-        <h2>{'Late ' + SEASONS[index]}</h2>
-        <Month season={index} half={1} currentDay={currentDay}/>
+        {range(3).map(month => (
+          <div key={month}>
+            <h2>{MONTHS[index*3 + month]} {MONTH_SYMBOLS[index*3 + month]}</h2>
+            <Month season={index} month={month} currentDay={currentDay}/>
+          </div>
+        ))}
       </div>
     </div>
   );
@@ -222,7 +228,7 @@ export default class NewCalendar extends Component<{}, CalendarState> {
       hour: 0,
       minute: 0,
       second: 0,
-      day: { date: -1, season: -1, half: -1 },
+      day: { date: -1, season: -1, month: -1 },
       year: 0,
     }
   }
@@ -240,7 +246,7 @@ export default class NewCalendar extends Component<{}, CalendarState> {
     if (this.state.day.season === season) {
       let day = {
         season: season,
-        half: -1,
+        month: -1,
         date: -1,
       };
 
