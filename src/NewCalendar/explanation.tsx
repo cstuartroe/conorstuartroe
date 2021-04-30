@@ -32,12 +32,12 @@ export default class NewCalendarExplanation extends Component<{}, {}> {
           }
 
           return <div key={n} className='row' style={{padding: 0}}>
-            <div className="col-6">
+            <div className="col-5 col-md-6">
               <p style={{textAlign: 'right'}}>
                 {date.toDateString()}
               </p>
             </div>
-            <div className="col-6">
+            <div className="col-7 col-md-6">
               <p>
                 {dayToString(newDate.day)}
                 {' '}
