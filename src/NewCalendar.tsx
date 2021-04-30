@@ -9,7 +9,7 @@ const WEEKDAYS = ['Sunday','Moonday','Mercuryday','Venusday','Earthday','Marsday
 const HOLIDAYS = ['Spring Equinox','Summer Solstice','Autumn Equinox','Winter Solstice',];
 const SEASONS = ["Spring", "Summer", "Autumn", "Winter"];
 const SEASON_ICONS = [faCloud, faSun, faLeaf, faSnowflake];
-const WEEKEND_DAYS = [0, 1, 8];
+const WEEKEND_DAYS = [0, 1, 7, 8];
 
 const FIRST_NEW_YEARS_DAY = new Date(2016, 2, 21, 0, 0, 0);
 const FIRST_YEAR = 5362; // 21 Mar 2016 thru 30 March 2017
