@@ -1,7 +1,5 @@
 import React, { Component } from "react";
-
-let range = (n: number) => Array.from(Array(n).keys())
-
+import { range } from "./utils";
 
 const key_names = ["C", "C#/Db", "D", "D#/Eb", "E", "F", "F#/Gb", "G", "G#/Ab", "A", "A#/Bb", "B"];
 const guitar_strings = [4, 9, 2, 7, 11, 4];

@@ -23,7 +23,6 @@ urlpatterns = [
     path('projects', views.projects, name='projects'),
     path('clock', views.clock, name='clock'),
     path('calendar', views.calendar, name='calendar'),
-    path('new_calendar', views.new_calendar, name='new_calendar'),
     path('negaternary', views.negaternary, name='negaternary'),
     path('negabinary', views.negabinary, name='negabinary'),
     path('randwords', views.randwords, name='randwords'),

@@ -3,6 +3,7 @@ import { BrowserRouter as Router, Route, Switch } from "react-router-dom";
 
 import Guitar from "./Guitar";
 import TwitterMirror from "./TwitterMirror";
+import NewCalendar from "./NewCalendar";
 
 class App extends Component {
   render() {
@@ -15,6 +16,9 @@ class App extends Component {
             <Route exact={true} path="/twitter_mirror" render={() => (
                 <TwitterMirror/>
             )} />
+            <Route exact={true} path="/new_calendar" render={() => (
+              <NewCalendar/>
+            )}/>
           </Switch>
         </Router>
     );

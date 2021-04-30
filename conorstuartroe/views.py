@@ -27,10 +27,6 @@ def calendar(request):
     return render(request, 'calendar.html')
 
 
-def new_calendar(request):
-    return render(request, 'calendar2.html')
-
-
 def negaternary(request):
     return render(request, 'negaternary.html')
 

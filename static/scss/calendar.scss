@@ -1,0 +1,103 @@
+body {
+	text-align: center;
+}
+
+.fa {
+	font-size: 80% !important;
+}
+
+#current {
+	font-family: "Gentium";
+	font-size: calc(4vw + 2vh);
+	font-weight: 600;
+	color: #ddddcc;
+}
+
+.season-wrapper {
+	padding: calc(.6vw + .3vh);
+	background-color: #222218;
+}
+
+.season {
+	width: 100%;
+	border-radius: calc(1.5vw + 1vh);
+	display: inline-block;
+	text-align: center;
+	padding: 1em;
+}
+
+.season h2 {
+	font-family: "Gentium";
+	font-size: calc(1.5vw + 1vh);
+	font-weight: 600;
+	margin: .15vw;
+}
+
+.month {
+	display: inline-block;
+}
+
+.month tr th div {
+	height: calc(2vw + 1vh);
+	width: calc(2vw + 1vh);
+	border-radius: calc(2vw + 1vh);
+	text-align: center;
+	margin: 2px;
+	display: table;
+}
+
+.month tr th div p {
+	font-size: calc(1vw + 1vh);
+	font-family: "Gentium";
+	margin: 0;
+	margin-top: .15vw;
+}
+
+svg[data-prefix='fas'] {
+	font-size: calc(1.5vw + 1vh);
+}
+
+.weekend {
+	background-color: #ddddcc;
+}
+
+.weekend p {
+	color: #222218;
+}
+
+.weekday {
+	background-color: #222218;
+}
+
+.weekday p, .activeDay p {
+	color: #ddddcc;
+}
+
+.activeDay {
+	background-color: #9988ff !important;
+}
+
+#new-year {
+	background-color: #ccccdd;
+	color: #222218;
+}
+
+#Spring {
+	background-color: #00cc66;
+	color: #222218;
+}
+
+#Summer {
+	background-color: #ffff99;
+	color: #222218;
+}
+
+#Autumn {
+	background-color: #993300;
+	color: #ddddcc;
+}
+
+#Winter {
+	background-color: #333344;
+	color: #ddddcc;
+}
