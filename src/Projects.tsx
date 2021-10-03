@@ -21,7 +21,7 @@ export default function Projects(_props: {}) {
     <>
       <div className="col-1 col-md-2 col-lg-3"/>
       <div className="col-10 col-md-8 col-lg-6">
-        <div className='lander-plate'>
+        <div className='lander-plate' style={{width: '100%'}}>
           <h1 style={{marginBottom: 0}}>Projects</h1>
         </div>
 
