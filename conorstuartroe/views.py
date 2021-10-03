@@ -11,10 +11,6 @@ def react_index(request):
     return render(request, 'react_index.html')
 
 
-def index(request):
-    return render(request, 'index.html')
-
-
 def projects(request):
     return render(request, 'projects.html')
 

@@ -1,132 +1,133 @@
-body {
+.calendar-style {
 	text-align: center;
-}
 
-.container-fluid .row {
-	padding: 1em;
-	background-color: #222218;
-}
 
-.fa {
-	font-size: 80% !important;
-}
+	.container-fluid .row {
+		padding: 1em;
+		background-color: #222218;
+	}
 
-#current, .explanation {
-	font-family: "Gentium";
-	color: #ddddcc;
-}
+	.fa {
+		font-size: 80% !important;
+	}
 
-#current {
-	font-size: calc(4vw + 2vh);
-	font-weight: 600;
-}
+	#current, .explanation {
+		font-family: "Gentium";
+		color: #ddddcc;
+	}
 
-.explanation h3 {
-	padding-top: 1vh;
-}
+	#current {
+		font-size: calc(4vw + 2vh);
+		font-weight: 600;
+	}
 
-.explanation h2 {
-	font-size: calc(3vw + 1.5vh);
-}
+	.explanation h3 {
+		padding-top: 1vh;
+	}
 
-p, .explanation h3 {
-	font-size: calc(2vw + 1vh);
-}
+	.explanation h2 {
+		font-size: calc(3vw + 1.5vh);
+	}
 
-.explanation p {
-	font-size: calc(.5vw + 1.4vh);
-	text-align: justify;
-}
+	p, .explanation h3 {
+		font-size: calc(2vw + 1vh);
+	}
 
-td {
-	padding: 0 1vw;
-}
+	.explanation p {
+		font-size: calc(.5vw + 1.4vh);
+		text-align: justify;
+	}
 
-.season-wrapper {
-	padding: calc(.6vw + .3vh);
-	background-color: #222218;
-}
+	td {
+		padding: 0 1vw;
+	}
 
-.season {
-	width: 100%;
-	border-radius: calc(1.5vw + 1vh);
-	display: inline-block;
-	text-align: center;
-	padding: 1em;
-}
+	.season-wrapper {
+		padding: calc(.6vw + .3vh);
+		background-color: #222218;
+	}
 
-.season h2 {
-	font-family: "Gentium";
-	font-size: calc(1.5vw + 1vh);
-	font-weight: 600;
-	margin: .15vw;
-}
+	.season {
+		width: 100%;
+		border-radius: calc(1.5vw + 1vh);
+		display: inline-block;
+		text-align: center;
+		padding: 1em;
+	}
 
-.month {
-	display: inline-block;
-}
+	.season h2 {
+		font-family: "Gentium";
+		font-size: calc(1.5vw + 1vh);
+		font-weight: 600;
+		margin: .15vw;
+	}
 
-.month tr th div {
-	height: calc(2vw + 1vh);
-	width: calc(2vw + 1vh);
-	border-radius: calc(2vw + 1vh);
-	text-align: center;
-	margin: 2px;
-	display: table;
-}
+	.month {
+		display: inline-block;
+	}
 
-.month tr th div p {
-	font-size: calc(1vw + 1vh);
-	font-family: "Gentium";
-	margin: 0;
-	margin-top: .15vw;
-}
+	.month tr th div {
+		height: calc(2vw + 1vh);
+		width: calc(2vw + 1vh);
+		border-radius: calc(2vw + 1vh);
+		text-align: center;
+		margin: 2px;
+		display: table;
+	}
 
-svg[data-prefix='fas'] {
-	font-size: calc(1.5vw + 1vh);
-}
+	.month tr th div p {
+		font-size: calc(1vw + 1vh);
+		font-family: "Gentium";
+		margin: 0;
+		margin-top: .15vw;
+	}
 
-.weekend {
-	background-color: #ddddcc;
-}
+	svg[data-prefix='fas'] {
+		font-size: calc(1.5vw + 1vh);
+	}
 
-.weekend p {
-	color: #222218;
-}
+	.weekend {
+		background-color: #ddddcc;
+	}
 
-.weekday {
-	background-color: #222218;
-}
+	.weekend p {
+		color: #222218;
+	}
 
-.weekday p, .activeDay p {
-	color: #ddddcc;
-}
+	.weekday {
+		background-color: #222218;
+	}
 
-.activeDay {
-	background-color: #9988ff !important;
-}
+	.weekday p, .activeDay p {
+		color: #ddddcc;
+	}
 
-#new-year {
-	background-color: #ccccdd;
-	color: #222218;
-}
+	.activeDay {
+		background-color: #9988ff !important;
+	}
 
-#Spring {
-	background-color: #00cc66;
-	color: #222218;
-}
+	#new-year {
+		background-color: #ccccdd;
+		color: #222218;
+	}
 
-#Summer {
-	background-color: #ffff99;
-	color: #222218;
-}
+	#Spring {
+		background-color: #00cc66;
+		color: #222218;
+	}
 
-#Autumn {
-	background-color: #993300;
-	color: #ddddcc;
-}
+	#Summer {
+		background-color: #ffff99;
+		color: #222218;
+	}
 
-#Winter {
-	background-color: #333344;
-	color: #ddddcc;
+	#Autumn {
+		background-color: #993300;
+		color: #ddddcc;
+	}
+
+	#Winter {
+		background-color: #333344;
+		color: #ddddcc;
+	}
 }

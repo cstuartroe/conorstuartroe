@@ -14,6 +14,10 @@ module.exports = {
           "sass-loader",
         ],
       },
+      {
+        test: /\.(png|jpg|woff|woff2|eot|ttf|svg)(\?v=[0-9]\.[0-9]\.[0-9])?$/,
+        loader: 'url-loader'
+      },
     ],
   },
   resolve: {

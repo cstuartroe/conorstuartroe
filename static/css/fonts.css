@@ -4,3 +4,17 @@
     url("/static/font/GentiumPlus-R.svg") format('svg');
     font-weight: normal;
 }
+
+@font-face {
+    font-family: "Josefin Sans";
+    src: url("/static/font/JosefinSans-Regular.ttf") format('truetype'),
+    url("/static/font/JosefinSans-Regular.svg") format('svg');
+    font-weight: normal;
+}
+
+@font-face {
+    font-family: "Mina";
+    src: url("/static/font/Mina-Regular.ttf") format('truetype'),
+    url("/static/font/Mina-Regular.svg") format('svg');
+    font-weight: normal;
+}

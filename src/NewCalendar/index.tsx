@@ -172,35 +172,37 @@ export default class NewCalendar extends Component<{}, NewDateTime> {
 
   render() {
     return (
-      <div className='container-fluid'>
-        <div className='row'>
-          <div className='col-12'>
-            <h1 id='current'>
-              {this.state.hour}
-              {':'}
-              {lpad(this.state.minute.toString(), 2, '0')}
-              {':'}
-              {lpad(this.state.second.toString(), 2, '0')}
-              {' '}
-              {dayToString(this.state.day)}
-              {'\xa0'}
-              {this.state.year}
-            </h1>
-          </div>
-          <div className='col-12 explanation'>
-            <p style={{textAlign: 'center'}}>
-              <Link to={'/new_calendar/explanation'}>explanation</Link>
-            </p>
-          </div>
+      <div className={'calendar-style'}>
+        <div className='container-fluid'>
+          <div className='row'>
+            <div className='col-12'>
+              <h1 id='current'>
+                {this.state.hour}
+                {':'}
+                {lpad(this.state.minute.toString(), 2, '0')}
+                {':'}
+                {lpad(this.state.second.toString(), 2, '0')}
+                {' '}
+                {dayToString(this.state.day)}
+                {'\xa0'}
+                {this.state.year}
+              </h1>
+            </div>
+            <div className='col-12 explanation'>
+              <p style={{textAlign: 'center'}}>
+                <Link to={'/new_calendar/explanation'}>explanation</Link>
+              </p>
+            </div>
 
-          {this.specialDay(-1)}
-          {[0, 1].map(s => (
-            <Season key={s} currentDay={this.state.day} index={s}/>
-          ))}
-          {this.specialDay(-2)}
-          {[2, 3].map(s => (
-            <Season key={s} currentDay={this.state.day} index={s}/>
-          ))}
+            {this.specialDay(-1)}
+            {[0, 1].map(s => (
+              <Season key={s} currentDay={this.state.day} index={s}/>
+            ))}
+            {this.specialDay(-2)}
+            {[2, 3].map(s => (
+              <Season key={s} currentDay={this.state.day} index={s}/>
+            ))}
+          </div>
         </div>
       </div>
     );

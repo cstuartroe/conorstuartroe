@@ -19,7 +19,6 @@ var scales: {[name: string]: Scale} = {
 const scale_list = major_modes.concat([...Object.keys(scales)]);
 
 for (var i in major_modes) {
-  console.log(major_modes[i]);
   var scale: Scale = {"0": "1"};
   var current_note = 0;
   for (var j in ionian_intervals) {
