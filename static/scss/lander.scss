@@ -2,14 +2,16 @@ $lander_background: #303438;
 $lander_translucent_background: rgba(48, 52, 56, 95%);
 $lander_border: white;
 $lander_text: white;
-$rich_purple: #7259ff;
+$rich_purple: #6c5ad1;
+$rich_green: #307563;
 $main_font: "Mina";
 $border_radius: 12px;
 
 .lander-style {
 	background-color: $lander_background;
-	min-height: 100vh;
+	height: 100vh;
 	text-align: center;
+	overflow: scroll;
 
 	::-webkit-scrollbar {
 		width: 10px;
@@ -27,14 +29,13 @@ $border_radius: 12px;
 	h1, h2, h3 {
 		text-align: center;
 		font-family: $main_font, Arial;
-		color: #6E9548;
+		color: $rich_green;
 		padding: 0;
 	}
 
 	h1 {
 		padding: 0em 3em;
 		font-size: 5vh;
-		color: #9B768D;
 		font-variant: small-caps;
 	}
 
@@ -57,7 +58,7 @@ $border_radius: 12px;
 	p, td, th, textarea, button {
 		font-family: $main_font, Arial;
 		line-height: 1.5;
-		font-size: 2.3vh;
+		font-size: 2vh;
 		text-align: justify;
 	}
 
@@ -127,7 +128,7 @@ $border_radius: 12px;
 	}
 
 	b {
-		color: #6E9548;
+		color: $rich_green;
 	}
 
 	table {
@@ -169,12 +170,19 @@ $border_radius: 12px;
 		color: white;
 	}
 
-	#mainframe {
+	#mainframe, .project-section, .lander-plate {
 		text-align: center;
-		padding: 10vh 0 0;
 		background-color: $lander_translucent_background;
 		border: 2px solid $lander_border;
 		border-radius: $border_radius;
+	}
+
+	.project-section {
+		margin: 20px 0;
+	}
+
+	.lander-plate {
+		width: fit-content;
 	}
 
 	.circle {
