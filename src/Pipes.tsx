@@ -13,7 +13,7 @@ const grid_width = Math.floor(vw / section_length) + 1;
 const node_frequency = .13;
 const margin = Math.floor(section_length/2);
 const node_radius = 10;
-const particle_radius = 5;
+const particle_radius = 4;
 const frame_interval = 25;
 
 const pixels_x = (grid_x: number) => grid_x * section_length + margin;
@@ -287,25 +287,21 @@ class PipesManager {
   }
 
   spawnParticles = () => {
-    if (this.ticks - this.last_particle_spawn < (section_length/2)) {
-      return;
-    }
+    if (Math.random() < (1/(this.numParticles**1.5*10/section_length + 1))) {
+      const node = this.edgeNodes[randint(this.edgeNodes.length)]
 
-    this.edgeNodes.forEach(node => {
-      if (Math.random() < (2/(this.numParticles**.5 + 1))) {
-        const par: Particle = {
-          hue: 140 + randint(220), // green, blue, purple, pink, red; skip oranges and yellows
-          ticks_since_spawn: 0,
-          direction: "up",
-          position: 0,
-          speed: 1 + Math.random()*2,
-        }
-
-        putParticle(node, directions.filter(d => node.pipes[d] !== undefined)[0], par);
-        this.numParticles++;
-        this.last_particle_spawn = this.ticks;
+      const par: Particle = {
+        hue: 140 + randint(220), // green, blue, purple, pink, red; skip oranges and yellows
+        ticks_since_spawn: 0,
+        direction: "up",
+        position: 0,
+        speed: 1 + Math.random()*2,
       }
-    });
+
+      putParticle(node, directions.filter(d => node.pipes[d] !== undefined)[0], par);
+      this.numParticles++;
+      this.last_particle_spawn = this.ticks;
+    }
   }
 
   drawNodes = () => {
@@ -384,7 +380,9 @@ class PipesManager {
 
     const dv = directionVectors[par.direction];
 
-    const lightness = Math.round(Math.sin(par.ticks_since_spawn/15)*10) + 65;
+    const swell = Math.round(Math.sin(par.ticks_since_spawn/15) * 10);
+    const lightness = swell + 65;
+    const radius = particle_radius + (swell/20);
 
     ctx.fillStyle = `hsl(${par.hue}, 100%, ${lightness}%)`;
 
@@ -392,7 +390,7 @@ class PipesManager {
     ctx.arc(
       x1 + par.position*Math.abs(dv.x),
       y1 + par.position*Math.abs(dv.y),
-      particle_radius,
+      radius,
       0,
       Math.PI*2,
     )
