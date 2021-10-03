@@ -39,20 +39,17 @@ class App extends Component<{}> {
 
               <div className="container-fluid" style={{padding: '10vh 0 0'}}>
                 <div className="row" style={{marginLeft: 0, marginRight: 0}}>
-                  <div className="col-2 col-md-3"/>
-                  <div className="col-8 col-md-6">
-                    <Switch>
-                      <Route exact={true} path={"/"} render={() => (
-                        <Home/>
-                      )}/>
-                      <Route exact={true} path={"/projects"} render={() => (
-                        <Projects/>
-                      )}/>
-                      <Route exact={false} path={''} render={() => (
-                        <NotFound/>
-                      )}/>
-                    </Switch>
-                  </div>
+                  <Switch>
+                    <Route exact={true} path={"/"} render={() => (
+                      <Home/>
+                    )}/>
+                    <Route exact={true} path={"/projects"} render={() => (
+                      <Projects/>
+                    )}/>
+                    <Route exact={false} path={''} render={() => (
+                      <NotFound/>
+                    )}/>
+                  </Switch>
                 </div>
               </div>
             </div>

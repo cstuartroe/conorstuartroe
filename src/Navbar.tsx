@@ -1,6 +1,36 @@
 import { Link } from 'react-router-dom';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
 import { faHome, faBriefcase, faRocket, faLink } from "@fortawesome/free-solid-svg-icons";
+import { IconDefinition } from "@fortawesome/fontawesome-svg-core";
+
+type PagelinkProps = {
+  icon: IconDefinition,
+  to: string
+  text: string,
+  inReact: boolean,
+}
+
+function Pagelink({icon, to, inReact, text}: PagelinkProps) {
+  const content = <>
+    <FontAwesomeIcon icon={icon}/>
+    <br/>
+    {text}
+  </>;
+
+  if (inReact) {
+    return (
+      <Link to={to} className="pagelink">
+        {content}
+      </Link>
+    );
+  } else {
+    return (
+      <a href={to} className="pagelink">
+        {content}
+      </a>
+    );
+  }
+}
 
 export default function Navbar(_props: {}) {
   return (
@@ -12,22 +42,10 @@ export default function Navbar(_props: {}) {
       zIndex: 1,
     }}>
       <div className="pagelinks d-flex flex-row">
-        <Link to="/" className="flex-fill">
-          <FontAwesomeIcon icon={faHome}/>
-          About&nbsp;me
-        </Link>
-        <a href="/static/pdf/resume.pdf" className="flex-fill">
-          <FontAwesomeIcon icon={faBriefcase}/>
-          Resume
-        </a>
-        <Link to="/projects" className="flex-fill">
-          <FontAwesomeIcon icon={faRocket}/>
-          Projects
-        </Link>
-        <a href="https://linktr.ee/cstuartroe/" className="flex-fill">
-          <FontAwesomeIcon icon={faLink}/>
-          Links
-        </a>
+        <Pagelink icon={faHome} to={'/'} inReact={true} text={'index'}/>
+        <Pagelink icon={faBriefcase} to={'/static/pdf/resume.pdf'} inReact={false} text={'resume'}/>
+        <Pagelink icon={faRocket} to={'/projects'} inReact={true} text={'projects'}/>
+        <Pagelink icon={faLink} to={'https://linktr.ee/cstuartroe'} inReact={false} text={'links'}/>
       </div>
     </header>
   );
