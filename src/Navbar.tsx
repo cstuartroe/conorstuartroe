@@ -4,7 +4,13 @@ import { faHome, faBriefcase, faRocket, faLink } from "@fortawesome/free-solid-s
 
 export default function Navbar(_props: {}) {
   return (
-    <header id="navbar">
+    <header id="navbar" style={{
+      position: 'fixed',
+      width: '100vw',
+      top: 0,
+      left: 0,
+      zIndex: 1,
+    }}>
       <div className="pagelinks d-flex flex-row">
         <Link to="/" className="flex-fill">
           <FontAwesomeIcon icon={faHome}/>

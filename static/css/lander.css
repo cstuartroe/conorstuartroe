@@ -30,30 +30,21 @@ h1 {
 	font-variant: small-caps;
 }
 
-h1.chinese {
-	font-size: 6vh;
-}
-
 h2 {
 	font-size: 3.5vh;
 	margin: .5em;
 }
 
-h3 {
-	font-size: 2.75vh;
-	margin: .5em;
-}
-
 button:focus {outline:0;}
 
-p, td, th, textarea, button {
+p, button {
 	font-family: "Gentium";
 	line-height: 1.5;
 	font-size: 2.3vh;
 	text-align: justify;
 }
 
-p, td, th, button {
+p, button {
 	color: #303438;
 	padding: 0;
 	padding-bottom: 2vh;
@@ -72,71 +63,6 @@ button {
 	padding: 3vw;
 }
 
-td, th {
-	text-align: left;
-	padding: 10px;
-}
-
-th {
-	color: #6E9548;
-}
-
-.fa, .fas, .fab, .svg-inline--fa {
-	font-size: 100% !important;
-	margin-right: .5vw;
-}
-
-pre {
-	font-family: "Courier New";
-	text-align: left;
-	color: #E1E6D4;
-	padding: 10px;
-	font-size: 2vh;
-	line-height: 1;
-	background-color: #303438;
-	width: auto;
-	display: inline-block;
-	margin: 0;
-	border-radius: 10px;
-}
-
-code {
-	font-family: "Courier New";
-	font-weight: 400;
-	color: #E1E6D4;
-	padding: 5px;
-	font-size: 2vh;
-	line-height: 1;
-	background-color: #303438;
-	margin: 0;
-	border-radius: 10px;
-}
-
-hr {
-	height: 0px;
-	margin: 20px 20vw;
-	padding: 10px 0px;
-	background: url("/static/img/dash.png") repeat-x 0 0;
-	background-position: center;
-    border: 0;
-    text-align: center;
-    color: #E1E6D4;
-}
-
-.fa-cog {
-	font-family: FontAwesome;
-	-webkit-animation: fa-spin 5s infinite linear;
-	animation: fa-spin 5s infinite linear;
-	display: inline-block;
-	position: relative;
-	padding: 0;
-	background: #E1E6D4;
-	border-radius: 50%;
-	color: #303438;
-	top: -40px;
-	font-size: 20px !important;
-}
-
 p a {
 	color: #9B768D;
 	border: 1px solid white;
@@ -150,78 +76,11 @@ p a:hover {
     text-decoration: none;
 }
 
-b {
-	color: #6E9548;
-}
-
-table {
-	display: inline-block;
-}
-
-#navbar {
-	position: fixed;
-	width: 100vw;
-	top: 0;
-	left: 0;
-	background-color: white;
-	z-index: 1;
-}
-
 .container {
 	width: auto;
-}
-
-.pagelinks a {
-	font-family: "Gentium";
-    font-size: calc(1.5vh + 1vw);
-	color: #6E9548;
-	text-decoration: none;
-	padding: .25em;
-	border: 2px solid white;
-	border-top: none;
-	border-radius: 0 0 5px 5px;
-}
-
-.pagelinks a:hover {
-	background-color: #8fc78f;
-	border-color: black;
-    color: white;
 }
 
 #mainframe {
 	text-align: center;
 	padding: 10vh 0;
-}
-
-.circle {
-    border-radius: 40%;
-    margin: 1em auto;
-    display:block;
-}
-
-#grid td {
-	padding: 0;
-	margin: 0;
-}
-
-.cell {
-	background-color: #444444;
-	border-style: solid;
-	width: 6vw; 
-	height: 6vw;
-	text-align: center;
-	margin: 0;
-}
-
-.filled {
-	background-color: red;
-}
-
-input {
-	background-color: white;
-	font-size: 2em;
-}
-
-input[readonly] {
-	background-color: #888;
 }
