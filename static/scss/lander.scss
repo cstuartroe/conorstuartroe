@@ -11,18 +11,18 @@ $border_radius: 12px;
 	background-color: $lander_background;
 	height: 100vh;
 	text-align: center;
-	overflow: scroll;
+	overflow-y: scroll;
 
-	::-webkit-scrollbar {
+	&::-webkit-scrollbar {
 		width: 10px;
 	}
 
-	::-webkit-scrollbar-track {
-		background: #fff;
+	&::-webkit-scrollbar-track {
+		background: transparent;
 	}
 
-	::-webkit-scrollbar-thumb {
-		background: #f0f0f0;
+	&::-webkit-scrollbar-thumb {
+		background: rgba(255, 255, 255, 10%);
 		border-radius: 5px;
 	}
 
