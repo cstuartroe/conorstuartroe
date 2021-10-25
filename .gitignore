@@ -9,4 +9,7 @@ node_modules
 main.js
 staticfiles
 env.sh
+*.aux
+*.log
+*.out
 
