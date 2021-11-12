@@ -277,6 +277,10 @@
 % Usage: \mobile{<mobile number>}
 \newcommand*{\mobile}[1]{\def\@mobile{#1}}
 
+% Defines writer's location (optional)
+% Usage: \location{<city name>}
+\newcommand*{\location}[1]{\def\@location{#1}}
+
 % Defines writer's email (optional)
 % Usage: \email{<email address>}
 \newcommand*{\email}[1]{\def\@email{#1}}
@@ -455,11 +459,17 @@
     \headersocialstyle{%
       \newbool{isstart}%
       \setbool{isstart}{true}%
+      \ifthenelse{\isundefined{\@location}}%
+        {}%
+        {%
+          \faLocationArrow\acvHeaderIconSep\@location%
+          \setbool{isstart}{false}%
+        }%
       \ifthenelse{\isundefined{\@mobile}}%
         {}%
         {%
+          \ifbool{isstart}{\setbool{isstart}{false}}{\acvHeaderSocialSep}%
           \faMobile\acvHeaderIconSep\@mobile%
-          \setbool{isstart}{false}%
         }%
       \ifthenelse{\isundefined{\@email}}%
         {}%
