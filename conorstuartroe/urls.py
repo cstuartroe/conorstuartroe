@@ -21,7 +21,6 @@ from . import views
 urlpatterns = [
     path('admin/', admin.site.urls),
     path('clock', views.clock, name='clock'),
-    path('calendar', views.calendar, name='calendar'),
     path('negaternary', views.negaternary, name='negaternary'),
     path('negabinary', views.negabinary, name='negabinary'),
     path('randwords', views.randwords, name='randwords'),

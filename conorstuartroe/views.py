@@ -15,10 +15,6 @@ def clock(request):
     return render(request, 'clock.html')
 
 
-def calendar(request):
-    return render(request, 'calendar.html')
-
-
 def negaternary(request):
     return render(request, 'negaternary.html')
 
