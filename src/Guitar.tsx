@@ -1,33 +1,60 @@
-import React, { Component } from "react";
+import React, {Component, CSSProperties} from "react";
 import { range } from "./utils";
 
-const key_names = ["C", "C#/Db", "D", "D#/Eb", "E", "F", "F#/Gb", "G", "G#/Ab", "A", "A#/Bb", "B"];
-const guitar_strings = [4, 9, 2, 7, 11, 4];
+const key_names: {[edo: number]: string[]} = {
+  12: ["E", "F", "F#/Gb", "G", "G#/Ab", "A", "A#/Bb", "B", "C", "C#/Db", "D", "D#/Eb"],
+  15: ["E", "F", "F#", "Gb", "G", "G#/Ab", "A", "A#", "Bb", "B", "C", "C#/Db", "D", "D#", "Eb"],
+  22: range(22).map(n => n + ""),
+};
 
-const ionian_intervals = [2, 2, 1, 2, 2, 2, 1];
-const major_modes = ["Ionian (Major)", "Dorian", "Phrygian", "Lydian", "Mixolydian", "Aeolian (Minor)", "Locrian"];
+const guitar_strings: {[edo: number]: number[]} = {
+  12: [0, 5, 10, 3, 7, 0],
+  15: [0, 6, 12, 3, 9, 0],
+  22: [0, 9, 18, 5, 13, 0],
+};
 
 type Scale = {[degree: string]: string};
 
-var scales: {[name: string]: Scale} = {
-  "Harmonic Minor": {"0": "1", "2": "2", "3": "3", "5": "4", "7": "5", "8": "6", "11": "7"},
-  "Pentatonic Major": {"0": "1", "2": "2", "4": "3", "7": "5", "9": "6"},
-  "Pentatonic Minor": {"0": "1", "3": "3", "5": "4", "7": "5", "10": "7"},
-  "Blues": {"0": "1", "3": "3", "5": "4", "6": "#", "7": "5", "10": "7"}
+const scales: { [edo: number]: { [name: string]: Scale } } = {
+  12: {
+    "Harmonic Minor": {"0": "1", "2": "2", "3": "3", "5": "4", "7": "5", "8": "6", "11": "7"},
+    "Pentatonic Major": {"0": "1", "2": "2", "4": "3", "7": "5", "9": "6"},
+    "Pentatonic Minor": {"0": "1", "3": "3", "5": "4", "7": "5", "10": "7"},
+    "Blues": {"0": "1", "3": "3", "5": "4", "6": "#", "7": "5", "10": "7"},
+  },
+  15: {
+    "Half-Mixolydian": {"0": "1", "2": "2", "5": "3", "6": "4", "9": "5", "11": "6", "13": "7"},
+  },
+  22: {
+    "Major Bent": {"0": "1", "4": "2", "7": "3", "9": "4", "13": "5", "16": "6", "20": "7"},
+    "Minor Bent": {"0": "1", "3": "2", "7": "3", "9": "4", "13": "5", "16": "6", "20": "7"},
+    "Neutral Bent": {"0": "1", "3": "2", "7": "3", "9": "4", "13": "5", "16": "6", "19": "7"},
+    "Major Septimal": {"0": "1", "4": "2", "7": "3", "9": "4", "13": "5", "17": "6", "20": "7"},
+    "Minor Septimal": {"0": "1", "3": "2", "7": "3", "9": "4", "12": "5", "16": "6", "20": "7"},
+    "Balanced Septimal": {"0": "1", "4": "2", "7": "3", "9": "4", "13": "5", "17": "6", "19": "7"},
+  }
 };
 
-const scale_list = major_modes.concat([...Object.keys(scales)]);
+const ionian_intervals: {[edo: number]: number[]} = {
+  12: [2, 2, 1, 2, 2, 2, 1],
+  15: [3, 2, 1, 3, 2, 3, 1],
+  22: [4, 4, 1, 4, 4, 4, 1],
+}
 
-for (var i in major_modes) {
-  var scale: Scale = {"0": "1"};
-  var current_note = 0;
-  for (var j in ionian_intervals) {
-    var interval = ionian_intervals[(parseInt(i) + parseInt(j)) % 7];
-    current_note += interval;
-    scale[current_note] = String(parseInt(j) + 2);
+const diatonic_modes = ["Ionian (Major)", "Dorian", "Phrygian", "Lydian", "Mixolydian", "Aeolian (Minor)", "Locrian"];
+
+for (let i = 0; i < 7; i++) {
+  for (const edo of Object.keys(scales)) {
+    const scale: Scale = {"0": "1"};
+    let current_note = 0;
+
+    for (let j = 0; j < 7; j++) {
+      current_note += ionian_intervals[parseInt(edo)][(i + j) % 7];
+      scale[current_note] = String(j + 2);
+    }
+
+    scales[parseInt(edo)][diatonic_modes[i]] = scale;
   }
-
-  scales[major_modes[i]] = scale;
 }
 
 const scale_position_colors : {[degree: string]: string} = {
@@ -43,19 +70,35 @@ const scale_position_colors : {[degree: string]: string} = {
 
 type Position = {string_index: number, fret: number};
 
-const frets = range(13);
-
-var positions: Position[] = [];
-for (const string_index of range(guitar_strings.length)) {
-  for (const fret of frets) {
-    positions.push({string_index: string_index, fret: fret});
-  }
+type Props = {
+  edo: number;
 }
 
-class Guitar extends Component {
-  state = {
-    key: 0,
-    mode: major_modes[0]
+type State = {
+  key: number,
+  scale_name: string,
+}
+
+class Guitar extends Component<Props, State> {
+  private positions: Position[];
+  private readonly frets: number[];
+
+  constructor(props: Props) {
+    super(props);
+
+    this.state = {
+      key: 0,
+      scale_name: diatonic_modes[0]
+    }
+
+    this.frets = range(Math.floor(props.edo * 1.4));
+    this.positions = [];
+
+    for (const string_index of range(guitar_strings[props.edo].length)) {
+      for (const fret of this.frets) {
+       this.positions.push({string_index: string_index, fret: fret});
+      }
+    }
   }
 
   keychange(event: React.ChangeEvent<HTMLSelectElement>) {
@@ -63,64 +106,128 @@ class Guitar extends Component {
   }
 
   modechange(event: React.ChangeEvent<HTMLSelectElement>) {
-    this.setState({mode: event.target.value});
+    this.setState({scale_name: event.target.value});
   }
 
   render() {
+    const { edo } = this.props;
+
+    const neckHeight = 160
+
+    const getHeight = (steps: number, extra: number = 0) => {
+      return (neckHeight + 1 - Math.pow(2, -steps/edo)*neckHeight + extra) + "vh"
+    }
+
+    const dotStyle: CSSProperties = {
+      backgroundColor: "#000000",
+      width: "2vh",
+      height: "2vh",
+      position: "absolute",
+      borderRadius: "1vh",
+    };
+
     return (
       <div>
         <div>
           <select name="key" id="keyselect" onChange={this.keychange.bind(this)}>
-          {key_names.map((name, number) =>
+          {key_names[edo].map((name, number) =>
             <option value={number} key={number}>{name}</option>
           )}
           </select>
         </div>
 
         <div>
-          <select name="mode" id="modeselect" onChange={this.modechange.bind(this)}>
-          {scale_list.map((mode) =>
+          <select name="mode" id="modeselect" value={this.state.scale_name} onChange={this.modechange.bind(this)}>
+          {Object.keys(scales[edo]).map((mode) =>
             <option value={mode} key={mode}>{mode}</option>
           )}
           </select>
         </div>
 
-        <div style={{backgroundColor: "#9c7714", width: "36vh", height: "120vh", position: "absolute", left: "calc(50vw - 18vh)"}}>
-          {frets.map((fret) =>
+        <div style={{
+          backgroundColor: "#9c7714",
+          width: "36vh",
+          height: neckHeight*.62 + "vh",
+          position: "absolute",
+          left: "calc(50vw - 18vh)",
+        }}>
+
+          {this.frets.map((fret) =>
             <div className="fret" key={fret}
-              style={{backgroundColor: "#999999", width: "100%", height: "1vh", left: "0", top: (241 - Math.pow(.946, fret)*240) + "vh", position: "absolute"}}/>
+              style={{
+                backgroundColor: "#999999",
+                width: "100%",
+                height: "1vh",
+                left: "0",
+                top: getHeight(fret),
+                position: "absolute",
+              }}/>
           )}
 
-          {guitar_strings.map((note, index) =>
+          {guitar_strings[edo].map((note, index) =>
             <div className="string" key={index}
-              style={{backgroundColor: "#b5a642", width: ".5vh", height: "120vh", left: (6*index + 2.75) + "vh", top: "0", position: "absolute"}}/>
+              style={{
+                backgroundColor: "#b5a642",
+                width: ".5vh",
+                height: neckHeight*.62 + "vh",
+                left: (6*index + 2.75) + "vh",
+                top: "0",
+                position: "absolute",
+              }}/>
           )}
 
 
           {[3, 5, 7, 9].map((fret) =>
             <div className="guidedot" key={fret}
-              style={{backgroundColor: "#000000", width: "2vh", "height": "2vh", left: "17vh",
-                      top: (241 - Math.pow(.946, (fret - .55))*240) + "vh", position: "absolute", borderRadius: "1vh"}}/>
+              style={{
+                ...dotStyle,
+                left: "17vh",
+                top: getHeight(fret - .5, -1),
+              }}/>
           )}
+
           <div id="left-octave-dot"
-            style={{backgroundColor: "#000000", width: "2vh", "height": "2vh", left: "15.5vh",
-                    top: (241 - Math.pow(.946, 11.45)*240) + "vh", position: "absolute", borderRadius: "1vh"}}/>
+            style={{
+              ...dotStyle,
+              left: "15.5vh",
+              top: getHeight(edo - .5, -1),
+            }}/>
+
           <div id="right-octave-dot"
-            style={{backgroundColor: "#000000", width: "2vh", "height": "2vh", left: "18.5vh",
-                    top: (241 - Math.pow(.946, 11.45)*240) + "vh", position: "absolute", borderRadius: "1vh"}}/>
+            style={{
+              ...dotStyle,
+              left: "18.5vh",
+              top: getHeight(edo - .5, -1),
+            }}/>
 
 
-          {positions.map((pos, index) => {
-            var note = (12 + guitar_strings[pos.string_index]+ pos.fret - this.state.key) % 12;
-            if (note in scales[this.state.mode]) {
-                var scale_position = scales[this.state.mode][note];
-                return <div className="finger-dot" key={index}
-                            style={{backgroundColor: scale_position_colors[scale_position],
-                            color: "#ffffff", fontWeight: 900, textAlign: "center", fontFamily: "Arial",
-                            width: "3vh", "height": "3vh", left: (6*pos.string_index + 1.5) + "vh",
-                            top: (240 - Math.pow(.946, pos.fret)*240) + "vh", fontSize: "2vh",
-                            position: "absolute", borderRadius: "1.5vh"}}>{scale_position}</div>;
-            } else { return null; }
+          {this.positions.map((pos, index) => {
+            const note = (edo + guitar_strings[edo][pos.string_index] + pos.fret - this.state.key) % edo;
+
+            if (note in scales[edo][this.state.scale_name]) {
+              const scale_position = scales[edo][this.state.scale_name][note];
+
+              return <div
+                className="finger-dot" key={index}
+                style={{
+                  backgroundColor: scale_position_colors[scale_position],
+                  color: "#ffffff",
+                  fontWeight: 900,
+                  textAlign: "center",
+                  fontFamily: "Arial",
+                  width: "3vh",
+                  height: "3vh",
+                  left: (6*pos.string_index + 1.5) + "vh",
+                  top: getHeight(pos.fret, -1),
+                  fontSize: "2vh",
+                  position: "absolute",
+                  borderRadius: "1.5vh",
+                }}>
+                {scale_position}
+              </div>;
+            } else {
+              return null;
+            }
           })}
 
         </div>

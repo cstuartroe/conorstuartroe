@@ -19,7 +19,10 @@ class App extends Component<{}> {
       <Router>
         <Switch>
           <Route exact={true} path="/guitar" render={() => (
-            <Guitar/>
+            <Guitar edo={12}/>
+          )}/>
+          <Route exact={true} path="/guitar/:edo" render={(t) => (
+            <Guitar edo={parseInt(t.match.params.edo)}/>
           )}/>
           <Route exact={true} path="/twitter_mirror" render={() => (
             <TwitterMirror/>
