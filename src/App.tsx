@@ -9,6 +9,7 @@ import Pipes from "./Pipes";
 import Navbar from "./Navbar";
 import Home from "./Home";
 import Projects from "./Projects";
+import NoteDrops from "./NoteDrops";
 import NotFound from "./NotFound";
 
 import "../static/scss/lander.scss";
@@ -32,6 +33,9 @@ class App extends Component<{}> {
           )}/>
           <Route exact={true} path="/new_calendar/explanation" render={() => (
             <NewCalendarExplanation/>
+          )}/>
+          <Route exact={true} path="/notedrops" render={() => (
+            <NoteDrops/>
           )}/>
           <Route exact={false} path="">
             <Pipes/>
