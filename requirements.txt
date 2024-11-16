@@ -7,7 +7,6 @@ Django==3.2
 feedparser==6.0.2
 gunicorn==20.1.0
 idna==2.10
-lxml==4.6.3
 oauthlib==3.1.0
 praw==7.2.0
 prawcore==2.0.0
