@@ -12,4 +12,4 @@ env.sh
 *.aux
 *.log
 *.out
-
+.DS_Store
