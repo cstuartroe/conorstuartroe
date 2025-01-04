@@ -19,12 +19,29 @@ import "../../static/scss/calendar.scss";
 
 const MONTH_SYMBOLS = ['♈︎', '♉︎', '♊︎', '♋︎', '♌︎', '♍︎', '♎︎', '♏︎', '♐︎', '♑︎', '♒︎', '♓︎'];
 const SEASON_ICONS = [faCloud, faSun, faLeaf, faSnowflake];
+const CELESTIAL_BODIES = ["moon", "sun", "star"];
+
+function CelestialImage(body: number, count: number) {
+  return (
+      <th className="flex-fill">
+          <img
+              src={`/static/img/calendar/blank_${count}_${CELESTIAL_BODIES[body]}s.png`}
+              style={{
+                width: "calc(2vw + 1vh)",
+                margin: "2px",
+              }}
+              alt={`${count} ${CELESTIAL_BODIES[body]}s`}
+          />
+      </th>
+)
+  ;
+}
 
 function DaySquare(props: { day: Day, currentDay: Day }) {
   let { day, currentDay } = props;
 
   let className = "weekday";
-  if (day.season === -1 || day.month === -1 || WEEKEND_DAYS.includes(day.date % 10)) {
+  if (day.season === -1 || day.month === -1 || WEEKEND_DAYS.includes(day.date % 6)) {
     className = "weekend";
   }
 
@@ -54,13 +71,15 @@ function Month(props: {season: number, month: number, currentDay: Day}) {
   return (
     <table className="month">
       <tbody>
-        {range(3).map(w => (
+        {range(5).map(w => (
           <tr key={w} className="d-flex flex-row">
-            {range(10).map(d => (
+            {CelestialImage(month % 3, w + 1)}
+            {range(6).map(d => (
               <th key={d} className="flex-fill">
-                <DaySquare day={{date: w*10 + d, season, month}} currentDay={currentDay}/>
+                <DaySquare day={{date: w*6 + d, season, month}} currentDay={currentDay}/>
               </th>
             ))}
+            {CelestialImage(month % 3, w + 1)}
           </tr>
         ))}
       </tbody>
@@ -78,7 +97,10 @@ function Season(props: SeasonProps) {
 
   return (
     <div className='col-12 col-md-6 season-wrapper'>
-      <div className='season' id={SEASONS[index]}>
+      <div className='season' id={SEASONS[index]} style={{
+        backgroundImage: `url(/static/img/calendar/blank_${SEASONS[index]}.png)`,
+        backgroundSize: 'contain',
+      }}>
         <h2>{HOLIDAYS[index]}</h2>
         <table className='month'>
           <tbody>

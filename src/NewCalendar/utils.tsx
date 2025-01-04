@@ -1,11 +1,10 @@
-export const WEEKDAYS = ['Sunday','Moonday','Mercuryday','Venusday','Earthday',
-  'Marsday','Jupiterday','Saturnday','Starday', 'Skyday'];
+export const WEEKDAYS = ['Skyday','Marsday','Mercuryday','Jupiterday','Venusday','Saturnday'];
 export const HOLIDAYS = ['First Equinox','First Solstice','Second Equinox','Second Solstice',];
 export const SEASONS = ["Spring", "Summer", "Autumn", "Winter"];
 export const MONTHS = ["Aries", "Taurus", "Gemini", "Cancer", "Leo", "Virgo",
   "Libra", "Scorpio", "Sagittarius", "Capricorn", "Aquarius", "Pisces"];
 
-export const WEEKEND_DAYS = [0, 1, 8, 9];
+export const WEEKEND_DAYS = [0, 5];
 
 export const FIRST_NEW_YEARS_DAY = new Date(2016, 2, 21, 0, 0, 0);
 const FIRST_YEAR = 5362; // 21 Mar 2016 thru 30 March 2017
@@ -13,7 +12,7 @@ const FIRST_YEAR = 5362; // 21 Mar 2016 thru 30 March 2017
 export type Day = {
   season: number, // -1 for NYD, 0 for spring, so on (-2 for leap day)
   month: number,   // -1 for solstice/equinox, 0-2 for regular month
-  date: number,   // 0-44 inclusive
+  date: number,   // 0-29 inclusive
 }
 
 export function dayEq(day1: Day, day2: Day) {
@@ -120,7 +119,7 @@ export function dayToString(day: Day) {
   } else if (day.month === -1) {
     return HOLIDAYS[day.season];
   } else {
-    return WEEKDAYS[day.date % 10] + " " + (day.date + 1).toString() + "\xa0"
+    return WEEKDAYS[day.date % 6] + " " + (day.date + 1).toString() + "\xa0"
       + MONTHS[day.season*3 + day.month];
   }
 }

@@ -104,10 +104,9 @@ export default class NewCalendarExplanation extends Component<{}, {}> {
               <h3>The week</h3>
 
               <p>
-                The 30-day months are split into three 10-day weeks. The weekdays are named after the seven classical
-                planets, plus "Earth", "Star", and "Sky"; the weekday names in order are:
-                Sunday, Moonday, Mercuryday, Venusday, Earthday, Marsday, Jupiterday, Saturnday, Starday, and Skyday.
-                That's right - there's an Earth Day every week!
+                The 30-day months are split into five 6-day weeks. The weekdays are named after the five classical
+                planets, plus "Sky"; the weekday names in order are:
+                Skyday, Marsday, Mercuryday, Jupiterday, Venusday, Saturnday.
               </p>
 
               <h3>Time</h3>

@@ -1,10 +1,13 @@
+$cream: #ddddcc;
+$dark_gray: #222218;
+
 .calendar-style {
 	text-align: center;
 
 
 	.container-fluid .row {
 		padding: 1em;
-		background-color: #222218;
+		background-color: $dark_gray;
 	}
 
 	.fa {
@@ -13,7 +16,7 @@
 
 	#current, .explanation {
 		font-family: "Gentium";
-		color: #ddddcc;
+		color: $cream;
 	}
 
 	#current {
@@ -44,7 +47,7 @@
 
 	.season-wrapper {
 		padding: calc(.6vw + .3vh);
-		background-color: #222218;
+		background-color: $dark_gray;
 	}
 
 	.season {
@@ -87,19 +90,19 @@
 	}
 
 	.weekend {
-		background-color: #ddddcc;
+		background-color: $cream;
 	}
 
 	.weekend p {
-		color: #222218;
+		color: $dark_gray;
 	}
 
 	.weekday {
-		background-color: #222218;
+		background-color: $dark_gray;
 	}
 
 	.weekday p, .activeDay p {
-		color: #ddddcc;
+		color: $cream;
 	}
 
 	.activeDay {
@@ -108,26 +111,26 @@
 
 	#new-year {
 		background-color: #ccccdd;
-		color: #222218;
+		color: $dark_gray;
 	}
 
 	#Spring {
-		background-color: #00cc66;
-		color: #222218;
+		background-color: #478547;
+		color: $cream;
 	}
 
 	#Summer {
-		background-color: #ffff99;
-		color: #222218;
+		background-color: #caa02b;
+		color: $cream;
 	}
 
 	#Autumn {
-		background-color: #993300;
-		color: #ddddcc;
+		background-color: #994936;
+		color: $cream;
 	}
 
 	#Winter {
-		background-color: #333344;
-		color: #ddddcc;
+		background-color: #343445;
+		color: $cream;
 	}
 }
