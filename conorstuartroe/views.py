@@ -4,7 +4,6 @@ import datetime
 import os
 
 from .randwords import clearseed, randpattern, genwords
-from .twitter import api, tweet_to_json
 
 
 def react_index(request):
@@ -89,24 +88,3 @@ def journalmd(request, date_string):
         with open(filename, "w") as fh:
             fh.write(request.POST["md"])
         return HttpResponse()
-
-
-HACK_HOUSE_ACCOUNTS = [
-    'cstuartroe',
-    'dkb868',
-    'vvhuang_',
-    'vroomerify',
-    'kayolord',
-    'apagajewski',
-]
-
-
-def tweetlist(request):
-    tweets = []
-    for username in HACK_HOUSE_ACCOUNTS:
-        for status in api.user_timeline(screen_name=username):
-            tweets.append(tweet_to_json(status))
-
-    tweets.sort(key=lambda t: t["created_at"], reverse=True)
-
-    return JsonResponse(tweets[:20], safe=False)

@@ -27,6 +27,5 @@ urlpatterns = [
     path('journal', views.journalhome, name="journalhome"),
     path('journal/<str:date_string>', views.journalentry, name="journalentry"),
     path('journal/md/<str:date_string>', views.journalmd, name="journalmd"),
-    path('tweetlist', views.tweetlist, name='tweetlist'),
     re_path(r'^.*$', views.react_index, name="react_index")
 ]
