@@ -12,6 +12,7 @@ import NoteDrops from "./NoteDrops";
 import NotFound from "./NotFound";
 
 import "../static/scss/lander.scss";
+import Crossword from "./Crossword";
 
 class App extends Component<{}> {
   render() {
@@ -32,6 +33,9 @@ class App extends Component<{}> {
           )}/>
           <Route exact={true} path="/notedrops" render={() => (
             <NoteDrops/>
+          )}/>
+          <Route exact={true} path="/crossword" render={() => (
+            <Crossword/>
           )}/>
           <Route exact={false} path="">
             <Pipes/>
