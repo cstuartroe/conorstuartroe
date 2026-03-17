@@ -10,6 +10,7 @@ export default function Crossword(_props: Props) {
   const [userInput, setUserInput] = useState<string>("");
   const [crosswords, setCrosswords] = useState<string[]>([]);
   const [loading, setLoading] = useState<boolean>(false);
+  const [errorMessage, setErrorMessage] = useState<string>("");
 
   const workerRef = useRef<Worker | null>(null);
   // Clean up the worker if the component unmounts
@@ -34,7 +35,8 @@ export default function Crossword(_props: Props) {
         style={{margin: "auto", display: "flex"}}
         onClick={() => {
           setLoading(true);
-          const words = userInput.split(",").map(word => word.trim());
+          setErrorMessage("");
+          const words = userInput.split(",").map(word => word.trim().toLocaleUpperCase());
 
           // Terminate existing worker if the user clicks "Generate!" multiple times
           if (workerRef.current) {
@@ -52,6 +54,9 @@ export default function Crossword(_props: Props) {
             console.log(res);
             setCrosswords(res.map(([_, crossword, __]) => crossword));
             setLoading(false);
+            if (res.length === 0) {
+              setErrorMessage("Not possible for that set of words.")
+            }
 
             // Cleanup worker after completion
             workerRef.current?.terminate();
@@ -64,6 +69,9 @@ export default function Crossword(_props: Props) {
       >
         Generate!
       </button>
+      {errorMessage && (
+        <p style={{textAlign: "center", color: "red"}}>{errorMessage}</p>
+      )}
       {loading ? (
         <p>Loading...</p>
       ) : (
@@ -86,7 +94,7 @@ export default function Crossword(_props: Props) {
                         fontFamily: "Times New Roman",
                       }}
                     >
-                      {c.toLocaleUpperCase()}
+                      {c}
                     </td>
                   ))}
                 </tr>
